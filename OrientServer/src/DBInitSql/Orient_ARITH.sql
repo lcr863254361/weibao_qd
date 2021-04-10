@@ -1,0 +1,106 @@
+--------------------算法属性表-----------------
+CREATE TABLE CWM_ARITH_ATTRIBUTE
+(
+    ID                             VARCHAR2(38) NOT NULL,
+    TYPE                           VARCHAR2(50),
+    ARITH_COLUMN_ID                VARCHAR2(38),
+    VALUE                          VARCHAR2(100),
+    COLUMN_ID                      VARCHAR2(38),
+    ORDER_SIGN                     NUMBER(30,0),
+    CONSTRAINT PK_CWM_ARITH_ATTRIBUTE PRIMARY KEY (ID) USING INDEX
+        PCTFREE 10
+        INITRANS 2
+        MAXTRANS 255
+);
+COMMENT ON COLUMN CWM_ARITH_ATTRIBUTE.ID IS '算法参数主键ID';
+COMMENT ON COLUMN CWM_ARITH_ATTRIBUTE.TYPE IS '参数的数据类型';
+COMMENT ON COLUMN CWM_ARITH_ATTRIBUTE.ARITH_COLUMN_ID IS '参数所属统计属性';
+COMMENT ON COLUMN CWM_ARITH_ATTRIBUTE.VALUE IS '参数值，和字段作用一起，相当于常量参数';
+COMMENT ON COLUMN CWM_ARITH_ATTRIBUTE.COLUMN_ID IS '字段ID，和参数值作用一样，相当于变量参数';
+COMMENT ON COLUMN CWM_ARITH_ATTRIBUTE.ORDER_SIGN IS '参数的顺序号';
+
+
+
+CREATE TABLE CWM_ARITH_VIEW_CANSHUXIANG
+(
+    ID                             VARCHAR2(38) NOT NULL,
+    NAME                           VARCHAR2(100),
+    ISFORARITH                     VARCHAR2(10),
+    COLUMN_ID                      VARCHAR2(38),
+    ORDER_SIGN                     NUMBER(30,0),
+    VIEW_ID                        VARCHAR2(38),
+    DISPLAY_NAME                   VARCHAR2(100),
+    CONSTRAINT PK_CWM_ARITH_VIEW_CSX PRIMARY KEY (ID) USING INDEX
+        PCTFREE 10
+        INITRANS 2
+        MAXTRANS 255
+);
+COMMENT ON COLUMN CWM_ARITH_VIEW_CANSHUXIANG.ID IS '统计视图统计参数项的主键ID';
+COMMENT ON COLUMN CWM_ARITH_VIEW_CANSHUXIANG.NAME IS '参数项名称';
+COMMENT ON COLUMN CWM_ARITH_VIEW_CANSHUXIANG.ISFORARITH IS '是否统计项，1表示是，0表示否';
+COMMENT ON COLUMN CWM_ARITH_VIEW_CANSHUXIANG.COLUMN_ID IS '参数项的字段ID,若是统计项则是统计属性，若不是则是普通属性';
+COMMENT ON COLUMN CWM_ARITH_VIEW_CANSHUXIANG.ORDER_SIGN IS '统计参数项的顺序号';
+COMMENT ON COLUMN CWM_ARITH_VIEW_CANSHUXIANG.VIEW_ID IS '统计参数项所属的统计视图';
+COMMENT ON COLUMN CWM_ARITH_VIEW_CANSHUXIANG.DISPLAY_NAME IS '统计视图的统计参数项的显示名';
+
+
+CREATE TABLE CWM_ARITHMETIC
+(
+    ID                             VARCHAR2(100),
+    NAME                           VARCHAR2(100),
+    TYPE                           NUMBER(1,0),
+    CATEGORY                       VARCHAR2(100),
+    DESCRIPTION                    VARCHAR2(1000),
+    FILE_NAME                      VARCHAR2(100),
+    METHOD_NAME                    VARCHAR2(100),
+    PARA_NUMBER                    NUMBER(10,0),
+    PARA_TYPE                      VARCHAR2(400),
+    REF_LIB                        VARCHAR2(100),
+    DATA_TYPE                      VARCHAR2(30),
+    IS_VALID                       NUMBER(1,0),
+    ARITH_TYPE                     NUMBER(1,0),
+    LEAST_NUMBER                   NUMBER(10,0),
+    CLASS_NAME                     VARCHAR2(100),
+    CLASS_PACKAGE                  VARCHAR2(100),
+    FILE_NUMBER                    NUMBER(10,0),
+    ARITH_METHOD                   VARCHAR2(100),
+    PID                            VARCHAR2(38),
+    MAIN_JAR                       NUMBER(1,0),
+    FILE_LOCATION                  VARCHAR2(200)
+);
+COMMENT ON COLUMN CWM_ARITHMETIC.ID IS '唯一ID';
+COMMENT ON COLUMN CWM_ARITHMETIC.NAME IS '算法名称';
+COMMENT ON COLUMN CWM_ARITHMETIC.TYPE IS '类型，分数据库自带算法（0）和自定义算法（1）';
+COMMENT ON COLUMN CWM_ARITHMETIC.CATEGORY IS '类别，算法所属类别';
+COMMENT ON COLUMN CWM_ARITHMETIC.DESCRIPTION IS '算法描述';
+COMMENT ON COLUMN CWM_ARITHMETIC.FILE_NAME IS '自定义算法的文件名(可以多个)，以‘，’分割';
+COMMENT ON COLUMN CWM_ARITHMETIC.METHOD_NAME IS '自定义算法的方法名';
+COMMENT ON COLUMN CWM_ARITHMETIC.PARA_NUMBER IS '算法的参数个数';
+COMMENT ON COLUMN CWM_ARITHMETIC.PARA_TYPE IS '算法的参数类型，以‘，’分割';
+COMMENT ON COLUMN CWM_ARITHMETIC.REF_LIB IS '引用的lib包名';
+COMMENT ON COLUMN CWM_ARITHMETIC.DATA_TYPE IS '算法返回类型';
+COMMENT ON COLUMN CWM_ARITHMETIC.IS_VALID IS '是否启用，是否有效，1表示有效和启用，0表示无效和删除';
+COMMENT ON COLUMN CWM_ARITHMETIC.ARITH_TYPE IS '算法所对应的函数是单行函数还是聚集函数，0表示单行函数，1表示聚集函数';
+COMMENT ON COLUMN CWM_ARITHMETIC.LEAST_NUMBER IS '无限制参数的参数个数最小值，即最少有多少个参数！';
+COMMENT ON COLUMN CWM_ARITHMETIC.CLASS_NAME IS '自定义算法所在类名';
+COMMENT ON COLUMN CWM_ARITHMETIC.CLASS_PACKAGE IS '自定义算法所在类的包名';
+COMMENT ON COLUMN CWM_ARITHMETIC.FILE_NUMBER IS '自定义算法的文件数';
+COMMENT ON COLUMN CWM_ARITHMETIC.ARITH_METHOD IS '数据库内置算法公式';
+COMMENT ON COLUMN CWM_ARITHMETIC.PID IS '用于自定义算法的树形组织';
+COMMENT ON COLUMN CWM_ARITHMETIC.MAIN_JAR IS '用于解析的主jar包标识';
+
+
+
+
+--*******************************************--
+--             SEQUENCE 相关                 --
+--*******************************************--
+
+CREATE SEQUENCE CWM_ARITHMETIC_SEQ
+INCREMENT BY 1
+START WITH 2
+NOMAXVALUE
+NOMINVALUE
+NOCYCLE 
+CACHE 20
+NOORDER ;

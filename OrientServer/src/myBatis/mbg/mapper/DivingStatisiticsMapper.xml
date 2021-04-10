@@ -1,0 +1,1303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.orient.weibao.mbg.mapper.DivingStatisiticsMapper">
+  <resultMap id="BaseResultMap" type="com.orient.weibao.mbg.model.DivingStatisitics">
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="SYS_DATE_TIME" jdbcType="TIMESTAMP" property="sysDateTime" />
+    <result column="SYS_USERNAME" jdbcType="VARCHAR" property="sysUsername" />
+    <result column="SYS_IS_DELETE" jdbcType="DECIMAL" property="sysIsDelete" />
+    <result column="SYS_SECRECY" jdbcType="VARCHAR" property="sysSecrecy" />
+    <result column="SYS_SCHEMA" jdbcType="VARCHAR" property="sysSchema" />
+    <result column="SYS_OPERATE" jdbcType="VARCHAR" property="sysOperate" />
+    <result column="SYS_FLOW" jdbcType="VARCHAR" property="sysFlow" />
+    <result column="C_SEA_AREA_3446" jdbcType="VARCHAR" property="cSeaArea3446" />
+    <result column="C_WORK_TIME_LONG_3446" jdbcType="VARCHAR" property="cWorkTimeLong3446" />
+    <result column="C_HANGCI_3446" jdbcType="VARCHAR" property="cHangci3446" />
+    <result column="C_SMALL_BOAT_3446" jdbcType="VARCHAR" property="cSmallBoat3446" />
+    <result column="C_COMPANY_3446" jdbcType="VARCHAR" property="cCompany3446" />
+    <result column="C_DIVING_TASK_3446" jdbcType="VARCHAR" property="cDivingTask3446" />
+    <result column="C_UNDER_WATER_3446" jdbcType="VARCHAR" property="cUnderWater3446" />
+    <result column="C_DEPTH_3446" jdbcType="VARCHAR" property="cDepth3446" />
+    <result column="C_PERSON_3446" jdbcType="VARCHAR" property="cPerson3446" />
+    <result column="C_WORK_CONTENT_3446" jdbcType="VARCHAR" property="cWorkContent3446" />
+    <result column="C_WATER_TIME_LONG_3446" jdbcType="VARCHAR" property="cWaterTimeLong3446" />
+    <result column="C_DIVING_TIME_3446" jdbcType="VARCHAR" property="cDivingTime3446" />
+    <result column="T_DIVING_TASK_480_ID" jdbcType="VARCHAR" property="tDivingTask480Id" />
+    <result column="T_HANGCI_480_ID" jdbcType="VARCHAR" property="tHangci480Id" />
+    <result column="C_YOUXIAN_3446" jdbcType="VARCHAR" property="cYouxian3446" />
+    <result column="C_MAIN_DRIVER_3446" jdbcType="VARCHAR" property="cMainDriver3446" />
+    <result column="C_ZUOXIAN_3446" jdbcType="VARCHAR" property="cZuoxian3446" />
+    <result column="C_PERSON_TOTALWEIGHT_3446" jdbcType="FLOAT" property="cPersonTotalweight3446" />
+    <result column="C_ZX_COMPANY_3446" jdbcType="VARCHAR" property="cZxCompany3446" />
+    <result column="C_LONGITUDE_3446" jdbcType="VARCHAR" property="cLongitude3446" />
+    <result column="C_LATITUDE_3446" jdbcType="VARCHAR" property="cLatitude3446" />
+    <result column="C_SAMPLE_SITUATION_3446" jdbcType="VARCHAR" property="cSampleSituation3446" />
+    <result column="TUOLANPEOPLE_3446" jdbcType="VARCHAR" property="tuolanpeople3446" />
+    <result column="RECOVERSEASTATEESTIM_3446" jdbcType="VARCHAR" property="recoverseastateestim3446" />
+    <result column="TIMEZONE_3446" jdbcType="VARCHAR" property="timezone3446" />
+    <result column="WORKSTARTDEPTH_3446" jdbcType="VARCHAR" property="workstartdepth3446" />
+    <result column="BALLASTREMOVETIME_3446" jdbcType="VARCHAR" property="ballastremovetime3446" />
+    <result column="SOUTHNORTHHALFSPHERE_3446" jdbcType="VARCHAR" property="southnorthhalfsphere3446" />
+    <result column="WORKENDDEPTH_3446" jdbcType="VARCHAR" property="workenddepth3446" />
+    <result column="BUFANGLANGHEIGHT_3446" jdbcType="VARCHAR" property="bufanglangheight3446" />
+    <result column="TWICERECOVERBOATTIME_3446" jdbcType="VARCHAR" property="twicerecoverboattime3446" />
+    <result column="TWICEBUFANGBOATTIME_3446" jdbcType="VARCHAR" property="twicebufangboattime3446" />
+    <result column="RECOVERBOATASSISTANT_3446" jdbcType="VARCHAR" property="recoverboatassistant3446" />
+    <result column="STARTWORKTIME_3446" jdbcType="VARCHAR" property="startworktime3446" />
+    <result column="BUFANGTYPE_3446" jdbcType="VARCHAR" property="bufangtype3446" />
+    <result column="ONCERECOVERBOATTIME_3446" jdbcType="VARCHAR" property="oncerecoverboattime3446" />
+    <result column="RECOVERDECKTIME_3446" jdbcType="VARCHAR" property="recoverdecktime3446" />
+    <result column="BUFANGMAXWINDSPEED_3446" jdbcType="VARCHAR" property="bufangmaxwindspeed3446" />
+    <result column="PERSONOUTCABINTIME_3446" jdbcType="VARCHAR" property="personoutcabintime3446" />
+    <result column="GUALANASSISTANT_3446" jdbcType="VARCHAR" property="gualanassistant3446" />
+    <result column="BUFANGCOMMANDTIME_3446" jdbcType="VARCHAR" property="bufangcommandtime3446" />
+    <result column="STARTFILLWATERTIME_3446" jdbcType="VARCHAR" property="startfillwatertime3446" />
+    <result column="HATCHOPENTIME_3446" jdbcType="VARCHAR" property="hatchopentime3446" />
+    <result column="C_HANGDUAN_3446" jdbcType="VARCHAR" property="cHangduan3446" />
+    <result column="WATERDOWNPICTURES_3446" jdbcType="VARCHAR" property="waterdownpictures3446" />
+    <result column="HATCHCLOSETIME_3446" jdbcType="VARCHAR" property="hatchclosetime3446" />
+    <result column="ENDWORKTIME_3446" jdbcType="VARCHAR" property="endworktime3446" />
+    <result column="SEAFLOORENVIRONMENTD_3446" jdbcType="VARCHAR" property="seafloorenvironmentd3446" />
+    <result column="RECOVERLANGHEIGHT_3446" jdbcType="VARCHAR" property="recoverlangheight3446" />
+    <result column="DIVINGDOUTWATERTIME_3446" jdbcType="VARCHAR" property="divingdoutwatertime3446" />
+    <result column="DIVINGDENTRYTIME_3446" jdbcType="VARCHAR" property="divingdentrytime3446" />
+    <result column="GUALANPEOPLE_3446" jdbcType="VARCHAR" property="gualanpeople3446" />
+    <result column="EASTWESTHALFSPHERE_3446" jdbcType="VARCHAR" property="eastwesthalfsphere3446" />
+    <result column="PERSONCOMEINCABINT_3446" jdbcType="VARCHAR" property="personcomeincabint3446" />
+    <result column="BUFANGSEASTATEESTIMA_3446" jdbcType="VARCHAR" property="bufangseastateestima3446" />
+    <result column="BUFANGAVERAGEWSPEED_3446" jdbcType="VARCHAR" property="bufangaveragewspeed3446" />
+    <result column="RECOVERMAXWINDSPEED_3446" jdbcType="VARCHAR" property="recovermaxwindspeed3446" />
+    <result column="TUOLANASSISTANT_3446" jdbcType="VARCHAR" property="tuolanassistant3446" />
+    <result column="BUFANGBOATASSISTANT_3446" jdbcType="VARCHAR" property="bufangboatassistant3446" />
+    <result column="RECOVERMAVERAGEWINDS_3446" jdbcType="VARCHAR" property="recovermaveragewinds3446" />
+    <result column="FLOATWATERTIME_3446" jdbcType="VARCHAR" property="floatwatertime3446" />
+    <result column="SPECIALVERSION_3446" jdbcType="VARCHAR" property="specialversion3446" />
+    <result column="RECOVERBOATDPERSON_3446" jdbcType="VARCHAR" property="recoverboatdperson3446" />
+    <result column="ONCEBUFANGBOATTIME_3446" jdbcType="VARCHAR" property="oncebufangboattime3446" />
+    <result column="BUFANGBOATDRIVER_3446" jdbcType="VARCHAR" property="bufangboatdriver3446" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    ID, SYS_DATE_TIME, SYS_USERNAME, SYS_IS_DELETE, SYS_SECRECY, SYS_SCHEMA, SYS_OPERATE, 
+    SYS_FLOW, C_SEA_AREA_3446, C_WORK_TIME_LONG_3446, C_HANGCI_3446, C_SMALL_BOAT_3446, 
+    C_COMPANY_3446, C_DIVING_TASK_3446, C_UNDER_WATER_3446, C_DEPTH_3446, C_PERSON_3446, 
+    C_WORK_CONTENT_3446, C_WATER_TIME_LONG_3446, C_DIVING_TIME_3446, T_DIVING_TASK_480_ID, 
+    T_HANGCI_480_ID, C_YOUXIAN_3446, C_MAIN_DRIVER_3446, C_ZUOXIAN_3446, C_PERSON_TOTALWEIGHT_3446, 
+    C_ZX_COMPANY_3446, C_LONGITUDE_3446, C_LATITUDE_3446, C_SAMPLE_SITUATION_3446, TUOLANPEOPLE_3446, 
+    RECOVERSEASTATEESTIM_3446, TIMEZONE_3446, WORKSTARTDEPTH_3446, BALLASTREMOVETIME_3446, 
+    SOUTHNORTHHALFSPHERE_3446, WORKENDDEPTH_3446, BUFANGLANGHEIGHT_3446, TWICERECOVERBOATTIME_3446, 
+    TWICEBUFANGBOATTIME_3446, RECOVERBOATASSISTANT_3446, STARTWORKTIME_3446, BUFANGTYPE_3446, 
+    ONCERECOVERBOATTIME_3446, RECOVERDECKTIME_3446, BUFANGMAXWINDSPEED_3446, PERSONOUTCABINTIME_3446, 
+    GUALANASSISTANT_3446, BUFANGCOMMANDTIME_3446, STARTFILLWATERTIME_3446, HATCHOPENTIME_3446, 
+    C_HANGDUAN_3446, WATERDOWNPICTURES_3446, HATCHCLOSETIME_3446, ENDWORKTIME_3446, SEAFLOORENVIRONMENTD_3446, 
+    RECOVERLANGHEIGHT_3446, DIVINGDOUTWATERTIME_3446, DIVINGDENTRYTIME_3446, GUALANPEOPLE_3446, 
+    EASTWESTHALFSPHERE_3446, PERSONCOMEINCABINT_3446, BUFANGSEASTATEESTIMA_3446, BUFANGAVERAGEWSPEED_3446, 
+    RECOVERMAXWINDSPEED_3446, TUOLANASSISTANT_3446, BUFANGBOATASSISTANT_3446, RECOVERMAVERAGEWINDS_3446, 
+    FLOATWATERTIME_3446, SPECIALVERSION_3446, RECOVERBOATDPERSON_3446, ONCEBUFANGBOATTIME_3446, 
+    BUFANGBOATDRIVER_3446
+  </sql>
+  <select id="selectByExample" parameterType="com.orient.weibao.mbg.model.DivingStatisiticsExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from T_DIVING_STATISTICS_480
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from T_DIVING_STATISTICS_480
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from T_DIVING_STATISTICS_480
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.orient.weibao.mbg.model.DivingStatisiticsExample">
+    delete from T_DIVING_STATISTICS_480
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.orient.weibao.mbg.model.DivingStatisitics">
+    insert into T_DIVING_STATISTICS_480 (ID, SYS_DATE_TIME, SYS_USERNAME, 
+      SYS_IS_DELETE, SYS_SECRECY, SYS_SCHEMA, 
+      SYS_OPERATE, SYS_FLOW, C_SEA_AREA_3446, 
+      C_WORK_TIME_LONG_3446, C_HANGCI_3446, C_SMALL_BOAT_3446, 
+      C_COMPANY_3446, C_DIVING_TASK_3446, C_UNDER_WATER_3446, 
+      C_DEPTH_3446, C_PERSON_3446, C_WORK_CONTENT_3446, 
+      C_WATER_TIME_LONG_3446, C_DIVING_TIME_3446, T_DIVING_TASK_480_ID, 
+      T_HANGCI_480_ID, C_YOUXIAN_3446, C_MAIN_DRIVER_3446, 
+      C_ZUOXIAN_3446, C_PERSON_TOTALWEIGHT_3446, C_ZX_COMPANY_3446, 
+      C_LONGITUDE_3446, C_LATITUDE_3446, C_SAMPLE_SITUATION_3446, 
+      TUOLANPEOPLE_3446, RECOVERSEASTATEESTIM_3446, 
+      TIMEZONE_3446, WORKSTARTDEPTH_3446, BALLASTREMOVETIME_3446, 
+      SOUTHNORTHHALFSPHERE_3446, WORKENDDEPTH_3446, 
+      BUFANGLANGHEIGHT_3446, TWICERECOVERBOATTIME_3446, 
+      TWICEBUFANGBOATTIME_3446, RECOVERBOATASSISTANT_3446, 
+      STARTWORKTIME_3446, BUFANGTYPE_3446, ONCERECOVERBOATTIME_3446, 
+      RECOVERDECKTIME_3446, BUFANGMAXWINDSPEED_3446, 
+      PERSONOUTCABINTIME_3446, GUALANASSISTANT_3446, 
+      BUFANGCOMMANDTIME_3446, STARTFILLWATERTIME_3446, 
+      HATCHOPENTIME_3446, C_HANGDUAN_3446, WATERDOWNPICTURES_3446, 
+      HATCHCLOSETIME_3446, ENDWORKTIME_3446, SEAFLOORENVIRONMENTD_3446, 
+      RECOVERLANGHEIGHT_3446, DIVINGDOUTWATERTIME_3446, 
+      DIVINGDENTRYTIME_3446, GUALANPEOPLE_3446, 
+      EASTWESTHALFSPHERE_3446, PERSONCOMEINCABINT_3446, 
+      BUFANGSEASTATEESTIMA_3446, BUFANGAVERAGEWSPEED_3446, 
+      RECOVERMAXWINDSPEED_3446, TUOLANASSISTANT_3446, 
+      BUFANGBOATASSISTANT_3446, RECOVERMAVERAGEWINDS_3446, 
+      FLOATWATERTIME_3446, SPECIALVERSION_3446, 
+      RECOVERBOATDPERSON_3446, ONCEBUFANGBOATTIME_3446, 
+      BUFANGBOATDRIVER_3446)
+    values (#{id,jdbcType=VARCHAR}, #{sysDateTime,jdbcType=TIMESTAMP}, #{sysUsername,jdbcType=VARCHAR}, 
+      #{sysIsDelete,jdbcType=DECIMAL}, #{sysSecrecy,jdbcType=VARCHAR}, #{sysSchema,jdbcType=VARCHAR}, 
+      #{sysOperate,jdbcType=VARCHAR}, #{sysFlow,jdbcType=VARCHAR}, #{cSeaArea3446,jdbcType=VARCHAR}, 
+      #{cWorkTimeLong3446,jdbcType=VARCHAR}, #{cHangci3446,jdbcType=VARCHAR}, #{cSmallBoat3446,jdbcType=VARCHAR}, 
+      #{cCompany3446,jdbcType=VARCHAR}, #{cDivingTask3446,jdbcType=VARCHAR}, #{cUnderWater3446,jdbcType=VARCHAR}, 
+      #{cDepth3446,jdbcType=VARCHAR}, #{cPerson3446,jdbcType=VARCHAR}, #{cWorkContent3446,jdbcType=VARCHAR}, 
+      #{cWaterTimeLong3446,jdbcType=VARCHAR}, #{cDivingTime3446,jdbcType=VARCHAR}, #{tDivingTask480Id,jdbcType=VARCHAR}, 
+      #{tHangci480Id,jdbcType=VARCHAR}, #{cYouxian3446,jdbcType=VARCHAR}, #{cMainDriver3446,jdbcType=VARCHAR}, 
+      #{cZuoxian3446,jdbcType=VARCHAR}, #{cPersonTotalweight3446,jdbcType=FLOAT}, #{cZxCompany3446,jdbcType=VARCHAR}, 
+      #{cLongitude3446,jdbcType=VARCHAR}, #{cLatitude3446,jdbcType=VARCHAR}, #{cSampleSituation3446,jdbcType=VARCHAR}, 
+      #{tuolanpeople3446,jdbcType=VARCHAR}, #{recoverseastateestim3446,jdbcType=VARCHAR}, 
+      #{timezone3446,jdbcType=VARCHAR}, #{workstartdepth3446,jdbcType=VARCHAR}, #{ballastremovetime3446,jdbcType=VARCHAR}, 
+      #{southnorthhalfsphere3446,jdbcType=VARCHAR}, #{workenddepth3446,jdbcType=VARCHAR}, 
+      #{bufanglangheight3446,jdbcType=VARCHAR}, #{twicerecoverboattime3446,jdbcType=VARCHAR}, 
+      #{twicebufangboattime3446,jdbcType=VARCHAR}, #{recoverboatassistant3446,jdbcType=VARCHAR}, 
+      #{startworktime3446,jdbcType=VARCHAR}, #{bufangtype3446,jdbcType=VARCHAR}, #{oncerecoverboattime3446,jdbcType=VARCHAR}, 
+      #{recoverdecktime3446,jdbcType=VARCHAR}, #{bufangmaxwindspeed3446,jdbcType=VARCHAR}, 
+      #{personoutcabintime3446,jdbcType=VARCHAR}, #{gualanassistant3446,jdbcType=VARCHAR}, 
+      #{bufangcommandtime3446,jdbcType=VARCHAR}, #{startfillwatertime3446,jdbcType=VARCHAR}, 
+      #{hatchopentime3446,jdbcType=VARCHAR}, #{cHangduan3446,jdbcType=VARCHAR}, #{waterdownpictures3446,jdbcType=VARCHAR}, 
+      #{hatchclosetime3446,jdbcType=VARCHAR}, #{endworktime3446,jdbcType=VARCHAR}, #{seafloorenvironmentd3446,jdbcType=VARCHAR}, 
+      #{recoverlangheight3446,jdbcType=VARCHAR}, #{divingdoutwatertime3446,jdbcType=VARCHAR}, 
+      #{divingdentrytime3446,jdbcType=VARCHAR}, #{gualanpeople3446,jdbcType=VARCHAR}, 
+      #{eastwesthalfsphere3446,jdbcType=VARCHAR}, #{personcomeincabint3446,jdbcType=VARCHAR}, 
+      #{bufangseastateestima3446,jdbcType=VARCHAR}, #{bufangaveragewspeed3446,jdbcType=VARCHAR}, 
+      #{recovermaxwindspeed3446,jdbcType=VARCHAR}, #{tuolanassistant3446,jdbcType=VARCHAR}, 
+      #{bufangboatassistant3446,jdbcType=VARCHAR}, #{recovermaveragewinds3446,jdbcType=VARCHAR}, 
+      #{floatwatertime3446,jdbcType=VARCHAR}, #{specialversion3446,jdbcType=VARCHAR}, 
+      #{recoverboatdperson3446,jdbcType=VARCHAR}, #{oncebufangboattime3446,jdbcType=VARCHAR}, 
+      #{bufangboatdriver3446,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.orient.weibao.mbg.model.DivingStatisitics">
+    insert into T_DIVING_STATISTICS_480
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        ID,
+      </if>
+      <if test="sysDateTime != null">
+        SYS_DATE_TIME,
+      </if>
+      <if test="sysUsername != null">
+        SYS_USERNAME,
+      </if>
+      <if test="sysIsDelete != null">
+        SYS_IS_DELETE,
+      </if>
+      <if test="sysSecrecy != null">
+        SYS_SECRECY,
+      </if>
+      <if test="sysSchema != null">
+        SYS_SCHEMA,
+      </if>
+      <if test="sysOperate != null">
+        SYS_OPERATE,
+      </if>
+      <if test="sysFlow != null">
+        SYS_FLOW,
+      </if>
+      <if test="cSeaArea3446 != null">
+        C_SEA_AREA_3446,
+      </if>
+      <if test="cWorkTimeLong3446 != null">
+        C_WORK_TIME_LONG_3446,
+      </if>
+      <if test="cHangci3446 != null">
+        C_HANGCI_3446,
+      </if>
+      <if test="cSmallBoat3446 != null">
+        C_SMALL_BOAT_3446,
+      </if>
+      <if test="cCompany3446 != null">
+        C_COMPANY_3446,
+      </if>
+      <if test="cDivingTask3446 != null">
+        C_DIVING_TASK_3446,
+      </if>
+      <if test="cUnderWater3446 != null">
+        C_UNDER_WATER_3446,
+      </if>
+      <if test="cDepth3446 != null">
+        C_DEPTH_3446,
+      </if>
+      <if test="cPerson3446 != null">
+        C_PERSON_3446,
+      </if>
+      <if test="cWorkContent3446 != null">
+        C_WORK_CONTENT_3446,
+      </if>
+      <if test="cWaterTimeLong3446 != null">
+        C_WATER_TIME_LONG_3446,
+      </if>
+      <if test="cDivingTime3446 != null">
+        C_DIVING_TIME_3446,
+      </if>
+      <if test="tDivingTask480Id != null">
+        T_DIVING_TASK_480_ID,
+      </if>
+      <if test="tHangci480Id != null">
+        T_HANGCI_480_ID,
+      </if>
+      <if test="cYouxian3446 != null">
+        C_YOUXIAN_3446,
+      </if>
+      <if test="cMainDriver3446 != null">
+        C_MAIN_DRIVER_3446,
+      </if>
+      <if test="cZuoxian3446 != null">
+        C_ZUOXIAN_3446,
+      </if>
+      <if test="cPersonTotalweight3446 != null">
+        C_PERSON_TOTALWEIGHT_3446,
+      </if>
+      <if test="cZxCompany3446 != null">
+        C_ZX_COMPANY_3446,
+      </if>
+      <if test="cLongitude3446 != null">
+        C_LONGITUDE_3446,
+      </if>
+      <if test="cLatitude3446 != null">
+        C_LATITUDE_3446,
+      </if>
+      <if test="cSampleSituation3446 != null">
+        C_SAMPLE_SITUATION_3446,
+      </if>
+      <if test="tuolanpeople3446 != null">
+        TUOLANPEOPLE_3446,
+      </if>
+      <if test="recoverseastateestim3446 != null">
+        RECOVERSEASTATEESTIM_3446,
+      </if>
+      <if test="timezone3446 != null">
+        TIMEZONE_3446,
+      </if>
+      <if test="workstartdepth3446 != null">
+        WORKSTARTDEPTH_3446,
+      </if>
+      <if test="ballastremovetime3446 != null">
+        BALLASTREMOVETIME_3446,
+      </if>
+      <if test="southnorthhalfsphere3446 != null">
+        SOUTHNORTHHALFSPHERE_3446,
+      </if>
+      <if test="workenddepth3446 != null">
+        WORKENDDEPTH_3446,
+      </if>
+      <if test="bufanglangheight3446 != null">
+        BUFANGLANGHEIGHT_3446,
+      </if>
+      <if test="twicerecoverboattime3446 != null">
+        TWICERECOVERBOATTIME_3446,
+      </if>
+      <if test="twicebufangboattime3446 != null">
+        TWICEBUFANGBOATTIME_3446,
+      </if>
+      <if test="recoverboatassistant3446 != null">
+        RECOVERBOATASSISTANT_3446,
+      </if>
+      <if test="startworktime3446 != null">
+        STARTWORKTIME_3446,
+      </if>
+      <if test="bufangtype3446 != null">
+        BUFANGTYPE_3446,
+      </if>
+      <if test="oncerecoverboattime3446 != null">
+        ONCERECOVERBOATTIME_3446,
+      </if>
+      <if test="recoverdecktime3446 != null">
+        RECOVERDECKTIME_3446,
+      </if>
+      <if test="bufangmaxwindspeed3446 != null">
+        BUFANGMAXWINDSPEED_3446,
+      </if>
+      <if test="personoutcabintime3446 != null">
+        PERSONOUTCABINTIME_3446,
+      </if>
+      <if test="gualanassistant3446 != null">
+        GUALANASSISTANT_3446,
+      </if>
+      <if test="bufangcommandtime3446 != null">
+        BUFANGCOMMANDTIME_3446,
+      </if>
+      <if test="startfillwatertime3446 != null">
+        STARTFILLWATERTIME_3446,
+      </if>
+      <if test="hatchopentime3446 != null">
+        HATCHOPENTIME_3446,
+      </if>
+      <if test="cHangduan3446 != null">
+        C_HANGDUAN_3446,
+      </if>
+      <if test="waterdownpictures3446 != null">
+        WATERDOWNPICTURES_3446,
+      </if>
+      <if test="hatchclosetime3446 != null">
+        HATCHCLOSETIME_3446,
+      </if>
+      <if test="endworktime3446 != null">
+        ENDWORKTIME_3446,
+      </if>
+      <if test="seafloorenvironmentd3446 != null">
+        SEAFLOORENVIRONMENTD_3446,
+      </if>
+      <if test="recoverlangheight3446 != null">
+        RECOVERLANGHEIGHT_3446,
+      </if>
+      <if test="divingdoutwatertime3446 != null">
+        DIVINGDOUTWATERTIME_3446,
+      </if>
+      <if test="divingdentrytime3446 != null">
+        DIVINGDENTRYTIME_3446,
+      </if>
+      <if test="gualanpeople3446 != null">
+        GUALANPEOPLE_3446,
+      </if>
+      <if test="eastwesthalfsphere3446 != null">
+        EASTWESTHALFSPHERE_3446,
+      </if>
+      <if test="personcomeincabint3446 != null">
+        PERSONCOMEINCABINT_3446,
+      </if>
+      <if test="bufangseastateestima3446 != null">
+        BUFANGSEASTATEESTIMA_3446,
+      </if>
+      <if test="bufangaveragewspeed3446 != null">
+        BUFANGAVERAGEWSPEED_3446,
+      </if>
+      <if test="recovermaxwindspeed3446 != null">
+        RECOVERMAXWINDSPEED_3446,
+      </if>
+      <if test="tuolanassistant3446 != null">
+        TUOLANASSISTANT_3446,
+      </if>
+      <if test="bufangboatassistant3446 != null">
+        BUFANGBOATASSISTANT_3446,
+      </if>
+      <if test="recovermaveragewinds3446 != null">
+        RECOVERMAVERAGEWINDS_3446,
+      </if>
+      <if test="floatwatertime3446 != null">
+        FLOATWATERTIME_3446,
+      </if>
+      <if test="specialversion3446 != null">
+        SPECIALVERSION_3446,
+      </if>
+      <if test="recoverboatdperson3446 != null">
+        RECOVERBOATDPERSON_3446,
+      </if>
+      <if test="oncebufangboattime3446 != null">
+        ONCEBUFANGBOATTIME_3446,
+      </if>
+      <if test="bufangboatdriver3446 != null">
+        BUFANGBOATDRIVER_3446,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="sysDateTime != null">
+        #{sysDateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sysUsername != null">
+        #{sysUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="sysIsDelete != null">
+        #{sysIsDelete,jdbcType=DECIMAL},
+      </if>
+      <if test="sysSecrecy != null">
+        #{sysSecrecy,jdbcType=VARCHAR},
+      </if>
+      <if test="sysSchema != null">
+        #{sysSchema,jdbcType=VARCHAR},
+      </if>
+      <if test="sysOperate != null">
+        #{sysOperate,jdbcType=VARCHAR},
+      </if>
+      <if test="sysFlow != null">
+        #{sysFlow,jdbcType=VARCHAR},
+      </if>
+      <if test="cSeaArea3446 != null">
+        #{cSeaArea3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cWorkTimeLong3446 != null">
+        #{cWorkTimeLong3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cHangci3446 != null">
+        #{cHangci3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cSmallBoat3446 != null">
+        #{cSmallBoat3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cCompany3446 != null">
+        #{cCompany3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cDivingTask3446 != null">
+        #{cDivingTask3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cUnderWater3446 != null">
+        #{cUnderWater3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cDepth3446 != null">
+        #{cDepth3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cPerson3446 != null">
+        #{cPerson3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cWorkContent3446 != null">
+        #{cWorkContent3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cWaterTimeLong3446 != null">
+        #{cWaterTimeLong3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cDivingTime3446 != null">
+        #{cDivingTime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="tDivingTask480Id != null">
+        #{tDivingTask480Id,jdbcType=VARCHAR},
+      </if>
+      <if test="tHangci480Id != null">
+        #{tHangci480Id,jdbcType=VARCHAR},
+      </if>
+      <if test="cYouxian3446 != null">
+        #{cYouxian3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cMainDriver3446 != null">
+        #{cMainDriver3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cZuoxian3446 != null">
+        #{cZuoxian3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cPersonTotalweight3446 != null">
+        #{cPersonTotalweight3446,jdbcType=FLOAT},
+      </if>
+      <if test="cZxCompany3446 != null">
+        #{cZxCompany3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cLongitude3446 != null">
+        #{cLongitude3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cLatitude3446 != null">
+        #{cLatitude3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cSampleSituation3446 != null">
+        #{cSampleSituation3446,jdbcType=VARCHAR},
+      </if>
+      <if test="tuolanpeople3446 != null">
+        #{tuolanpeople3446,jdbcType=VARCHAR},
+      </if>
+      <if test="recoverseastateestim3446 != null">
+        #{recoverseastateestim3446,jdbcType=VARCHAR},
+      </if>
+      <if test="timezone3446 != null">
+        #{timezone3446,jdbcType=VARCHAR},
+      </if>
+      <if test="workstartdepth3446 != null">
+        #{workstartdepth3446,jdbcType=VARCHAR},
+      </if>
+      <if test="ballastremovetime3446 != null">
+        #{ballastremovetime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="southnorthhalfsphere3446 != null">
+        #{southnorthhalfsphere3446,jdbcType=VARCHAR},
+      </if>
+      <if test="workenddepth3446 != null">
+        #{workenddepth3446,jdbcType=VARCHAR},
+      </if>
+      <if test="bufanglangheight3446 != null">
+        #{bufanglangheight3446,jdbcType=VARCHAR},
+      </if>
+      <if test="twicerecoverboattime3446 != null">
+        #{twicerecoverboattime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="twicebufangboattime3446 != null">
+        #{twicebufangboattime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="recoverboatassistant3446 != null">
+        #{recoverboatassistant3446,jdbcType=VARCHAR},
+      </if>
+      <if test="startworktime3446 != null">
+        #{startworktime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="bufangtype3446 != null">
+        #{bufangtype3446,jdbcType=VARCHAR},
+      </if>
+      <if test="oncerecoverboattime3446 != null">
+        #{oncerecoverboattime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="recoverdecktime3446 != null">
+        #{recoverdecktime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="bufangmaxwindspeed3446 != null">
+        #{bufangmaxwindspeed3446,jdbcType=VARCHAR},
+      </if>
+      <if test="personoutcabintime3446 != null">
+        #{personoutcabintime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="gualanassistant3446 != null">
+        #{gualanassistant3446,jdbcType=VARCHAR},
+      </if>
+      <if test="bufangcommandtime3446 != null">
+        #{bufangcommandtime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="startfillwatertime3446 != null">
+        #{startfillwatertime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="hatchopentime3446 != null">
+        #{hatchopentime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cHangduan3446 != null">
+        #{cHangduan3446,jdbcType=VARCHAR},
+      </if>
+      <if test="waterdownpictures3446 != null">
+        #{waterdownpictures3446,jdbcType=VARCHAR},
+      </if>
+      <if test="hatchclosetime3446 != null">
+        #{hatchclosetime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="endworktime3446 != null">
+        #{endworktime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="seafloorenvironmentd3446 != null">
+        #{seafloorenvironmentd3446,jdbcType=VARCHAR},
+      </if>
+      <if test="recoverlangheight3446 != null">
+        #{recoverlangheight3446,jdbcType=VARCHAR},
+      </if>
+      <if test="divingdoutwatertime3446 != null">
+        #{divingdoutwatertime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="divingdentrytime3446 != null">
+        #{divingdentrytime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="gualanpeople3446 != null">
+        #{gualanpeople3446,jdbcType=VARCHAR},
+      </if>
+      <if test="eastwesthalfsphere3446 != null">
+        #{eastwesthalfsphere3446,jdbcType=VARCHAR},
+      </if>
+      <if test="personcomeincabint3446 != null">
+        #{personcomeincabint3446,jdbcType=VARCHAR},
+      </if>
+      <if test="bufangseastateestima3446 != null">
+        #{bufangseastateestima3446,jdbcType=VARCHAR},
+      </if>
+      <if test="bufangaveragewspeed3446 != null">
+        #{bufangaveragewspeed3446,jdbcType=VARCHAR},
+      </if>
+      <if test="recovermaxwindspeed3446 != null">
+        #{recovermaxwindspeed3446,jdbcType=VARCHAR},
+      </if>
+      <if test="tuolanassistant3446 != null">
+        #{tuolanassistant3446,jdbcType=VARCHAR},
+      </if>
+      <if test="bufangboatassistant3446 != null">
+        #{bufangboatassistant3446,jdbcType=VARCHAR},
+      </if>
+      <if test="recovermaveragewinds3446 != null">
+        #{recovermaveragewinds3446,jdbcType=VARCHAR},
+      </if>
+      <if test="floatwatertime3446 != null">
+        #{floatwatertime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="specialversion3446 != null">
+        #{specialversion3446,jdbcType=VARCHAR},
+      </if>
+      <if test="recoverboatdperson3446 != null">
+        #{recoverboatdperson3446,jdbcType=VARCHAR},
+      </if>
+      <if test="oncebufangboattime3446 != null">
+        #{oncebufangboattime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="bufangboatdriver3446 != null">
+        #{bufangboatdriver3446,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.orient.weibao.mbg.model.DivingStatisiticsExample" resultType="java.lang.Long">
+    select count(*) from T_DIVING_STATISTICS_480
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update T_DIVING_STATISTICS_480
+    <set>
+      <if test="record.id != null">
+        ID = #{record.id,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sysDateTime != null">
+        SYS_DATE_TIME = #{record.sysDateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.sysUsername != null">
+        SYS_USERNAME = #{record.sysUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sysIsDelete != null">
+        SYS_IS_DELETE = #{record.sysIsDelete,jdbcType=DECIMAL},
+      </if>
+      <if test="record.sysSecrecy != null">
+        SYS_SECRECY = #{record.sysSecrecy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sysSchema != null">
+        SYS_SCHEMA = #{record.sysSchema,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sysOperate != null">
+        SYS_OPERATE = #{record.sysOperate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sysFlow != null">
+        SYS_FLOW = #{record.sysFlow,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cSeaArea3446 != null">
+        C_SEA_AREA_3446 = #{record.cSeaArea3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cWorkTimeLong3446 != null">
+        C_WORK_TIME_LONG_3446 = #{record.cWorkTimeLong3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cHangci3446 != null">
+        C_HANGCI_3446 = #{record.cHangci3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cSmallBoat3446 != null">
+        C_SMALL_BOAT_3446 = #{record.cSmallBoat3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cCompany3446 != null">
+        C_COMPANY_3446 = #{record.cCompany3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cDivingTask3446 != null">
+        C_DIVING_TASK_3446 = #{record.cDivingTask3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cUnderWater3446 != null">
+        C_UNDER_WATER_3446 = #{record.cUnderWater3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cDepth3446 != null">
+        C_DEPTH_3446 = #{record.cDepth3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cPerson3446 != null">
+        C_PERSON_3446 = #{record.cPerson3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cWorkContent3446 != null">
+        C_WORK_CONTENT_3446 = #{record.cWorkContent3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cWaterTimeLong3446 != null">
+        C_WATER_TIME_LONG_3446 = #{record.cWaterTimeLong3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cDivingTime3446 != null">
+        C_DIVING_TIME_3446 = #{record.cDivingTime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tDivingTask480Id != null">
+        T_DIVING_TASK_480_ID = #{record.tDivingTask480Id,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tHangci480Id != null">
+        T_HANGCI_480_ID = #{record.tHangci480Id,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cYouxian3446 != null">
+        C_YOUXIAN_3446 = #{record.cYouxian3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cMainDriver3446 != null">
+        C_MAIN_DRIVER_3446 = #{record.cMainDriver3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cZuoxian3446 != null">
+        C_ZUOXIAN_3446 = #{record.cZuoxian3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cPersonTotalweight3446 != null">
+        C_PERSON_TOTALWEIGHT_3446 = #{record.cPersonTotalweight3446,jdbcType=FLOAT},
+      </if>
+      <if test="record.cZxCompany3446 != null">
+        C_ZX_COMPANY_3446 = #{record.cZxCompany3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cLongitude3446 != null">
+        C_LONGITUDE_3446 = #{record.cLongitude3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cLatitude3446 != null">
+        C_LATITUDE_3446 = #{record.cLatitude3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cSampleSituation3446 != null">
+        C_SAMPLE_SITUATION_3446 = #{record.cSampleSituation3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tuolanpeople3446 != null">
+        TUOLANPEOPLE_3446 = #{record.tuolanpeople3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.recoverseastateestim3446 != null">
+        RECOVERSEASTATEESTIM_3446 = #{record.recoverseastateestim3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.timezone3446 != null">
+        TIMEZONE_3446 = #{record.timezone3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.workstartdepth3446 != null">
+        WORKSTARTDEPTH_3446 = #{record.workstartdepth3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.ballastremovetime3446 != null">
+        BALLASTREMOVETIME_3446 = #{record.ballastremovetime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.southnorthhalfsphere3446 != null">
+        SOUTHNORTHHALFSPHERE_3446 = #{record.southnorthhalfsphere3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.workenddepth3446 != null">
+        WORKENDDEPTH_3446 = #{record.workenddepth3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.bufanglangheight3446 != null">
+        BUFANGLANGHEIGHT_3446 = #{record.bufanglangheight3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.twicerecoverboattime3446 != null">
+        TWICERECOVERBOATTIME_3446 = #{record.twicerecoverboattime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.twicebufangboattime3446 != null">
+        TWICEBUFANGBOATTIME_3446 = #{record.twicebufangboattime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.recoverboatassistant3446 != null">
+        RECOVERBOATASSISTANT_3446 = #{record.recoverboatassistant3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.startworktime3446 != null">
+        STARTWORKTIME_3446 = #{record.startworktime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.bufangtype3446 != null">
+        BUFANGTYPE_3446 = #{record.bufangtype3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.oncerecoverboattime3446 != null">
+        ONCERECOVERBOATTIME_3446 = #{record.oncerecoverboattime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.recoverdecktime3446 != null">
+        RECOVERDECKTIME_3446 = #{record.recoverdecktime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.bufangmaxwindspeed3446 != null">
+        BUFANGMAXWINDSPEED_3446 = #{record.bufangmaxwindspeed3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.personoutcabintime3446 != null">
+        PERSONOUTCABINTIME_3446 = #{record.personoutcabintime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.gualanassistant3446 != null">
+        GUALANASSISTANT_3446 = #{record.gualanassistant3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.bufangcommandtime3446 != null">
+        BUFANGCOMMANDTIME_3446 = #{record.bufangcommandtime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.startfillwatertime3446 != null">
+        STARTFILLWATERTIME_3446 = #{record.startfillwatertime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.hatchopentime3446 != null">
+        HATCHOPENTIME_3446 = #{record.hatchopentime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cHangduan3446 != null">
+        C_HANGDUAN_3446 = #{record.cHangduan3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.waterdownpictures3446 != null">
+        WATERDOWNPICTURES_3446 = #{record.waterdownpictures3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.hatchclosetime3446 != null">
+        HATCHCLOSETIME_3446 = #{record.hatchclosetime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.endworktime3446 != null">
+        ENDWORKTIME_3446 = #{record.endworktime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.seafloorenvironmentd3446 != null">
+        SEAFLOORENVIRONMENTD_3446 = #{record.seafloorenvironmentd3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.recoverlangheight3446 != null">
+        RECOVERLANGHEIGHT_3446 = #{record.recoverlangheight3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.divingdoutwatertime3446 != null">
+        DIVINGDOUTWATERTIME_3446 = #{record.divingdoutwatertime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.divingdentrytime3446 != null">
+        DIVINGDENTRYTIME_3446 = #{record.divingdentrytime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.gualanpeople3446 != null">
+        GUALANPEOPLE_3446 = #{record.gualanpeople3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.eastwesthalfsphere3446 != null">
+        EASTWESTHALFSPHERE_3446 = #{record.eastwesthalfsphere3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.personcomeincabint3446 != null">
+        PERSONCOMEINCABINT_3446 = #{record.personcomeincabint3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.bufangseastateestima3446 != null">
+        BUFANGSEASTATEESTIMA_3446 = #{record.bufangseastateestima3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.bufangaveragewspeed3446 != null">
+        BUFANGAVERAGEWSPEED_3446 = #{record.bufangaveragewspeed3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.recovermaxwindspeed3446 != null">
+        RECOVERMAXWINDSPEED_3446 = #{record.recovermaxwindspeed3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tuolanassistant3446 != null">
+        TUOLANASSISTANT_3446 = #{record.tuolanassistant3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.bufangboatassistant3446 != null">
+        BUFANGBOATASSISTANT_3446 = #{record.bufangboatassistant3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.recovermaveragewinds3446 != null">
+        RECOVERMAVERAGEWINDS_3446 = #{record.recovermaveragewinds3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.floatwatertime3446 != null">
+        FLOATWATERTIME_3446 = #{record.floatwatertime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.specialversion3446 != null">
+        SPECIALVERSION_3446 = #{record.specialversion3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.recoverboatdperson3446 != null">
+        RECOVERBOATDPERSON_3446 = #{record.recoverboatdperson3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.oncebufangboattime3446 != null">
+        ONCEBUFANGBOATTIME_3446 = #{record.oncebufangboattime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="record.bufangboatdriver3446 != null">
+        BUFANGBOATDRIVER_3446 = #{record.bufangboatdriver3446,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update T_DIVING_STATISTICS_480
+    set ID = #{record.id,jdbcType=VARCHAR},
+      SYS_DATE_TIME = #{record.sysDateTime,jdbcType=TIMESTAMP},
+      SYS_USERNAME = #{record.sysUsername,jdbcType=VARCHAR},
+      SYS_IS_DELETE = #{record.sysIsDelete,jdbcType=DECIMAL},
+      SYS_SECRECY = #{record.sysSecrecy,jdbcType=VARCHAR},
+      SYS_SCHEMA = #{record.sysSchema,jdbcType=VARCHAR},
+      SYS_OPERATE = #{record.sysOperate,jdbcType=VARCHAR},
+      SYS_FLOW = #{record.sysFlow,jdbcType=VARCHAR},
+      C_SEA_AREA_3446 = #{record.cSeaArea3446,jdbcType=VARCHAR},
+      C_WORK_TIME_LONG_3446 = #{record.cWorkTimeLong3446,jdbcType=VARCHAR},
+      C_HANGCI_3446 = #{record.cHangci3446,jdbcType=VARCHAR},
+      C_SMALL_BOAT_3446 = #{record.cSmallBoat3446,jdbcType=VARCHAR},
+      C_COMPANY_3446 = #{record.cCompany3446,jdbcType=VARCHAR},
+      C_DIVING_TASK_3446 = #{record.cDivingTask3446,jdbcType=VARCHAR},
+      C_UNDER_WATER_3446 = #{record.cUnderWater3446,jdbcType=VARCHAR},
+      C_DEPTH_3446 = #{record.cDepth3446,jdbcType=VARCHAR},
+      C_PERSON_3446 = #{record.cPerson3446,jdbcType=VARCHAR},
+      C_WORK_CONTENT_3446 = #{record.cWorkContent3446,jdbcType=VARCHAR},
+      C_WATER_TIME_LONG_3446 = #{record.cWaterTimeLong3446,jdbcType=VARCHAR},
+      C_DIVING_TIME_3446 = #{record.cDivingTime3446,jdbcType=VARCHAR},
+      T_DIVING_TASK_480_ID = #{record.tDivingTask480Id,jdbcType=VARCHAR},
+      T_HANGCI_480_ID = #{record.tHangci480Id,jdbcType=VARCHAR},
+      C_YOUXIAN_3446 = #{record.cYouxian3446,jdbcType=VARCHAR},
+      C_MAIN_DRIVER_3446 = #{record.cMainDriver3446,jdbcType=VARCHAR},
+      C_ZUOXIAN_3446 = #{record.cZuoxian3446,jdbcType=VARCHAR},
+      C_PERSON_TOTALWEIGHT_3446 = #{record.cPersonTotalweight3446,jdbcType=FLOAT},
+      C_ZX_COMPANY_3446 = #{record.cZxCompany3446,jdbcType=VARCHAR},
+      C_LONGITUDE_3446 = #{record.cLongitude3446,jdbcType=VARCHAR},
+      C_LATITUDE_3446 = #{record.cLatitude3446,jdbcType=VARCHAR},
+      C_SAMPLE_SITUATION_3446 = #{record.cSampleSituation3446,jdbcType=VARCHAR},
+      TUOLANPEOPLE_3446 = #{record.tuolanpeople3446,jdbcType=VARCHAR},
+      RECOVERSEASTATEESTIM_3446 = #{record.recoverseastateestim3446,jdbcType=VARCHAR},
+      TIMEZONE_3446 = #{record.timezone3446,jdbcType=VARCHAR},
+      WORKSTARTDEPTH_3446 = #{record.workstartdepth3446,jdbcType=VARCHAR},
+      BALLASTREMOVETIME_3446 = #{record.ballastremovetime3446,jdbcType=VARCHAR},
+      SOUTHNORTHHALFSPHERE_3446 = #{record.southnorthhalfsphere3446,jdbcType=VARCHAR},
+      WORKENDDEPTH_3446 = #{record.workenddepth3446,jdbcType=VARCHAR},
+      BUFANGLANGHEIGHT_3446 = #{record.bufanglangheight3446,jdbcType=VARCHAR},
+      TWICERECOVERBOATTIME_3446 = #{record.twicerecoverboattime3446,jdbcType=VARCHAR},
+      TWICEBUFANGBOATTIME_3446 = #{record.twicebufangboattime3446,jdbcType=VARCHAR},
+      RECOVERBOATASSISTANT_3446 = #{record.recoverboatassistant3446,jdbcType=VARCHAR},
+      STARTWORKTIME_3446 = #{record.startworktime3446,jdbcType=VARCHAR},
+      BUFANGTYPE_3446 = #{record.bufangtype3446,jdbcType=VARCHAR},
+      ONCERECOVERBOATTIME_3446 = #{record.oncerecoverboattime3446,jdbcType=VARCHAR},
+      RECOVERDECKTIME_3446 = #{record.recoverdecktime3446,jdbcType=VARCHAR},
+      BUFANGMAXWINDSPEED_3446 = #{record.bufangmaxwindspeed3446,jdbcType=VARCHAR},
+      PERSONOUTCABINTIME_3446 = #{record.personoutcabintime3446,jdbcType=VARCHAR},
+      GUALANASSISTANT_3446 = #{record.gualanassistant3446,jdbcType=VARCHAR},
+      BUFANGCOMMANDTIME_3446 = #{record.bufangcommandtime3446,jdbcType=VARCHAR},
+      STARTFILLWATERTIME_3446 = #{record.startfillwatertime3446,jdbcType=VARCHAR},
+      HATCHOPENTIME_3446 = #{record.hatchopentime3446,jdbcType=VARCHAR},
+      C_HANGDUAN_3446 = #{record.cHangduan3446,jdbcType=VARCHAR},
+      WATERDOWNPICTURES_3446 = #{record.waterdownpictures3446,jdbcType=VARCHAR},
+      HATCHCLOSETIME_3446 = #{record.hatchclosetime3446,jdbcType=VARCHAR},
+      ENDWORKTIME_3446 = #{record.endworktime3446,jdbcType=VARCHAR},
+      SEAFLOORENVIRONMENTD_3446 = #{record.seafloorenvironmentd3446,jdbcType=VARCHAR},
+      RECOVERLANGHEIGHT_3446 = #{record.recoverlangheight3446,jdbcType=VARCHAR},
+      DIVINGDOUTWATERTIME_3446 = #{record.divingdoutwatertime3446,jdbcType=VARCHAR},
+      DIVINGDENTRYTIME_3446 = #{record.divingdentrytime3446,jdbcType=VARCHAR},
+      GUALANPEOPLE_3446 = #{record.gualanpeople3446,jdbcType=VARCHAR},
+      EASTWESTHALFSPHERE_3446 = #{record.eastwesthalfsphere3446,jdbcType=VARCHAR},
+      PERSONCOMEINCABINT_3446 = #{record.personcomeincabint3446,jdbcType=VARCHAR},
+      BUFANGSEASTATEESTIMA_3446 = #{record.bufangseastateestima3446,jdbcType=VARCHAR},
+      BUFANGAVERAGEWSPEED_3446 = #{record.bufangaveragewspeed3446,jdbcType=VARCHAR},
+      RECOVERMAXWINDSPEED_3446 = #{record.recovermaxwindspeed3446,jdbcType=VARCHAR},
+      TUOLANASSISTANT_3446 = #{record.tuolanassistant3446,jdbcType=VARCHAR},
+      BUFANGBOATASSISTANT_3446 = #{record.bufangboatassistant3446,jdbcType=VARCHAR},
+      RECOVERMAVERAGEWINDS_3446 = #{record.recovermaveragewinds3446,jdbcType=VARCHAR},
+      FLOATWATERTIME_3446 = #{record.floatwatertime3446,jdbcType=VARCHAR},
+      SPECIALVERSION_3446 = #{record.specialversion3446,jdbcType=VARCHAR},
+      RECOVERBOATDPERSON_3446 = #{record.recoverboatdperson3446,jdbcType=VARCHAR},
+      ONCEBUFANGBOATTIME_3446 = #{record.oncebufangboattime3446,jdbcType=VARCHAR},
+      BUFANGBOATDRIVER_3446 = #{record.bufangboatdriver3446,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.orient.weibao.mbg.model.DivingStatisitics">
+    update T_DIVING_STATISTICS_480
+    <set>
+      <if test="sysDateTime != null">
+        SYS_DATE_TIME = #{sysDateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sysUsername != null">
+        SYS_USERNAME = #{sysUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="sysIsDelete != null">
+        SYS_IS_DELETE = #{sysIsDelete,jdbcType=DECIMAL},
+      </if>
+      <if test="sysSecrecy != null">
+        SYS_SECRECY = #{sysSecrecy,jdbcType=VARCHAR},
+      </if>
+      <if test="sysSchema != null">
+        SYS_SCHEMA = #{sysSchema,jdbcType=VARCHAR},
+      </if>
+      <if test="sysOperate != null">
+        SYS_OPERATE = #{sysOperate,jdbcType=VARCHAR},
+      </if>
+      <if test="sysFlow != null">
+        SYS_FLOW = #{sysFlow,jdbcType=VARCHAR},
+      </if>
+      <if test="cSeaArea3446 != null">
+        C_SEA_AREA_3446 = #{cSeaArea3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cWorkTimeLong3446 != null">
+        C_WORK_TIME_LONG_3446 = #{cWorkTimeLong3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cHangci3446 != null">
+        C_HANGCI_3446 = #{cHangci3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cSmallBoat3446 != null">
+        C_SMALL_BOAT_3446 = #{cSmallBoat3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cCompany3446 != null">
+        C_COMPANY_3446 = #{cCompany3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cDivingTask3446 != null">
+        C_DIVING_TASK_3446 = #{cDivingTask3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cUnderWater3446 != null">
+        C_UNDER_WATER_3446 = #{cUnderWater3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cDepth3446 != null">
+        C_DEPTH_3446 = #{cDepth3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cPerson3446 != null">
+        C_PERSON_3446 = #{cPerson3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cWorkContent3446 != null">
+        C_WORK_CONTENT_3446 = #{cWorkContent3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cWaterTimeLong3446 != null">
+        C_WATER_TIME_LONG_3446 = #{cWaterTimeLong3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cDivingTime3446 != null">
+        C_DIVING_TIME_3446 = #{cDivingTime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="tDivingTask480Id != null">
+        T_DIVING_TASK_480_ID = #{tDivingTask480Id,jdbcType=VARCHAR},
+      </if>
+      <if test="tHangci480Id != null">
+        T_HANGCI_480_ID = #{tHangci480Id,jdbcType=VARCHAR},
+      </if>
+      <if test="cYouxian3446 != null">
+        C_YOUXIAN_3446 = #{cYouxian3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cMainDriver3446 != null">
+        C_MAIN_DRIVER_3446 = #{cMainDriver3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cZuoxian3446 != null">
+        C_ZUOXIAN_3446 = #{cZuoxian3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cPersonTotalweight3446 != null">
+        C_PERSON_TOTALWEIGHT_3446 = #{cPersonTotalweight3446,jdbcType=FLOAT},
+      </if>
+      <if test="cZxCompany3446 != null">
+        C_ZX_COMPANY_3446 = #{cZxCompany3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cLongitude3446 != null">
+        C_LONGITUDE_3446 = #{cLongitude3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cLatitude3446 != null">
+        C_LATITUDE_3446 = #{cLatitude3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cSampleSituation3446 != null">
+        C_SAMPLE_SITUATION_3446 = #{cSampleSituation3446,jdbcType=VARCHAR},
+      </if>
+      <if test="tuolanpeople3446 != null">
+        TUOLANPEOPLE_3446 = #{tuolanpeople3446,jdbcType=VARCHAR},
+      </if>
+      <if test="recoverseastateestim3446 != null">
+        RECOVERSEASTATEESTIM_3446 = #{recoverseastateestim3446,jdbcType=VARCHAR},
+      </if>
+      <if test="timezone3446 != null">
+        TIMEZONE_3446 = #{timezone3446,jdbcType=VARCHAR},
+      </if>
+      <if test="workstartdepth3446 != null">
+        WORKSTARTDEPTH_3446 = #{workstartdepth3446,jdbcType=VARCHAR},
+      </if>
+      <if test="ballastremovetime3446 != null">
+        BALLASTREMOVETIME_3446 = #{ballastremovetime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="southnorthhalfsphere3446 != null">
+        SOUTHNORTHHALFSPHERE_3446 = #{southnorthhalfsphere3446,jdbcType=VARCHAR},
+      </if>
+      <if test="workenddepth3446 != null">
+        WORKENDDEPTH_3446 = #{workenddepth3446,jdbcType=VARCHAR},
+      </if>
+      <if test="bufanglangheight3446 != null">
+        BUFANGLANGHEIGHT_3446 = #{bufanglangheight3446,jdbcType=VARCHAR},
+      </if>
+      <if test="twicerecoverboattime3446 != null">
+        TWICERECOVERBOATTIME_3446 = #{twicerecoverboattime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="twicebufangboattime3446 != null">
+        TWICEBUFANGBOATTIME_3446 = #{twicebufangboattime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="recoverboatassistant3446 != null">
+        RECOVERBOATASSISTANT_3446 = #{recoverboatassistant3446,jdbcType=VARCHAR},
+      </if>
+      <if test="startworktime3446 != null">
+        STARTWORKTIME_3446 = #{startworktime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="bufangtype3446 != null">
+        BUFANGTYPE_3446 = #{bufangtype3446,jdbcType=VARCHAR},
+      </if>
+      <if test="oncerecoverboattime3446 != null">
+        ONCERECOVERBOATTIME_3446 = #{oncerecoverboattime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="recoverdecktime3446 != null">
+        RECOVERDECKTIME_3446 = #{recoverdecktime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="bufangmaxwindspeed3446 != null">
+        BUFANGMAXWINDSPEED_3446 = #{bufangmaxwindspeed3446,jdbcType=VARCHAR},
+      </if>
+      <if test="personoutcabintime3446 != null">
+        PERSONOUTCABINTIME_3446 = #{personoutcabintime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="gualanassistant3446 != null">
+        GUALANASSISTANT_3446 = #{gualanassistant3446,jdbcType=VARCHAR},
+      </if>
+      <if test="bufangcommandtime3446 != null">
+        BUFANGCOMMANDTIME_3446 = #{bufangcommandtime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="startfillwatertime3446 != null">
+        STARTFILLWATERTIME_3446 = #{startfillwatertime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="hatchopentime3446 != null">
+        HATCHOPENTIME_3446 = #{hatchopentime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="cHangduan3446 != null">
+        C_HANGDUAN_3446 = #{cHangduan3446,jdbcType=VARCHAR},
+      </if>
+      <if test="waterdownpictures3446 != null">
+        WATERDOWNPICTURES_3446 = #{waterdownpictures3446,jdbcType=VARCHAR},
+      </if>
+      <if test="hatchclosetime3446 != null">
+        HATCHCLOSETIME_3446 = #{hatchclosetime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="endworktime3446 != null">
+        ENDWORKTIME_3446 = #{endworktime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="seafloorenvironmentd3446 != null">
+        SEAFLOORENVIRONMENTD_3446 = #{seafloorenvironmentd3446,jdbcType=VARCHAR},
+      </if>
+      <if test="recoverlangheight3446 != null">
+        RECOVERLANGHEIGHT_3446 = #{recoverlangheight3446,jdbcType=VARCHAR},
+      </if>
+      <if test="divingdoutwatertime3446 != null">
+        DIVINGDOUTWATERTIME_3446 = #{divingdoutwatertime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="divingdentrytime3446 != null">
+        DIVINGDENTRYTIME_3446 = #{divingdentrytime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="gualanpeople3446 != null">
+        GUALANPEOPLE_3446 = #{gualanpeople3446,jdbcType=VARCHAR},
+      </if>
+      <if test="eastwesthalfsphere3446 != null">
+        EASTWESTHALFSPHERE_3446 = #{eastwesthalfsphere3446,jdbcType=VARCHAR},
+      </if>
+      <if test="personcomeincabint3446 != null">
+        PERSONCOMEINCABINT_3446 = #{personcomeincabint3446,jdbcType=VARCHAR},
+      </if>
+      <if test="bufangseastateestima3446 != null">
+        BUFANGSEASTATEESTIMA_3446 = #{bufangseastateestima3446,jdbcType=VARCHAR},
+      </if>
+      <if test="bufangaveragewspeed3446 != null">
+        BUFANGAVERAGEWSPEED_3446 = #{bufangaveragewspeed3446,jdbcType=VARCHAR},
+      </if>
+      <if test="recovermaxwindspeed3446 != null">
+        RECOVERMAXWINDSPEED_3446 = #{recovermaxwindspeed3446,jdbcType=VARCHAR},
+      </if>
+      <if test="tuolanassistant3446 != null">
+        TUOLANASSISTANT_3446 = #{tuolanassistant3446,jdbcType=VARCHAR},
+      </if>
+      <if test="bufangboatassistant3446 != null">
+        BUFANGBOATASSISTANT_3446 = #{bufangboatassistant3446,jdbcType=VARCHAR},
+      </if>
+      <if test="recovermaveragewinds3446 != null">
+        RECOVERMAVERAGEWINDS_3446 = #{recovermaveragewinds3446,jdbcType=VARCHAR},
+      </if>
+      <if test="floatwatertime3446 != null">
+        FLOATWATERTIME_3446 = #{floatwatertime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="specialversion3446 != null">
+        SPECIALVERSION_3446 = #{specialversion3446,jdbcType=VARCHAR},
+      </if>
+      <if test="recoverboatdperson3446 != null">
+        RECOVERBOATDPERSON_3446 = #{recoverboatdperson3446,jdbcType=VARCHAR},
+      </if>
+      <if test="oncebufangboattime3446 != null">
+        ONCEBUFANGBOATTIME_3446 = #{oncebufangboattime3446,jdbcType=VARCHAR},
+      </if>
+      <if test="bufangboatdriver3446 != null">
+        BUFANGBOATDRIVER_3446 = #{bufangboatdriver3446,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.orient.weibao.mbg.model.DivingStatisitics">
+    update T_DIVING_STATISTICS_480
+    set SYS_DATE_TIME = #{sysDateTime,jdbcType=TIMESTAMP},
+      SYS_USERNAME = #{sysUsername,jdbcType=VARCHAR},
+      SYS_IS_DELETE = #{sysIsDelete,jdbcType=DECIMAL},
+      SYS_SECRECY = #{sysSecrecy,jdbcType=VARCHAR},
+      SYS_SCHEMA = #{sysSchema,jdbcType=VARCHAR},
+      SYS_OPERATE = #{sysOperate,jdbcType=VARCHAR},
+      SYS_FLOW = #{sysFlow,jdbcType=VARCHAR},
+      C_SEA_AREA_3446 = #{cSeaArea3446,jdbcType=VARCHAR},
+      C_WORK_TIME_LONG_3446 = #{cWorkTimeLong3446,jdbcType=VARCHAR},
+      C_HANGCI_3446 = #{cHangci3446,jdbcType=VARCHAR},
+      C_SMALL_BOAT_3446 = #{cSmallBoat3446,jdbcType=VARCHAR},
+      C_COMPANY_3446 = #{cCompany3446,jdbcType=VARCHAR},
+      C_DIVING_TASK_3446 = #{cDivingTask3446,jdbcType=VARCHAR},
+      C_UNDER_WATER_3446 = #{cUnderWater3446,jdbcType=VARCHAR},
+      C_DEPTH_3446 = #{cDepth3446,jdbcType=VARCHAR},
+      C_PERSON_3446 = #{cPerson3446,jdbcType=VARCHAR},
+      C_WORK_CONTENT_3446 = #{cWorkContent3446,jdbcType=VARCHAR},
+      C_WATER_TIME_LONG_3446 = #{cWaterTimeLong3446,jdbcType=VARCHAR},
+      C_DIVING_TIME_3446 = #{cDivingTime3446,jdbcType=VARCHAR},
+      T_DIVING_TASK_480_ID = #{tDivingTask480Id,jdbcType=VARCHAR},
+      T_HANGCI_480_ID = #{tHangci480Id,jdbcType=VARCHAR},
+      C_YOUXIAN_3446 = #{cYouxian3446,jdbcType=VARCHAR},
+      C_MAIN_DRIVER_3446 = #{cMainDriver3446,jdbcType=VARCHAR},
+      C_ZUOXIAN_3446 = #{cZuoxian3446,jdbcType=VARCHAR},
+      C_PERSON_TOTALWEIGHT_3446 = #{cPersonTotalweight3446,jdbcType=FLOAT},
+      C_ZX_COMPANY_3446 = #{cZxCompany3446,jdbcType=VARCHAR},
+      C_LONGITUDE_3446 = #{cLongitude3446,jdbcType=VARCHAR},
+      C_LATITUDE_3446 = #{cLatitude3446,jdbcType=VARCHAR},
+      C_SAMPLE_SITUATION_3446 = #{cSampleSituation3446,jdbcType=VARCHAR},
+      TUOLANPEOPLE_3446 = #{tuolanpeople3446,jdbcType=VARCHAR},
+      RECOVERSEASTATEESTIM_3446 = #{recoverseastateestim3446,jdbcType=VARCHAR},
+      TIMEZONE_3446 = #{timezone3446,jdbcType=VARCHAR},
+      WORKSTARTDEPTH_3446 = #{workstartdepth3446,jdbcType=VARCHAR},
+      BALLASTREMOVETIME_3446 = #{ballastremovetime3446,jdbcType=VARCHAR},
+      SOUTHNORTHHALFSPHERE_3446 = #{southnorthhalfsphere3446,jdbcType=VARCHAR},
+      WORKENDDEPTH_3446 = #{workenddepth3446,jdbcType=VARCHAR},
+      BUFANGLANGHEIGHT_3446 = #{bufanglangheight3446,jdbcType=VARCHAR},
+      TWICERECOVERBOATTIME_3446 = #{twicerecoverboattime3446,jdbcType=VARCHAR},
+      TWICEBUFANGBOATTIME_3446 = #{twicebufangboattime3446,jdbcType=VARCHAR},
+      RECOVERBOATASSISTANT_3446 = #{recoverboatassistant3446,jdbcType=VARCHAR},
+      STARTWORKTIME_3446 = #{startworktime3446,jdbcType=VARCHAR},
+      BUFANGTYPE_3446 = #{bufangtype3446,jdbcType=VARCHAR},
+      ONCERECOVERBOATTIME_3446 = #{oncerecoverboattime3446,jdbcType=VARCHAR},
+      RECOVERDECKTIME_3446 = #{recoverdecktime3446,jdbcType=VARCHAR},
+      BUFANGMAXWINDSPEED_3446 = #{bufangmaxwindspeed3446,jdbcType=VARCHAR},
+      PERSONOUTCABINTIME_3446 = #{personoutcabintime3446,jdbcType=VARCHAR},
+      GUALANASSISTANT_3446 = #{gualanassistant3446,jdbcType=VARCHAR},
+      BUFANGCOMMANDTIME_3446 = #{bufangcommandtime3446,jdbcType=VARCHAR},
+      STARTFILLWATERTIME_3446 = #{startfillwatertime3446,jdbcType=VARCHAR},
+      HATCHOPENTIME_3446 = #{hatchopentime3446,jdbcType=VARCHAR},
+      C_HANGDUAN_3446 = #{cHangduan3446,jdbcType=VARCHAR},
+      WATERDOWNPICTURES_3446 = #{waterdownpictures3446,jdbcType=VARCHAR},
+      HATCHCLOSETIME_3446 = #{hatchclosetime3446,jdbcType=VARCHAR},
+      ENDWORKTIME_3446 = #{endworktime3446,jdbcType=VARCHAR},
+      SEAFLOORENVIRONMENTD_3446 = #{seafloorenvironmentd3446,jdbcType=VARCHAR},
+      RECOVERLANGHEIGHT_3446 = #{recoverlangheight3446,jdbcType=VARCHAR},
+      DIVINGDOUTWATERTIME_3446 = #{divingdoutwatertime3446,jdbcType=VARCHAR},
+      DIVINGDENTRYTIME_3446 = #{divingdentrytime3446,jdbcType=VARCHAR},
+      GUALANPEOPLE_3446 = #{gualanpeople3446,jdbcType=VARCHAR},
+      EASTWESTHALFSPHERE_3446 = #{eastwesthalfsphere3446,jdbcType=VARCHAR},
+      PERSONCOMEINCABINT_3446 = #{personcomeincabint3446,jdbcType=VARCHAR},
+      BUFANGSEASTATEESTIMA_3446 = #{bufangseastateestima3446,jdbcType=VARCHAR},
+      BUFANGAVERAGEWSPEED_3446 = #{bufangaveragewspeed3446,jdbcType=VARCHAR},
+      RECOVERMAXWINDSPEED_3446 = #{recovermaxwindspeed3446,jdbcType=VARCHAR},
+      TUOLANASSISTANT_3446 = #{tuolanassistant3446,jdbcType=VARCHAR},
+      BUFANGBOATASSISTANT_3446 = #{bufangboatassistant3446,jdbcType=VARCHAR},
+      RECOVERMAVERAGEWINDS_3446 = #{recovermaveragewinds3446,jdbcType=VARCHAR},
+      FLOATWATERTIME_3446 = #{floatwatertime3446,jdbcType=VARCHAR},
+      SPECIALVERSION_3446 = #{specialversion3446,jdbcType=VARCHAR},
+      RECOVERBOATDPERSON_3446 = #{recoverboatdperson3446,jdbcType=VARCHAR},
+      ONCEBUFANGBOATTIME_3446 = #{oncebufangboattime3446,jdbcType=VARCHAR},
+      BUFANGBOATDRIVER_3446 = #{bufangboatdriver3446,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

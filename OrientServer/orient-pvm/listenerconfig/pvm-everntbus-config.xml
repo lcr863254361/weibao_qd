@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Copyright (c) 2016. Orient Company
+  ~
+  -->
+
+<ListenerOrder>
+    <EventSource eventType="com.orient.pvm.event.ImportCheckTemplateEvent"
+                 name="com.orient.pvm.controller.CheckModelDataTemplateController">
+        <BaseOrderList>
+            <OrderValue name="com.orient.pvm.eventlistener.CheckTemplateListener"/>
+            <OrderValue name="com.orient.pvm.eventlistener.BindCheckModelTemplateListener"/>
+        </BaseOrderList>
+        <ExtenderOderList>
+            <Listener name="com.orient.pvm.eventlistener.CheckTemplateListener" order="1"/>
+            <Listener name="com.orient.pvm.eventlistener.BindCheckModelTemplateListener" order="5"/>
+        </ExtenderOderList>
+    </EventSource>
+
+    <EventSource eventType="com.orient.pvm.event.TaskBindCheckModelEvent"
+                 name="com.orient.pvm.controller.CheckModelController">
+        <BaseOrderList>
+            <OrderValue name="com.orient.pvm.eventlistener.CreateTaskCheckModelListener"/>
+            <OrderValue name="com.orient.pvm.eventlistener.FillCheckModelDataListener"/>
+        </BaseOrderList>
+        <ExtenderOderList>
+            <Listener name="com.orient.pvm.eventlistener.CreateTaskCheckModelListener" order="1"/>
+            <Listener name="com.orient.pvm.eventlistener.FillCheckModelDataListener" order="5"/>
+        </ExtenderOderList>
+    </EventSource>
+
+    <EventSource eventType="com.orient.pvm.event.DeleteCheckModelEvent"
+                 name="com.orient.pvm.controller.CheckModelController">
+        <BaseOrderList>
+            <OrderValue name="com.orient.pvm.eventlistener.DeleteRelatedModelDataListener"/>
+            <OrderValue name="com.orient.pvm.eventlistener.DeleteRelationDataListener"/>
+            <OrderValue name="com.orient.pvm.eventlistener.DeleteCheckModelListener"/>
+        </BaseOrderList>
+        <ExtenderOderList>
+            <Listener name="com.orient.pvm.eventlistener.DeleteRelatedModelDataListener" order="1"/>
+            <Listener name="com.orient.pvm.eventlistener.DeleteRelationDataListener" order="5"/>
+            <Listener name="com.orient.pvm.eventlistener.DeleteCheckModelListener" order="10"/>
+        </ExtenderOderList>
+    </EventSource>
+
+</ListenerOrder>

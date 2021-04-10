@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.orient.weibao.dao.DivingTaskDao">
+    <resultMap id="DivingTaskWithInfomLog" type="com.orient.weibao.dto.DivingTaskNameWithInformLog"
+    extends="com.orient.weibao.mbg.mapper.DivingTaskMapper.BaseResultMap"
+    >
+        <collection property="informLogList" ofType="com.orient.weibao.mbg.model.InformLog">
+            <id column="i_ID" jdbcType="VARCHAR" property="id" />
+            <result column="C_TABLE_ID_3566" jdbcType="VARCHAR" property="cTableId3566" />
+            <result column="C_STATE_3566" jdbcType="VARCHAR" property="cState3566" />
+            <result column="C_UPLOAD_TIME_3566" jdbcType="VARCHAR" property="cUploadTime3566" />
+            <result column="C_TASK_ID_3566" jdbcType="VARCHAR" property="cTaskId3566" />
+            <result column="C_UPLOAD_PERSON_3566" jdbcType="VARCHAR" property="cUploadPerson3566" />
+            <result column="C_TYPE_3566" jdbcType="VARCHAR" property="cType3566" />
+            <result column="C_TASK_NAME_3566" jdbcType="VARCHAR" property="cTaskName3566" />
+            <result column="C_TABLE_NAME_3566" jdbcType="VARCHAR" property="cTableName3566" />
+            <result column="C_IS_EXCEPTION_3566" jdbcType="VARCHAR" property="cIsException3566" />
+        </collection>
+    </resultMap>
+    <select id="queryCurrentHangduanDivingTaskWithInfomLog"
+                         resultMap="DivingTaskWithInfomLog">
+        select TASK.*,
+             INFO.ID i_ID, C_TABLE_ID_3566, C_STATE_3566, C_UPLOAD_TIME_3566, C_TASK_ID_3566, C_UPLOAD_PERSON_3566,
+    C_TYPE_3566, C_TASK_NAME_3566, C_TABLE_NAME_3566, C_IS_EXCEPTION_3566 from T_DIVING_TASK_480 TASK left join T_INFORM_LOG_480 INFO on TASK.ID = INFO.C_TASK_ID_3566
+            where TASK.T_HANGDUAN_480_ID =  (select T_HANGDUAN_480_ID from T_DIVING_TASK_480 WHERE C_STATE_3208='进行中')
+            order by INFO.C_UPLOAD_TIME_3566 desc
+    </select>
+
+    <select id="queryCurrentHangduanDivingTaskWithPlanInfomLog"
+            resultMap="DivingTaskWithInfomLog">
+        select TASK.*,
+             INFO.ID i_ID, C_TABLE_ID_3566, C_STATE_3566, C_UPLOAD_TIME_3566, C_TASK_ID_3566, C_UPLOAD_PERSON_3566,
+    C_TYPE_3566, C_TASK_NAME_3566, C_TABLE_NAME_3566, C_IS_EXCEPTION_3566 from T_DIVING_TASK_480 TASK left join T_INFORM_LOG_480 INFO on TASK.ID = INFO.C_TASK_ID_3566
+            where TASK.T_HANGDUAN_480_ID =  (select T_HANGDUAN_480_ID from T_DIVING_TASK_480 WHERE C_STATE_3208='进行中') AND INFO.C_TYPE_3566='plan'
+            order by INFO.C_UPLOAD_TIME_3566 desc
+    </select>
+</mapper>

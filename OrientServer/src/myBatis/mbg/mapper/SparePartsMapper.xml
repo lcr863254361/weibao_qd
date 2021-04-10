@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.orient.weibao.mbg.mapper.SparePartsMapper">
+  <resultMap id="BaseResultMap" type="com.orient.weibao.mbg.model.SpareParts">
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="SYS_DATE_TIME" jdbcType="TIMESTAMP" property="sysDateTime" />
+    <result column="SYS_USERNAME" jdbcType="VARCHAR" property="sysUsername" />
+    <result column="SYS_IS_DELETE" jdbcType="DECIMAL" property="sysIsDelete" />
+    <result column="SYS_SECRECY" jdbcType="VARCHAR" property="sysSecrecy" />
+    <result column="SYS_SCHEMA" jdbcType="VARCHAR" property="sysSchema" />
+    <result column="SYS_OPERATE" jdbcType="VARCHAR" property="sysOperate" />
+    <result column="SYS_FLOW" jdbcType="VARCHAR" property="sysFlow" />
+    <result column="C_KEY_PART_3209" jdbcType="VARCHAR" property="cKeyPart3209" />
+    <result column="C_GUIGE_MODE_3209" jdbcType="VARCHAR" property="cGuigeMode3209" />
+    <result column="C_NUMBER_3209" jdbcType="VARCHAR" property="cNumber3209" />
+    <result column="C_DUTY_PERSON_3209" jdbcType="VARCHAR" property="cDutyPerson3209" />
+    <result column="C_DEVICE_NAME_3209" jdbcType="VARCHAR" property="cDeviceName3209" />
+    <result column="C_FUNCTION_JIANJIE_3209" jdbcType="VARCHAR" property="cFunctionJianjie3209" />
+    <result column="T_PRODUCT_STRUCTURE_480_ID" jdbcType="VARCHAR" property="tProductStructure480Id" />
+    <result column="C_DEVICE_CODE_3209" jdbcType="VARCHAR" property="cDeviceCode3209" />
+    <result column="C_NOTE_3209" jdbcType="VARCHAR" property="cNote3209" />
+    <result column="C_MODEL_3209" jdbcType="VARCHAR" property="cModel3209" />
+    <result column="C_VERSION_3209" jdbcType="VARCHAR" property="cVersion3209" />
+    <result column="C_CARRY_COUNT_3209" jdbcType="DECIMAL" property="cCarryCount3209" />
+    <result column="C_AIR_WEIGHT_3209" jdbcType="FLOAT" property="cAirWeight3209" />
+    <result column="C_FRESH_WATER_WEIGHT_3209" jdbcType="FLOAT" property="cFreshWaterWeight3209" />
+    <result column="C_DEWATER_VOLUME_3209" jdbcType="FLOAT" property="cDewaterVolume3209" />
+    <result column="C_IS_CARRY_TYPE_3209" jdbcType="VARCHAR" property="cIsCarryType3209" />
+    <result column="C_CABIN_INOROUT_3209" jdbcType="VARCHAR" property="cCabinInorout3209" />
+    <result column="C_WIDTH_3209" jdbcType="FLOAT" property="cWidth3209" />
+    <result column="C_LENGTH_3209" jdbcType="FLOAT" property="cLength3209" />
+    <result column="C_HEIGHT_3209" jdbcType="FLOAT" property="cHeight3209" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    ID, SYS_DATE_TIME, SYS_USERNAME, SYS_IS_DELETE, SYS_SECRECY, SYS_SCHEMA, SYS_OPERATE, 
+    SYS_FLOW, C_KEY_PART_3209, C_GUIGE_MODE_3209, C_NUMBER_3209, C_DUTY_PERSON_3209, 
+    C_DEVICE_NAME_3209, C_FUNCTION_JIANJIE_3209, T_PRODUCT_STRUCTURE_480_ID, C_DEVICE_CODE_3209, 
+    C_NOTE_3209, C_MODEL_3209, C_VERSION_3209, C_CARRY_COUNT_3209, C_AIR_WEIGHT_3209, 
+    C_FRESH_WATER_WEIGHT_3209, C_DEWATER_VOLUME_3209, C_IS_CARRY_TYPE_3209, C_CABIN_INOROUT_3209, 
+    C_WIDTH_3209, C_LENGTH_3209, C_HEIGHT_3209
+  </sql>
+  <select id="selectByExample" parameterType="com.orient.weibao.mbg.model.SparePartsExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from T_SPARE_PARTS_480
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from T_SPARE_PARTS_480
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from T_SPARE_PARTS_480
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.orient.weibao.mbg.model.SparePartsExample">
+    delete from T_SPARE_PARTS_480
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.orient.weibao.mbg.model.SpareParts">
+    insert into T_SPARE_PARTS_480 (ID, SYS_DATE_TIME, SYS_USERNAME, 
+      SYS_IS_DELETE, SYS_SECRECY, SYS_SCHEMA, 
+      SYS_OPERATE, SYS_FLOW, C_KEY_PART_3209, 
+      C_GUIGE_MODE_3209, C_NUMBER_3209, C_DUTY_PERSON_3209, 
+      C_DEVICE_NAME_3209, C_FUNCTION_JIANJIE_3209, 
+      T_PRODUCT_STRUCTURE_480_ID, C_DEVICE_CODE_3209, 
+      C_NOTE_3209, C_MODEL_3209, C_VERSION_3209, 
+      C_CARRY_COUNT_3209, C_AIR_WEIGHT_3209, C_FRESH_WATER_WEIGHT_3209, 
+      C_DEWATER_VOLUME_3209, C_IS_CARRY_TYPE_3209, C_CABIN_INOROUT_3209, 
+      C_WIDTH_3209, C_LENGTH_3209, C_HEIGHT_3209
+      )
+    values (#{id,jdbcType=VARCHAR}, #{sysDateTime,jdbcType=TIMESTAMP}, #{sysUsername,jdbcType=VARCHAR}, 
+      #{sysIsDelete,jdbcType=DECIMAL}, #{sysSecrecy,jdbcType=VARCHAR}, #{sysSchema,jdbcType=VARCHAR}, 
+      #{sysOperate,jdbcType=VARCHAR}, #{sysFlow,jdbcType=VARCHAR}, #{cKeyPart3209,jdbcType=VARCHAR}, 
+      #{cGuigeMode3209,jdbcType=VARCHAR}, #{cNumber3209,jdbcType=VARCHAR}, #{cDutyPerson3209,jdbcType=VARCHAR}, 
+      #{cDeviceName3209,jdbcType=VARCHAR}, #{cFunctionJianjie3209,jdbcType=VARCHAR}, 
+      #{tProductStructure480Id,jdbcType=VARCHAR}, #{cDeviceCode3209,jdbcType=VARCHAR}, 
+      #{cNote3209,jdbcType=VARCHAR}, #{cModel3209,jdbcType=VARCHAR}, #{cVersion3209,jdbcType=VARCHAR}, 
+      #{cCarryCount3209,jdbcType=DECIMAL}, #{cAirWeight3209,jdbcType=FLOAT}, #{cFreshWaterWeight3209,jdbcType=FLOAT}, 
+      #{cDewaterVolume3209,jdbcType=FLOAT}, #{cIsCarryType3209,jdbcType=VARCHAR}, #{cCabinInorout3209,jdbcType=VARCHAR}, 
+      #{cWidth3209,jdbcType=FLOAT}, #{cLength3209,jdbcType=FLOAT}, #{cHeight3209,jdbcType=FLOAT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.orient.weibao.mbg.model.SpareParts">
+    insert into T_SPARE_PARTS_480
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        ID,
+      </if>
+      <if test="sysDateTime != null">
+        SYS_DATE_TIME,
+      </if>
+      <if test="sysUsername != null">
+        SYS_USERNAME,
+      </if>
+      <if test="sysIsDelete != null">
+        SYS_IS_DELETE,
+      </if>
+      <if test="sysSecrecy != null">
+        SYS_SECRECY,
+      </if>
+      <if test="sysSchema != null">
+        SYS_SCHEMA,
+      </if>
+      <if test="sysOperate != null">
+        SYS_OPERATE,
+      </if>
+      <if test="sysFlow != null">
+        SYS_FLOW,
+      </if>
+      <if test="cKeyPart3209 != null">
+        C_KEY_PART_3209,
+      </if>
+      <if test="cGuigeMode3209 != null">
+        C_GUIGE_MODE_3209,
+      </if>
+      <if test="cNumber3209 != null">
+        C_NUMBER_3209,
+      </if>
+      <if test="cDutyPerson3209 != null">
+        C_DUTY_PERSON_3209,
+      </if>
+      <if test="cDeviceName3209 != null">
+        C_DEVICE_NAME_3209,
+      </if>
+      <if test="cFunctionJianjie3209 != null">
+        C_FUNCTION_JIANJIE_3209,
+      </if>
+      <if test="tProductStructure480Id != null">
+        T_PRODUCT_STRUCTURE_480_ID,
+      </if>
+      <if test="cDeviceCode3209 != null">
+        C_DEVICE_CODE_3209,
+      </if>
+      <if test="cNote3209 != null">
+        C_NOTE_3209,
+      </if>
+      <if test="cModel3209 != null">
+        C_MODEL_3209,
+      </if>
+      <if test="cVersion3209 != null">
+        C_VERSION_3209,
+      </if>
+      <if test="cCarryCount3209 != null">
+        C_CARRY_COUNT_3209,
+      </if>
+      <if test="cAirWeight3209 != null">
+        C_AIR_WEIGHT_3209,
+      </if>
+      <if test="cFreshWaterWeight3209 != null">
+        C_FRESH_WATER_WEIGHT_3209,
+      </if>
+      <if test="cDewaterVolume3209 != null">
+        C_DEWATER_VOLUME_3209,
+      </if>
+      <if test="cIsCarryType3209 != null">
+        C_IS_CARRY_TYPE_3209,
+      </if>
+      <if test="cCabinInorout3209 != null">
+        C_CABIN_INOROUT_3209,
+      </if>
+      <if test="cWidth3209 != null">
+        C_WIDTH_3209,
+      </if>
+      <if test="cLength3209 != null">
+        C_LENGTH_3209,
+      </if>
+      <if test="cHeight3209 != null">
+        C_HEIGHT_3209,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="sysDateTime != null">
+        #{sysDateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sysUsername != null">
+        #{sysUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="sysIsDelete != null">
+        #{sysIsDelete,jdbcType=DECIMAL},
+      </if>
+      <if test="sysSecrecy != null">
+        #{sysSecrecy,jdbcType=VARCHAR},
+      </if>
+      <if test="sysSchema != null">
+        #{sysSchema,jdbcType=VARCHAR},
+      </if>
+      <if test="sysOperate != null">
+        #{sysOperate,jdbcType=VARCHAR},
+      </if>
+      <if test="sysFlow != null">
+        #{sysFlow,jdbcType=VARCHAR},
+      </if>
+      <if test="cKeyPart3209 != null">
+        #{cKeyPart3209,jdbcType=VARCHAR},
+      </if>
+      <if test="cGuigeMode3209 != null">
+        #{cGuigeMode3209,jdbcType=VARCHAR},
+      </if>
+      <if test="cNumber3209 != null">
+        #{cNumber3209,jdbcType=VARCHAR},
+      </if>
+      <if test="cDutyPerson3209 != null">
+        #{cDutyPerson3209,jdbcType=VARCHAR},
+      </if>
+      <if test="cDeviceName3209 != null">
+        #{cDeviceName3209,jdbcType=VARCHAR},
+      </if>
+      <if test="cFunctionJianjie3209 != null">
+        #{cFunctionJianjie3209,jdbcType=VARCHAR},
+      </if>
+      <if test="tProductStructure480Id != null">
+        #{tProductStructure480Id,jdbcType=VARCHAR},
+      </if>
+      <if test="cDeviceCode3209 != null">
+        #{cDeviceCode3209,jdbcType=VARCHAR},
+      </if>
+      <if test="cNote3209 != null">
+        #{cNote3209,jdbcType=VARCHAR},
+      </if>
+      <if test="cModel3209 != null">
+        #{cModel3209,jdbcType=VARCHAR},
+      </if>
+      <if test="cVersion3209 != null">
+        #{cVersion3209,jdbcType=VARCHAR},
+      </if>
+      <if test="cCarryCount3209 != null">
+        #{cCarryCount3209,jdbcType=DECIMAL},
+      </if>
+      <if test="cAirWeight3209 != null">
+        #{cAirWeight3209,jdbcType=FLOAT},
+      </if>
+      <if test="cFreshWaterWeight3209 != null">
+        #{cFreshWaterWeight3209,jdbcType=FLOAT},
+      </if>
+      <if test="cDewaterVolume3209 != null">
+        #{cDewaterVolume3209,jdbcType=FLOAT},
+      </if>
+      <if test="cIsCarryType3209 != null">
+        #{cIsCarryType3209,jdbcType=VARCHAR},
+      </if>
+      <if test="cCabinInorout3209 != null">
+        #{cCabinInorout3209,jdbcType=VARCHAR},
+      </if>
+      <if test="cWidth3209 != null">
+        #{cWidth3209,jdbcType=FLOAT},
+      </if>
+      <if test="cLength3209 != null">
+        #{cLength3209,jdbcType=FLOAT},
+      </if>
+      <if test="cHeight3209 != null">
+        #{cHeight3209,jdbcType=FLOAT},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.orient.weibao.mbg.model.SparePartsExample" resultType="java.lang.Long">
+    select count(*) from T_SPARE_PARTS_480
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update T_SPARE_PARTS_480
+    <set>
+      <if test="record.id != null">
+        ID = #{record.id,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sysDateTime != null">
+        SYS_DATE_TIME = #{record.sysDateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.sysUsername != null">
+        SYS_USERNAME = #{record.sysUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sysIsDelete != null">
+        SYS_IS_DELETE = #{record.sysIsDelete,jdbcType=DECIMAL},
+      </if>
+      <if test="record.sysSecrecy != null">
+        SYS_SECRECY = #{record.sysSecrecy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sysSchema != null">
+        SYS_SCHEMA = #{record.sysSchema,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sysOperate != null">
+        SYS_OPERATE = #{record.sysOperate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sysFlow != null">
+        SYS_FLOW = #{record.sysFlow,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cKeyPart3209 != null">
+        C_KEY_PART_3209 = #{record.cKeyPart3209,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cGuigeMode3209 != null">
+        C_GUIGE_MODE_3209 = #{record.cGuigeMode3209,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cNumber3209 != null">
+        C_NUMBER_3209 = #{record.cNumber3209,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cDutyPerson3209 != null">
+        C_DUTY_PERSON_3209 = #{record.cDutyPerson3209,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cDeviceName3209 != null">
+        C_DEVICE_NAME_3209 = #{record.cDeviceName3209,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cFunctionJianjie3209 != null">
+        C_FUNCTION_JIANJIE_3209 = #{record.cFunctionJianjie3209,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tProductStructure480Id != null">
+        T_PRODUCT_STRUCTURE_480_ID = #{record.tProductStructure480Id,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cDeviceCode3209 != null">
+        C_DEVICE_CODE_3209 = #{record.cDeviceCode3209,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cNote3209 != null">
+        C_NOTE_3209 = #{record.cNote3209,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cModel3209 != null">
+        C_MODEL_3209 = #{record.cModel3209,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cVersion3209 != null">
+        C_VERSION_3209 = #{record.cVersion3209,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cCarryCount3209 != null">
+        C_CARRY_COUNT_3209 = #{record.cCarryCount3209,jdbcType=DECIMAL},
+      </if>
+      <if test="record.cAirWeight3209 != null">
+        C_AIR_WEIGHT_3209 = #{record.cAirWeight3209,jdbcType=FLOAT},
+      </if>
+      <if test="record.cFreshWaterWeight3209 != null">
+        C_FRESH_WATER_WEIGHT_3209 = #{record.cFreshWaterWeight3209,jdbcType=FLOAT},
+      </if>
+      <if test="record.cDewaterVolume3209 != null">
+        C_DEWATER_VOLUME_3209 = #{record.cDewaterVolume3209,jdbcType=FLOAT},
+      </if>
+      <if test="record.cIsCarryType3209 != null">
+        C_IS_CARRY_TYPE_3209 = #{record.cIsCarryType3209,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cCabinInorout3209 != null">
+        C_CABIN_INOROUT_3209 = #{record.cCabinInorout3209,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cWidth3209 != null">
+        C_WIDTH_3209 = #{record.cWidth3209,jdbcType=FLOAT},
+      </if>
+      <if test="record.cLength3209 != null">
+        C_LENGTH_3209 = #{record.cLength3209,jdbcType=FLOAT},
+      </if>
+      <if test="record.cHeight3209 != null">
+        C_HEIGHT_3209 = #{record.cHeight3209,jdbcType=FLOAT},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update T_SPARE_PARTS_480
+    set ID = #{record.id,jdbcType=VARCHAR},
+      SYS_DATE_TIME = #{record.sysDateTime,jdbcType=TIMESTAMP},
+      SYS_USERNAME = #{record.sysUsername,jdbcType=VARCHAR},
+      SYS_IS_DELETE = #{record.sysIsDelete,jdbcType=DECIMAL},
+      SYS_SECRECY = #{record.sysSecrecy,jdbcType=VARCHAR},
+      SYS_SCHEMA = #{record.sysSchema,jdbcType=VARCHAR},
+      SYS_OPERATE = #{record.sysOperate,jdbcType=VARCHAR},
+      SYS_FLOW = #{record.sysFlow,jdbcType=VARCHAR},
+      C_KEY_PART_3209 = #{record.cKeyPart3209,jdbcType=VARCHAR},
+      C_GUIGE_MODE_3209 = #{record.cGuigeMode3209,jdbcType=VARCHAR},
+      C_NUMBER_3209 = #{record.cNumber3209,jdbcType=VARCHAR},
+      C_DUTY_PERSON_3209 = #{record.cDutyPerson3209,jdbcType=VARCHAR},
+      C_DEVICE_NAME_3209 = #{record.cDeviceName3209,jdbcType=VARCHAR},
+      C_FUNCTION_JIANJIE_3209 = #{record.cFunctionJianjie3209,jdbcType=VARCHAR},
+      T_PRODUCT_STRUCTURE_480_ID = #{record.tProductStructure480Id,jdbcType=VARCHAR},
+      C_DEVICE_CODE_3209 = #{record.cDeviceCode3209,jdbcType=VARCHAR},
+      C_NOTE_3209 = #{record.cNote3209,jdbcType=VARCHAR},
+      C_MODEL_3209 = #{record.cModel3209,jdbcType=VARCHAR},
+      C_VERSION_3209 = #{record.cVersion3209,jdbcType=VARCHAR},
+      C_CARRY_COUNT_3209 = #{record.cCarryCount3209,jdbcType=DECIMAL},
+      C_AIR_WEIGHT_3209 = #{record.cAirWeight3209,jdbcType=FLOAT},
+      C_FRESH_WATER_WEIGHT_3209 = #{record.cFreshWaterWeight3209,jdbcType=FLOAT},
+      C_DEWATER_VOLUME_3209 = #{record.cDewaterVolume3209,jdbcType=FLOAT},
+      C_IS_CARRY_TYPE_3209 = #{record.cIsCarryType3209,jdbcType=VARCHAR},
+      C_CABIN_INOROUT_3209 = #{record.cCabinInorout3209,jdbcType=VARCHAR},
+      C_WIDTH_3209 = #{record.cWidth3209,jdbcType=FLOAT},
+      C_LENGTH_3209 = #{record.cLength3209,jdbcType=FLOAT},
+      C_HEIGHT_3209 = #{record.cHeight3209,jdbcType=FLOAT}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.orient.weibao.mbg.model.SpareParts">
+    update T_SPARE_PARTS_480
+    <set>
+      <if test="sysDateTime != null">
+        SYS_DATE_TIME = #{sysDateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sysUsername != null">
+        SYS_USERNAME = #{sysUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="sysIsDelete != null">
+        SYS_IS_DELETE = #{sysIsDelete,jdbcType=DECIMAL},
+      </if>
+      <if test="sysSecrecy != null">
+        SYS_SECRECY = #{sysSecrecy,jdbcType=VARCHAR},
+      </if>
+      <if test="sysSchema != null">
+        SYS_SCHEMA = #{sysSchema,jdbcType=VARCHAR},
+      </if>
+      <if test="sysOperate != null">
+        SYS_OPERATE = #{sysOperate,jdbcType=VARCHAR},
+      </if>
+      <if test="sysFlow != null">
+        SYS_FLOW = #{sysFlow,jdbcType=VARCHAR},
+      </if>
+      <if test="cKeyPart3209 != null">
+        C_KEY_PART_3209 = #{cKeyPart3209,jdbcType=VARCHAR},
+      </if>
+      <if test="cGuigeMode3209 != null">
+        C_GUIGE_MODE_3209 = #{cGuigeMode3209,jdbcType=VARCHAR},
+      </if>
+      <if test="cNumber3209 != null">
+        C_NUMBER_3209 = #{cNumber3209,jdbcType=VARCHAR},
+      </if>
+      <if test="cDutyPerson3209 != null">
+        C_DUTY_PERSON_3209 = #{cDutyPerson3209,jdbcType=VARCHAR},
+      </if>
+      <if test="cDeviceName3209 != null">
+        C_DEVICE_NAME_3209 = #{cDeviceName3209,jdbcType=VARCHAR},
+      </if>
+      <if test="cFunctionJianjie3209 != null">
+        C_FUNCTION_JIANJIE_3209 = #{cFunctionJianjie3209,jdbcType=VARCHAR},
+      </if>
+      <if test="tProductStructure480Id != null">
+        T_PRODUCT_STRUCTURE_480_ID = #{tProductStructure480Id,jdbcType=VARCHAR},
+      </if>
+      <if test="cDeviceCode3209 != null">
+        C_DEVICE_CODE_3209 = #{cDeviceCode3209,jdbcType=VARCHAR},
+      </if>
+      <if test="cNote3209 != null">
+        C_NOTE_3209 = #{cNote3209,jdbcType=VARCHAR},
+      </if>
+      <if test="cModel3209 != null">
+        C_MODEL_3209 = #{cModel3209,jdbcType=VARCHAR},
+      </if>
+      <if test="cVersion3209 != null">
+        C_VERSION_3209 = #{cVersion3209,jdbcType=VARCHAR},
+      </if>
+      <if test="cCarryCount3209 != null">
+        C_CARRY_COUNT_3209 = #{cCarryCount3209,jdbcType=DECIMAL},
+      </if>
+      <if test="cAirWeight3209 != null">
+        C_AIR_WEIGHT_3209 = #{cAirWeight3209,jdbcType=FLOAT},
+      </if>
+      <if test="cFreshWaterWeight3209 != null">
+        C_FRESH_WATER_WEIGHT_3209 = #{cFreshWaterWeight3209,jdbcType=FLOAT},
+      </if>
+      <if test="cDewaterVolume3209 != null">
+        C_DEWATER_VOLUME_3209 = #{cDewaterVolume3209,jdbcType=FLOAT},
+      </if>
+      <if test="cIsCarryType3209 != null">
+        C_IS_CARRY_TYPE_3209 = #{cIsCarryType3209,jdbcType=VARCHAR},
+      </if>
+      <if test="cCabinInorout3209 != null">
+        C_CABIN_INOROUT_3209 = #{cCabinInorout3209,jdbcType=VARCHAR},
+      </if>
+      <if test="cWidth3209 != null">
+        C_WIDTH_3209 = #{cWidth3209,jdbcType=FLOAT},
+      </if>
+      <if test="cLength3209 != null">
+        C_LENGTH_3209 = #{cLength3209,jdbcType=FLOAT},
+      </if>
+      <if test="cHeight3209 != null">
+        C_HEIGHT_3209 = #{cHeight3209,jdbcType=FLOAT},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.orient.weibao.mbg.model.SpareParts">
+    update T_SPARE_PARTS_480
+    set SYS_DATE_TIME = #{sysDateTime,jdbcType=TIMESTAMP},
+      SYS_USERNAME = #{sysUsername,jdbcType=VARCHAR},
+      SYS_IS_DELETE = #{sysIsDelete,jdbcType=DECIMAL},
+      SYS_SECRECY = #{sysSecrecy,jdbcType=VARCHAR},
+      SYS_SCHEMA = #{sysSchema,jdbcType=VARCHAR},
+      SYS_OPERATE = #{sysOperate,jdbcType=VARCHAR},
+      SYS_FLOW = #{sysFlow,jdbcType=VARCHAR},
+      C_KEY_PART_3209 = #{cKeyPart3209,jdbcType=VARCHAR},
+      C_GUIGE_MODE_3209 = #{cGuigeMode3209,jdbcType=VARCHAR},
+      C_NUMBER_3209 = #{cNumber3209,jdbcType=VARCHAR},
+      C_DUTY_PERSON_3209 = #{cDutyPerson3209,jdbcType=VARCHAR},
+      C_DEVICE_NAME_3209 = #{cDeviceName3209,jdbcType=VARCHAR},
+      C_FUNCTION_JIANJIE_3209 = #{cFunctionJianjie3209,jdbcType=VARCHAR},
+      T_PRODUCT_STRUCTURE_480_ID = #{tProductStructure480Id,jdbcType=VARCHAR},
+      C_DEVICE_CODE_3209 = #{cDeviceCode3209,jdbcType=VARCHAR},
+      C_NOTE_3209 = #{cNote3209,jdbcType=VARCHAR},
+      C_MODEL_3209 = #{cModel3209,jdbcType=VARCHAR},
+      C_VERSION_3209 = #{cVersion3209,jdbcType=VARCHAR},
+      C_CARRY_COUNT_3209 = #{cCarryCount3209,jdbcType=DECIMAL},
+      C_AIR_WEIGHT_3209 = #{cAirWeight3209,jdbcType=FLOAT},
+      C_FRESH_WATER_WEIGHT_3209 = #{cFreshWaterWeight3209,jdbcType=FLOAT},
+      C_DEWATER_VOLUME_3209 = #{cDewaterVolume3209,jdbcType=FLOAT},
+      C_IS_CARRY_TYPE_3209 = #{cIsCarryType3209,jdbcType=VARCHAR},
+      C_CABIN_INOROUT_3209 = #{cCabinInorout3209,jdbcType=VARCHAR},
+      C_WIDTH_3209 = #{cWidth3209,jdbcType=FLOAT},
+      C_LENGTH_3209 = #{cLength3209,jdbcType=FLOAT},
+      C_HEIGHT_3209 = #{cHeight3209,jdbcType=FLOAT}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

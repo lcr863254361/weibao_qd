@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/springdao/spring-dao-sysmodel-etl.xml</file>
+          <file>file://$MODULE_DIR$/springdao/spring-dao-sysmodel-sys.xml</file>
+          <file>file://$MODULE_DIR$/springdao/spring-dao-sysmodel-back.xml</file>
+          <file>file://$MODULE_DIR$/springdao/spring-dao-sysmodel-file.xml</file>
+          <file>file://$MODULE_DIR$/springdao/spring-dao-sysmodel-role.xml</file>
+          <file>file://$MODULE_DIR$/springdao/spring-dao-sysmodel-tbom.xml</file>
+          <file>file://$MODULE_DIR$/springdao/spring-dao-sysmodel-user.xml</file>
+          <file>file://$MODULE_DIR$/springdao/spring-dao-sysmodel-arith.xml</file>
+          <file>file://$MODULE_DIR$/springdao/spring-dao-sysmodel-tools.xml</file>
+          <file>file://$MODULE_DIR$/springdao/spring-dao-sysmodel-report.xml</file>
+          <file>file://$MODULE_DIR$/springdao/spring-dao-sysmodel-syslog.xml</file>
+          <file>file://$MODULE_DIR$/springdao/spring-dao-sysmodel-workflow.xml</file>
+        </fileset>
+      </configuration>
+    </facet>
+    <facet type="hibernate" name="Hibernate">
+      <configuration>
+        <datasource-map>
+          <unit-entry name="a.xml" value="07d647db-4b53-4edd-9a2d-4cd0ddb10ba8" />
+          <unit-entry name="hibernate.cfg.xml" value="07d647db-4b53-4edd-9a2d-4cd0ddb10ba8" />
+        </datasource-map>
+        <naming-strategy-map>
+          <unit-entry name="hibernate.cfg.xml" />
+        </naming-strategy-map>
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/../../OrientServer/src/springdao/dataAccessContext-local.xml" />
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="orient-metamodel" exported="" />
+    <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="library" name="lib1" level="project" />
+  </component>
+</module>

@@ -1,0 +1,857 @@
+<!DOCTYPE databases PUBLIC
+        "-//EXOLAB/Castor Mapping DTD Version 1.0//EN"
+        "http://castor.exolab.org/mapping.dtd">
+<mapping>
+    <description>HikeyTDM RCP Mapping</description>
+
+    <!--  下表是业务库SCHEMA表，有name,version,description,modifiedTime,isLock,username,ip,lockModifiedTime属性
+
+
+
+        以及tables,views,restrictions三个一对多映射  -->
+
+    <class name="com.orient.metamodel.metadomain.Schema" identity="identity">
+        <map-to xml="schema"/>
+        <field name="identity">
+            <bind-xml name="identityname" node="attribute"/>
+        </field>
+        <field name="id">
+            <bind-xml name="id" node="attribute"/>
+        </field>
+        <field name="name">
+            <bind-xml name="name" node="attribute"/>
+        </field>
+        <field name="version">
+            <bind-xml name="version" node="attribute"/>
+        </field>
+        <field name="description">
+            <bind-xml name="description" node="attribute"/>
+        </field>
+        <field name="modifiedTime">
+            <bind-xml name="modifiedTime" node="attribute"/>
+        </field>
+        <field name="isLock">
+            <bind-xml name="isLock" node="attribute"/>
+        </field>
+        <field name="ip">
+            <bind-xml name="ip" node="attribute"/>
+        </field>
+        <field name="username">
+            <bind-xml name="username" node="attribute"/>
+        </field>
+        <field name="lockModifiedTime">
+            <bind-xml name="lockModifiedTime" node="attribute"/>
+        </field>
+        <field name="secrecySet">
+            <bind-xml name="secrecySet" node="attribute"/>
+        </field>
+        <field name="type">
+            <bind-xml name="type" node="attribute"/>
+        </field>
+        <field name="tables" collection="set"
+               type="com.orient.metamodel.metadomain.Table">
+            <bind-xml name="table"/>
+        </field>
+        <field name="restrictions" collection="set"
+               type="com.orient.metamodel.metadomain.Restriction">
+            <bind-xml name="restriction"/>
+        </field>
+        <field name="views" collection="set"
+               type="com.orient.metamodel.metadomain.View">
+            <bind-xml name="view"/>
+        </field>
+        <field name="isdelete">
+            <bind-xml name="isdelete" node="attribute"/>
+        </field>
+    </class>
+
+    <!-- 下表是数据类TABLE表，有name,displayName,tableName,pid,paiXu,isConnectTable,detailText,description,bigImage,norImage,smaImage,category,isValid属性
+        以及cwmConsExpressions,cwmTabColumnses,cwmRelationColumnses三个一对多映射和与schema的逆向映射 -->
+
+    <class name="com.orient.metamodel.metadomain.Table" identity="identity"
+           auto-complete="false">
+        <map-to xml="table"/>
+        <field name="id">
+            <bind-xml name="id" node="attribute"/>
+        </field>
+        <field name="identity">
+            <bind-xml name="identityname" node="attribute"/>
+        </field>
+        <field name="name">
+            <bind-xml name="name" node="attribute"/>
+        </field>
+        <field name="displayName">
+            <bind-xml name="displayName" node="attribute"/>
+        </field>
+        <field name="tableName">
+            <bind-xml name="tableName" node="attribute"/>
+        </field>
+        <!-- <field name="pid">
+            <bind-xml name="pid" node="attribute" />
+            </field> -->
+        <field name="paiXu">
+            <bind-xml name="paiXu" node="attribute"/>
+        </field>
+        <field name="isConnectTable">
+            <bind-xml name="isConnectTable" node="attribute"/>
+        </field>
+        <field name="detailText">
+            <bind-xml name="detailText" node="attribute"/>
+        </field>
+        <field name="description">
+            <bind-xml name="description" node="attribute"/>
+        </field>
+        <field name="bigImage">
+            <bind-xml name="bigImage" node="attribute"/>
+        </field>
+        <field name="norImage">
+            <bind-xml name="norImage" node="attribute"/>
+        </field>
+        <field name="smaImage">
+            <bind-xml name="smaImage" node="attribute"/>
+        </field>
+        <field name="category">
+            <bind-xml name="category" node="attribute"/>
+        </field>
+        <field name="isShow">
+            <bind-xml name="isShow" node="attribute"/>
+        </field>
+        <field name="isValid">
+            <bind-xml name="isValid" node="attribute"/>
+        </field>
+        <field name="order">
+            <bind-xml name="order" node="attribute"/>
+        </field>
+        <field name="cite">
+            <bind-xml name="cite" node="attribute"/>
+        </field>
+        <field name="existData">
+            <bind-xml name="existData" node="attribute"/>
+        </field>
+        <field name="secrecy">
+            <bind-xml name="secrecy" node="attribute"/>
+        </field>
+        <field name="useSecrecy">
+            <bind-xml name="useSecrecy" node="attribute"/>
+        </field>
+        <field name="type">
+            <bind-xml name="type" node="attribute"/>
+        </field>
+        <field name="mapTable">
+            <bind-xml name="mapTable" node="attribute"/>
+        </field>
+        <field name="shareable">
+            <bind-xml name="shareable" node="attribute"/>
+        </field>
+        <field name="colSum">
+            <bind-xml name="colSum" node="attribute"/>
+        </field>
+        <field name="schema" type="com.orient.metamodel.metadomain.Schema">
+            <bind-xml name="schema" node="attribute" reference="true"/>
+        </field>
+        <field name="cwmTabColumnses" collection="set" type="com.orient.metamodel.metadomain.Column">
+            <bind-xml name="column"/>
+        </field>
+        <field name="cwmRelationColumnses" collection="set" type="com.orient.metamodel.metadomain.RelationColumns">
+            <bind-xml name="relationColumn"/>
+        </field>
+        <field name="cwmConsExpressions" collection="set" type="com.orient.metamodel.metadomain.ConsExpression">
+            <bind-xml name="consExpression"/>
+        </field>
+        <field name="childTables" collection="set" type="com.orient.metamodel.metadomain.Table">
+            <bind-xml name="childTable"/>
+        </field>
+        <!-- <field name="cwmArithColumnses" collection="set"
+            type="com.orient.metamodel.metadomain.ArithColumn">
+            <bind-xml name="arithColumn" />
+        </field> -->
+        <field name="pkColumns" collection="map">
+            <bind-xml name="pkColumns">
+                <class name="org.exolab.castor.mapping.MapItem">
+                    <field name="key" type="java.lang.Integer">
+                        <bind-xml name="id" node="attribute"/>
+                    </field>
+                    <field name="value" type="com.orient.metamodel.metadomain.Column">
+                        <bind-xml name="pkColumn" node="attribute" reference="true"/>
+                    </field>
+                </class>
+            </bind-xml>
+        </field>
+        <field name="ukColumns" collection="map">
+            <bind-xml name="ukColumns">
+                <class name="org.exolab.castor.mapping.MapItem">
+                    <field name="key" type="java.lang.Integer">
+                        <bind-xml name="id" node="attribute"/>
+                    </field>
+                    <field name="value" type="com.orient.metamodel.metadomain.Column">
+                        <bind-xml name="ukColumn" node="attribute" reference="true"/>
+                    </field>
+                </class>
+            </bind-xml>
+        </field>
+        <field name="skColumns" collection="map">
+            <bind-xml name="skColumns">
+                <class name="org.exolab.castor.mapping.MapItem">
+                    <field name="key" type="java.lang.Integer">
+                        <bind-xml name="id" node="attribute"/>
+                    </field>
+                    <field name="value" type="com.orient.metamodel.metadomain.Column">
+                        <bind-xml name="skColumn" node="attribute" reference="true"/>
+                    </field>
+                </class>
+            </bind-xml>
+        </field>
+        <field name="zxColumns" collection="map">
+            <bind-xml name="zxColumns">
+                <class name="org.exolab.castor.mapping.MapItem">
+                    <field name="key" type="java.lang.Integer">
+                        <bind-xml name="id" node="attribute"/>
+                    </field>
+                    <field name="value"
+                           type="com.orient.metamodel.metadomain.Column">
+                        <bind-xml name="zxColumn" node="attribute" reference="true"/>
+                    </field>
+                </class>
+            </bind-xml>
+        </field>
+
+    </class>
+
+    <!-- 下表是数据类的参数关联约束ConsExpression表，有expression,result,pri属性
+
+
+
+        以及与table的逆向映射 -->
+
+    <class name="com.orient.metamodel.metadomain.ConsExpression" auto-complete="false">
+        <map-to xml="consExpression"/>
+        <field name="id">
+            <bind-xml name="id" node="attribute"/>
+        </field>
+        <field name="expression">
+            <bind-xml name="expression" node="attribute"/>
+        </field>
+        <field name="result">
+            <bind-xml name="result" node="attribute"/>
+        </field>
+        <field name="pri">
+            <bind-xml name="pri" node="attribute"/>
+        </field>
+        <field name="order">
+            <bind-xml name="order" node="attribute"/>
+        </field>
+        <field name="table" type="com.orient.metamodel.metadomain.Table">
+            <bind-xml name="table" node="attribute" reference="true"/>
+        </field>
+    </class>
+
+    <!-- 下表是字段Column表，有name,displayName,category,description,columnName,isAllSearch,isForSearch,isIndex,operateSign,purpose,casesensitive,defaultValue,isNull,isOnly,
+        isPK,isAutoIncrement,type,sequenceName,maxLength,minLength,isShow,isWrap,propertyParagraph,
+        propertyCategory,linage,isMutiUk,isUsedPaixu,isValid属性
+
+
+
+        以及relationColumn,refRelationColumn两个一对一映射和与table,restriction的逆向映射 -->
+
+    <class name="com.orient.metamodel.metadomain.Column" identity="identity"
+           auto-complete="false">
+        <map-to xml="column"/>
+        <field name="id">
+            <bind-xml name="id" node="attribute"/>
+        </field>
+        <field name="identity">
+            <bind-xml name="identityname" node="attribute"/>
+        </field>
+        <field name="name">
+            <bind-xml name="name" node="attribute"/>
+        </field>
+        <field name="displayName">
+            <bind-xml name="displayName" node="attribute"/>
+        </field>
+        <field name="category">
+            <bind-xml name="category" node="attribute"/>
+        </field>
+        <field name="description">
+            <bind-xml name="description" node="attribute"/>
+        </field>
+        <field name="columnName">
+            <bind-xml name="columnName" node="attribute"/>
+        </field>
+        <field name="isAllSearch">
+            <bind-xml name="isAllSearch" node="attribute"/>
+        </field>
+        <field name="isForSearch">
+            <bind-xml name="isForSearch" node="attribute"/>
+        </field>
+        <field name="isIndex">
+            <bind-xml name="isIndex" node="attribute"/>
+        </field>
+        <field name="operateSign">
+            <bind-xml name="operateSign" node="attribute"/>
+        </field>
+        <field name="purpose">
+            <bind-xml name="purpose" node="attribute"/>
+        </field>
+        <field name="casesensitive">
+            <bind-xml name="casesensitive" node="attribute"/>
+        </field>
+        <field name="defaultValue">
+            <bind-xml name="defaultValue" node="attribute"/>
+        </field>
+        <field name="isNeed">
+            <bind-xml name="isNeed" node="attribute"/>
+        </field>
+        <field name="isNull">
+            <bind-xml name="isNull" node="attribute"/>
+        </field>
+        <field name="isOnly">
+            <bind-xml name="isOnly" node="attribute"/>
+        </field>
+        <field name="isPK">
+            <bind-xml name="isPK" node="attribute"/>
+        </field>
+        <field name="isAutoIncrement">
+            <bind-xml name="isAutoIncrement" node="attribute"/>
+        </field>
+        <field name="type">
+            <bind-xml name="type" node="attribute"/>
+        </field>
+        <field name="sequenceName">
+            <bind-xml name="sequenceName" node="attribute"/>
+        </field>
+        <field name="maxLength">
+            <bind-xml name="maxLength" node="attribute"/>
+        </field>
+        <field name="minLength">
+            <bind-xml name="minLength" node="attribute"/>
+        </field>
+        <field name="numlength">
+            <bind-xml name="numlength" node="attribute"/>
+        </field>
+        <field name="numprecision">
+            <bind-xml name="numprecision" node="attribute"/>
+        </field>
+        <field name="isShow">
+            <bind-xml name="isShow" node="attribute"/>
+        </field>
+        <field name="isWrap">
+            <bind-xml name="isWrap" node="attribute"/>
+        </field>
+        <field name="propertyParagraph">
+            <bind-xml name="propertyParagraph" node="attribute"/>
+        </field>
+        <field name="propertyCategory">
+            <bind-xml name="propertyCategory" node="attribute"/>
+        </field>
+        <field name="linage">
+            <bind-xml name="linage" node="attribute"/>
+        </field>
+        <field name="isValid">
+            <bind-xml name="isValid" node="attribute"/>
+        </field>
+        <field name="isMutiUk">
+            <bind-xml name="isMutiUk" node="attribute"/>
+        </field>
+        <field name="isUsedPaixu">
+            <bind-xml name="isUsedPaixu" node="attribute"/>
+        </field>
+        <field name="order">
+            <bind-xml name="order" node="attribute"/>
+        </field>
+        <field name="cite">
+            <bind-xml name="cite" node="attribute"/>
+        </field>
+        <field name="existData">
+            <bind-xml name="existData" node="attribute"/>
+        </field>
+        <field name="mapColumn">
+            <bind-xml name="mapColumn" node="attribute"/>
+        </field>
+        <field name="autoAddDefault">
+            <bind-xml name="autoAddDefault" node="attribute"/>
+        </field>
+        <field name="editable">
+            <bind-xml name="editable" node="attribute"/>
+        </field>
+        <field name="seqInterval">
+            <bind-xml name="seqInterval" node="attribute"/>
+        </field>
+        <field name="selector">
+            <bind-xml name="selector" node="attribute"/>
+        </field>
+        <field name="unit">
+            <bind-xml name="unit" node="attribute"/>
+        </field>
+        <field name="table" type="com.orient.metamodel.metadomain.Table">
+            <bind-xml name="table" node="attribute" reference="true"/>
+        </field>
+        <field name="view" type="com.orient.metamodel.metadomain.View">
+            <bind-xml name="view" node="attribute" reference="true"/>
+        </field>
+        <!--  2012.2.16 去掉子节点 relation
+        <field name="relationColumn"
+            type="com.orient.metamodel.metadomain.RelationColumns">
+            <bind-xml name="relationColumn" />
+        </field>
+        <field name="arithColumn"
+            type="com.orient.metamodel.metadomain.ArithColumn">
+            <bind-xml name="arithColumn" />
+        </field> -->
+        <field name="arithId">
+            <bind-xml name="arithId" node="attribute"/>
+        </field>
+        <field name="arithName">
+            <bind-xml name="arithName" node="attribute"/>
+        </field>
+        <field name="arithMethod">
+            <bind-xml name="arithMethod" node="attribute"/>
+        </field>
+        <field name="arithType">
+            <bind-xml name="arithType" node="attribute"/>
+        </field>
+        <field name="arithAttribute" collection="set" type="com.orient.metamodel.metadomain.ArithAttribute">
+            <bind-xml name="arithAttribute"/>
+        </field>
+        <!--<field name="refRelationColumn" type="com.orient.metamodel.metadomain.RelationColumns">
+            <bind-xml name="refRelationColumn" />
+            </field> -->
+        <field name="restriction" type="com.orient.metamodel.metadomain.Restriction">
+            <bind-xml name="restriction" node="attribute" reference="true"/>
+        </field>
+    </class>
+
+    <!-- 下表是关系属性字段RelationColumn表，有relationtype,ownership,isFK属性
+
+
+
+        以及cwmTabColumnsByColumnId,refTable,table三个逆向映射 -->
+
+    <class name="com.orient.metamodel.metadomain.RelationColumns" auto-complete="false">
+        <map-to xml="relationColumn"/>
+
+        <field name="id">
+            <bind-xml name="id" node="attribute"/>
+        </field>
+
+        <field name="columnName">
+            <bind-xml name="columnName" node="attribute"/>
+        </field>
+        <field name="relationtype">
+            <bind-xml name="relationtype" node="attribute"/>
+        </field>
+        <field name="ownership">
+            <bind-xml name="ownership" node="attribute"/>
+        </field>
+        <field name="isFK">
+            <bind-xml name="isFK" node="attribute"/>
+        </field>
+        <field name="cwmTabColumnsByColumnId" type="com.orient.metamodel.metadomain.Column">
+            <bind-xml name="cwmTabColumnsByColumnId" node="attribute" reference="true"/>
+        </field>
+        <!-- <field name="columnId" type="com.orient.metamodel.metadomain.Column">
+            <bind-xml name="columnId" node="attribute" reference="true"/>
+            </field> -->
+        <field name="refColumnName">
+            <bind-xml name="refColumnName" node="attribute"/>
+        </field>
+        <field name="category">
+            <bind-xml name="category" node="attribute"/>
+        </field>
+        <field name="islistdisplay">
+            <bind-xml name="islistdisplay" node="attribute"/>
+        </field>
+        <field name="table" type="com.orient.metamodel.metadomain.Table">
+            <bind-xml name="table" node="attribute" reference="true"/>
+        </field>
+        <field name="refTable" type="com.orient.metamodel.metadomain.Table">
+            <bind-xml name="refTable" node="attribute" reference="true"/>
+        </field>
+        <field name="subRelationColumn" type="com.orient.metamodel.metadomain.Column">
+            <bind-xml name="subRelationColumn" node="attribute" reference="true"/>
+        </field>
+    </class>
+
+    <!-- 下表是统计属性字段ArithColumn表，有arithId,arithName属性
+
+
+		以及table,column三个逆向映射和arithAttribute一个一对多映射 -->
+    <!-- <class name="com.orient.metamodel.metadomain.ArithColumn" auto-complete="true">
+        <map-to xml="arithColumn"/>
+       <field name="columnName">
+            <bind-xml name="columnName" node="attribute" />
+        </field>
+        <field name="arithId">
+            <bind-xml name="arithId" node="attribute" />
+        </field>
+        <field name="arithName">
+            <bind-xml name="arithName" node="attribute" />
+        </field>
+        <field name="table" type="com.orient.metamodel.metadomain.Table">
+            <bind-xml name="table" node="attribute" reference="true" />
+        </field>
+        <field name="view" type="com.orient.metamodel.metadomain.View">
+            <bind-xml name="view" node="attribute" reference="true" />
+        </field>
+        <field name="column" type="com.orient.metamodel.metadomain.Column">
+            <bind-xml name="column" node="attribute" reference="true" />
+        </field>
+        <field name="arithAttribute" collection="set"
+            type="com.orient.metamodel.metadomain.ArithAttribute">
+            <bind-xml name="arithAttribute" />
+        </field>
+    </class> -->
+
+    <!-- 下表是算法参数ArithAttribute表，有arithId,arithName属性
+
+
+        以及table,column三个逆向映射和arithAttribute一个一对多映射 -->
+    <class name="com.orient.metamodel.metadomain.ArithAttribute" auto-complete="false">
+        <map-to xml="arithAttribute"/>
+        <field name="id">
+            <bind-xml name="id" node="attribute"/>
+        </field>
+        <field name="order">
+            <bind-xml name="order" node="attribute"/>
+        </field>
+        <field name="type">
+            <bind-xml name="type" node="attribute"/>
+        </field>
+        <field name="column" type="com.orient.metamodel.metadomain.Column">
+            <bind-xml name="column" node="attribute" reference="true"/>
+        </field>
+        <!-- <field name="acolumn"
+            type="com.orient.metamodel.metadomain.ArithColumn">
+            <bind-xml name="acolumn" node="attribute" reference="true" />
+        </field> -->
+        <field name="value">
+            <bind-xml name="value" node="attribute"/>
+        </field>
+    </class>
+    <!-- 下表是约束Restriction表，有name,displayName,type,isMultiSelected,errorInfo,description,displayType,maxLength,minLength,isValid属性
+
+
+
+        以及columns,cwmEnums两个一对多映射,tableEnum的一对一映射和与schema的逆向映射 -->
+
+    <class name="com.orient.metamodel.metadomain.Restriction" identity="identity" auto-complete="false">
+        <field name="id">
+            <bind-xml name="id" node="attribute"/>
+        </field>
+        <field name="identity">
+            <bind-xml name="identityname" node="attribute"/>
+        </field>
+        <map-to xml="restriction"/>
+        <field name="name">
+            <bind-xml name="name" node="attribute"/>
+        </field>
+        <field name="displayName">
+            <bind-xml name="displayName" node="attribute"/>
+        </field>
+        <field name="type">
+            <bind-xml name="type" node="attribute"/>
+        </field>
+        <field name="isMultiSelected">
+            <bind-xml name="isMultiSelected" node="attribute"/>
+        </field>
+        <field name="dataType">
+            <bind-xml name="dataType" node="attribute"/>
+        </field>
+        <field name="errorInfo">
+            <bind-xml name="errorInfo" node="attribute"/>
+        </field>
+        <field name="description">
+            <bind-xml name="description" node="attribute"/>
+        </field>
+        <field name="displayType">
+            <bind-xml name="displayType" node="attribute"/>
+        </field>
+        <field name="maxLength">
+            <bind-xml name="maxLength" node="attribute"/>
+        </field>
+        <field name="minLength">
+            <bind-xml name="minLength" node="attribute"/>
+        </field>
+        <field name="isValid">
+            <bind-xml name="isValid" node="attribute"/>
+        </field>
+        <field name="order">
+            <bind-xml name="order" node="attribute"/>
+        </field>
+        <field name="cite">
+            <bind-xml name="cite" node="attribute"/>
+        </field>
+        <field name="schema" type="com.orient.metamodel.metadomain.Schema">
+            <bind-xml name="schema" node="attribute" reference="true"/>
+        </field>
+        <!--<field name="columns" collection="set"
+            type="com.orient.metamodel.metadomain.Column">
+            <bind-xml name="column" node="attricbute" reference="true"/>
+            </field>-->
+        <field name="cwmEnums" collection="set" type="com.orient.metamodel.metadomain.Enum">
+            <bind-xml name="enum"/>
+        </field>
+        <field name="tableEnum" type="com.orient.metamodel.metadomain.TableEnum">
+            <bind-xml name="tableEnum"/>
+        </field>
+    </class>
+
+    <!-- 下表是枚举信息Enum表，有value,displayName,imageURL,description属性
+
+
+
+        以及对restriction的逆向映射 -->
+
+    <class name="com.orient.metamodel.metadomain.Enum" auto-complete="false">
+        <map-to xml="enum"/>
+        <field name="id">
+            <bind-xml name="id" node="attribute"/>
+        </field>
+        <field name="value">
+            <bind-xml name="value" node="attribute"/>
+        </field>
+        <field name="displayValue">
+            <bind-xml name="displayValue" node="attribute"/>
+        </field>
+        <field name="imageURL">
+            <bind-xml name="imageURL" node="attribute"/>
+        </field>
+        <field name="description">
+            <bind-xml name="description" node="attribute"/>
+        </field>
+        <field name="order">
+            <bind-xml name="order" node="attribute"/>
+        </field>
+        <field name="isopen">
+            <bind-xml name="isopen" node="attribute"/>
+        </field>
+        <field name="cwmRestriction" type="com.orient.metamodel.metadomain.Restriction">
+            <bind-xml name="restriction" node="attribute" reference="true"/>
+        </field>
+    </class>
+
+    <!-- 下表是数据类枚举约束TableEnum表，有expression,tableEnumSql属性
+
+
+
+        以及关联数据类对TABLE表的逆向映射 和所属数据类，所属字段对table，column的逆向映射  -->
+
+    <class name="com.orient.metamodel.metadomain.TableEnum" auto-complete="false">
+        <map-to xml="tableEnum"/>
+        <field name="id">
+            <bind-xml name="id" node="attribute"/>
+        </field>
+        <field name="expression">
+            <bind-xml name="expression" node="attribute"/>
+        </field>
+        <field name="tableEnumSql">
+            <bind-xml name="tableEnumSql" node="attribute"/>
+        </field>
+        <field name="cwmRestriction" type="com.orient.metamodel.metadomain.Restriction">
+            <bind-xml name="restriction" node="attribute" reference="true"/>
+        </field>
+        <field name="table" type="com.orient.metamodel.metadomain.Table">
+            <bind-xml name="table" node="attribute" reference="true"/>
+        </field>
+        <field name="column" type="com.orient.metamodel.metadomain.Column">
+            <bind-xml name="column" node="attribute" reference="true"/>
+        </field>
+        <field name="maxTable" type="com.orient.metamodel.metadomain.Table">
+            <bind-xml name="maxTable" node="attribute" reference="true"/>
+        </field>
+        <field name="minTable" type="com.orient.metamodel.metadomain.Table">
+            <bind-xml name="minTable" node="attribute" reference="true"/>
+        </field>
+        <field name="maxColumn" type="com.orient.metamodel.metadomain.Column">
+            <bind-xml name="maxColumn" node="attribute" reference="true"/>
+        </field>
+        <field name="minColumn" type="com.orient.metamodel.metadomain.Column">
+            <bind-xml name="minColumn" node="attribute" reference="true"/>
+        </field>
+        <field name="cwmRelationTableEnums" collection="map">
+            <bind-xml name="cwmRelationTableEnums">
+                <class name="org.exolab.castor.mapping.MapItem">
+                    <field name="key" type="java.lang.Integer">
+                        <bind-xml name="id" node="attribute"/>
+                    </field>
+                    <field name="value"
+                           type="com.orient.metamodel.metadomain.Table">
+                        <bind-xml name="refTable" node="attribute" reference="true"/>
+                    </field>
+                </class>
+            </bind-xml>
+        </field>
+        <field name="tabledetailSet" collection="set" type="com.orient.metamodel.metadomain.RelationDetail">
+            <bind-xml name="relationDetail"/>
+        </field>
+    </class>
+
+    <class name="com.orient.metamodel.metadomain.RelationDetail" auto-complete="false">
+        <map-to xml="relationDetail"/>
+        <field name="fromTable" type="com.orient.metamodel.metadomain.Table">
+            <bind-xml name="fromtable" node="attribute" reference="true"/>
+        </field>
+        <field name="toTable" type="com.orient.metamodel.metadomain.Table">
+            <bind-xml name="totable" node="attribute" reference="true"/>
+        </field>
+        <field name="rtoTable" type="com.orient.metamodel.metadomain.Table">
+            <bind-xml name="rtotable" node="attribute" reference="true"/>
+        </field>
+        <field name="rfromTable" type="com.orient.metamodel.metadomain.Table">
+            <bind-xml name="rfromTable" node="attribute" reference="true"/>
+        </field>
+        <field name="type">
+            <bind-xml name="type" node="attribute"/>
+        </field>
+        <field name="viewName">
+            <bind-xml name="viewName" node="attribute"/>
+        </field>
+    </class>
+
+    <!-- 下表是数据查询试图View表，有name,displayName,description,expression,type,isValid,viewSql属性
+
+
+
+        以及cwmReturnViewColumns,cwmPaixuViewColumns,cwmViewRelationtables,table,schema的逆向映射 -->
+
+    <class name="com.orient.metamodel.metadomain.View" identity="identity" auto-complete="false">
+        <map-to xml="view"/>
+        <field name="id">
+            <bind-xml name="id" node="attribute"/>
+        </field>
+        <field name="identity">
+            <bind-xml name="identityname" node="attribute"/>
+        </field>
+        <field name="name">
+            <bind-xml name="name" node="attribute"/>
+        </field>
+        <field name="displayName">
+            <bind-xml name="displayName" node="attribute"/>
+        </field>
+        <field name="description">
+            <bind-xml name="description" node="attribute"/>
+        </field>
+        <field name="expression">
+            <bind-xml name="expression" node="attribute"/>
+        </field>
+        <field name="type">
+            <bind-xml name="type" node="attribute"/>
+        </field>
+        <field name="isValid">
+            <bind-xml name="isValid" node="attribute"/>
+        </field>
+        <field name="viewSql">
+            <bind-xml name="viewSql" node="attribute"/>
+        </field>
+        <field name="paixuFx">
+            <bind-xml name="paixuFx" node="attribute"/>
+        </field>
+        <field name="order">
+            <bind-xml name="order" node="attribute"/>
+        </field>
+        <field name="cite">
+            <bind-xml name="cite" node="attribute"/>
+        </field>
+        <field name="joinType">
+            <bind-xml name="joinType" node="attribute"/>
+        </field>
+        <field name="cwmReturnViewColumns" collection="map">
+            <bind-xml name="cwmReturnViewColumns">
+                <class name="org.exolab.castor.mapping.MapItem">
+                    <field name="key" type="java.lang.Integer">
+                        <bind-xml name="id" node="attribute"/>
+                    </field>
+                    <field name="value"
+                           type="com.orient.metamodel.metadomain.Column">
+                        <bind-xml name="returnColumn" node="attribute"
+                                  reference="true"/>
+                    </field>
+                </class>
+            </bind-xml>
+        </field>
+        <field name="cwmPaixuViewColumns" collection="map">
+            <bind-xml name="cwmPaixuViewColumns">
+                <class name="org.exolab.castor.mapping.MapItem">
+                    <field name="key" type="java.lang.Integer">
+                        <bind-xml name="id" node="attribute"/>
+                    </field>
+                    <field name="value"
+                           type="com.orient.metamodel.metadomain.Column">
+                        <bind-xml name="paixuColumn" node="attribute" reference="true"/>
+                    </field>
+                </class>
+            </bind-xml>
+        </field>
+        <field name="cwmViewRelationtables" collection="map">
+            <bind-xml name="cwmViewRelationtables">
+                <class name="org.exolab.castor.mapping.MapItem">
+                    <field name="key" type="java.lang.String">
+                        <bind-xml name="id" node="attribute"/>
+                    </field>
+                    <field name="value"
+                           type="com.orient.metamodel.metadomain.Table">
+                        <bind-xml name="refTable" node="attribute" reference="true"/>
+                    </field>
+                </class>
+            </bind-xml>
+        </field>
+        <!-- <field name="cwmArithColumnses" collection="set"
+            type="com.orient.metamodel.metadomain.ArithColumn">
+            <bind-xml name="arithcolumn"/>
+        </field> -->
+        <field name="refviewSet" collection="set"
+               type="com.orient.metamodel.metadomain.View">
+            <bind-xml name="refviewSet" node="attribute" reference="true"/>
+        </field>
+        <field name="columns" collection="set"
+               type="com.orient.metamodel.metadomain.Column">
+            <bind-xml name="column"/>
+        </field>
+        <field name="schema" type="com.orient.metamodel.metadomain.Schema">
+            <bind-xml name="schema" node="attribute" reference="true"/>
+        </field>
+        <field name="table" type="com.orient.metamodel.metadomain.Table">
+            <bind-xml name="table" node="attribute" reference="true"/>
+        </field>
+        <field name="tabledetailSet" collection="set"
+               type="com.orient.metamodel.metadomain.RelationDetail">
+            <bind-xml name="relationDetail"/>
+        </field>
+        <field name="canshuxiang" collection="set"
+               type="com.orient.metamodel.metadomain.ArithViewAttribute">
+            <bind-xml name="arithViewAttribute"/>
+        </field>
+    </class>
+    <class name="com.orient.metamodel.metadomain.ArithViewAttribute" auto-complete="false">
+        <map-to xml="arithViewAttribute"/>
+        <field name="id">
+            <bind-xml name="id" node="attribute"/>
+        </field>
+        <field name="isForArith">
+            <bind-xml name="isForArith" node="attribute"/>
+        </field>
+        <field name="name">
+            <bind-xml name="name" node="attribute"/>
+        </field>
+        <field name="displayName">
+            <bind-xml name="displayName" node="attribute"/>
+        </field>
+        <field name="arithId">
+            <bind-xml name="arithId" node="attribute"/>
+        </field>
+        <field name="arithName">
+            <bind-xml name="arithName" node="attribute"/>
+        </field>
+        <field name="view" type="com.orient.metamodel.metadomain.View">
+            <bind-xml name="view" node="attribute" reference="true"/>
+        </field>
+        <field name="column" type="com.orient.metamodel.metadomain.Column">
+            <bind-xml name="column" node="attribute" reference="true"/>
+        </field>
+        <field name="order">
+            <bind-xml name="order" node="attribute"/>
+        </field>
+        <field name="arithAttribute" collection="set" type="com.orient.metamodel.metadomain.ArithAttribute">
+            <bind-xml name="arithAttribute"/>
+        </field>
+    </class>
+</mapping>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mapping>
+    <description>PVM 数据同步XMLMapping</description>
+
+    <class name="com.orient.pvm.bean.sync.PVMTables" >
+        <map-to xml="PVMTables" />
+        <field name="version"  type="java.lang.String">
+            <bind-xml name="version" node="attribute" />
+        </field>
+        <field name="checkModelList" collection="arraylist"
+               type="com.orient.pvm.bean.sync.CheckModel">
+            <bind-xml name="CheckModel" />
+        </field>
+    </class>
+
+
+    <class name="com.orient.pvm.bean.sync.CheckModel">
+        <map-to xml="CheckModel" />
+        <field name="modelId"  type="java.lang.String">
+            <bind-xml name="modelId" node="attribute" />
+        </field>
+        <field name="modelName"  type="java.lang.String">
+            <bind-xml name="modelName" node="attribute" />
+        </field>
+        <field name="taskModelName"  type="java.lang.String">
+            <bind-xml name="taskModelName" node="attribute" />
+        </field>
+        <field name="taskPath"  type="java.lang.String">
+            <bind-xml name="taskPath" node="attribute" />
+        </field>
+        <field name="period"    type="java.lang.String">
+            <bind-xml name="period"   node="attribute"  />
+        </field>
+        <field name="time"    type="java.lang.String">
+            <bind-xml name="time"   node="attribute"  />
+        </field>
+        <field name="plan_Start"  type="java.lang.String">
+            <bind-xml name="plan_Start" node="attribute" />
+        </field>
+        <field name="plan_End"  type="java.lang.String">
+            <bind-xml name="plan_End" node="attribute" />
+        </field>
+        <field name="modelStatus"  type="java.lang.String">
+            <bind-xml name="modelStatus" node="attribute" />
+        </field>
+        <field name="projectName"  type="java.lang.String">
+            <bind-xml name="projectName" node="attribute" />
+        </field>
+
+        <field name="modelType"  type="java.lang.String">
+            <bind-xml name="modelType" node="attribute" />
+        </field>
+
+        <field name="remark"  type="java.lang.String">
+            <bind-xml name="remark" node="attribute" />
+        </field>
+
+        <field name="signfileids"  type="java.lang.String">
+            <bind-xml name="signfileids" node="attribute" />
+        </field>
+
+        <field name="team"
+               type="com.orient.pvm.bean.sync.Team">
+            <bind-xml name="Team" />
+        </field>
+        <field name="signers"
+               type="com.orient.pvm.bean.sync.Signers">
+            <bind-xml name="Signers" />
+        </field>
+
+        <field name="columns"
+               type="com.orient.pvm.bean.sync.Columns">
+            <bind-xml name="Columns" />
+        </field>
+
+
+        <field name="rows" collection="arraylist"
+               type="com.orient.pvm.bean.sync.Row">
+            <bind-xml name="Row" />
+        </field>
+
+        <field name="files"
+               type="com.orient.pvm.bean.sync.Files">
+            <bind-xml name="Files" />
+        </field>
+    </class>
+
+    <!--TEAM-->
+    <class name="com.orient.pvm.bean.sync.Team">
+        <map-to xml="Team" />
+
+        <field name="uploadUserId" type="java.lang.String">
+            <bind-xml name="uploadUserId"  node="attribute" />
+        </field>
+
+        <field name="userIds" collection="arraylist"
+               type="com.orient.pvm.bean.sync.UserId">
+            <bind-xml name="UserId" />
+        </field>
+    </class>
+    <class name="com.orient.pvm.bean.sync.UserId">
+        <map-to xml="UserId" />
+        <field name="id" type="java.lang.String">
+            <bind-xml name="id"  node="attribute" />
+        </field>
+    </class>
+
+    <!--Signers-->
+    <class name="com.orient.pvm.bean.sync.Signers">
+        <map-to xml="Signers" />
+        <field name="signers" collection="arraylist"
+               type="com.orient.pvm.bean.sync.Signer">
+            <bind-xml name="Signer" />
+        </field>
+    </class>
+    <class name="com.orient.pvm.bean.sync.Signer">
+        <map-to xml="Signer" />
+        <field name="roleName" type="java.lang.String">
+            <bind-xml name="roleName"  node="attribute" />
+        </field>
+        <field name="userId" type="java.lang.String">
+            <bind-xml name="userId"  node="attribute" />
+        </field>
+        <field name="userName" type="java.lang.String">
+            <bind-xml name="userName"  node="attribute" />
+        </field>
+    </class>
+
+    <!--Files-->
+    <class name="com.orient.pvm.bean.sync.Files">
+        <map-to xml="Files" />
+        <field name="files" collection="arraylist"
+               type="com.orient.pvm.bean.sync.PVMFile">
+            <bind-xml name="File" />
+        </field>
+    </class>
+    <class name="com.orient.pvm.bean.sync.PVMFile">
+        <map-to xml="File" />
+        <field name="fileName" type="java.lang.String">
+            <bind-xml name="fileName"  node="attribute" />
+        </field>
+        <field name="fileId" type="java.lang.String">
+            <bind-xml name="fileId"  node="attribute" />
+        </field>
+    </class>
+
+    <!--COLUMNS-->
+    <class name="com.orient.pvm.bean.sync.Columns">
+        <map-to xml="Columns" />
+        <field name="columns" collection="arraylist"
+               type="com.orient.pvm.bean.sync.Column">
+            <bind-xml name="Column" />
+        </field>
+    </class>
+    <class name="com.orient.pvm.bean.sync.Column">
+        <map-to xml="Column" />
+        <field name="headName"  type="java.lang.String">
+            <bind-xml name="headName" node="attribute" />
+        </field>
+        <field name="headCode"  type="java.lang.String">
+            <bind-xml name="headCode" node="attribute" />
+        </field>
+        <field name="type"  type="java.lang.String">
+            <bind-xml name="type" node="attribute" />
+        </field>
+        <field name="defaultType" type="java.lang.String">
+            <bind-xml name="defaultType" node="attribute" />
+        </field>
+        <field name="isRequired"  type="java.lang.String">
+            <bind-xml name="isRequired" node="attribute" />
+        </field>
+        <field name="isBindPhoto"  type="java.lang.String">
+            <bind-xml name="isBindPhoto" node="attribute" />
+        </field>
+    </class>
+
+    <!--ROW-->
+    <class name="com.orient.pvm.bean.sync.Row">
+        <map-to xml="ROW" />
+        <field name="dataId"  type="java.lang.String">
+            <bind-xml name="dataId" node="attribute" />
+        </field>
+        <field name="checks" collection="arraylist"
+               type="com.orient.pvm.bean.sync.Check">
+            <bind-xml name="Check"/>
+        </field>
+    </class>
+
+
+    <!--Check-->
+    <class name="com.orient.pvm.bean.sync.Check">
+        <map-to xml="Check" />
+        <field name="headName"  type="java.lang.String">
+            <bind-xml name="headName" node="attribute" />
+        </field>
+        <field name="headCode"  type="java.lang.String">
+            <bind-xml name="headCode" node="attribute" />
+        </field>
+        <field name="dispalyValue"  type="java.lang.String">
+            <bind-xml name="dispalyValue" node="attribute" />
+        </field>
+        <field name="type"  type="java.lang.String">
+            <bind-xml name="type" node="attribute" />
+        </field>
+        <field name="checkOps" collection="arraylist"
+               type="com.orient.pvm.bean.sync.CheckOP">
+            <bind-xml name="CheckOP" />
+        </field>
+    </class>
+
+    <!--CheckOP-->
+
+    <class name="com.orient.pvm.bean.sync.CheckOP">
+        <map-to xml="CheckOP" />
+        <field name="label"  type="java.lang.String">
+            <bind-xml name="label" node="attribute" />
+        </field>
+        <field name="OPTYPE"  type="java.lang.String">
+            <bind-xml name="OPTYPE" node="attribute" />
+        </field>
+        <field name="value"  type="java.lang.String">
+            <bind-xml name="value" node="attribute" />
+        </field>
+        <field name="fileId"  type="java.lang.String">
+            <bind-xml name="fileId" node="attribute" />
+        </field>
+        <field name="OPTIME"  type="java.lang.String">
+            <bind-xml name="OPTIME" node="attribute" />
+        </field>
+        <field name="OPUSERID"  type="java.lang.String">
+            <bind-xml name="OPUSERID" node="attribute" />
+        </field>
+    </class>
+
+
+
+    <class name="com.orient.pvm.bean.sync.PVMUsers" >
+        <map-to xml="PVMUsers" />
+
+        <field name="users" collection="arraylist"
+               type="com.orient.pvm.bean.sync.PVMUser">
+            <bind-xml name="PVMUser" />
+        </field>
+    </class>
+    <class name="com.orient.pvm.bean.sync.PVMUser" >
+        <map-to xml="PVMUser" />
+        <field name="id"  type="java.lang.String">
+            <bind-xml name="id" node="attribute" />
+        </field>
+        <field name="name"  type="java.lang.String">
+            <bind-xml name="name" node="attribute" />
+        </field>
+        <field name="displayName"  type="java.lang.String">
+            <bind-xml name="displayName" node="attribute" />
+        </field>
+        <field name="password"  type="java.lang.String">
+            <bind-xml name="password" node="attribute" />
+        </field>
+    </class>
+
+</mapping>

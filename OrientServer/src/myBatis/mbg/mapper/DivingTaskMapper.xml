@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.orient.weibao.mbg.mapper.DivingTaskMapper">
+  <resultMap id="BaseResultMap" type="com.orient.weibao.mbg.model.DivingTask">
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="SYS_DATE_TIME" jdbcType="TIMESTAMP" property="sysDateTime" />
+    <result column="SYS_USERNAME" jdbcType="VARCHAR" property="sysUsername" />
+    <result column="SYS_IS_DELETE" jdbcType="DECIMAL" property="sysIsDelete" />
+    <result column="SYS_SECRECY" jdbcType="VARCHAR" property="sysSecrecy" />
+    <result column="SYS_SCHEMA" jdbcType="VARCHAR" property="sysSchema" />
+    <result column="SYS_OPERATE" jdbcType="VARCHAR" property="sysOperate" />
+    <result column="SYS_FLOW" jdbcType="VARCHAR" property="sysFlow" />
+    <result column="C_PLAN_DIVING_DEPTH_3208" jdbcType="VARCHAR" property="cPlanDivingDepth3208" />
+    <result column="C_PLAN_START_TIME_3208" jdbcType="TIMESTAMP" property="cPlanStartTime3208" />
+    <result column="C_TASK_NAME_3208" jdbcType="VARCHAR" property="cTaskName3208" />
+    <result column="C_STATE_3208" jdbcType="VARCHAR" property="cState3208" />
+    <result column="C_END_TIME_3208" jdbcType="TIMESTAMP" property="cEndTime3208" />
+    <result column="T_HANGDUAN_480_ID" jdbcType="VARCHAR" property="tHangduan480Id" />
+    <result column="C_RESPONSIBLE_PERSON_3208" jdbcType="VARCHAR" property="cResponsiblePerson3208" />
+    <result column="C_TASK_TARGET_3208" jdbcType="VARCHAR" property="cTaskTarget3208" />
+    <result column="C_TASK_DEPTH_3208" jdbcType="DECIMAL" property="cTaskDepth3208" />
+    <result column="T_HANGCI_480_ID" jdbcType="VARCHAR" property="tHangci480Id" />
+    <result column="C_ATTEND_PEOPLE_3208" jdbcType="VARCHAR" property="cAttendPeople3208" />
+    <result column="C_END_STATE_3208" jdbcType="VARCHAR" property="cEndState3208" />
+    <result column="C_JINGDU_3208" jdbcType="FLOAT" property="cJingdu3208" />
+    <result column="C_WEIDU_3208" jdbcType="FLOAT" property="cWeidu3208" />
+    <result column="C_FLOW_TEMP_TYPE_3208" jdbcType="VARCHAR" property="cFlowTempType3208" />
+    <result column="C_SEA_AREA_3208" jdbcType="VARCHAR" property="cSeaArea3208" />
+    <result column="T_DIVING__PLAN_TABLE_480_ID" jdbcType="VARCHAR" property="tDivingPlanTable480Id" />
+    <result column="C_POSITION_TIME_3208" jdbcType="VARCHAR" property="cPositionTime3208" />
+    <result column="C_FLOAT_TO_WTIME_3208" jdbcType="VARCHAR" property="cFloatToWtime3208" />
+    <result column="C_PLAN_THROW_TIME_3208" jdbcType="VARCHAR" property="cPlanThrowTime3208" />
+    <result column="C_WATER_HOURS_3208" jdbcType="VARCHAR" property="cWaterHours3208" />
+    <result column="C_TASK_TYPE_3208" jdbcType="VARCHAR" property="cTaskType3208" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    ID, SYS_DATE_TIME, SYS_USERNAME, SYS_IS_DELETE, SYS_SECRECY, SYS_SCHEMA, SYS_OPERATE, 
+    SYS_FLOW, C_PLAN_DIVING_DEPTH_3208, C_PLAN_START_TIME_3208, C_TASK_NAME_3208, C_STATE_3208, 
+    C_END_TIME_3208, T_HANGDUAN_480_ID, C_RESPONSIBLE_PERSON_3208, C_TASK_TARGET_3208, 
+    C_TASK_DEPTH_3208, T_HANGCI_480_ID, C_ATTEND_PEOPLE_3208, C_END_STATE_3208, C_JINGDU_3208, 
+    C_WEIDU_3208, C_FLOW_TEMP_TYPE_3208, C_SEA_AREA_3208, T_DIVING__PLAN_TABLE_480_ID, 
+    C_POSITION_TIME_3208, C_FLOAT_TO_WTIME_3208, C_PLAN_THROW_TIME_3208, C_WATER_HOURS_3208, 
+    C_TASK_TYPE_3208
+  </sql>
+  <select id="selectByExample" parameterType="com.orient.weibao.mbg.model.DivingTaskExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from T_DIVING_TASK_480
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from T_DIVING_TASK_480
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from T_DIVING_TASK_480
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.orient.weibao.mbg.model.DivingTaskExample">
+    delete from T_DIVING_TASK_480
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.orient.weibao.mbg.model.DivingTask">
+    insert into T_DIVING_TASK_480 (ID, SYS_DATE_TIME, SYS_USERNAME, 
+      SYS_IS_DELETE, SYS_SECRECY, SYS_SCHEMA, 
+      SYS_OPERATE, SYS_FLOW, C_PLAN_DIVING_DEPTH_3208, 
+      C_PLAN_START_TIME_3208, C_TASK_NAME_3208, C_STATE_3208, 
+      C_END_TIME_3208, T_HANGDUAN_480_ID, C_RESPONSIBLE_PERSON_3208, 
+      C_TASK_TARGET_3208, C_TASK_DEPTH_3208, T_HANGCI_480_ID, 
+      C_ATTEND_PEOPLE_3208, C_END_STATE_3208, C_JINGDU_3208, 
+      C_WEIDU_3208, C_FLOW_TEMP_TYPE_3208, C_SEA_AREA_3208, 
+      T_DIVING__PLAN_TABLE_480_ID, C_POSITION_TIME_3208, 
+      C_FLOAT_TO_WTIME_3208, C_PLAN_THROW_TIME_3208, 
+      C_WATER_HOURS_3208, C_TASK_TYPE_3208)
+    values (#{id,jdbcType=VARCHAR}, #{sysDateTime,jdbcType=TIMESTAMP}, #{sysUsername,jdbcType=VARCHAR}, 
+      #{sysIsDelete,jdbcType=DECIMAL}, #{sysSecrecy,jdbcType=VARCHAR}, #{sysSchema,jdbcType=VARCHAR}, 
+      #{sysOperate,jdbcType=VARCHAR}, #{sysFlow,jdbcType=VARCHAR}, #{cPlanDivingDepth3208,jdbcType=VARCHAR}, 
+      #{cPlanStartTime3208,jdbcType=TIMESTAMP}, #{cTaskName3208,jdbcType=VARCHAR}, #{cState3208,jdbcType=VARCHAR}, 
+      #{cEndTime3208,jdbcType=TIMESTAMP}, #{tHangduan480Id,jdbcType=VARCHAR}, #{cResponsiblePerson3208,jdbcType=VARCHAR}, 
+      #{cTaskTarget3208,jdbcType=VARCHAR}, #{cTaskDepth3208,jdbcType=DECIMAL}, #{tHangci480Id,jdbcType=VARCHAR}, 
+      #{cAttendPeople3208,jdbcType=VARCHAR}, #{cEndState3208,jdbcType=VARCHAR}, #{cJingdu3208,jdbcType=FLOAT}, 
+      #{cWeidu3208,jdbcType=FLOAT}, #{cFlowTempType3208,jdbcType=VARCHAR}, #{cSeaArea3208,jdbcType=VARCHAR}, 
+      #{tDivingPlanTable480Id,jdbcType=VARCHAR}, #{cPositionTime3208,jdbcType=VARCHAR}, 
+      #{cFloatToWtime3208,jdbcType=VARCHAR}, #{cPlanThrowTime3208,jdbcType=VARCHAR}, 
+      #{cWaterHours3208,jdbcType=VARCHAR}, #{cTaskType3208,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.orient.weibao.mbg.model.DivingTask">
+    insert into T_DIVING_TASK_480
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        ID,
+      </if>
+      <if test="sysDateTime != null">
+        SYS_DATE_TIME,
+      </if>
+      <if test="sysUsername != null">
+        SYS_USERNAME,
+      </if>
+      <if test="sysIsDelete != null">
+        SYS_IS_DELETE,
+      </if>
+      <if test="sysSecrecy != null">
+        SYS_SECRECY,
+      </if>
+      <if test="sysSchema != null">
+        SYS_SCHEMA,
+      </if>
+      <if test="sysOperate != null">
+        SYS_OPERATE,
+      </if>
+      <if test="sysFlow != null">
+        SYS_FLOW,
+      </if>
+      <if test="cPlanDivingDepth3208 != null">
+        C_PLAN_DIVING_DEPTH_3208,
+      </if>
+      <if test="cPlanStartTime3208 != null">
+        C_PLAN_START_TIME_3208,
+      </if>
+      <if test="cTaskName3208 != null">
+        C_TASK_NAME_3208,
+      </if>
+      <if test="cState3208 != null">
+        C_STATE_3208,
+      </if>
+      <if test="cEndTime3208 != null">
+        C_END_TIME_3208,
+      </if>
+      <if test="tHangduan480Id != null">
+        T_HANGDUAN_480_ID,
+      </if>
+      <if test="cResponsiblePerson3208 != null">
+        C_RESPONSIBLE_PERSON_3208,
+      </if>
+      <if test="cTaskTarget3208 != null">
+        C_TASK_TARGET_3208,
+      </if>
+      <if test="cTaskDepth3208 != null">
+        C_TASK_DEPTH_3208,
+      </if>
+      <if test="tHangci480Id != null">
+        T_HANGCI_480_ID,
+      </if>
+      <if test="cAttendPeople3208 != null">
+        C_ATTEND_PEOPLE_3208,
+      </if>
+      <if test="cEndState3208 != null">
+        C_END_STATE_3208,
+      </if>
+      <if test="cJingdu3208 != null">
+        C_JINGDU_3208,
+      </if>
+      <if test="cWeidu3208 != null">
+        C_WEIDU_3208,
+      </if>
+      <if test="cFlowTempType3208 != null">
+        C_FLOW_TEMP_TYPE_3208,
+      </if>
+      <if test="cSeaArea3208 != null">
+        C_SEA_AREA_3208,
+      </if>
+      <if test="tDivingPlanTable480Id != null">
+        T_DIVING__PLAN_TABLE_480_ID,
+      </if>
+      <if test="cPositionTime3208 != null">
+        C_POSITION_TIME_3208,
+      </if>
+      <if test="cFloatToWtime3208 != null">
+        C_FLOAT_TO_WTIME_3208,
+      </if>
+      <if test="cPlanThrowTime3208 != null">
+        C_PLAN_THROW_TIME_3208,
+      </if>
+      <if test="cWaterHours3208 != null">
+        C_WATER_HOURS_3208,
+      </if>
+      <if test="cTaskType3208 != null">
+        C_TASK_TYPE_3208,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="sysDateTime != null">
+        #{sysDateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sysUsername != null">
+        #{sysUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="sysIsDelete != null">
+        #{sysIsDelete,jdbcType=DECIMAL},
+      </if>
+      <if test="sysSecrecy != null">
+        #{sysSecrecy,jdbcType=VARCHAR},
+      </if>
+      <if test="sysSchema != null">
+        #{sysSchema,jdbcType=VARCHAR},
+      </if>
+      <if test="sysOperate != null">
+        #{sysOperate,jdbcType=VARCHAR},
+      </if>
+      <if test="sysFlow != null">
+        #{sysFlow,jdbcType=VARCHAR},
+      </if>
+      <if test="cPlanDivingDepth3208 != null">
+        #{cPlanDivingDepth3208,jdbcType=VARCHAR},
+      </if>
+      <if test="cPlanStartTime3208 != null">
+        #{cPlanStartTime3208,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cTaskName3208 != null">
+        #{cTaskName3208,jdbcType=VARCHAR},
+      </if>
+      <if test="cState3208 != null">
+        #{cState3208,jdbcType=VARCHAR},
+      </if>
+      <if test="cEndTime3208 != null">
+        #{cEndTime3208,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tHangduan480Id != null">
+        #{tHangduan480Id,jdbcType=VARCHAR},
+      </if>
+      <if test="cResponsiblePerson3208 != null">
+        #{cResponsiblePerson3208,jdbcType=VARCHAR},
+      </if>
+      <if test="cTaskTarget3208 != null">
+        #{cTaskTarget3208,jdbcType=VARCHAR},
+      </if>
+      <if test="cTaskDepth3208 != null">
+        #{cTaskDepth3208,jdbcType=DECIMAL},
+      </if>
+      <if test="tHangci480Id != null">
+        #{tHangci480Id,jdbcType=VARCHAR},
+      </if>
+      <if test="cAttendPeople3208 != null">
+        #{cAttendPeople3208,jdbcType=VARCHAR},
+      </if>
+      <if test="cEndState3208 != null">
+        #{cEndState3208,jdbcType=VARCHAR},
+      </if>
+      <if test="cJingdu3208 != null">
+        #{cJingdu3208,jdbcType=FLOAT},
+      </if>
+      <if test="cWeidu3208 != null">
+        #{cWeidu3208,jdbcType=FLOAT},
+      </if>
+      <if test="cFlowTempType3208 != null">
+        #{cFlowTempType3208,jdbcType=VARCHAR},
+      </if>
+      <if test="cSeaArea3208 != null">
+        #{cSeaArea3208,jdbcType=VARCHAR},
+      </if>
+      <if test="tDivingPlanTable480Id != null">
+        #{tDivingPlanTable480Id,jdbcType=VARCHAR},
+      </if>
+      <if test="cPositionTime3208 != null">
+        #{cPositionTime3208,jdbcType=VARCHAR},
+      </if>
+      <if test="cFloatToWtime3208 != null">
+        #{cFloatToWtime3208,jdbcType=VARCHAR},
+      </if>
+      <if test="cPlanThrowTime3208 != null">
+        #{cPlanThrowTime3208,jdbcType=VARCHAR},
+      </if>
+      <if test="cWaterHours3208 != null">
+        #{cWaterHours3208,jdbcType=VARCHAR},
+      </if>
+      <if test="cTaskType3208 != null">
+        #{cTaskType3208,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.orient.weibao.mbg.model.DivingTaskExample" resultType="java.lang.Long">
+    select count(*) from T_DIVING_TASK_480
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update T_DIVING_TASK_480
+    <set>
+      <if test="record.id != null">
+        ID = #{record.id,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sysDateTime != null">
+        SYS_DATE_TIME = #{record.sysDateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.sysUsername != null">
+        SYS_USERNAME = #{record.sysUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sysIsDelete != null">
+        SYS_IS_DELETE = #{record.sysIsDelete,jdbcType=DECIMAL},
+      </if>
+      <if test="record.sysSecrecy != null">
+        SYS_SECRECY = #{record.sysSecrecy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sysSchema != null">
+        SYS_SCHEMA = #{record.sysSchema,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sysOperate != null">
+        SYS_OPERATE = #{record.sysOperate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sysFlow != null">
+        SYS_FLOW = #{record.sysFlow,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cPlanDivingDepth3208 != null">
+        C_PLAN_DIVING_DEPTH_3208 = #{record.cPlanDivingDepth3208,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cPlanStartTime3208 != null">
+        C_PLAN_START_TIME_3208 = #{record.cPlanStartTime3208,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.cTaskName3208 != null">
+        C_TASK_NAME_3208 = #{record.cTaskName3208,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cState3208 != null">
+        C_STATE_3208 = #{record.cState3208,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cEndTime3208 != null">
+        C_END_TIME_3208 = #{record.cEndTime3208,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.tHangduan480Id != null">
+        T_HANGDUAN_480_ID = #{record.tHangduan480Id,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cResponsiblePerson3208 != null">
+        C_RESPONSIBLE_PERSON_3208 = #{record.cResponsiblePerson3208,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cTaskTarget3208 != null">
+        C_TASK_TARGET_3208 = #{record.cTaskTarget3208,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cTaskDepth3208 != null">
+        C_TASK_DEPTH_3208 = #{record.cTaskDepth3208,jdbcType=DECIMAL},
+      </if>
+      <if test="record.tHangci480Id != null">
+        T_HANGCI_480_ID = #{record.tHangci480Id,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cAttendPeople3208 != null">
+        C_ATTEND_PEOPLE_3208 = #{record.cAttendPeople3208,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cEndState3208 != null">
+        C_END_STATE_3208 = #{record.cEndState3208,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cJingdu3208 != null">
+        C_JINGDU_3208 = #{record.cJingdu3208,jdbcType=FLOAT},
+      </if>
+      <if test="record.cWeidu3208 != null">
+        C_WEIDU_3208 = #{record.cWeidu3208,jdbcType=FLOAT},
+      </if>
+      <if test="record.cFlowTempType3208 != null">
+        C_FLOW_TEMP_TYPE_3208 = #{record.cFlowTempType3208,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cSeaArea3208 != null">
+        C_SEA_AREA_3208 = #{record.cSeaArea3208,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tDivingPlanTable480Id != null">
+        T_DIVING__PLAN_TABLE_480_ID = #{record.tDivingPlanTable480Id,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cPositionTime3208 != null">
+        C_POSITION_TIME_3208 = #{record.cPositionTime3208,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cFloatToWtime3208 != null">
+        C_FLOAT_TO_WTIME_3208 = #{record.cFloatToWtime3208,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cPlanThrowTime3208 != null">
+        C_PLAN_THROW_TIME_3208 = #{record.cPlanThrowTime3208,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cWaterHours3208 != null">
+        C_WATER_HOURS_3208 = #{record.cWaterHours3208,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cTaskType3208 != null">
+        C_TASK_TYPE_3208 = #{record.cTaskType3208,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update T_DIVING_TASK_480
+    set ID = #{record.id,jdbcType=VARCHAR},
+      SYS_DATE_TIME = #{record.sysDateTime,jdbcType=TIMESTAMP},
+      SYS_USERNAME = #{record.sysUsername,jdbcType=VARCHAR},
+      SYS_IS_DELETE = #{record.sysIsDelete,jdbcType=DECIMAL},
+      SYS_SECRECY = #{record.sysSecrecy,jdbcType=VARCHAR},
+      SYS_SCHEMA = #{record.sysSchema,jdbcType=VARCHAR},
+      SYS_OPERATE = #{record.sysOperate,jdbcType=VARCHAR},
+      SYS_FLOW = #{record.sysFlow,jdbcType=VARCHAR},
+      C_PLAN_DIVING_DEPTH_3208 = #{record.cPlanDivingDepth3208,jdbcType=VARCHAR},
+      C_PLAN_START_TIME_3208 = #{record.cPlanStartTime3208,jdbcType=TIMESTAMP},
+      C_TASK_NAME_3208 = #{record.cTaskName3208,jdbcType=VARCHAR},
+      C_STATE_3208 = #{record.cState3208,jdbcType=VARCHAR},
+      C_END_TIME_3208 = #{record.cEndTime3208,jdbcType=TIMESTAMP},
+      T_HANGDUAN_480_ID = #{record.tHangduan480Id,jdbcType=VARCHAR},
+      C_RESPONSIBLE_PERSON_3208 = #{record.cResponsiblePerson3208,jdbcType=VARCHAR},
+      C_TASK_TARGET_3208 = #{record.cTaskTarget3208,jdbcType=VARCHAR},
+      C_TASK_DEPTH_3208 = #{record.cTaskDepth3208,jdbcType=DECIMAL},
+      T_HANGCI_480_ID = #{record.tHangci480Id,jdbcType=VARCHAR},
+      C_ATTEND_PEOPLE_3208 = #{record.cAttendPeople3208,jdbcType=VARCHAR},
+      C_END_STATE_3208 = #{record.cEndState3208,jdbcType=VARCHAR},
+      C_JINGDU_3208 = #{record.cJingdu3208,jdbcType=FLOAT},
+      C_WEIDU_3208 = #{record.cWeidu3208,jdbcType=FLOAT},
+      C_FLOW_TEMP_TYPE_3208 = #{record.cFlowTempType3208,jdbcType=VARCHAR},
+      C_SEA_AREA_3208 = #{record.cSeaArea3208,jdbcType=VARCHAR},
+      T_DIVING__PLAN_TABLE_480_ID = #{record.tDivingPlanTable480Id,jdbcType=VARCHAR},
+      C_POSITION_TIME_3208 = #{record.cPositionTime3208,jdbcType=VARCHAR},
+      C_FLOAT_TO_WTIME_3208 = #{record.cFloatToWtime3208,jdbcType=VARCHAR},
+      C_PLAN_THROW_TIME_3208 = #{record.cPlanThrowTime3208,jdbcType=VARCHAR},
+      C_WATER_HOURS_3208 = #{record.cWaterHours3208,jdbcType=VARCHAR},
+      C_TASK_TYPE_3208 = #{record.cTaskType3208,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.orient.weibao.mbg.model.DivingTask">
+    update T_DIVING_TASK_480
+    <set>
+      <if test="sysDateTime != null">
+        SYS_DATE_TIME = #{sysDateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sysUsername != null">
+        SYS_USERNAME = #{sysUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="sysIsDelete != null">
+        SYS_IS_DELETE = #{sysIsDelete,jdbcType=DECIMAL},
+      </if>
+      <if test="sysSecrecy != null">
+        SYS_SECRECY = #{sysSecrecy,jdbcType=VARCHAR},
+      </if>
+      <if test="sysSchema != null">
+        SYS_SCHEMA = #{sysSchema,jdbcType=VARCHAR},
+      </if>
+      <if test="sysOperate != null">
+        SYS_OPERATE = #{sysOperate,jdbcType=VARCHAR},
+      </if>
+      <if test="sysFlow != null">
+        SYS_FLOW = #{sysFlow,jdbcType=VARCHAR},
+      </if>
+      <if test="cPlanDivingDepth3208 != null">
+        C_PLAN_DIVING_DEPTH_3208 = #{cPlanDivingDepth3208,jdbcType=VARCHAR},
+      </if>
+      <if test="cPlanStartTime3208 != null">
+        C_PLAN_START_TIME_3208 = #{cPlanStartTime3208,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cTaskName3208 != null">
+        C_TASK_NAME_3208 = #{cTaskName3208,jdbcType=VARCHAR},
+      </if>
+      <if test="cState3208 != null">
+        C_STATE_3208 = #{cState3208,jdbcType=VARCHAR},
+      </if>
+      <if test="cEndTime3208 != null">
+        C_END_TIME_3208 = #{cEndTime3208,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tHangduan480Id != null">
+        T_HANGDUAN_480_ID = #{tHangduan480Id,jdbcType=VARCHAR},
+      </if>
+      <if test="cResponsiblePerson3208 != null">
+        C_RESPONSIBLE_PERSON_3208 = #{cResponsiblePerson3208,jdbcType=VARCHAR},
+      </if>
+      <if test="cTaskTarget3208 != null">
+        C_TASK_TARGET_3208 = #{cTaskTarget3208,jdbcType=VARCHAR},
+      </if>
+      <if test="cTaskDepth3208 != null">
+        C_TASK_DEPTH_3208 = #{cTaskDepth3208,jdbcType=DECIMAL},
+      </if>
+      <if test="tHangci480Id != null">
+        T_HANGCI_480_ID = #{tHangci480Id,jdbcType=VARCHAR},
+      </if>
+      <if test="cAttendPeople3208 != null">
+        C_ATTEND_PEOPLE_3208 = #{cAttendPeople3208,jdbcType=VARCHAR},
+      </if>
+      <if test="cEndState3208 != null">
+        C_END_STATE_3208 = #{cEndState3208,jdbcType=VARCHAR},
+      </if>
+      <if test="cJingdu3208 != null">
+        C_JINGDU_3208 = #{cJingdu3208,jdbcType=FLOAT},
+      </if>
+      <if test="cWeidu3208 != null">
+        C_WEIDU_3208 = #{cWeidu3208,jdbcType=FLOAT},
+      </if>
+      <if test="cFlowTempType3208 != null">
+        C_FLOW_TEMP_TYPE_3208 = #{cFlowTempType3208,jdbcType=VARCHAR},
+      </if>
+      <if test="cSeaArea3208 != null">
+        C_SEA_AREA_3208 = #{cSeaArea3208,jdbcType=VARCHAR},
+      </if>
+      <if test="tDivingPlanTable480Id != null">
+        T_DIVING__PLAN_TABLE_480_ID = #{tDivingPlanTable480Id,jdbcType=VARCHAR},
+      </if>
+      <if test="cPositionTime3208 != null">
+        C_POSITION_TIME_3208 = #{cPositionTime3208,jdbcType=VARCHAR},
+      </if>
+      <if test="cFloatToWtime3208 != null">
+        C_FLOAT_TO_WTIME_3208 = #{cFloatToWtime3208,jdbcType=VARCHAR},
+      </if>
+      <if test="cPlanThrowTime3208 != null">
+        C_PLAN_THROW_TIME_3208 = #{cPlanThrowTime3208,jdbcType=VARCHAR},
+      </if>
+      <if test="cWaterHours3208 != null">
+        C_WATER_HOURS_3208 = #{cWaterHours3208,jdbcType=VARCHAR},
+      </if>
+      <if test="cTaskType3208 != null">
+        C_TASK_TYPE_3208 = #{cTaskType3208,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.orient.weibao.mbg.model.DivingTask">
+    update T_DIVING_TASK_480
+    set SYS_DATE_TIME = #{sysDateTime,jdbcType=TIMESTAMP},
+      SYS_USERNAME = #{sysUsername,jdbcType=VARCHAR},
+      SYS_IS_DELETE = #{sysIsDelete,jdbcType=DECIMAL},
+      SYS_SECRECY = #{sysSecrecy,jdbcType=VARCHAR},
+      SYS_SCHEMA = #{sysSchema,jdbcType=VARCHAR},
+      SYS_OPERATE = #{sysOperate,jdbcType=VARCHAR},
+      SYS_FLOW = #{sysFlow,jdbcType=VARCHAR},
+      C_PLAN_DIVING_DEPTH_3208 = #{cPlanDivingDepth3208,jdbcType=VARCHAR},
+      C_PLAN_START_TIME_3208 = #{cPlanStartTime3208,jdbcType=TIMESTAMP},
+      C_TASK_NAME_3208 = #{cTaskName3208,jdbcType=VARCHAR},
+      C_STATE_3208 = #{cState3208,jdbcType=VARCHAR},
+      C_END_TIME_3208 = #{cEndTime3208,jdbcType=TIMESTAMP},
+      T_HANGDUAN_480_ID = #{tHangduan480Id,jdbcType=VARCHAR},
+      C_RESPONSIBLE_PERSON_3208 = #{cResponsiblePerson3208,jdbcType=VARCHAR},
+      C_TASK_TARGET_3208 = #{cTaskTarget3208,jdbcType=VARCHAR},
+      C_TASK_DEPTH_3208 = #{cTaskDepth3208,jdbcType=DECIMAL},
+      T_HANGCI_480_ID = #{tHangci480Id,jdbcType=VARCHAR},
+      C_ATTEND_PEOPLE_3208 = #{cAttendPeople3208,jdbcType=VARCHAR},
+      C_END_STATE_3208 = #{cEndState3208,jdbcType=VARCHAR},
+      C_JINGDU_3208 = #{cJingdu3208,jdbcType=FLOAT},
+      C_WEIDU_3208 = #{cWeidu3208,jdbcType=FLOAT},
+      C_FLOW_TEMP_TYPE_3208 = #{cFlowTempType3208,jdbcType=VARCHAR},
+      C_SEA_AREA_3208 = #{cSeaArea3208,jdbcType=VARCHAR},
+      T_DIVING__PLAN_TABLE_480_ID = #{tDivingPlanTable480Id,jdbcType=VARCHAR},
+      C_POSITION_TIME_3208 = #{cPositionTime3208,jdbcType=VARCHAR},
+      C_FLOAT_TO_WTIME_3208 = #{cFloatToWtime3208,jdbcType=VARCHAR},
+      C_PLAN_THROW_TIME_3208 = #{cPlanThrowTime3208,jdbcType=VARCHAR},
+      C_WATER_HOURS_3208 = #{cWaterHours3208,jdbcType=VARCHAR},
+      C_TASK_TYPE_3208 = #{cTaskType3208,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

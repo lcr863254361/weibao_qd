@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Copyright (c) 2016. Orient Company
+  ~
+  -->
+
+<ListenerOrder>
+    <EventSource eventType="com.orient.background.event.GenTemplateEvent"
+                 name="com.orient.background.controller.ModelFormViewController">
+        <BaseOrderList>
+            <OrderValue name="com.orient.background.eventListener.GenTemplateListener"/>
+        </BaseOrderList>
+        <ExtenderOderList>
+            <Listener name="com.orient.background.eventListener.GenTemplateListener" order="1"/>
+        </ExtenderOderList>
+    </EventSource>
+    <EventSource eventType="com.orient.background.event.PreviewModelViewEvent"
+                 name="com.orient.background.controller.ModelFormViewController">
+        <BaseOrderList>
+            <OrderValue name="com.orient.background.eventListener.PreviewModelViewListener"/>
+        </BaseOrderList>
+        <ExtenderOderList>
+            <Listener name="com.orient.background.eventListener.PreviewModelViewListener" order="1"/>
+        </ExtenderOderList>
+    </EventSource>
+    <EventSource eventType="com.orient.background.event.SaveModelViewEvent"
+                 name="com.orient.background.controller.ModelFormViewController">
+        <BaseOrderList>
+            <OrderValue name="com.orient.background.eventListener.SaveModelViewListener"/>
+        </BaseOrderList>
+        <ExtenderOderList>
+            <Listener name="com.orient.background.eventListener.SaveModelViewListener" order="1"/>
+        </ExtenderOderList>
+    </EventSource>
+    <EventSource eventType="com.orient.modeldata.event.SaveModelDataEvent"
+                 name="com.orient.background.controller.ModelFormViewController">
+        <BaseOrderList>
+            <OrderValue name="com.orient.modeldata.eventListener.SaveModelDataListener"/>
+        </BaseOrderList>
+        <ExtenderOderList>
+            <Listener name="com.orient.modeldata.eventListener.SaveModelDataListener" order="1"/>
+        </ExtenderOderList>
+    </EventSource>
+</ListenerOrder>

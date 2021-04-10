@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jbpm-configuration>
+ <!--
+  <import resource="jbpm.default.cfg.xml" />
+  <import resource="jbpm.businesscalendar.cfg.xml" />
+  <import resource="jbpm.tx.hibernate.cfg.xml" />
+  <import resource="jbpm.jpdl.cfg.xml" />
+  <import resource="jbpm.bpmn.cfg.xml" />
+  <import resource="jbpm.identity.cfg.xml" />
+  <import resource="jbpm.jobexecutor.cfg.xml" />
+  -->
+
+  <import resource="jbpmcfg/jbpm.mail.templates.edm.xml" />
+  <import resource="jbpmcfg/jbpm.custom.cfg.xml" />
+  <import resource="jbpmcfg/jbpm.tx.spring.cfg.xml" />
+  <import resource="jbpm.jpdl.cfg.xml" />
+  <import resource="jbpm.bpmn.cfg.xml" />
+  <import resource="jbpm.businesscalendar.cfg.xml" />
+  <import resource="jbpm.console.cfg.xml" />
+  
+ 
+ 
+  <process-engine-context>
+ 
+  </process-engine-context> 
+	<transaction-context>
+		<hibernate-session current="true" />
+		<object class="com.orient.workflow.ext.identity.EdmIdentitySessionImpl" />
+	</transaction-context> 
+</jbpm-configuration>

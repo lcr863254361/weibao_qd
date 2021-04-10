@@ -1,0 +1,151 @@
+<!DOCTYPE databases PUBLIC
+"-//EXOLAB/Castor Mapping DTD Version 1.0//EN"
+"http://castor.exolab.org/mapping.dtd">
+<mapping>
+	<description>EDM TBOM Source Mapping</description>
+	<class name="com.orient.webservice.tbom.bean.TbomSource">
+	   <field name="source" collection="arraylist"
+			type="com.orient.webservice.tbom.bean.TbomSchema">
+			<bind-xml name="schema" />
+		</field>
+		<field name="fileList" collection="arraylist"
+			type="com.orient.webservice.tbom.bean.TbomFile">
+			<bind-xml name="file" />
+		</field>
+	</class>
+	<class name="com.orient.webservice.tbom.bean.TbomFile" identity="id" auto-complete="true">
+	    <map-to xml="file"/>
+	    <field name="id">
+			<bind-xml name="id" node="attribute" />
+		</field>
+		<field name="name">
+			<bind-xml name="name" node="attribute" />
+		</field>
+		<field name="type">
+			<bind-xml name="type" node="attribute" />
+		</field>
+		<field name="date">
+			<bind-xml name="date" node="attribute" />
+		</field>
+		<field name="size">
+			<bind-xml name="size" node="attribute" />
+		</field>
+	</class>
+	<class name="com.orient.webservice.tbom.bean.TbomSchema" identity="id" auto-complete="true">
+		<map-to xml="schema"/>
+		<field name="id">
+			<bind-xml name="id" node="attribute"/>
+		</field>
+		<field name="name">
+			<bind-xml name="name" node="attribute" />
+		</field>
+		<field name="version">
+			<bind-xml name="version" node="attribute" />
+		</field>
+		<field name="tables" collection="set"
+			type="com.orient.webservice.tbom.bean.TbomTable">
+			<bind-xml name="table" />
+		</field>
+		<field name="views" collection="set"
+			type="com.orient.webservice.tbom.bean.TbomView">
+			<bind-xml name="view" />
+		</field>
+		<field name="dynamicTables" collection="set"
+			type="com.orient.webservice.tbom.bean.TbomTable">
+			<bind-xml name="dynamictable" />
+		</field>
+	</class>
+	
+
+	<class name="com.orient.webservice.tbom.bean.TbomTable" identity="id"
+		auto-complete="true">
+		<map-to xml="table"/>
+		<field name="id">
+			<bind-xml name="id" node="attribute"  QName-prefix="table"/>
+		</field>
+		<field name="name">
+			<bind-xml name="name" node="attribute" />
+		</field>
+		<field name="parentTable" type="com.orient.webservice.tbom.bean.TbomTable">
+			<bind-xml name="parentTable" node="attribute" reference="true" />
+		</field>
+		<field name="displayName">
+			<bind-xml name="displayName" node="attribute" />
+		</field>
+		<field name="schemaid">
+			<bind-xml name="schemaid" node="attribute" />
+		</field>
+		<field name="order">
+			<bind-xml name="order" node="attribute" />
+		</field>
+		<field name="type">
+			<bind-xml name="type" node="attribute" />
+		</field>
+		<field name="schema" type="com.orient.webservice.tbom.bean.TbomSchema">
+			<bind-xml name="schema" node="attribute" reference="true" />
+		</field>
+		<field name="cwmRelationColumnses" collection="arraylist"
+			type="com.orient.webservice.tbom.bean.TbomRelationColumns">
+			<bind-xml name="relationColumn" />
+		</field>
+		<field name="childTables" collection="set"
+			type="com.orient.webservice.tbom.bean.TbomTable">
+			<bind-xml name="childTable" />
+		</field>
+	</class>
+
+	<class name="com.orient.webservice.tbom.bean.TbomRelationColumns"
+		auto-complete="true">
+		<map-to xml="relationColumn"/>
+		<field name="id">
+			<bind-xml name="id" node="attribute" />
+		</field>
+		<field name="relationtype">
+			<bind-xml name="relationtype" node="attribute" />
+		</field>
+		<!-- <field name="ownership">
+			<bind-xml name="ownership" node="attribute" />
+		</field> -->
+		<field name="isFK">
+			<bind-xml name="isFK" node="attribute" />
+		</field>
+		<field name="table" type="com.orient.webservice.tbom.bean.TbomTable">
+			<bind-xml name="table" node="attribute" reference="true" />
+		</field>
+		<!-- <field name="refTable">
+			<bind-xml name="refTable" node="attribute"/>
+		</field> -->
+		<field name="refTable" type="com.orient.webservice.tbom.bean.TbomTable">
+			<bind-xml name="refTable" node="attribute" reference="true" />
+		</field>
+	</class>
+	
+	<class name="com.orient.webservice.tbom.bean.TbomView" identity="id"
+		auto-complete="true">
+		<map-to xml="view"/>
+		<field name="id">
+			<bind-xml name="id" node="attribute" />
+		</field>
+		<field name="name">
+			<bind-xml name="name" node="attribute" />
+		</field>
+		<field name="schemaid">
+			<bind-xml name="schemaid" node="attribute" />
+		</field>
+		<field name="displayName">
+			<bind-xml name="displayName" node="attribute" />
+		</field>
+		<field name="order">
+			<bind-xml name="order" node="attribute" />
+		</field>
+		<field name="type">
+			<bind-xml name="type" node="attribute" />
+		</field>
+		<field name="schema" type="com.orient.webservice.tbom.bean.TbomSchema">
+			<bind-xml name="schema" node="attribute" reference="true" />
+		</field>
+		<field name="table" type="com.orient.webservice.tbom.bean.TbomTable">
+			<bind-xml name="table" node="attribute" reference="true" />
+		</field>
+	</class>
+</mapping>

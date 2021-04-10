@@ -1,0 +1,1543 @@
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:705 */
+.x-tab-orientTab-top-over .x-frame-tl,
+.x-tab-orientTab-top-over .x-frame-bl,
+.x-tab-orientTab-top-over .x-frame-tr,
+.x-tab-orientTab-top-over .x-frame-br,
+.x-tab-orientTab-top-over .x-frame-tc,
+.x-tab-orientTab-top-over .x-frame-bc,
+.x-tab-orientTab-left-over .x-frame-tl,
+.x-tab-orientTab-left-over .x-frame-bl,
+.x-tab-orientTab-left-over .x-frame-tr,
+.x-tab-orientTab-left-over .x-frame-br,
+.x-tab-orientTab-left-over .x-frame-tc,
+.x-tab-orientTab-left-over .x-frame-bc,
+.x-tab-orientTab-right-over .x-frame-tl,
+.x-tab-orientTab-right-over .x-frame-bl,
+.x-tab-orientTab-right-over .x-frame-tr,
+.x-tab-orientTab-right-over .x-frame-br,
+.x-tab-orientTab-right-over .x-frame-tc,
+.x-tab-orientTab-right-over .x-frame-bc {
+    background-image: url(images/tab/tab-orientTab-top-over-corners.gif);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:713 */
+.x-tab-orientTab-top-over .x-frame-ml,
+.x-tab-orientTab-top-over .x-frame-mr,
+.x-tab-orientTab-left-over .x-frame-ml,
+.x-tab-orientTab-left-over .x-frame-mr,
+.x-tab-orientTab-right-over .x-frame-ml,
+.x-tab-orientTab-right-over .x-frame-mr {
+    background-image: url(images/tab/tab-orientTab-top-over-sides.gif);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:717 */
+.x-tab-orientTab-top-over .x-frame-mc,
+.x-tab-orientTab-left-over .x-frame-mc,
+.x-tab-orientTab-right-over .x-frame-mc {
+    background-color: #dc2f2f;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:727 */
+.x-tab-orientTab-bottom-over .x-frame-tl,
+.x-tab-orientTab-bottom-over .x-frame-bl,
+.x-tab-orientTab-bottom-over .x-frame-tr,
+.x-tab-orientTab-bottom-over .x-frame-br,
+.x-tab-orientTab-bottom-over .x-frame-tc,
+.x-tab-orientTab-bottom-over .x-frame-bc {
+    background-image: url(images/tab/tab-orientTab-bottom-over-corners.gif);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:735 */
+.x-tab-orientTab-bottom-over .x-frame-ml,
+.x-tab-orientTab-bottom-over .x-frame-mr {
+    background-image: url(images/tab/tab-orientTab-bottom-over-sides.gif);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:739 */
+.x-tab-orientTab-bottom-over .x-frame-mc {
+    background-color: #dc2f2f;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:751 */
+.x-tab-orientTab-top-active .x-frame-tl,
+.x-tab-orientTab-top-active .x-frame-bl,
+.x-tab-orientTab-top-active .x-frame-tr,
+.x-tab-orientTab-top-active .x-frame-br,
+.x-tab-orientTab-top-active .x-frame-tc,
+.x-tab-orientTab-top-active .x-frame-bc,
+.x-tab-orientTab-left-active .x-frame-tl,
+.x-tab-orientTab-left-active .x-frame-bl,
+.x-tab-orientTab-left-active .x-frame-tr,
+.x-tab-orientTab-left-active .x-frame-br,
+.x-tab-orientTab-left-active .x-frame-tc,
+.x-tab-orientTab-left-active .x-frame-bc,
+.x-tab-orientTab-right-active .x-frame-tl,
+.x-tab-orientTab-right-active .x-frame-bl,
+.x-tab-orientTab-right-active .x-frame-tr,
+.x-tab-orientTab-right-active .x-frame-br,
+.x-tab-orientTab-right-active .x-frame-tc,
+.x-tab-orientTab-right-active .x-frame-bc {
+    background-image: url(images/tab/tab-orientTab-top-active-corners.gif);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:759 */
+.x-tab-orientTab-top-active .x-frame-ml,
+.x-tab-orientTab-top-active .x-frame-mr,
+.x-tab-orientTab-left-active .x-frame-ml,
+.x-tab-orientTab-left-active .x-frame-mr,
+.x-tab-orientTab-right-active .x-frame-ml,
+.x-tab-orientTab-right-active .x-frame-mr {
+    background-image: url(images/tab/tab-orientTab-top-active-sides.gif);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:763 */
+.x-tab-orientTab-top-active .x-frame-mc,
+.x-tab-orientTab-left-active .x-frame-mc,
+.x-tab-orientTab-right-active .x-frame-mc {
+    background-color: #b20909;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:773 */
+.x-tab-orientTab-bottom-active .x-frame-tl,
+.x-tab-orientTab-bottom-active .x-frame-bl,
+.x-tab-orientTab-bottom-active .x-frame-tr,
+.x-tab-orientTab-bottom-active .x-frame-br,
+.x-tab-orientTab-bottom-active .x-frame-tc,
+.x-tab-orientTab-bottom-active .x-frame-bc {
+    background-image: url(images/tab/tab-orientTab-bottom-active-corners.gif);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:781 */
+.x-tab-orientTab-bottom-active .x-frame-ml,
+.x-tab-orientTab-bottom-active .x-frame-mr {
+    background-image: url(images/tab/tab-orientTab-bottom-active-sides.gif);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:785 */
+.x-tab-orientTab-bottom-active .x-frame-mc {
+    background-color: #b20909;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:797 */
+.x-tab-orientTab-top-disabled .x-frame-tl,
+.x-tab-orientTab-top-disabled .x-frame-bl,
+.x-tab-orientTab-top-disabled .x-frame-tr,
+.x-tab-orientTab-top-disabled .x-frame-br,
+.x-tab-orientTab-top-disabled .x-frame-tc,
+.x-tab-orientTab-top-disabled .x-frame-bc,
+.x-tab-orientTab-left-disabled .x-frame-tl,
+.x-tab-orientTab-left-disabled .x-frame-bl,
+.x-tab-orientTab-left-disabled .x-frame-tr,
+.x-tab-orientTab-left-disabled .x-frame-br,
+.x-tab-orientTab-left-disabled .x-frame-tc,
+.x-tab-orientTab-left-disabled .x-frame-bc,
+.x-tab-orientTab-right-disabled .x-frame-tl,
+.x-tab-orientTab-right-disabled .x-frame-bl,
+.x-tab-orientTab-right-disabled .x-frame-tr,
+.x-tab-orientTab-right-disabled .x-frame-br,
+.x-tab-orientTab-right-disabled .x-frame-tc,
+.x-tab-orientTab-right-disabled .x-frame-bc {
+    background-image: url(images/tab/tab-orientTab-top-disabled-corners.gif);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:805 */
+.x-tab-orientTab-top-disabled .x-frame-ml,
+.x-tab-orientTab-top-disabled .x-frame-mr,
+.x-tab-orientTab-left-disabled .x-frame-ml,
+.x-tab-orientTab-left-disabled .x-frame-mr,
+.x-tab-orientTab-right-disabled .x-frame-ml,
+.x-tab-orientTab-right-disabled .x-frame-mr {
+    background-image: url(images/tab/tab-orientTab-top-disabled-sides.gif);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:809 */
+.x-tab-orientTab-top-disabled .x-frame-mc,
+.x-tab-orientTab-left-disabled .x-frame-mc,
+.x-tab-orientTab-right-disabled .x-frame-mc {
+    background-color: #afd7ff;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:819 */
+.x-tab-orientTab-bottom-disabled .x-frame-tl,
+.x-tab-orientTab-bottom-disabled .x-frame-bl,
+.x-tab-orientTab-bottom-disabled .x-frame-tr,
+.x-tab-orientTab-bottom-disabled .x-frame-br,
+.x-tab-orientTab-bottom-disabled .x-frame-tc,
+.x-tab-orientTab-bottom-disabled .x-frame-bc {
+    background-image: url(images/tab/tab-orientTab-bottom-disabled-corners.gif);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:827 */
+.x-tab-orientTab-bottom-disabled .x-frame-ml,
+.x-tab-orientTab-bottom-disabled .x-frame-mr {
+    background-image: url(images/tab/tab-orientTab-bottom-disabled-sides.gif);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:831 */
+.x-tab-orientTab-bottom-disabled .x-frame-mc {
+    background-color: #afd7ff;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:861 */
+.x-tab-orientTab .x-tab-close-btn {
+    width: 12px;
+    height: 12px;
+    background-image: url(images/tab/tab-orientTab-close.png);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:870 */
+.x-tab-orientTab .x-tab-close-btn-over {
+    background-position: -12px 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:880 */
+.x-tab-orientTab .x-tab-close-btn {
+    top: 2px;
+    right: 2px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:924 */
+.x-tab-orientTab-disabled .x-tab-close-btn {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    opacity: 0.3;
+    background-position: 0 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:934 */
+.x-tab-orientTab-pressed .x-tab-close-btn {
+    background-position: -24px 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:939 */
+.x-tab-orientTab-closable .x-tab-wrap {
+    padding-right: 15px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/slicer.scss:78 */
+.x-tab-orientTab-top-over:after {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-orientTab-top-over-corners.gif), sides:url(images/tab/tab-orientTab-top-over-sides.gif)";
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/slicer.scss:78 */
+.x-tab-orientTab-bottom-over:after {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-orientTab-bottom-over-corners.gif), sides:url(images/tab/tab-orientTab-bottom-over-sides.gif)";
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/slicer.scss:78 */
+.x-tab-orientTab-top-active:after {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-orientTab-top-active-corners.gif), sides:url(images/tab/tab-orientTab-top-active-sides.gif)";
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/slicer.scss:78 */
+.x-tab-orientTab-bottom-active:after {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-orientTab-bottom-active-corners.gif), sides:url(images/tab/tab-orientTab-bottom-active-sides.gif)";
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/slicer.scss:78 */
+.x-tab-orientTab-top-disabled:after {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-orientTab-top-disabled-corners.gif), sides:url(images/tab/tab-orientTab-top-disabled-sides.gif)";
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/slicer.scss:78 */
+.x-tab-orientTab-bottom-disabled:after {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-orientTab-bottom-disabled-corners.gif), sides:url(images/tab/tab-orientTab-bottom-disabled-sides.gif)";
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:100 */
+.x-tab-bar-orientTab-top {
+    padding: 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:107 */
+.x-tab-bar-orientTab-bottom {
+    padding: 0 0 0 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:114 */
+.x-tab-bar-orientTab-left {
+    padding: 0 0 0 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:130 */
+.x-tab-bar-orientTab-right {
+    padding: 0 0 0 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:149 */
+.x-tab-bar-orientTab-horizontal {
+    height: 36px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:153 */
+.x-content-box .x-tab-bar-orientTab-horizontal {
+    height: 36px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:161 */
+.x-tab-bar-orientTab-vertical {
+    width: 36px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:165 */
+.x-content-box .x-tab-bar-orientTab-vertical {
+    width: 36px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:172 */
+.x-tab-bar-body-orientTab-top {
+    padding-bottom: 5px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:176 */
+.x-tab-bar-body-orientTab-bottom {
+    padding-top: 5px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:180 */
+.x-tab-bar-body-orientTab-left {
+    padding-right: 5px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:191 */
+.x-tab-bar-body-orientTab-right {
+    padding-left: 5px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:202 */
+.x-tab-bar-strip-orientTab {
+    border-style: solid;
+    border-color: #97cbff;
+    background-color: #dbedff;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:210 */
+.x-content-box .x-tab-bar-strip-orientTab-horizontal {
+    height: 5px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:218 */
+.x-content-box .x-tab-bar-strip-orientTab-vertical {
+    width: 5px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:224 */
+.x-tab-bar-strip-orientTab-top {
+    border-width: 0 0;
+    height: 5px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:227 */
+.x-tab-bar-plain .x-tab-bar-strip-orientTab-top {
+    border-width: 0 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:232 */
+.x-tab-bar-strip-orientTab-bottom {
+    border-width: 0 0 0 0;
+    height: 5px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:235 */
+.x-tab-bar-plain .x-tab-bar-strip-orientTab-bottom {
+    border-width: 0 0 0 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:240 */
+.x-tab-bar-strip-orientTab-left {
+    border-width: 0 0 0 0;
+    width: 5px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:243 */
+.x-tab-bar-plain .x-tab-bar-strip-orientTab-left {
+    border-width: 0 0 0 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:257 */
+.x-tab-bar-strip-orientTab-right {
+    border-width: 0 0 0 0;
+    width: 5px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:260 */
+.x-tab-bar-plain .x-tab-bar-strip-orientTab-right {
+    border-width: 0 0 0 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:274 */
+.x-tab-bar-orientTab {
+    background-color: #97cbff;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:323 */
+.x-tab-bar-orientTab .x-box-scroller {
+    cursor: pointer;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    opacity: 0.5;
+    background-color: #97cbff;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:339 */
+.x-tab-bar-orientTab .x-box-scroller-plain .x-box-scroller {
+    background-color: transparent;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:341 */
+.x-ie8m .x-tab-bar-orientTab .x-box-scroller-plain .x-box-scroller {
+    background-color: #fff;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:348 */
+.x-tab-bar-orientTab .x-box-scroller-hover {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    opacity: 0.6;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:354 */
+.x-tab-bar-orientTab .x-box-scroller-pressed {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    opacity: 0.7;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:362 */
+.x-tab-bar-orientTab .x-tabbar-scroll-left,
+.x-tab-bar-orientTab .x-tabbar-scroll-right {
+    height: 31px;
+    width: 24px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:368 */
+.x-tab-bar-orientTab .x-tabbar-scroll-top,
+.x-tab-bar-orientTab .x-tabbar-scroll-bottom {
+    width: 31px;
+    height: 24px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:377 */
+.x-tab-bar-orientTab-bottom .x-box-scroller {
+    margin-top: 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:381 */
+.x-tab-bar-orientTab-right .x-box-scroller {
+    margin-left: 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:395 */
+.x-tab-bar-orientTab .x-tabbar-scroll-left {
+    background-image: url(images/tab-bar/orientTab-scroll-left.png);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:399 */
+.x-tab-bar-orientTab .x-tabbar-scroll-right {
+    background-image: url(images/tab-bar/orientTab-scroll-right.png);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:403 */
+.x-tab-bar-orientTab .x-tabbar-scroll-top {
+    background-image: url(images/tab-bar/orientTab-scroll-top.png);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:407 */
+.x-tab-bar-orientTab .x-tabbar-scroll-bottom {
+    background-image: url(images/tab-bar/orientTab-scroll-bottom.png);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:425 */
+.x-tab-bar-orientTab .x-box-scroller-plain .x-tabbar-scroll-left {
+    background-image: url(images/tab-bar/orientTab-plain-scroll-left.png);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:429 */
+.x-tab-bar-orientTab .x-box-scroller-plain .x-tabbar-scroll-right {
+    background-image: url(images/tab-bar/orientTab-plain-scroll-right.png);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:433 */
+.x-tab-bar-orientTab .x-box-scroller-plain .x-tabbar-scroll-top {
+    background-image: url(images/tab-bar/orientTab-plain-scroll-top.png);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:437 */
+.x-tab-bar-orientTab .x-box-scroller-plain .x-tabbar-scroll-bottom {
+    background-image: url(images/tab-bar/orientTab-plain-scroll-bottom.png);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:549 */
+.x-tab-bar-orientTab .x-box-scroller-disabled {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
+    opacity: 0.25;
+    cursor: default;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/slicer.scss:78 */
+.x-tab-bar-orientTab-top:after {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom";
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/slicer.scss:78 */
+.x-tab-bar-orientTab-bottom:after {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:top";
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/slicer.scss:78 */
+.x-tab-bar-orientTab-left:after {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:right";
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/slicer.scss:78 */
+.x-tab-bar-orientTab-right:after {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:left";
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:137 */
+.x-tab-orientTab2-top {
+    -moz-border-radius-topleft: 3px;
+    -webkit-border-top-left-radius: 3px;
+    border-top-left-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    -webkit-border-top-right-radius: 3px;
+    border-top-right-radius: 3px;
+    -moz-border-radius-bottomright: 0;
+    -webkit-border-bottom-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -moz-border-radius-bottomleft: 0;
+    -webkit-border-bottom-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 8px 12px 7px 12px;
+    border-width: 0 0 0 0;
+    border-style: solid;
+    background-color: #fc3;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:189 */
+.x-tab-orientTab2-top-mc {
+    background-color: #fc3;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:235 */
+.x-nbr .x-tab-orientTab2-top {
+    padding: 0 !important;
+    border-width: 0 !important;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    border-radius: 0px;
+    background-color: transparent;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:255 */
+body.x-nbr .x-tab-orientTab2-top-frameInfo {
+    font-family: th-3-3-0-0-0-0-0-0-8-12-7-12;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:322 */
+.x-tab-orientTab2-top-tl {
+    background-position: 0 -6px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:326 */
+.x-tab-orientTab2-top-tr {
+    background-position: right -9px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:330 */
+.x-tab-orientTab2-top-bl {
+    background-position: 0 -12px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:334 */
+.x-tab-orientTab2-top-br {
+    background-position: right -15px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:338 */
+.x-tab-orientTab2-top-ml {
+    background-position: 0 top;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:342 */
+.x-tab-orientTab2-top-mr {
+    background-position: right top;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:346 */
+.x-tab-orientTab2-top-tc {
+    background-position: 0 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:350 */
+.x-tab-orientTab2-top-bc {
+    background-position: 0 -3px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:355 */
+.x-tab-orientTab2-top-tr,
+.x-tab-orientTab2-top-br,
+.x-tab-orientTab2-top-mr {
+    padding-right: 3px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:361 */
+.x-tab-orientTab2-top-tl,
+.x-tab-orientTab2-top-bl,
+.x-tab-orientTab2-top-ml {
+    padding-left: 3px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:367 */
+.x-tab-orientTab2-top-tc {
+    height: 3px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:370 */
+.x-tab-orientTab2-top-bc {
+    height: 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:374 */
+.x-tab-orientTab2-top-tl,
+.x-tab-orientTab2-top-bl,
+.x-tab-orientTab2-top-tr,
+.x-tab-orientTab2-top-br,
+.x-tab-orientTab2-top-tc,
+.x-tab-orientTab2-top-bc,
+.x-tab-orientTab2-top-ml,
+.x-tab-orientTab2-top-mr {
+    zoom: 1;
+    background-image: url(images/tab/tab-orientTab2-top-corners.gif);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:424 */
+.x-tab-orientTab2-top-ml,
+.x-tab-orientTab2-top-mr {
+    zoom: 1;
+    background-image: url(images/tab/tab-orientTab2-top-sides.gif);
+    background-repeat: repeat-y;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:437 */
+.x-tab-orientTab2-top-mc {
+    padding: 5px 9px 7px 9px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:445 */
+.x-strict .x-ie7 .x-tab-orientTab2-top-tl,
+.x-strict .x-ie7 .x-tab-orientTab2-top-bl {
+    position: relative;
+    right: 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/slicer.scss:78 */
+.x-tab-orientTab2-top:after {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-orientTab2-top-corners.gif), sides:url(images/tab/tab-orientTab2-top-sides.gif)";
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:137 */
+.x-tab-orientTab2-bottom {
+    -moz-border-radius-topleft: 0;
+    -webkit-border-top-left-radius: 0;
+    border-top-left-radius: 0;
+    -moz-border-radius-topright: 0;
+    -webkit-border-top-right-radius: 0;
+    border-top-right-radius: 0;
+    -moz-border-radius-bottomright: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding: 8px 12px 7px 12px;
+    border-width: 0 0 0 0;
+    border-style: solid;
+    background-color: #fc3;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:189 */
+.x-tab-orientTab2-bottom-mc {
+    background-color: #fc3;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:235 */
+.x-nbr .x-tab-orientTab2-bottom {
+    padding: 0 !important;
+    border-width: 0 !important;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    border-radius: 0px;
+    background-color: transparent;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:255 */
+body.x-nbr .x-tab-orientTab2-bottom-frameInfo {
+    font-family: th-0-0-3-3-0-0-0-0-8-12-7-12;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:322 */
+.x-tab-orientTab2-bottom-tl {
+    background-position: 0 -6px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:326 */
+.x-tab-orientTab2-bottom-tr {
+    background-position: right -9px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:330 */
+.x-tab-orientTab2-bottom-bl {
+    background-position: 0 -12px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:334 */
+.x-tab-orientTab2-bottom-br {
+    background-position: right -15px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:338 */
+.x-tab-orientTab2-bottom-ml {
+    background-position: 0 top;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:342 */
+.x-tab-orientTab2-bottom-mr {
+    background-position: right top;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:346 */
+.x-tab-orientTab2-bottom-tc {
+    background-position: 0 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:350 */
+.x-tab-orientTab2-bottom-bc {
+    background-position: 0 -3px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:355 */
+.x-tab-orientTab2-bottom-tr,
+.x-tab-orientTab2-bottom-br,
+.x-tab-orientTab2-bottom-mr {
+    padding-right: 3px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:361 */
+.x-tab-orientTab2-bottom-tl,
+.x-tab-orientTab2-bottom-bl,
+.x-tab-orientTab2-bottom-ml {
+    padding-left: 3px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:367 */
+.x-tab-orientTab2-bottom-tc {
+    height: 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:370 */
+.x-tab-orientTab2-bottom-bc {
+    height: 3px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:374 */
+.x-tab-orientTab2-bottom-tl,
+.x-tab-orientTab2-bottom-bl,
+.x-tab-orientTab2-bottom-tr,
+.x-tab-orientTab2-bottom-br,
+.x-tab-orientTab2-bottom-tc,
+.x-tab-orientTab2-bottom-bc,
+.x-tab-orientTab2-bottom-ml,
+.x-tab-orientTab2-bottom-mr {
+    zoom: 1;
+    background-image: url(images/tab/tab-orientTab2-bottom-corners.gif);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:424 */
+.x-tab-orientTab2-bottom-ml,
+.x-tab-orientTab2-bottom-mr {
+    zoom: 1;
+    background-image: url(images/tab/tab-orientTab2-bottom-sides.gif);
+    background-repeat: repeat-y;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:437 */
+.x-tab-orientTab2-bottom-mc {
+    padding: 8px 9px 4px 9px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:445 */
+.x-strict .x-ie7 .x-tab-orientTab2-bottom-tl,
+.x-strict .x-ie7 .x-tab-orientTab2-bottom-bl {
+    position: relative;
+    right: 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/slicer.scss:78 */
+.x-tab-orientTab2-bottom:after {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-orientTab2-bottom-corners.gif), sides:url(images/tab/tab-orientTab2-bottom-sides.gif)";
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:137 */
+.x-tab-orientTab2-left {
+    -moz-border-radius-topleft: 3px;
+    -webkit-border-top-left-radius: 3px;
+    border-top-left-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    -webkit-border-top-right-radius: 3px;
+    border-top-right-radius: 3px;
+    -moz-border-radius-bottomright: 0;
+    -webkit-border-bottom-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -moz-border-radius-bottomleft: 0;
+    -webkit-border-bottom-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 8px 12px 7px 12px;
+    border-width: 0 0 0 0;
+    border-style: solid;
+    background-color: #fc3;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:189 */
+.x-tab-orientTab2-left-mc {
+    background-color: #fc3;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:235 */
+.x-nbr .x-tab-orientTab2-left {
+    padding: 0 !important;
+    border-width: 0 !important;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    border-radius: 0px;
+    background-color: transparent;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:255 */
+body.x-nbr .x-tab-orientTab2-left-frameInfo {
+    font-family: th-3-3-0-0-0-0-0-0-8-12-7-12;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:322 */
+.x-tab-orientTab2-left-tl {
+    background-position: 0 -6px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:326 */
+.x-tab-orientTab2-left-tr {
+    background-position: right -9px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:330 */
+.x-tab-orientTab2-left-bl {
+    background-position: 0 -12px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:334 */
+.x-tab-orientTab2-left-br {
+    background-position: right -15px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:338 */
+.x-tab-orientTab2-left-ml {
+    background-position: 0 top;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:342 */
+.x-tab-orientTab2-left-mr {
+    background-position: right top;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:346 */
+.x-tab-orientTab2-left-tc {
+    background-position: 0 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:350 */
+.x-tab-orientTab2-left-bc {
+    background-position: 0 -3px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:355 */
+.x-tab-orientTab2-left-tr,
+.x-tab-orientTab2-left-br,
+.x-tab-orientTab2-left-mr {
+    padding-right: 3px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:361 */
+.x-tab-orientTab2-left-tl,
+.x-tab-orientTab2-left-bl,
+.x-tab-orientTab2-left-ml {
+    padding-left: 3px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:367 */
+.x-tab-orientTab2-left-tc {
+    height: 3px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:370 */
+.x-tab-orientTab2-left-bc {
+    height: 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:374 */
+.x-tab-orientTab2-left-tl,
+.x-tab-orientTab2-left-bl,
+.x-tab-orientTab2-left-tr,
+.x-tab-orientTab2-left-br,
+.x-tab-orientTab2-left-tc,
+.x-tab-orientTab2-left-bc,
+.x-tab-orientTab2-left-ml,
+.x-tab-orientTab2-left-mr {
+    zoom: 1;
+    background-image: url(images/tab/tab-orientTab2-top-corners.gif);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:424 */
+.x-tab-orientTab2-left-ml,
+.x-tab-orientTab2-left-mr {
+    zoom: 1;
+    background-image: url(images/tab/tab-orientTab2-top-sides.gif);
+    background-repeat: repeat-y;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:437 */
+.x-tab-orientTab2-left-mc {
+    padding: 5px 9px 7px 9px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:445 */
+.x-strict .x-ie7 .x-tab-orientTab2-left-tl,
+.x-strict .x-ie7 .x-tab-orientTab2-left-bl {
+    position: relative;
+    right: 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/slicer.scss:78 */
+.x-tab-orientTab2-left:after {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-orientTab2-top-corners.gif), sides:url(images/tab/tab-orientTab2-top-sides.gif)";
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:137 */
+.x-tab-orientTab2-right {
+    -moz-border-radius-topleft: 3px;
+    -webkit-border-top-left-radius: 3px;
+    border-top-left-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    -webkit-border-top-right-radius: 3px;
+    border-top-right-radius: 3px;
+    -moz-border-radius-bottomright: 0;
+    -webkit-border-bottom-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -moz-border-radius-bottomleft: 0;
+    -webkit-border-bottom-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 8px 12px 7px 12px;
+    border-width: 0 0 0 0;
+    border-style: solid;
+    background-color: #fc3;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:189 */
+.x-tab-orientTab2-right-mc {
+    background-color: #fc3;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:235 */
+.x-nbr .x-tab-orientTab2-right {
+    padding: 0 !important;
+    border-width: 0 !important;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    border-radius: 0px;
+    background-color: transparent;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:255 */
+body.x-nbr .x-tab-orientTab2-right-frameInfo {
+    font-family: th-3-3-0-0-0-0-0-0-8-12-7-12;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:322 */
+.x-tab-orientTab2-right-tl {
+    background-position: 0 -6px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:326 */
+.x-tab-orientTab2-right-tr {
+    background-position: right -9px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:330 */
+.x-tab-orientTab2-right-bl {
+    background-position: 0 -12px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:334 */
+.x-tab-orientTab2-right-br {
+    background-position: right -15px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:338 */
+.x-tab-orientTab2-right-ml {
+    background-position: 0 top;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:342 */
+.x-tab-orientTab2-right-mr {
+    background-position: right top;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:346 */
+.x-tab-orientTab2-right-tc {
+    background-position: 0 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:350 */
+.x-tab-orientTab2-right-bc {
+    background-position: 0 -3px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:355 */
+.x-tab-orientTab2-right-tr,
+.x-tab-orientTab2-right-br,
+.x-tab-orientTab2-right-mr {
+    padding-right: 3px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:361 */
+.x-tab-orientTab2-right-tl,
+.x-tab-orientTab2-right-bl,
+.x-tab-orientTab2-right-ml {
+    padding-left: 3px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:367 */
+.x-tab-orientTab2-right-tc {
+    height: 3px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:370 */
+.x-tab-orientTab2-right-bc {
+    height: 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:374 */
+.x-tab-orientTab2-right-tl,
+.x-tab-orientTab2-right-bl,
+.x-tab-orientTab2-right-tr,
+.x-tab-orientTab2-right-br,
+.x-tab-orientTab2-right-tc,
+.x-tab-orientTab2-right-bc,
+.x-tab-orientTab2-right-ml,
+.x-tab-orientTab2-right-mr {
+    zoom: 1;
+    background-image: url(images/tab/tab-orientTab2-top-corners.gif);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:424 */
+.x-tab-orientTab2-right-ml,
+.x-tab-orientTab2-right-mr {
+    zoom: 1;
+    background-image: url(images/tab/tab-orientTab2-top-sides.gif);
+    background-repeat: repeat-y;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:437 */
+.x-tab-orientTab2-right-mc {
+    padding: 5px 9px 7px 9px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/frame.scss:445 */
+.x-strict .x-ie7 .x-tab-orientTab2-right-tl,
+.x-strict .x-ie7 .x-tab-orientTab2-right-bl {
+    position: relative;
+    right: 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/slicer.scss:78 */
+.x-tab-orientTab2-right:after {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-orientTab2-top-corners.gif), sides:url(images/tab/tab-orientTab2-top-sides.gif)";
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:307 */
+.x-tab-orientTab2 {
+    border-color: #97cbff;
+    margin: 0 1px 0 0;
+    cursor: pointer;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:312 */
+.x-tab-orientTab2 .x-tab-inner {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Tahoma;
+    color: #fff;
+    line-height: 16px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:322 */
+.x-tab-orientTab2 .x-tab-icon-el {
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    background-position: center center;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:329 */
+.x-tab-orientTab2 .x-tab-glyph {
+    font-size: 16px;
+    color: #fff;
+    opacity: 0.5;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:343 */
+.x-ie8m .x-tab-orientTab2 .x-tab-glyph {
+    color: #ffe699;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:351 */
+.x-strict .x-ie9 .x-tab-bar-vertical .x-tab-orientTab2 {
+    padding-left: 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:354 */
+.x-strict .x-ie9 .x-tab-bar-vertical .x-tab-orientTab2 .x-tab-button {
+    padding-left: 12px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:358 */
+.x-strict .x-ie9 .x-tab-bar-vertical .x-tab-orientTab2 .x-tab-icon-el {
+    left: 12px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:366 */
+.x-tab-orientTab2-icon .x-tab-inner {
+    width: 16px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:384 */
+.x-tab-orientTab2-left {
+    margin: 0 0 0 1px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:394 */
+.x-tab-orientTab2-top,
+.x-tab-orientTab2-left,
+.x-tab-orientTab2-right {
+    border-bottom: 0 solid #97cbff;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:417 */
+.x-tab-orientTab2-bottom {
+    border-top: 0 solid #97cbff;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:438 */
+.x-tab-orientTab2-left {
+    -webkit-transform: rotate(270deg);
+    -webkit-transform-origin: 100% 0;
+    -moz-transform: rotate(270deg);
+    -moz-transform-origin: 100% 0;
+    -o-transform: rotate(270deg);
+    -o-transform-origin: 100% 0;
+    transform: rotate(270deg);
+    transform-origin: 100% 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/rotate-element.scss:36 */
+.x-ie9m .x-tab-orientTab2-left {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:454 */
+.x-tab-orientTab2-right {
+    -webkit-transform: rotate(90deg);
+    -webkit-transform-origin: 0 0;
+    -moz-transform: rotate(90deg);
+    -moz-transform-origin: 0 0;
+    -o-transform: rotate(90deg);
+    -o-transform-origin: 0 0;
+    transform: rotate(90deg);
+    transform-origin: 0 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/rotate-element.scss:36 */
+.x-ie9m .x-tab-orientTab2-right {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:471 */
+.x-tab-orientTab2-icon-text-left .x-tab-inner {
+    padding-left: 22px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:485 */
+.x-tab-orientTab2-over {
+    background-color: #ffcf3f;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:509 */
+.x-tab-orientTab2-over .x-tab-glyph {
+    color: #fff;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:516 */
+.x-ie8m .x-tab-orientTab2-over .x-tab-glyph {
+    color: #ffe79f;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:545 */
+.x-tab-orientTab2-active {
+    background-color: #eeb300;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:551 */
+.x-tab-orientTab2-active .x-tab-inner {
+    color: #000;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:566 */
+.x-tab-orientTab2-active .x-tab-glyph {
+    color: #000;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:573 */
+.x-ie8m .x-tab-orientTab2-active .x-tab-glyph {
+    color: #775900;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:579 */
+.x-tab-orientTab2-top-active,
+.x-tab-orientTab2-left-active,
+.x-tab-orientTab2-right-active {
+    border-bottom: 0 solid #eeb300;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:594 */
+.x-tab-orientTab2-bottom-active {
+    border-top: 0 solid #eeb300;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:607 */
+.x-tab-orientTab2-disabled {
+    cursor: default;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:620 */
+.x-tab-orientTab2-disabled .x-tab-inner {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    opacity: 0.3;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:639 */
+.x-tab-orientTab2-disabled .x-tab-icon-el {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    opacity: 0.5;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:644 */
+.x-tab-orientTab2-disabled .x-tab-glyph {
+    color: #fff;
+    opacity: 0.3;
+    filter: none;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:658 */
+.x-ie8m .x-tab-orientTab2-disabled .x-tab-glyph {
+    color: #c7e3ff;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:665 */
+.x-tab-orientTab2-top-disabled,
+.x-tab-orientTab2-left-disabled,
+.x-tab-orientTab2-right-disabled {
+    border-color: #97cbff #97cbff #97cbff;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:671 */
+.x-tab-orientTab2-bottom-disabled {
+    border-color: #97cbff #97cbff #97cbff #97cbff;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:699 */
+.x-nbr .x-tab-orientTab2 {
+    background-image: none;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:705 */
+.x-tab-orientTab2-top-over .x-frame-tl,
+.x-tab-orientTab2-top-over .x-frame-bl,
+.x-tab-orientTab2-top-over .x-frame-tr,
+.x-tab-orientTab2-top-over .x-frame-br,
+.x-tab-orientTab2-top-over .x-frame-tc,
+.x-tab-orientTab2-top-over .x-frame-bc,
+.x-tab-orientTab2-left-over .x-frame-tl,
+.x-tab-orientTab2-left-over .x-frame-bl,
+.x-tab-orientTab2-left-over .x-frame-tr,
+.x-tab-orientTab2-left-over .x-frame-br,
+.x-tab-orientTab2-left-over .x-frame-tc,
+.x-tab-orientTab2-left-over .x-frame-bc,
+.x-tab-orientTab2-right-over .x-frame-tl,
+.x-tab-orientTab2-right-over .x-frame-bl,
+.x-tab-orientTab2-right-over .x-frame-tr,
+.x-tab-orientTab2-right-over .x-frame-br,
+.x-tab-orientTab2-right-over .x-frame-tc,
+.x-tab-orientTab2-right-over .x-frame-bc {
+    background-image: url(images/tab/tab-orientTab2-top-over-corners.gif);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:713 */
+.x-tab-orientTab2-top-over .x-frame-ml,
+.x-tab-orientTab2-top-over .x-frame-mr,
+.x-tab-orientTab2-left-over .x-frame-ml,
+.x-tab-orientTab2-left-over .x-frame-mr,
+.x-tab-orientTab2-right-over .x-frame-ml,
+.x-tab-orientTab2-right-over .x-frame-mr {
+    background-image: url(images/tab/tab-orientTab2-top-over-sides.gif);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:717 */
+.x-tab-orientTab2-top-over .x-frame-mc,
+.x-tab-orientTab2-left-over .x-frame-mc,
+.x-tab-orientTab2-right-over .x-frame-mc {
+    background-color: #ffcf3f;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:727 */
+.x-tab-orientTab2-bottom-over .x-frame-tl,
+.x-tab-orientTab2-bottom-over .x-frame-bl,
+.x-tab-orientTab2-bottom-over .x-frame-tr,
+.x-tab-orientTab2-bottom-over .x-frame-br,
+.x-tab-orientTab2-bottom-over .x-frame-tc,
+.x-tab-orientTab2-bottom-over .x-frame-bc {
+    background-image: url(images/tab/tab-orientTab2-bottom-over-corners.gif);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:735 */
+.x-tab-orientTab2-bottom-over .x-frame-ml,
+.x-tab-orientTab2-bottom-over .x-frame-mr {
+    background-image: url(images/tab/tab-orientTab2-bottom-over-sides.gif);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:739 */
+.x-tab-orientTab2-bottom-over .x-frame-mc {
+    background-color: #ffcf3f;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:751 */
+.x-tab-orientTab2-top-active .x-frame-tl,
+.x-tab-orientTab2-top-active .x-frame-bl,
+.x-tab-orientTab2-top-active .x-frame-tr,
+.x-tab-orientTab2-top-active .x-frame-br,
+.x-tab-orientTab2-top-active .x-frame-tc,
+.x-tab-orientTab2-top-active .x-frame-bc,
+.x-tab-orientTab2-left-active .x-frame-tl,
+.x-tab-orientTab2-left-active .x-frame-bl,
+.x-tab-orientTab2-left-active .x-frame-tr,
+.x-tab-orientTab2-left-active .x-frame-br,
+.x-tab-orientTab2-left-active .x-frame-tc,
+.x-tab-orientTab2-left-active .x-frame-bc,
+.x-tab-orientTab2-right-active .x-frame-tl,
+.x-tab-orientTab2-right-active .x-frame-bl,
+.x-tab-orientTab2-right-active .x-frame-tr,
+.x-tab-orientTab2-right-active .x-frame-br,
+.x-tab-orientTab2-right-active .x-frame-tc,
+.x-tab-orientTab2-right-active .x-frame-bc {
+    background-image: url(images/tab/tab-orientTab2-top-active-corners.gif);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:759 */
+.x-tab-orientTab2-top-active .x-frame-ml,
+.x-tab-orientTab2-top-active .x-frame-mr,
+.x-tab-orientTab2-left-active .x-frame-ml,
+.x-tab-orientTab2-left-active .x-frame-mr,
+.x-tab-orientTab2-right-active .x-frame-ml,
+.x-tab-orientTab2-right-active .x-frame-mr {
+    background-image: url(images/tab/tab-orientTab2-top-active-sides.gif);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:763 */
+.x-tab-orientTab2-top-active .x-frame-mc,
+.x-tab-orientTab2-left-active .x-frame-mc,
+.x-tab-orientTab2-right-active .x-frame-mc {
+    background-color: #eeb300;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:773 */
+.x-tab-orientTab2-bottom-active .x-frame-tl,
+.x-tab-orientTab2-bottom-active .x-frame-bl,
+.x-tab-orientTab2-bottom-active .x-frame-tr,
+.x-tab-orientTab2-bottom-active .x-frame-br,
+.x-tab-orientTab2-bottom-active .x-frame-tc,
+.x-tab-orientTab2-bottom-active .x-frame-bc {
+    background-image: url(images/tab/tab-orientTab2-bottom-active-corners.gif);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:781 */
+.x-tab-orientTab2-bottom-active .x-frame-ml,
+.x-tab-orientTab2-bottom-active .x-frame-mr {
+    background-image: url(images/tab/tab-orientTab2-bottom-active-sides.gif);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:785 */
+.x-tab-orientTab2-bottom-active .x-frame-mc {
+    background-color: #eeb300;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:797 */
+.x-tab-orientTab2-top-disabled .x-frame-tl,
+.x-tab-orientTab2-top-disabled .x-frame-bl,
+.x-tab-orientTab2-top-disabled .x-frame-tr,
+.x-tab-orientTab2-top-disabled .x-frame-br,
+.x-tab-orientTab2-top-disabled .x-frame-tc,
+.x-tab-orientTab2-top-disabled .x-frame-bc,
+.x-tab-orientTab2-left-disabled .x-frame-tl,
+.x-tab-orientTab2-left-disabled .x-frame-bl,
+.x-tab-orientTab2-left-disabled .x-frame-tr,
+.x-tab-orientTab2-left-disabled .x-frame-br,
+.x-tab-orientTab2-left-disabled .x-frame-tc,
+.x-tab-orientTab2-left-disabled .x-frame-bc,
+.x-tab-orientTab2-right-disabled .x-frame-tl,
+.x-tab-orientTab2-right-disabled .x-frame-bl,
+.x-tab-orientTab2-right-disabled .x-frame-tr,
+.x-tab-orientTab2-right-disabled .x-frame-br,
+.x-tab-orientTab2-right-disabled .x-frame-tc,
+.x-tab-orientTab2-right-disabled .x-frame-bc {
+    background-image: url(images/tab/tab-orientTab2-top-disabled-corners.gif);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:805 */
+.x-tab-orientTab2-top-disabled .x-frame-ml,
+.x-tab-orientTab2-top-disabled .x-frame-mr,
+.x-tab-orientTab2-left-disabled .x-frame-ml,
+.x-tab-orientTab2-left-disabled .x-frame-mr,
+.x-tab-orientTab2-right-disabled .x-frame-ml,
+.x-tab-orientTab2-right-disabled .x-frame-mr {
+    background-image: url(images/tab/tab-orientTab2-top-disabled-sides.gif);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:809 */
+.x-tab-orientTab2-top-disabled .x-frame-mc,
+.x-tab-orientTab2-left-disabled .x-frame-mc,
+.x-tab-orientTab2-right-disabled .x-frame-mc {
+    background-color: #afd7ff;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:819 */
+.x-tab-orientTab2-bottom-disabled .x-frame-tl,
+.x-tab-orientTab2-bottom-disabled .x-frame-bl,
+.x-tab-orientTab2-bottom-disabled .x-frame-tr,
+.x-tab-orientTab2-bottom-disabled .x-frame-br,
+.x-tab-orientTab2-bottom-disabled .x-frame-tc,
+.x-tab-orientTab2-bottom-disabled .x-frame-bc {
+    background-image: url(images/tab/tab-orientTab2-bottom-disabled-corners.gif);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:827 */
+.x-tab-orientTab2-bottom-disabled .x-frame-ml,
+.x-tab-orientTab2-bottom-disabled .x-frame-mr {
+    background-image: url(images/tab/tab-orientTab2-bottom-disabled-sides.gif);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:831 */
+.x-tab-orientTab2-bottom-disabled .x-frame-mc {
+    background-color: #afd7ff;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:861 */
+.x-tab-orientTab2 .x-tab-close-btn {
+    width: 12px;
+    height: 12px;
+    background-image: url(images/tab/tab-orientTab2-close.png);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:870 */
+.x-tab-orientTab2 .x-tab-close-btn-over {
+    background-position: -12px 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:880 */
+.x-tab-orientTab2 .x-tab-close-btn {
+    top: 2px;
+    right: 2px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:924 */
+.x-tab-orientTab2-disabled .x-tab-close-btn {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    opacity: 0.3;
+    background-position: 0 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:934 */
+.x-tab-orientTab2-pressed .x-tab-close-btn {
+    background-position: -24px 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss:939 */
+.x-tab-orientTab2-closable .x-tab-wrap {
+    padding-right: 15px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/slicer.scss:78 */
+.x-tab-orientTab2-top-over:after {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-orientTab2-top-over-corners.gif), sides:url(images/tab/tab-orientTab2-top-over-sides.gif)";
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/slicer.scss:78 */
+.x-tab-orientTab2-bottom-over:after {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-orientTab2-bottom-over-corners.gif), sides:url(images/tab/tab-orientTab2-bottom-over-sides.gif)";
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/slicer.scss:78 */
+.x-tab-orientTab2-top-active:after {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-orientTab2-top-active-corners.gif), sides:url(images/tab/tab-orientTab2-top-active-sides.gif)";
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/slicer.scss:78 */
+.x-tab-orientTab2-bottom-active:after {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-orientTab2-bottom-active-corners.gif), sides:url(images/tab/tab-orientTab2-bottom-active-sides.gif)";
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/slicer.scss:78 */
+.x-tab-orientTab2-top-disabled:after {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-orientTab2-top-disabled-corners.gif), sides:url(images/tab/tab-orientTab2-top-disabled-sides.gif)";
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/slicer.scss:78 */
+.x-tab-orientTab2-bottom-disabled:after {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-orientTab2-bottom-disabled-corners.gif), sides:url(images/tab/tab-orientTab2-bottom-disabled-sides.gif)";
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:100 */
+.x-tab-bar-orientTab2-top {
+    padding: 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:107 */
+.x-tab-bar-orientTab2-bottom {
+    padding: 0 0 0 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:114 */
+.x-tab-bar-orientTab2-left {
+    padding: 0 0 0 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:130 */
+.x-tab-bar-orientTab2-right {
+    padding: 0 0 0 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:149 */
+.x-tab-bar-orientTab2-horizontal {
+    height: 36px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:153 */
+.x-content-box .x-tab-bar-orientTab2-horizontal {
+    height: 36px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:161 */
+.x-tab-bar-orientTab2-vertical {
+    width: 36px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:165 */
+.x-content-box .x-tab-bar-orientTab2-vertical {
+    width: 36px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:172 */
+.x-tab-bar-body-orientTab2-top {
+    padding-bottom: 5px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:176 */
+.x-tab-bar-body-orientTab2-bottom {
+    padding-top: 5px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:180 */
+.x-tab-bar-body-orientTab2-left {
+    padding-right: 5px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:191 */
+.x-tab-bar-body-orientTab2-right {
+    padding-left: 5px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:202 */
+.x-tab-bar-strip-orientTab2 {
+    border-style: solid;
+    border-color: #97cbff;
+    background-color: #dbedff;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:210 */
+.x-content-box .x-tab-bar-strip-orientTab2-horizontal {
+    height: 5px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:218 */
+.x-content-box .x-tab-bar-strip-orientTab2-vertical {
+    width: 5px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:224 */
+.x-tab-bar-strip-orientTab2-top {
+    border-width: 0 0;
+    height: 5px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:227 */
+.x-tab-bar-plain .x-tab-bar-strip-orientTab2-top {
+    border-width: 0 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:232 */
+.x-tab-bar-strip-orientTab2-bottom {
+    border-width: 0 0 0 0;
+    height: 5px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:235 */
+.x-tab-bar-plain .x-tab-bar-strip-orientTab2-bottom {
+    border-width: 0 0 0 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:240 */
+.x-tab-bar-strip-orientTab2-left {
+    border-width: 0 0 0 0;
+    width: 5px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:243 */
+.x-tab-bar-plain .x-tab-bar-strip-orientTab2-left {
+    border-width: 0 0 0 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:257 */
+.x-tab-bar-strip-orientTab2-right {
+    border-width: 0 0 0 0;
+    width: 5px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:260 */
+.x-tab-bar-plain .x-tab-bar-strip-orientTab2-right {
+    border-width: 0 0 0 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:274 */
+.x-tab-bar-orientTab2 {
+    background-color: #97cbff;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:323 */
+.x-tab-bar-orientTab2 .x-box-scroller {
+    cursor: pointer;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    opacity: 0.5;
+    background-color: #97cbff;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:339 */
+.x-tab-bar-orientTab2 .x-box-scroller-plain .x-box-scroller {
+    background-color: transparent;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:341 */
+.x-ie8m .x-tab-bar-orientTab2 .x-box-scroller-plain .x-box-scroller {
+    background-color: #fff;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:348 */
+.x-tab-bar-orientTab2 .x-box-scroller-hover {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    opacity: 0.6;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:354 */
+.x-tab-bar-orientTab2 .x-box-scroller-pressed {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    opacity: 0.7;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:362 */
+.x-tab-bar-orientTab2 .x-tabbar-scroll-left,
+.x-tab-bar-orientTab2 .x-tabbar-scroll-right {
+    height: 31px;
+    width: 24px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:368 */
+.x-tab-bar-orientTab2 .x-tabbar-scroll-top,
+.x-tab-bar-orientTab2 .x-tabbar-scroll-bottom {
+    width: 31px;
+    height: 24px;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:377 */
+.x-tab-bar-orientTab2-bottom .x-box-scroller {
+    margin-top: 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:381 */
+.x-tab-bar-orientTab2-right .x-box-scroller {
+    margin-left: 0;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:395 */
+.x-tab-bar-orientTab2 .x-tabbar-scroll-left {
+    background-image: url(images/tab-bar/orientTab2-scroll-left.png);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:399 */
+.x-tab-bar-orientTab2 .x-tabbar-scroll-right {
+    background-image: url(images/tab-bar/orientTab2-scroll-right.png);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:403 */
+.x-tab-bar-orientTab2 .x-tabbar-scroll-top {
+    background-image: url(images/tab-bar/orientTab2-scroll-top.png);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:407 */
+.x-tab-bar-orientTab2 .x-tabbar-scroll-bottom {
+    background-image: url(images/tab-bar/orientTab2-scroll-bottom.png);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:425 */
+.x-tab-bar-orientTab2 .x-box-scroller-plain .x-tabbar-scroll-left {
+    background-image: url(images/tab-bar/orientTab2-plain-scroll-left.png);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:429 */
+.x-tab-bar-orientTab2 .x-box-scroller-plain .x-tabbar-scroll-right {
+    background-image: url(images/tab-bar/orientTab2-plain-scroll-right.png);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:433 */
+.x-tab-bar-orientTab2 .x-box-scroller-plain .x-tabbar-scroll-top {
+    background-image: url(images/tab-bar/orientTab2-plain-scroll-top.png);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:437 */
+.x-tab-bar-orientTab2 .x-box-scroller-plain .x-tabbar-scroll-bottom {
+    background-image: url(images/tab-bar/orientTab2-plain-scroll-bottom.png);
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-neutral/sass/src/tab/Bar.scss:549 */
+.x-tab-bar-orientTab2 .x-box-scroller-disabled {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
+    opacity: 0.25;
+    cursor: default;
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/slicer.scss:78 */
+.x-tab-bar-orientTab2-top:after {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom";
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/slicer.scss:78 */
+.x-tab-bar-orientTab2-bottom:after {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:top";
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/slicer.scss:78 */
+.x-tab-bar-orientTab2-left:after {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:right";
+}
+/* /Users/panduanduan/Environment/ExtJS/WorkSpace/orient-product/ext/packages/ext-theme-base/sass/etc/mixins/slicer.scss:78 */
+.x-tab-bar-orientTab2-right:after {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:left";
+}

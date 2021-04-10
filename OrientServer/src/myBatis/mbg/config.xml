@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <properties resource="jdbc.properties"  />
+    <context id="context1" targetRuntime="MyBatis3" defaultModelType="flat">
+        <!--生成mapper.xml时覆盖原文件-->
+        <plugin type="org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin" />
+        <!--生成toString-->
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>
+
+        <commentGenerator type="com.orient.weibao.mbg.CommentGenerator">
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <property name="suppressAllComments" value="true"/>
+            <property name="suppressDate" value="true"/>
+            <property name="addRemarkComments" value="true"/>
+        </commentGenerator>
+
+
+        <jdbcConnection driverClass="${jdbc.driverClassName}"
+                      connectionURL="${jdbc.url}"
+                      userId="${jdbc.username}"
+                      password="${jdbc.password}" />
+      <javaModelGenerator targetPackage="com.orient.weibao.mbg.model"
+                          targetProject="OrientServer/orient-weibao" >
+            <property name="trimStrings" value="true" />
+      </javaModelGenerator>
+      <sqlMapGenerator targetPackage="mapper"
+                       targetProject="OrientServer/src/myBatis/mbg" />
+      <javaClientGenerator targetPackage="com.orient.weibao.mbg.mapper"
+                           targetProject="OrientServer/orient-weibao" type="XMLMAPPER" />
+
+<!--      <table domainObjectName="DivingPlanTable" tableName="T_DIVING__PLAN_TABLE_480" />-->
+<!--      <table domainObjectName="DivingTask" tableName="T_DIVING_TASK_480" />-->
+      <!--<table domainObjectName="CheckTempInst" tableName="T_CHECK_TEMP_INST_480" />-->
+<!--      <table domainObjectName="DivingStatisitics" tableName="T_DIVING_STATISTICS_480" />-->
+<!--        <table domainObjectName="CarryTool" tableName="T_CARRY_TOOL_480" />-->
+<!--        <table domainObjectName="DepthDesity" tableName="T_DEPTH_DESITY_480" />-->
+<!--        <table domainObjectName="SpareParts" tableName="T_SPARE_PARTS_480" />-->
+
+                <table domainObjectName="TotalCarryTool" tableName="T_CABIN_CARRY_TOOL_480" />
+
+    </context>
+</generatorConfiguration>

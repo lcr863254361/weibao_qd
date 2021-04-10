@@ -1,0 +1,153 @@
+{
+  "result": "success",
+  "msg": "",
+  "data": {
+    "id": "41",
+    "taskName": "任务4",
+    "leaderId": "",
+    "flowBeanList": [
+      {
+        "id": "108",
+        "name": "载人舱球壳、载体框架、压载水舱检查",
+        "beginDate": "2019-09-18",
+        "endDate": "2019-09-20",
+        "checkTempInstBeanList": [
+          {
+            "id": "1767",
+            "checkName": "压载与应急抛载准备情况",
+            "state": "未完成",
+            "checkTableType": "1"
+          },
+          {
+            "id": "1766",
+            "checkName": "作业工具1",
+            "state": "未完成",
+            "checkTableType": "2"
+          },
+          {
+            "id": "1765",
+            "checkName": "载荷测算",
+            "state": "未完成",
+            "checkTableType": "1"
+          }
+        ],
+        "postBeanList": [
+          {
+            "id": "1390",
+            "postName": "风测岗",
+            "fillPerson": "",
+            "signPerson": ""
+          },
+          {
+            "id": "1389",
+            "postName": "核动力操作岗",
+            "fillPerson": "",
+            "signPerson": ""
+          }
+        ],
+        "fileIds": [
+          "184",
+          "183",
+          "182"
+        ]
+      },
+      {
+        "id": "107",
+        "name": "观察窗水密性检查",
+        "beginDate": "2019-09-18",
+        "endDate": "2019-09-21",
+        "checkTempInstBeanList": [],
+        "postBeanList": [],
+        "fileIds": []
+      },
+      {
+        "id": "106",
+        "name": "防腐装置检查",
+        "beginDate": "2019-09-17",
+        "endDate": "2019-09-21",
+        "checkTempInstBeanList": [
+          {
+            "id": "1769",
+            "checkName": "压载与应急抛载准备情况",
+            "state": "未完成",
+            "checkTableType": "1"
+          },
+          {
+            "id": "1768",
+            "checkName": "作业工具1",
+            "state": "未完成",
+            "checkTableType": "2"
+          }
+        ],
+        "postBeanList": [
+          {
+            "id": "1393",
+            "postName": "电控岗",
+            "fillPerson": "杜慧荣,段龙飞,普通用户",
+            "signPerson": ""
+          },
+          {
+            "id": "1392",
+            "postName": "核动力操作岗",
+            "fillPerson": "黄宁",
+            "signPerson": ""
+          },
+          {
+            "id": "1391",
+            "postName": "风测岗",
+            "fillPerson": "贾磊",
+            "signPerson": ""
+          }
+        ],
+        "fileIds": [
+          "185"
+        ]
+      },
+      {
+        "id": "105",
+        "name": "紧固件或连接板放松检查",
+        "beginDate": "2019-09-27",
+        "endDate": "2019-10-04",
+        "checkTempInstBeanList": [],
+        "postBeanList": [],
+        "fileIds": []
+      },
+      {
+        "id": "104",
+        "name": "舱口盖启闭功能检测",
+        "beginDate": "2019-09-27",
+        "endDate": "2019-10-05",
+        "checkTempInstBeanList": [],
+        "postBeanList": [],
+        "fileIds": []
+      },
+      {
+        "id": "103",
+        "name": "舱口密封性检测",
+        "beginDate": "2019-09-27",
+        "endDate": "2019-10-08",
+        "checkTempInstBeanList": [],
+        "postBeanList": [],
+        "fileIds": []
+      },
+      {
+        "id": "102",
+        "name": "吊放和拖拽释放机构功能检查",
+        "beginDate": "2019-09-27",
+        "endDate": "2019-10-09",
+        "checkTempInstBeanList": [],
+        "postBeanList": [],
+        "fileIds": []
+      },
+      {
+        "id": "101",
+        "name": "通电检查",
+        "beginDate": "2019-09-27",
+        "endDate": "2019-10-10",
+        "checkTempInstBeanList": [],
+        "postBeanList": [],
+        "fileIds": []
+      }
+    ]
+  }
+}

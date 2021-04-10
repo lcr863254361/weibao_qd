@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.orient.weibao.dao.InformLogDao">
+    <insert id="insertSelective" parameterType="com.orient.weibao.mbg.model.InformLog">
+        insert into T_INFORM_LOG_480
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+                ID,
+            <if test="sysDateTime != null">
+                SYS_DATE_TIME,
+            </if>
+            <if test="sysUsername != null">
+                SYS_USERNAME,
+            </if>
+            <if test="sysIsDelete != null">
+                SYS_IS_DELETE,
+            </if>
+            <if test="sysSecrecy != null">
+                SYS_SECRECY,
+            </if>
+            <if test="sysSchema != null">
+                SYS_SCHEMA,
+            </if>
+            <if test="sysOperate != null">
+                SYS_OPERATE,
+            </if>
+            <if test="sysFlow != null">
+                SYS_FLOW,
+            </if>
+            <if test="cTableId3566 != null">
+                C_TABLE_ID_3566,
+            </if>
+            <if test="cState3566 != null">
+                C_STATE_3566,
+            </if>
+            <if test="cUploadTime3566 != null">
+                C_UPLOAD_TIME_3566,
+            </if>
+            <if test="cTaskId3566 != null">
+                C_TASK_ID_3566,
+            </if>
+            <if test="cUploadPerson3566 != null">
+                C_UPLOAD_PERSON_3566,
+            </if>
+            <if test="cType3566 != null">
+                C_TYPE_3566,
+            </if>
+            <if test="cTaskName3566 != null">
+                C_TASK_NAME_3566,
+            </if>
+            <if test="cTableName3566 != null">
+                C_TABLE_NAME_3566,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            SEQ_T_INFORM_LOG_480.nextval,
+            <if test="sysDateTime != null">
+                #{sysDateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="sysUsername != null">
+                #{sysUsername,jdbcType=VARCHAR},
+            </if>
+            <if test="sysIsDelete != null">
+                #{sysIsDelete,jdbcType=DECIMAL},
+            </if>
+            <if test="sysSecrecy != null">
+                #{sysSecrecy,jdbcType=VARCHAR},
+            </if>
+            <if test="sysSchema != null">
+                #{sysSchema,jdbcType=VARCHAR},
+            </if>
+            <if test="sysOperate != null">
+                #{sysOperate,jdbcType=VARCHAR},
+            </if>
+            <if test="sysFlow != null">
+                #{sysFlow,jdbcType=VARCHAR},
+            </if>
+            <if test="cTableId3566 != null">
+                #{cTableId3566,jdbcType=VARCHAR},
+            </if>
+            <if test="cState3566 != null">
+                #{cState3566,jdbcType=VARCHAR},
+            </if>
+            <if test="cUploadTime3566 != null">
+                #{cUploadTime3566,jdbcType=VARCHAR},
+            </if>
+            <if test="cTaskId3566 != null">
+                #{cTaskId3566,jdbcType=VARCHAR},
+            </if>
+            <if test="cUploadPerson3566 != null">
+                #{cUploadPerson3566,jdbcType=VARCHAR},
+            </if>
+            <if test="cType3566 != null">
+                #{cType3566,jdbcType=VARCHAR},
+            </if>
+            <if test="cTaskName3566 != null">
+                #{cTaskName3566,jdbcType=VARCHAR},
+            </if>
+            <if test="cTableName3566 != null">
+                #{cTableName3566,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+</mapper>

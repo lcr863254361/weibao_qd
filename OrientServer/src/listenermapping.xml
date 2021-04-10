@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns="http://castor.exolab.org/">
+
+    <class name = "com.orient.web.base.OrientEventBus.ListenerOrder" auto-complete="true">
+        <map-to xml="ListenerOrder"></map-to>
+        <field name = "eventSourceList" type="com.orient.web.base.OrientEventBus.EventSource" collection="arraylist">
+            <bind-xml name = "EventSource" node = "element"/>
+        </field>
+    </class>
+
+    <class name = "com.orient.web.base.OrientEventBus.EventSource">
+        <map-to xml="EventSource"></map-to>
+        <field name = "name" type="java.lang.String" >
+            <bind-xml name = "name" node = "attribute"/>
+        </field>
+        <field name = "eventType" type="java.lang.String" >
+            <bind-xml name = "eventType" node = "attribute"/>
+        </field>
+
+        <field name = "extenderOderList" type="com.orient.web.base.OrientEventBus.ExtenderOderList" >
+            <bind-xml name = "ExtenderOderList" node = "element"/>
+        </field>
+        <field name = "baseOrderList" type="com.orient.web.base.OrientEventBus.BaseOrderList" >
+            <bind-xml name = "BaseOrderList" node = "element"/>
+        </field>
+    </class>
+
+    <class name = "com.orient.web.base.OrientEventBus.ExtenderOderList">
+        <map-to xml="ExtenderOderList"></map-to>
+
+        <field name = "listenerList" type="com.orient.web.base.OrientEventBus.Listener" collection="arraylist">
+            <bind-xml name = "ListenerList" node = "element"/>
+        </field>
+    </class>
+
+    <class name = "com.orient.web.base.OrientEventBus.Listener">
+        <map-to xml="Listener"></map-to>
+
+        <field name = "listnerName" type="java.lang.String" >
+            <bind-xml name = "name" node = "attribute"/>
+        </field>
+        <field name = "order" type="java.lang.Integer" >
+            <bind-xml name = "order" node = "attribute"/>
+        </field>
+    </class>
+
+    <class name = "com.orient.web.base.OrientEventBus.BaseOrderList">
+        <map-to xml="BaseOrderList"></map-to>
+
+        <field name = "orderValueList" type="com.orient.web.base.OrientEventBus.OrderValue" collection="arraylist">
+            <bind-xml name = "OrderValue" node = "element"/>
+        </field>
+    </class>
+
+    <class name = "com.orient.web.base.OrientEventBus.OrderValue">
+        <map-to xml="OrderValue"></map-to>
+        <field name = "name" type="java.lang.String" >
+            <bind-xml name = "name" node = "attribute"/>
+        </field>
+    </class>
+
+</mapping>

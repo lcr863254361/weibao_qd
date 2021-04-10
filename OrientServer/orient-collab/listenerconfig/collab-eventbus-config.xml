@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Copyright (c) 2016. Orient Company
+  ~
+  -->
+
+<ListenerOrder>
+    <EventSource eventType="com.orient.collab.event.ProjectTreeNodeCreatedEvent"
+                 name="com.orient.collab.controller.ProjectTreeController">
+        <BaseOrderList>
+            <OrderValue name="com.orient.modeldata.eventListener.DefaultBeforeSaveModelDataListener"/>
+            <OrderValue name="com.orient.modeldata.eventListener.SaveModelDataListener"/>
+            <OrderValue name="com.orient.collab.event.listener.CreateDefaultRoleListener"/>
+            <OrderValue name="com.orient.modeldata.eventListener.DefaultAfterSaveModelDataListener"/>
+        </BaseOrderList>
+        <ExtenderOderList>
+            <!-- 0 ~ 9 可定制区间-->
+            <Listener name="com.orient.modeldata.eventListener.DefaultBeforeSaveModelDataListener" order="10"/>
+            <Listener name="com.orient.modeldata.eventListener.SaveModelDataListener" order="20"/>
+            <Listener name="com.orient.collab.event.listener.CreateDefaultRoleListener" order="21"/>
+            <!-- 21 ~ 29 可定制区间-->
+            <Listener name="com.orient.modeldata.eventListener.DefaultAfterSaveModelDataListener" order="30"/>
+        </ExtenderOderList>
+    </EventSource>
+
+    <EventSource eventType="com.orient.collab.event.ProjectTreeNodeDeletedEvent"
+                 name="com.orient.collab.controller.ProjectTreeController">
+        <BaseOrderList>
+            <OrderValue name="com.orient.collab.event.listener.RemoveDefaultRoleListener"/>
+            <OrderValue name="com.orient.collab.event.listener.RemoveDataFlowListener"/>
+            <OrderValue name="com.orient.collab.event.listener.RemoveBindDataListener"/>
+            <OrderValue name="com.orient.collab.event.listener.RemoveDesignDataListener"/>
+            <OrderValue name="com.orient.collab.event.listener.RemoveGanttSettingListener"/>
+            <OrderValue name="com.orient.collab.event.listener.RemovePVMDataListener"/>
+            <OrderValue name="com.orient.collab.event.listener.RemoveHisTaskListener"/>
+            <OrderValue name="com.orient.collab.event.listener.RemoveWorkFlowListener"/>
+        </BaseOrderList>
+        <ExtenderOderList>
+            <Listener name="com.orient.collab.event.listener.RemoveDefaultRoleListener" order="1"/>
+            <Listener name="com.orient.collab.event.listener.RemoveDataFlowListener" order="2"/>
+            <Listener name="com.orient.collab.event.listener.RemoveBindDataListener" order="3"/>
+            <Listener name="com.orient.collab.event.listener.RemoveDesignDataListener" order="4"/>
+            <Listener name="com.orient.collab.event.listener.RemoveGanttSettingListener" order="5"/>
+            <Listener name="com.orient.collab.event.listener.RemovePVMDataListener" order="6"/>
+            <Listener name="com.orient.collab.event.listener.RemoveHisTaskListener" order="7"/>
+            <Listener name="com.orient.collab.event.listener.RemoveWorkFlowListener" order="8"/>
+        </ExtenderOderList>
+    </EventSource>
+
+    <EventSource eventType="com.orient.collab.event.ProjectTreeNodeCreatedEvent"
+                 name="com.orient.collab.business.GanttBusiness">
+        <BaseOrderList>
+            <OrderValue name="com.orient.modeldata.eventListener.DefaultBeforeSaveModelDataListener"/>
+            <OrderValue name="com.orient.modeldata.eventListener.SaveModelDataListener"/>
+            <OrderValue name="com.orient.collab.event.listener.CreateDefaultRoleListener"/>
+            <OrderValue name="com.orient.modeldata.eventListener.DefaultAfterSaveModelDataListener"/>
+        </BaseOrderList>
+        <ExtenderOderList>
+            <Listener name="com.orient.modeldata.eventListener.DefaultBeforeSaveModelDataListener" order="10"/>
+            <Listener name="com.orient.modeldata.eventListener.SaveModelDataListener" order="20"/>
+            <Listener name="com.orient.collab.event.listener.CreateDefaultRoleListener" order="21"/>
+            <Listener name="com.orient.modeldata.eventListener.DefaultAfterSaveModelDataListener" order="30"/>
+        </ExtenderOderList>
+    </EventSource>
+
+    <EventSource eventType="com.orient.collab.event.ProjectTreeNodeEditEvent"
+                 name="com.orient.collab.business.GanttBusiness">
+        <BaseOrderList>
+            <OrderValue name="com.orient.modeldata.eventListener.DefaultBeforeSaveModelDataListener"/>
+            <OrderValue name="com.orient.modeldata.eventListener.UpdateModelDataListener"/>
+            <OrderValue name="com.orient.collab.event.listener.UpdateDefaultRoleListener"/>
+            <OrderValue name="com.orient.modeldata.eventListener.DefaultAfterSaveModelDataListener"/>
+        </BaseOrderList>
+        <ExtenderOderList>
+            <Listener name="com.orient.modeldata.eventListener.DefaultBeforeSaveModelDataListener" order="10"/>
+            <Listener name="com.orient.modeldata.eventListener.UpdateModelDataListener" order="20"/>
+            <Listener name="com.orient.collab.event.listener.UpdateDefaultRoleListener" order="21"/>
+            <Listener name="com.orient.modeldata.eventListener.DefaultAfterSaveModelDataListener" order="30"/>
+        </ExtenderOderList>
+    </EventSource>
+
+
+    <EventSource eventType="com.orient.collab.event.ProjectTreeNodeEditEvent"
+                 name="com.orient.collab.controller.ProjectTreeController">
+        <BaseOrderList>
+            <OrderValue name="com.orient.modeldata.eventListener.DefaultBeforeSaveModelDataListener"/>
+            <OrderValue name="com.orient.modeldata.eventListener.UpdateModelDataListener"/>
+            <OrderValue name="com.orient.collab.event.listener.UpdateDefaultRoleListener"/>
+            <OrderValue name="com.orient.collab.event.listener.UpdatePlanInfoListener"/>
+            <OrderValue name="com.orient.modeldata.eventListener.DefaultAfterSaveModelDataListener"/>
+        </BaseOrderList>
+        <ExtenderOderList>
+            <Listener name="com.orient.modeldata.eventListener.DefaultBeforeSaveModelDataListener" order="10"/>
+            <Listener name="com.orient.modeldata.eventListener.UpdateModelDataListener" order="20"/>
+            <Listener name="com.orient.collab.event.listener.UpdateDefaultRoleListener" order="21"/>
+            <Listener name="com.orient.collab.event.listener.UpdatePlanInfoListener" order="22"/>
+            <Listener name="com.orient.modeldata.eventListener.DefaultAfterSaveModelDataListener" order="30"/>
+        </ExtenderOderList>
+    </EventSource>
+
+</ListenerOrder>

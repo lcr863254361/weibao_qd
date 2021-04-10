@@ -1,0 +1,2073 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns="http://castor.exolab.org/" xmlns:cst="http://castor.exolab.org/">
+	<description xmlns="">jpdl description</description>
+	<class name="com.orient.jpdl.model.EventListener">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.EventListener</description>
+		<map-to xml="event-listener" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="clazz" type="java.lang.String">
+			<bind-xml name="class" node="attribute"/>
+		</field>
+		<field name="expr" type="java.lang.String">
+			<bind-xml name="expr" node="attribute"/>
+		</field>
+		<field name="lang" type="java.lang.String">
+			<bind-xml name="lang" node="attribute"/>
+		</field>
+		<field name="factory" type="java.lang.String">
+			<bind-xml name="factory" node="attribute"/>
+		</field>
+		<field name="method" type="java.lang.String">
+			<bind-xml name="method" node="attribute"/>
+		</field>
+		<field name="autoWire" type="java.lang.String">
+			<bind-xml name="auto-wire" node="attribute"/>
+		</field>
+		<field name="cache" type="com.orient.jpdl.model.types.BooleanValueType">
+			<bind-xml name="cache" node="attribute"/>
+		</field>
+		<field name="propagation" type="com.orient.jpdl.model.types.BooleanValueType">
+			<bind-xml name="propagation" node="attribute"/>
+		</field>
+		<field name="items" type="com.orient.jpdl.model.WireObjectTypeItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.ScriptItem">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.ScriptItem</description>
+		<map-to xml="script" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="on" type="com.orient.jpdl.model.On">
+			<bind-xml name="on" node="element"/>
+		</field>
+		<field name="transition" type="com.orient.jpdl.model.Transition">
+			<bind-xml name="transition" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.EventListenerGroup">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.EventListenerGroup</description>
+		<map-to xml="eventListenerGroup" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="eventListener" type="com.orient.jpdl.model.EventListener" required="true">
+			<bind-xml name="event-listener" node="element"/>
+		</field>
+		<field name="hql" type="com.orient.jpdl.model.Hql" required="true">
+			<bind-xml name="hql" node="element"/>
+		</field>
+		<field name="sql" type="com.orient.jpdl.model.Sql" required="true">
+			<bind-xml name="sql" node="element"/>
+		</field>
+		<field name="java" type="com.orient.jpdl.model.Java" required="true">
+			<bind-xml name="java" node="element"/>
+		</field>
+		<field name="assign" type="com.orient.jpdl.model.Assign" required="true">
+			<bind-xml name="assign" node="element"/>
+		</field>
+		<field name="script" type="com.orient.jpdl.model.Script" required="true">
+			<bind-xml name="script" node="element"/>
+		</field>
+		<field name="mail" type="com.orient.jpdl.model.Mail" required="true">
+			<bind-xml name="mail" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.RulesChoiceItem">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.RulesChoiceItem</description>
+		<map-to ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="fact" type="com.orient.jpdl.model.Fact">
+			<bind-xml name="fact" node="element"/>
+		</field>
+		<field name="transition" type="com.orient.jpdl.model.Transition">
+			<bind-xml name="transition" node="element"/>
+		</field>
+		<field name="on" type="com.orient.jpdl.model.On">
+			<bind-xml name="on" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.TaskChoice">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.TaskChoice</description>
+		<map-to/>
+		<field name="items" type="com.orient.jpdl.model.TaskChoiceItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.types.ContinueType">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.types.ContinueType</description>
+		<map-to xml="ContinueType" ns-uri="http://jbpm.org/4.4/jpdl"/>
+	</class>
+	<class name="com.orient.jpdl.model.Start">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Start</description>
+		<map-to xml="start" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="form" type="java.lang.String">
+			<bind-xml name="form" node="attribute"/>
+		</field>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="g" type="java.lang.String">
+			<bind-xml name="g" node="attribute"/>
+		</field>
+		<field name="continue" type="com.orient.jpdl.model.types.ContinueType">
+			<bind-xml name="continue" node="attribute"/>
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="description" node="element"/>
+		</field>
+		<field name="startChoice" type="com.orient.jpdl.model.StartChoice">
+			<bind-xml name="-error-if-this-is-used-" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Long">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Long</description>
+		<map-to xml="long" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="value" type="long" required="true">
+			<bind-xml name="value" node="attribute"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.WireObjectGroup">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.WireObjectGroup</description>
+		<map-to xml="wireObjectGroup" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="null" type="java.lang.Object" required="true">
+			<bind-xml name="null" node="element"/>
+		</field>
+		<field name="ref" type="com.orient.jpdl.model.Ref" required="true">
+			<bind-xml name="ref" node="element"/>
+		</field>
+		<field name="envRef" type="java.lang.Object" required="true">
+			<bind-xml name="env-ref" node="element"/>
+		</field>
+		<field name="jndi" type="com.orient.jpdl.model.Jndi" required="true">
+			<bind-xml name="jndi" node="element"/>
+		</field>
+		<field name="list" type="com.orient.jpdl.model.List" required="true">
+			<bind-xml name="list" node="element"/>
+		</field>
+		<field name="map" type="com.orient.jpdl.model.Map" required="true">
+			<bind-xml name="map" node="element"/>
+		</field>
+		<field name="set" type="com.orient.jpdl.model.Set" required="true">
+			<bind-xml name="set" node="element"/>
+		</field>
+		<field name="properties" type="com.orient.jpdl.model.Properties" required="true">
+			<bind-xml name="properties" node="element"/>
+		</field>
+		<field name="object" type="com.orient.jpdl.model.Object" required="true">
+			<bind-xml name="object" node="element"/>
+		</field>
+		<field name="string" type="com.orient.jpdl.model.String" required="true">
+			<bind-xml name="string" node="element"/>
+		</field>
+		<field name="byte" type="com.orient.jpdl.model.Byte" required="true">
+			<bind-xml name="byte" node="element"/>
+		</field>
+		<field name="char" type="com.orient.jpdl.model.Char" required="true">
+			<bind-xml name="char" node="element"/>
+		</field>
+		<field name="double" type="com.orient.jpdl.model.Double" required="true">
+			<bind-xml name="double" node="element"/>
+		</field>
+		<field name="false" type="com.orient.jpdl.model.False" required="true">
+			<bind-xml name="false" node="element"/>
+		</field>
+		<field name="float" type="com.orient.jpdl.model.Float" required="true">
+			<bind-xml name="float" node="element"/>
+		</field>
+		<field name="int" type="com.orient.jpdl.model.Int" required="true">
+			<bind-xml name="int" node="element"/>
+		</field>
+		<field name="long" type="com.orient.jpdl.model.Long" required="true">
+			<bind-xml name="long" node="element"/>
+		</field>
+		<field name="short" type="com.orient.jpdl.model.Short" required="true">
+			<bind-xml name="short" node="element"/>
+		</field>
+		<field name="true" type="com.orient.jpdl.model.True" required="true">
+			<bind-xml name="true" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Object">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Object</description>
+		<map-to xml="object" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="clazz" type="java.lang.String">
+			<bind-xml name="class" node="attribute"/>
+		</field>
+		<field name="expr" type="java.lang.String">
+			<bind-xml name="expr" node="attribute"/>
+		</field>
+		<field name="lang" type="java.lang.String">
+			<bind-xml name="lang" node="attribute"/>
+		</field>
+		<field name="factory" type="java.lang.String">
+			<bind-xml name="factory" node="attribute"/>
+		</field>
+		<field name="method" type="java.lang.String">
+			<bind-xml name="method" node="attribute"/>
+		</field>
+		<field name="autoWire" type="java.lang.String">
+			<bind-xml name="auto-wire" node="attribute"/>
+		</field>
+		<field name="cache" type="com.orient.jpdl.model.types.BooleanValueType">
+			<bind-xml name="cache" node="attribute"/>
+		</field>
+		<field name="items" type="com.orient.jpdl.model.WireObjectTypeItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.SetItem">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.SetItem</description>
+		<map-to xml="set" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="wireObjectGroup" type="com.orient.jpdl.model.WireObjectGroup" required="true">
+			<bind-xml name="-error-if-this-is-used-" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.RulesDecisionChoice">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.RulesDecisionChoice</description>
+		<map-to/>
+		<field name="items" type="com.orient.jpdl.model.RulesDecisionChoiceItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Simulation">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Simulation</description>
+		<map-to xml="simulation"/>
+		<field name="clazz" type="java.lang.String">
+			<bind-xml name="class" node="attribute"/>
+		</field>
+		<field name="expr" type="java.lang.String">
+			<bind-xml name="expr" node="attribute"/>
+		</field>
+		<field name="lang" type="java.lang.String">
+			<bind-xml name="lang" node="attribute"/>
+		</field>
+		<field name="factory" type="java.lang.String">
+			<bind-xml name="factory" node="attribute"/>
+		</field>
+		<field name="method" type="java.lang.String">
+			<bind-xml name="method" node="attribute"/>
+		</field>
+		<field name="autoWire" type="java.lang.String">
+			<bind-xml name="auto-wire" node="attribute"/>
+		</field>
+		<field name="cache" type="com.orient.jpdl.model.types.BooleanValueType">
+			<bind-xml name="cache" node="attribute"/>
+		</field>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="g" type="java.lang.String">
+			<bind-xml name="g" node="attribute"/>
+		</field>
+		<field name="continue" type="com.orient.jpdl.model.types.ContinueType">
+			<bind-xml name="continue" node="attribute"/>
+		</field>
+		<field name="items" type="com.orient.jpdl.model.WireObjectTypeItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+		<field name="items" type="com.orient.jpdl.model.SimulationItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Reminder">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Reminder</description>
+		<map-to xml="reminder" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="duedate" type="java.lang.String">
+			<bind-xml name="duedate" node="attribute"/>
+		</field>
+		<field name="repeat" type="java.lang.String">
+			<bind-xml name="repeat" node="attribute"/>
+		</field>
+		<field name="continue" type="com.orient.jpdl.model.types.ContinueType">
+			<bind-xml name="continue" node="attribute"/>
+		</field>
+		<field name="template" type="java.lang.String">
+			<bind-xml name="template" node="attribute"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.InvokeItem">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.InvokeItem</description>
+		<map-to xml="invoke" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="arg" type="com.orient.jpdl.model.Arg">
+			<bind-xml name="arg" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.types.AcknowledgeType">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.types.AcknowledgeType</description>
+		<map-to xml="AcknowledgeType" ns-uri="http://jbpm.org/4.4/jpdl"/>
+	</class>
+	<class name="com.orient.jpdl.model.StateChoiceItem">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.StateChoiceItem</description>
+		<map-to ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="on" type="com.orient.jpdl.model.On">
+			<bind-xml name="on" node="element"/>
+		</field>
+		<field name="transition" type="com.orient.jpdl.model.Transition">
+			<bind-xml name="transition" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.StartChoice">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.StartChoice</description>
+		<map-to/>
+		<field name="items" type="com.orient.jpdl.model.StartChoiceItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Entry">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Entry</description>
+		<map-to xml="entry" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="key" type="com.orient.jpdl.model.Key">
+			<bind-xml name="key" node="element"/>
+		</field>
+		<field name="value" type="com.orient.jpdl.model.Value">
+			<bind-xml name="value" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Timer">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Timer</description>
+		<map-to xml="timer" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="duedate" type="java.lang.String">
+			<bind-xml name="duedate" node="attribute"/>
+		</field>
+		<field name="repeat" type="java.lang.String">
+			<bind-xml name="repeat" node="attribute"/>
+		</field>
+		<field name="duedatetime" type="java.lang.String">
+			<bind-xml name="duedatetime" node="attribute"/>
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="description" node="element"/>
+		</field>
+		<field name="eventListenerGroup" type="com.orient.jpdl.model.EventListenerGroup" collection="array">
+			<bind-xml name="-error-if-this-is-used-" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Key">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Key</description>
+		<map-to xml="key" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="wireObjectGroup" type="com.orient.jpdl.model.WireObjectGroup" required="true">
+			<bind-xml name="-error-if-this-is-used-" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Java">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Java</description>
+		<map-to xml="java"/>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="g" type="java.lang.String">
+			<bind-xml name="g" node="attribute"/>
+		</field>
+		<field name="continue" type="com.orient.jpdl.model.types.ContinueType">
+			<bind-xml name="continue" node="attribute"/>
+		</field>
+		<field name="items" type="com.orient.jpdl.model.JavaItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.ForkChoiceItem">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.ForkChoiceItem</description>
+		<map-to ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="on" type="com.orient.jpdl.model.On">
+			<bind-xml name="on" node="element"/>
+		</field>
+		<field name="transition" type="com.orient.jpdl.model.Transition">
+			<bind-xml name="transition" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.EndCancel">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.EndCancel</description>
+		<map-to xml="end-cancel" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="ends" type="com.orient.jpdl.model.types.EndCancelEndsType">
+			<bind-xml name="ends" node="attribute"/>
+		</field>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="g" type="java.lang.String">
+			<bind-xml name="g" node="attribute"/>
+		</field>
+		<field name="continue" type="com.orient.jpdl.model.types.ContinueType">
+			<bind-xml name="continue" node="attribute"/>
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="description" node="element"/>
+		</field>
+		<field name="on" type="com.orient.jpdl.model.On" collection="array">
+			<bind-xml name="on" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Foreach">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Foreach</description>
+		<map-to xml="foreach" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="var" type="java.lang.String" required="true">
+			<bind-xml name="var" node="attribute"/>
+		</field>
+		<field name="in" type="java.lang.String" required="true">
+			<bind-xml name="in" node="attribute"/>
+		</field>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="g" type="java.lang.String">
+			<bind-xml name="g" node="attribute"/>
+		</field>
+		<field name="continue" type="com.orient.jpdl.model.types.ContinueType">
+			<bind-xml name="continue" node="attribute"/>
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="description" node="element"/>
+		</field>
+		<field name="foreachChoice" type="com.orient.jpdl.model.ForeachChoice">
+			<bind-xml name="-error-if-this-is-used-" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Property">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Property</description>
+		<map-to xml="property" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="name" type="java.lang.String" required="true">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="value" type="java.lang.String" required="true">
+			<bind-xml name="value" node="attribute"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.AssignItem">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.AssignItem</description>
+		<map-to xml="assign" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="on" type="com.orient.jpdl.model.On">
+			<bind-xml name="on" node="element"/>
+		</field>
+		<field name="transition" type="com.orient.jpdl.model.Transition">
+			<bind-xml name="transition" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Set">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Set</description>
+		<map-to xml="set"/>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="clazz" type="java.lang.String">
+			<bind-xml name="class" node="attribute"/>
+		</field>
+		<field name="synchronized" type="com.orient.jpdl.model.types.BooleanValueType">
+			<bind-xml name="synchronized" node="attribute"/>
+		</field>
+		<field name="items" type="com.orient.jpdl.model.SetItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.WireObjectTypeItem">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.WireObjectTypeItem</description>
+		<map-to xml="wireObjectType" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="description" type="java.lang.String" collection="array">
+			<bind-xml name="description" node="element"/>
+		</field>
+		<field name="factory" type="com.orient.jpdl.model.Factory">
+			<bind-xml name="factory" node="element"/>
+		</field>
+		<field name="constructor" type="com.orient.jpdl.model.Constructor">
+			<bind-xml name="constructor" node="element"/>
+		</field>
+		<field name="arg" type="com.orient.jpdl.model.Arg">
+			<bind-xml name="arg" node="element"/>
+		</field>
+		<field name="field" type="com.orient.jpdl.model.Field">
+			<bind-xml name="field" node="element"/>
+		</field>
+		<field name="property" type="com.orient.jpdl.model.Property">
+			<bind-xml name="property" node="element"/>
+		</field>
+		<field name="invoke" type="com.orient.jpdl.model.Invoke">
+			<bind-xml name="invoke" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Char">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Char</description>
+		<map-to xml="char" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="value" type="java.lang.String" required="true">
+			<bind-xml name="value" node="attribute"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.SimulationItem">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.SimulationItem</description>
+		<map-to xml="simulation" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="on" type="com.orient.jpdl.model.On">
+			<bind-xml name="on" node="element"/>
+		</field>
+		<field name="transition" type="com.orient.jpdl.model.Transition">
+			<bind-xml name="transition" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Attachment">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Attachment</description>
+		<map-to xml="attachment" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="url" type="java.lang.String">
+			<bind-xml name="url" node="attribute"/>
+		</field>
+		<field name="resource" type="java.lang.String">
+			<bind-xml name="resource" node="attribute"/>
+		</field>
+		<field name="file" type="java.lang.String">
+			<bind-xml name="file" node="attribute"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.MigrateInstancesItem">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.MigrateInstancesItem</description>
+		<map-to xml="migrate-instances" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="migrationHandler" type="com.orient.jpdl.model.MigrationHandler">
+			<bind-xml name="migration-handler" node="element"/>
+		</field>
+		<field name="activityMapping" type="com.orient.jpdl.model.ActivityMapping">
+			<bind-xml name="activity-mapping" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.False">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.False</description>
+		<map-to xml="false" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.types.EndErrorEndsType">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.types.EndErrorEndsType</description>
+		<map-to xml="EndErrorEndsType" ns-uri="http://jbpm.org/4.4/jpdl"/>
+	</class>
+	<class name="com.orient.jpdl.model.To">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.To</description>
+		<map-to xml="to" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="addresses" type="java.lang.String">
+			<bind-xml name="addresses" node="attribute"/>
+		</field>
+		<field name="users" type="java.lang.String">
+			<bind-xml name="users" node="attribute"/>
+		</field>
+		<field name="groups" type="java.lang.String">
+			<bind-xml name="groups" node="attribute"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.SqlItem">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.SqlItem</description>
+		<map-to xml="sql" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="on" type="com.orient.jpdl.model.On">
+			<bind-xml name="on" node="element"/>
+		</field>
+		<field name="transition" type="com.orient.jpdl.model.Transition">
+			<bind-xml name="transition" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.SubProcessChoice">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.SubProcessChoice</description>
+		<map-to/>
+		<field name="items" type="com.orient.jpdl.model.SubProcessChoiceItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.GroupChoice">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.GroupChoice</description>
+		<map-to/>
+		<field name="items" type="com.orient.jpdl.model.GroupChoiceItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Arg">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Arg</description>
+		<map-to xml="arg" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="type" type="java.lang.String">
+			<bind-xml name="type" node="attribute"/>
+		</field>
+		<field name="wireObjectGroup" type="com.orient.jpdl.model.WireObjectGroup" required="true">
+			<bind-xml name="-error-if-this-is-used-" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.ForkChoice">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.ForkChoice</description>
+		<map-to/>
+		<field name="items" type="com.orient.jpdl.model.ForkChoiceItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.AnalysisItem">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.AnalysisItem</description>
+		<map-to xml="analysis" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="on" type="com.orient.jpdl.model.On">
+			<bind-xml name="on" node="element"/>
+		</field>
+		<field name="transition" type="com.orient.jpdl.model.Transition">
+			<bind-xml name="transition" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.String">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.String</description>
+		<map-to xml="string" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="value" type="java.lang.Object">
+			<bind-xml name="value" node="attribute"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.MigrateInstances">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.MigrateInstances</description>
+		<map-to xml="migrate-instances"/>
+		<field name="action" type="com.orient.jpdl.model.types.MigrationActionType">
+			<bind-xml name="action" node="attribute"/>
+		</field>
+		<field name="items" type="com.orient.jpdl.model.MigrateInstancesItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.CustomItem">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.CustomItem</description>
+		<map-to xml="custom" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="on" type="com.orient.jpdl.model.On">
+			<bind-xml name="on" node="element"/>
+		</field>
+		<field name="transition" type="com.orient.jpdl.model.Transition">
+			<bind-xml name="transition" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.RulesChoice">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.RulesChoice</description>
+		<map-to/>
+		<field name="items" type="com.orient.jpdl.model.RulesChoiceItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.From">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.From</description>
+		<map-to xml="from" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="wireObjectGroup" type="com.orient.jpdl.model.WireObjectGroup" required="true">
+			<bind-xml name="-error-if-this-is-used-" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.ForeachChoiceItem">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.ForeachChoiceItem</description>
+		<map-to ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="on" type="com.orient.jpdl.model.On">
+			<bind-xml name="on" node="element"/>
+		</field>
+		<field name="transition" type="com.orient.jpdl.model.Transition">
+			<bind-xml name="transition" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Constructor">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Constructor</description>
+		<map-to xml="constructor"/>
+		<field name="items" type="com.orient.jpdl.model.ConstructorItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.types.JoinLockmodeType">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.types.JoinLockmodeType</description>
+		<map-to xml="JoinLockmodeType" ns-uri="http://jbpm.org/4.4/jpdl"/>
+	</class>
+	<class name="com.orient.jpdl.model.Jndi">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Jndi</description>
+		<map-to xml="jndi" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="jndiName" type="java.lang.String" required="true">
+			<bind-xml name="jndi-name" node="attribute"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Float">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Float</description>
+		<map-to xml="float" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="value" type="float" required="true">
+			<bind-xml name="value" node="attribute"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Script">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Script</description>
+		<map-to xml="script"/>
+		<field name="expr" type="java.lang.String">
+			<bind-xml name="expr" node="attribute"/>
+		</field>
+		<field name="lang" type="java.lang.String">
+			<bind-xml name="lang" node="attribute"/>
+		</field>
+		<field name="var" type="java.lang.String">
+			<bind-xml name="var" node="attribute"/>
+		</field>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="g" type="java.lang.String">
+			<bind-xml name="g" node="attribute"/>
+		</field>
+		<field name="continue" type="com.orient.jpdl.model.types.ContinueType">
+			<bind-xml name="continue" node="attribute"/>
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="description" node="element"/>
+		</field>
+		<field name="text" type="java.lang.String">
+			<bind-xml name="text" node="element"/>
+		</field>
+		<field name="items" type="com.orient.jpdl.model.ScriptItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.ListItem">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.ListItem</description>
+		<map-to xml="list" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="wireObjectGroup" type="com.orient.jpdl.model.WireObjectGroup" required="true">
+			<bind-xml name="-error-if-this-is-used-" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.GroupChoiceItem">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.GroupChoiceItem</description>
+		<map-to ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="activityGroup" type="com.orient.jpdl.model.ActivityGroup" required="true">
+			<bind-xml name="-error-if-this-is-used-" node="element"/>
+		</field>
+		<field name="transition" type="com.orient.jpdl.model.Transition">
+			<bind-xml name="transition" node="element"/>
+		</field>
+		<field name="on" type="com.orient.jpdl.model.On">
+			<bind-xml name="on" node="element"/>
+		</field>
+		<field name="timer" type="com.orient.jpdl.model.Timer">
+			<bind-xml name="timer" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Join">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Join</description>
+		<map-to xml="join" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="multiplicity" type="java.lang.String">
+			<bind-xml name="multiplicity" node="attribute"/>
+		</field>
+		<field name="lockmode" type="com.orient.jpdl.model.types.JoinLockmodeType">
+			<bind-xml name="lockmode" node="attribute"/>
+		</field>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="g" type="java.lang.String">
+			<bind-xml name="g" node="attribute"/>
+		</field>
+		<field name="continue" type="com.orient.jpdl.model.types.ContinueType">
+			<bind-xml name="continue" node="attribute"/>
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="description" node="element"/>
+		</field>
+		<field name="joinChoice" type="com.orient.jpdl.model.JoinChoice">
+			<bind-xml name="-error-if-this-is-used-" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Int">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Int</description>
+		<map-to xml="int" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="value" type="int" required="true">
+			<bind-xml name="value" node="attribute"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.TaskChoiceItem">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.TaskChoiceItem</description>
+		<map-to ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="on" type="com.orient.jpdl.model.On">
+			<bind-xml name="on" node="element"/>
+		</field>
+		<field name="timer" type="com.orient.jpdl.model.Timer">
+			<bind-xml name="timer" node="element"/>
+		</field>
+		<field name="transition" type="com.orient.jpdl.model.Transition">
+			<bind-xml name="transition" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.RulesDecision">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.RulesDecision</description>
+		<map-to xml="rules-decision" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="g" type="java.lang.String">
+			<bind-xml name="g" node="attribute"/>
+		</field>
+		<field name="continue" type="com.orient.jpdl.model.types.ContinueType">
+			<bind-xml name="continue" node="attribute"/>
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="description" node="element"/>
+		</field>
+		<field name="rulesDecisionChoice" type="com.orient.jpdl.model.RulesDecisionChoice">
+			<bind-xml name="-error-if-this-is-used-" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Task">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Task</description>
+		<map-to xml="task" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="swimlane" type="java.lang.String">
+			<bind-xml name="swimlane" node="attribute"/>
+		</field>
+		<field name="form" type="java.lang.String">
+			<bind-xml name="form" node="attribute"/>
+		</field>
+		<field name="duedate" type="java.lang.String">
+			<bind-xml name="duedate" node="attribute"/>
+		</field>
+		<field name="onTransition" type="com.orient.jpdl.model.types.TaskOnTransitionType">
+			<bind-xml name="on-transition" node="attribute"/>
+		</field>
+		<field name="completion" type="java.lang.String">
+			<bind-xml name="completion" node="attribute"/>
+		</field>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="g" type="java.lang.String">
+			<bind-xml name="g" node="attribute"/>
+		</field>
+		<field name="continue" type="com.orient.jpdl.model.types.ContinueType">
+			<bind-xml name="continue" node="attribute"/>
+		</field>
+		<field name="assignee" type="java.lang.String">
+			<bind-xml name="assignee" node="attribute"/>
+		</field>
+		<field name="assigneeLang" type="java.lang.String">
+			<bind-xml name="assignee-lang" node="attribute"/>
+		</field>
+		<field name="candidateUsers" type="java.lang.String">
+			<bind-xml name="candidate-users" node="attribute"/>
+		</field>
+		<field name="candidateUsersLang" type="java.lang.String">
+			<bind-xml name="candidate-users-lang" node="attribute"/>
+		</field>
+		<field name="candidateGroups" type="java.lang.String">
+			<bind-xml name="candidate-groups" node="attribute"/>
+		</field>
+		<field name="candidateGroupsLang" type="java.lang.String">
+			<bind-xml name="candidate-groups-lang" node="attribute"/>
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="description" node="element"/>
+		</field>
+		<field name="assignmentHandler" type="com.orient.jpdl.model.AssignmentHandler">
+			<bind-xml name="assignment-handler" node="element"/>
+		</field>
+		<field name="notification" type="com.orient.jpdl.model.Notification">
+			<bind-xml name="notification" node="element"/>
+		</field>
+		<field name="reminder" type="com.orient.jpdl.model.Reminder">
+			<bind-xml name="reminder" node="element"/>
+		</field>
+		<field name="taskChoice" type="com.orient.jpdl.model.TaskChoice">
+			<bind-xml name="-error-if-this-is-used-" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Double">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Double</description>
+		<map-to xml="double" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="value" type="double" required="true">
+			<bind-xml name="value" node="attribute"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Byte">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Byte</description>
+		<map-to xml="byte" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="value" type="byte" required="true">
+			<bind-xml name="value" node="attribute"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.JoinChoiceItem">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.JoinChoiceItem</description>
+		<map-to ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="on" type="com.orient.jpdl.model.On">
+			<bind-xml name="on" node="element"/>
+		</field>
+		<field name="transition" type="com.orient.jpdl.model.Transition">
+			<bind-xml name="transition" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.SubProcessChoiceItem">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.SubProcessChoiceItem</description>
+		<map-to ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="parameterIn" type="com.orient.jpdl.model.ParameterIn">
+			<bind-xml name="parameter-in" node="element"/>
+		</field>
+		<field name="parameterOut" type="com.orient.jpdl.model.ParameterOut">
+			<bind-xml name="parameter-out" node="element"/>
+		</field>
+		<field name="timer" type="com.orient.jpdl.model.Timer">
+			<bind-xml name="timer" node="element"/>
+		</field>
+		<field name="on" type="com.orient.jpdl.model.On">
+			<bind-xml name="on" node="element"/>
+		</field>
+		<field name="swimlaneMapping" type="com.orient.jpdl.model.SwimlaneMapping">
+			<bind-xml name="swimlane-mapping" node="element"/>
+		</field>
+		<field name="transition" type="com.orient.jpdl.model.Transition">
+			<bind-xml name="transition" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Notification">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Notification</description>
+		<map-to xml="notification" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="continue" type="com.orient.jpdl.model.types.ContinueType">
+			<bind-xml name="continue" node="attribute"/>
+		</field>
+		<field name="template" type="java.lang.String">
+			<bind-xml name="template" node="attribute"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.ActivityGroup">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.ActivityGroup</description>
+		<map-to xml="activityGroup" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="start" type="com.orient.jpdl.model.Start" required="true">
+			<bind-xml name="start" node="element"/>
+		</field>
+		<field name="end" type="com.orient.jpdl.model.End" required="true">
+			<bind-xml name="end" node="element"/>
+		</field>
+		<field name="endCancel" type="com.orient.jpdl.model.EndCancel" required="true">
+			<bind-xml name="end-cancel" node="element"/>
+		</field>
+		<field name="endError" type="com.orient.jpdl.model.EndError" required="true">
+			<bind-xml name="end-error" node="element"/>
+		</field>
+		<field name="state" type="com.orient.jpdl.model.State" required="true">
+			<bind-xml name="state" node="element"/>
+		</field>
+		<field name="decision" type="com.orient.jpdl.model.Decision" required="true">
+			<bind-xml name="decision" node="element"/>
+		</field>
+		<field name="foreach" type="com.orient.jpdl.model.Foreach" required="true">
+			<bind-xml name="foreach" node="element"/>
+		</field>
+		<field name="fork" type="com.orient.jpdl.model.Fork" required="true">
+			<bind-xml name="fork" node="element"/>
+		</field>
+		<field name="join" type="com.orient.jpdl.model.Join" required="true">
+			<bind-xml name="join" node="element"/>
+		</field>
+		<field name="script" type="com.orient.jpdl.model.Script" required="true">
+			<bind-xml name="script" node="element"/>
+		</field>
+		<field name="hql" type="com.orient.jpdl.model.Hql" required="true">
+			<bind-xml name="hql" node="element"/>
+		</field>
+		<field name="sql" type="com.orient.jpdl.model.Sql" required="true">
+			<bind-xml name="sql" node="element"/>
+		</field>
+		<field name="mail" type="com.orient.jpdl.model.Mail" required="true">
+			<bind-xml name="mail" node="element"/>
+		</field>
+		<field name="jms" type="com.orient.jpdl.model.Jms" required="true">
+			<bind-xml name="jms" node="element"/>
+		</field>
+		<field name="java" type="com.orient.jpdl.model.Java" required="true">
+			<bind-xml name="java" node="element"/>
+		</field>
+		<field name="assign" type="com.orient.jpdl.model.Assign" required="true">
+			<bind-xml name="assign" node="element"/>
+		</field>
+		<field name="daq" type="com.orient.jpdl.model.Daq" required="true">
+			<bind-xml name="daq" node="element"/>
+		</field>
+		<field name="simulation" type="com.orient.jpdl.model.Simulation" required="true">
+			<bind-xml name="simulation" node="element"/>
+		</field>
+		<field name="analysis" type="com.orient.jpdl.model.Analysis" required="true">
+			<bind-xml name="analysis" node="element"/>
+		</field>
+		<field name="custom" type="com.orient.jpdl.model.Custom" required="true">
+			<bind-xml name="custom" node="element"/>
+		</field>
+		<field name="task" type="com.orient.jpdl.model.Task" required="true">
+			<bind-xml name="task" node="element"/>
+		</field>
+		<field name="subProcess" type="com.orient.jpdl.model.SubProcess" required="true">
+			<bind-xml name="sub-process" node="element"/>
+		</field>
+		<field name="group" type="com.orient.jpdl.model.Group" required="true">
+			<bind-xml name="group" node="element"/>
+		</field>
+		<field name="rulesDecision" type="com.orient.jpdl.model.RulesDecision" required="true">
+			<bind-xml name="rules-decision" node="element"/>
+		</field>
+		<field name="rules" type="com.orient.jpdl.model.Rules" required="true">
+			<bind-xml name="rules" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Fact">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Fact</description>
+		<map-to xml="fact" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="var" type="java.lang.String">
+			<bind-xml name="var" node="attribute"/>
+		</field>
+		<field name="expr" type="java.lang.String">
+			<bind-xml name="expr" node="attribute"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Rules">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Rules</description>
+		<map-to xml="rules" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="g" type="java.lang.String">
+			<bind-xml name="g" node="attribute"/>
+		</field>
+		<field name="continue" type="com.orient.jpdl.model.types.ContinueType">
+			<bind-xml name="continue" node="attribute"/>
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="description" node="element"/>
+		</field>
+		<field name="rulesChoice" type="com.orient.jpdl.model.RulesChoice">
+			<bind-xml name="-error-if-this-is-used-" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Transition">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Transition</description>
+		<map-to xml="transition" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="to" type="java.lang.String">
+			<bind-xml name="to" node="attribute"/>
+		</field>
+		<field name="g" type="java.lang.String">
+			<bind-xml name="g" node="attribute"/>
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="description" node="element"/>
+		</field>
+		<field name="eventListenerGroup" type="com.orient.jpdl.model.EventListenerGroup" collection="array">
+			<bind-xml name="-error-if-this-is-used-" node="element"/>
+		</field>
+		<field name="condition" type="com.orient.jpdl.model.Condition" collection="array">
+			<bind-xml name="condition" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.AssignmentHandler">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.AssignmentHandler</description>
+		<map-to xml="assignment-handler" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="clazz" type="java.lang.String">
+			<bind-xml name="class" node="attribute"/>
+		</field>
+		<field name="expr" type="java.lang.String">
+			<bind-xml name="expr" node="attribute"/>
+		</field>
+		<field name="lang" type="java.lang.String">
+			<bind-xml name="lang" node="attribute"/>
+		</field>
+		<field name="factory" type="java.lang.String">
+			<bind-xml name="factory" node="attribute"/>
+		</field>
+		<field name="method" type="java.lang.String">
+			<bind-xml name="method" node="attribute"/>
+		</field>
+		<field name="autoWire" type="java.lang.String">
+			<bind-xml name="auto-wire" node="attribute"/>
+		</field>
+		<field name="cache" type="com.orient.jpdl.model.types.BooleanValueType">
+			<bind-xml name="cache" node="attribute"/>
+		</field>
+		<field name="items" type="com.orient.jpdl.model.WireObjectTypeItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.MailItem">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.MailItem</description>
+		<map-to xml="mail" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="on" type="com.orient.jpdl.model.On">
+			<bind-xml name="on" node="element"/>
+		</field>
+		<field name="transition" type="com.orient.jpdl.model.Transition">
+			<bind-xml name="transition" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.StartChoiceItem">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.StartChoiceItem</description>
+		<map-to ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="on" type="com.orient.jpdl.model.On">
+			<bind-xml name="on" node="element"/>
+		</field>
+		<field name="transition" type="com.orient.jpdl.model.Transition">
+			<bind-xml name="transition" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Assign">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Assign</description>
+		<map-to xml="assign"/>
+		<field name="fromExpr" type="java.lang.String">
+			<bind-xml name="from-expr" node="attribute"/>
+		</field>
+		<field name="lang" type="java.lang.String">
+			<bind-xml name="lang" node="attribute"/>
+		</field>
+		<field name="fromVar" type="java.lang.String">
+			<bind-xml name="from-var" node="attribute"/>
+		</field>
+		<field name="toExpr" type="java.lang.String">
+			<bind-xml name="to-expr" node="attribute"/>
+		</field>
+		<field name="toVar" type="java.lang.String">
+			<bind-xml name="to-var" node="attribute"/>
+		</field>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="g" type="java.lang.String">
+			<bind-xml name="g" node="attribute"/>
+		</field>
+		<field name="continue" type="com.orient.jpdl.model.types.ContinueType">
+			<bind-xml name="continue" node="attribute"/>
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="description" node="element"/>
+		</field>
+		<field name="from" type="com.orient.jpdl.model.From">
+			<bind-xml name="from" node="element"/>
+		</field>
+		<field name="items" type="com.orient.jpdl.model.AssignItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Mail">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Mail</description>
+		<map-to xml="mail"/>
+		<field name="clazz" type="java.lang.String">
+			<bind-xml name="class" node="attribute"/>
+		</field>
+		<field name="expr" type="java.lang.String">
+			<bind-xml name="expr" node="attribute"/>
+		</field>
+		<field name="lang" type="java.lang.String">
+			<bind-xml name="lang" node="attribute"/>
+		</field>
+		<field name="factory" type="java.lang.String">
+			<bind-xml name="factory" node="attribute"/>
+		</field>
+		<field name="method" type="java.lang.String">
+			<bind-xml name="method" node="attribute"/>
+		</field>
+		<field name="autoWire" type="java.lang.String">
+			<bind-xml name="auto-wire" node="attribute"/>
+		</field>
+		<field name="cache" type="com.orient.jpdl.model.types.BooleanValueType">
+			<bind-xml name="cache" node="attribute"/>
+		</field>
+		<field name="template" type="java.lang.String">
+			<bind-xml name="template" node="attribute"/>
+		</field>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="g" type="java.lang.String">
+			<bind-xml name="g" node="attribute"/>
+		</field>
+		<field name="continue" type="com.orient.jpdl.model.types.ContinueType">
+			<bind-xml name="continue" node="attribute"/>
+		</field>
+		<field name="items" type="com.orient.jpdl.model.WireObjectTypeItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+		<field name="from" type="com.orient.jpdl.model.From">
+			<bind-xml name="from" node="element"/>
+		</field>
+		<field name="to" type="com.orient.jpdl.model.To">
+			<bind-xml name="to" node="element"/>
+		</field>
+		<field name="cc" type="com.orient.jpdl.model.Cc">
+			<bind-xml name="cc" node="element"/>
+		</field>
+		<field name="bcc" type="com.orient.jpdl.model.Bcc">
+			<bind-xml name="bcc" node="element"/>
+		</field>
+		<field name="subject" type="java.lang.String">
+			<bind-xml name="subject" node="element"/>
+		</field>
+		<field name="text" type="java.lang.String">
+			<bind-xml name="text" node="element"/>
+		</field>
+		<field name="html" type="java.lang.String">
+			<bind-xml name="html" node="element"/>
+		</field>
+		<field name="attachments" type="com.orient.jpdl.model.Attachments">
+			<bind-xml name="attachments" node="element"/>
+		</field>
+		<field name="items" type="com.orient.jpdl.model.MailItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.JmsItem">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.JmsItem</description>
+		<map-to xml="jms" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="on" type="com.orient.jpdl.model.On">
+			<bind-xml name="on" node="element"/>
+		</field>
+		<field name="transition" type="com.orient.jpdl.model.Transition">
+			<bind-xml name="transition" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Sql">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Sql</description>
+		<map-to xml="sql"/>
+		<field name="var" type="java.lang.String">
+			<bind-xml name="var" node="attribute"/>
+		</field>
+		<field name="unique" type="java.lang.String">
+			<bind-xml name="unique" node="attribute"/>
+		</field>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="g" type="java.lang.String">
+			<bind-xml name="g" node="attribute"/>
+		</field>
+		<field name="continue" type="com.orient.jpdl.model.types.ContinueType">
+			<bind-xml name="continue" node="attribute"/>
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="description" node="element"/>
+		</field>
+		<field name="query" type="java.lang.String" required="true">
+			<bind-xml name="query" node="element"/>
+		</field>
+		<field name="parameters" type="com.orient.jpdl.model.Parameters">
+			<bind-xml name="parameters" node="element"/>
+		</field>
+		<field name="items" type="com.orient.jpdl.model.SqlItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.PropertiesItem">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.PropertiesItem</description>
+		<map-to xml="properties" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="property" type="com.orient.jpdl.model.Property">
+			<bind-xml name="property" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.EndError">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.EndError</description>
+		<map-to xml="end-error" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="ends" type="com.orient.jpdl.model.types.EndErrorEndsType">
+			<bind-xml name="ends" node="attribute"/>
+		</field>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="g" type="java.lang.String">
+			<bind-xml name="g" node="attribute"/>
+		</field>
+		<field name="continue" type="com.orient.jpdl.model.types.ContinueType">
+			<bind-xml name="continue" node="attribute"/>
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="description" node="element"/>
+		</field>
+		<field name="on" type="com.orient.jpdl.model.On" collection="array">
+			<bind-xml name="on" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Map">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Map</description>
+		<map-to xml="map" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="clazz" type="java.lang.String">
+			<bind-xml name="class" node="attribute"/>
+		</field>
+		<field name="synchronized" type="com.orient.jpdl.model.types.BooleanValueType">
+			<bind-xml name="synchronized" node="attribute"/>
+		</field>
+		<field name="entry" type="com.orient.jpdl.model.Entry" collection="array">
+			<bind-xml name="entry" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Bcc">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Bcc</description>
+		<map-to xml="bcc" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="addresses" type="java.lang.String">
+			<bind-xml name="addresses" node="attribute"/>
+		</field>
+		<field name="users" type="java.lang.String">
+			<bind-xml name="users" node="attribute"/>
+		</field>
+		<field name="groups" type="java.lang.String">
+			<bind-xml name="groups" node="attribute"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.types.MigrationActionType">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.types.MigrationActionType</description>
+		<map-to xml="MigrationActionType" ns-uri="http://jbpm.org/4.4/jpdl"/>
+	</class>
+	<class name="com.orient.jpdl.model.Swimlane">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Swimlane</description>
+		<map-to xml="swimlane" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="name" type="java.lang.String" required="true">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="assignee" type="java.lang.String">
+			<bind-xml name="assignee" node="attribute"/>
+		</field>
+		<field name="assigneeLang" type="java.lang.String">
+			<bind-xml name="assignee-lang" node="attribute"/>
+		</field>
+		<field name="candidateUsers" type="java.lang.String">
+			<bind-xml name="candidate-users" node="attribute"/>
+		</field>
+		<field name="candidateUsersLang" type="java.lang.String">
+			<bind-xml name="candidate-users-lang" node="attribute"/>
+		</field>
+		<field name="candidateGroups" type="java.lang.String">
+			<bind-xml name="candidate-groups" node="attribute"/>
+		</field>
+		<field name="candidateGroupsLang" type="java.lang.String">
+			<bind-xml name="candidate-groups-lang" node="attribute"/>
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="description" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Analysis">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Analysis</description>
+		<map-to xml="analysis"/>
+		<field name="clazz" type="java.lang.String">
+			<bind-xml name="class" node="attribute"/>
+		</field>
+		<field name="expr" type="java.lang.String">
+			<bind-xml name="expr" node="attribute"/>
+		</field>
+		<field name="lang" type="java.lang.String">
+			<bind-xml name="lang" node="attribute"/>
+		</field>
+		<field name="factory" type="java.lang.String">
+			<bind-xml name="factory" node="attribute"/>
+		</field>
+		<field name="method" type="java.lang.String">
+			<bind-xml name="method" node="attribute"/>
+		</field>
+		<field name="autoWire" type="java.lang.String">
+			<bind-xml name="auto-wire" node="attribute"/>
+		</field>
+		<field name="cache" type="com.orient.jpdl.model.types.BooleanValueType">
+			<bind-xml name="cache" node="attribute"/>
+		</field>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="g" type="java.lang.String">
+			<bind-xml name="g" node="attribute"/>
+		</field>
+		<field name="continue" type="com.orient.jpdl.model.types.ContinueType">
+			<bind-xml name="continue" node="attribute"/>
+		</field>
+		<field name="items" type="com.orient.jpdl.model.WireObjectTypeItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+		<field name="items" type="com.orient.jpdl.model.AnalysisItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.True">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.True</description>
+		<map-to xml="true" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.ProcessChoiceItem">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.ProcessChoiceItem</description>
+		<map-to ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="swimlane" type="com.orient.jpdl.model.Swimlane">
+			<bind-xml name="swimlane" node="element"/>
+		</field>
+		<field name="on" type="com.orient.jpdl.model.On">
+			<bind-xml name="on" node="element"/>
+		</field>
+		<field name="timer" type="com.orient.jpdl.model.Timer">
+			<bind-xml name="timer" node="element"/>
+		</field>
+		<field name="variable" type="com.orient.jpdl.model.Variable">
+			<bind-xml name="variable" node="element"/>
+		</field>
+		<field name="activityGroup" type="com.orient.jpdl.model.ActivityGroup" required="true">
+			<bind-xml name="-error-if-this-is-used-" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.On">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.On</description>
+		<map-to xml="on" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="event" type="java.lang.String">
+			<bind-xml name="event" node="attribute"/>
+		</field>
+		<field name="continue" type="com.orient.jpdl.model.types.ContinueType">
+			<bind-xml name="continue" node="attribute"/>
+		</field>
+		<field name="timer" type="com.orient.jpdl.model.Timer">
+			<bind-xml name="timer" node="element"/>
+		</field>
+		<field name="eventListenerGroup" type="com.orient.jpdl.model.EventListenerGroup" collection="array">
+			<bind-xml name="-error-if-this-is-used-" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Group">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Group</description>
+		<map-to xml="group" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="g" type="java.lang.String">
+			<bind-xml name="g" node="attribute"/>
+		</field>
+		<field name="continue" type="com.orient.jpdl.model.types.ContinueType">
+			<bind-xml name="continue" node="attribute"/>
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="description" node="element"/>
+		</field>
+		<field name="groupChoice" type="com.orient.jpdl.model.GroupChoice">
+			<bind-xml name="-error-if-this-is-used-" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.SwimlaneMapping">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.SwimlaneMapping</description>
+		<map-to xml="swimlane-mapping" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="swimlane" type="java.lang.String" required="true">
+			<bind-xml name="swimlane" node="attribute"/>
+		</field>
+		<field name="subSwimlane" type="java.lang.String" required="true">
+			<bind-xml name="sub-swimlane" node="attribute"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.types.BooleanValueType">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.types.BooleanValueType</description>
+		<map-to xml="BooleanValueType" ns-uri="http://jbpm.org/4.4/jpdl"/>
+	</class>
+	<class name="com.orient.jpdl.model.Cc">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Cc</description>
+		<map-to xml="cc" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="addresses" type="java.lang.String">
+			<bind-xml name="addresses" node="attribute"/>
+		</field>
+		<field name="users" type="java.lang.String">
+			<bind-xml name="users" node="attribute"/>
+		</field>
+		<field name="groups" type="java.lang.String">
+			<bind-xml name="groups" node="attribute"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.SubProcess">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.SubProcess</description>
+		<map-to xml="sub-process" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="subProcessId" type="java.lang.String">
+			<bind-xml name="sub-process-id" node="attribute"/>
+		</field>
+		<field name="subProcessKey" type="java.lang.String">
+			<bind-xml name="sub-process-key" node="attribute"/>
+		</field>
+		<field name="outcome" type="java.lang.String">
+			<bind-xml name="outcome" node="attribute"/>
+		</field>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="g" type="java.lang.String">
+			<bind-xml name="g" node="attribute"/>
+		</field>
+		<field name="continue" type="com.orient.jpdl.model.types.ContinueType">
+			<bind-xml name="continue" node="attribute"/>
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="description" node="element"/>
+		</field>
+		<field name="subProcessChoice" type="com.orient.jpdl.model.SubProcessChoice">
+			<bind-xml name="-error-if-this-is-used-" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Ref">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Ref</description>
+		<map-to xml="ref" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="object" type="java.lang.String" required="true">
+			<bind-xml name="object" node="attribute"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Variable">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Variable</description>
+		<map-to xml="variable" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="type" type="java.lang.String">
+			<bind-xml name="type" node="attribute"/>
+		</field>
+		<field name="initExpr" type="java.lang.String">
+			<bind-xml name="init-expr" node="attribute"/>
+		</field>
+		<field name="history" type="com.orient.jpdl.model.types.BooleanValueType">
+			<bind-xml name="history" node="attribute"/>
+		</field>
+		<field name="wireObjectGroup" type="com.orient.jpdl.model.WireObjectGroup">
+			<bind-xml name="-error-if-this-is-used-" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Custom">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Custom</description>
+		<map-to xml="custom"/>
+		<field name="clazz" type="java.lang.String">
+			<bind-xml name="class" node="attribute"/>
+		</field>
+		<field name="expr" type="java.lang.String">
+			<bind-xml name="expr" node="attribute"/>
+		</field>
+		<field name="lang" type="java.lang.String">
+			<bind-xml name="lang" node="attribute"/>
+		</field>
+		<field name="factory" type="java.lang.String">
+			<bind-xml name="factory" node="attribute"/>
+		</field>
+		<field name="method" type="java.lang.String">
+			<bind-xml name="method" node="attribute"/>
+		</field>
+		<field name="autoWire" type="java.lang.String">
+			<bind-xml name="auto-wire" node="attribute"/>
+		</field>
+		<field name="cache" type="com.orient.jpdl.model.types.BooleanValueType">
+			<bind-xml name="cache" node="attribute"/>
+		</field>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="g" type="java.lang.String">
+			<bind-xml name="g" node="attribute"/>
+		</field>
+		<field name="continue" type="com.orient.jpdl.model.types.ContinueType">
+			<bind-xml name="continue" node="attribute"/>
+		</field>
+		<field name="items" type="com.orient.jpdl.model.WireObjectTypeItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+		<field name="items" type="com.orient.jpdl.model.CustomItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.DecisionChoiceItem">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.DecisionChoiceItem</description>
+		<map-to ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="on" type="com.orient.jpdl.model.On" collection="array">
+			<bind-xml name="on" node="element"/>
+		</field>
+		<field name="transition" type="com.orient.jpdl.model.Transition" collection="array">
+			<bind-xml name="transition" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.HqlItem">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.HqlItem</description>
+		<map-to xml="hql" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="on" type="com.orient.jpdl.model.On">
+			<bind-xml name="on" node="element"/>
+		</field>
+		<field name="transition" type="com.orient.jpdl.model.Transition">
+			<bind-xml name="transition" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Hql">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Hql</description>
+		<map-to xml="hql"/>
+		<field name="var" type="java.lang.String">
+			<bind-xml name="var" node="attribute"/>
+		</field>
+		<field name="unique" type="java.lang.String">
+			<bind-xml name="unique" node="attribute"/>
+		</field>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="g" type="java.lang.String">
+			<bind-xml name="g" node="attribute"/>
+		</field>
+		<field name="continue" type="com.orient.jpdl.model.types.ContinueType">
+			<bind-xml name="continue" node="attribute"/>
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="description" node="element"/>
+		</field>
+		<field name="query" type="java.lang.String" required="true">
+			<bind-xml name="query" node="element"/>
+		</field>
+		<field name="parameters" type="com.orient.jpdl.model.Parameters">
+			<bind-xml name="parameters" node="element"/>
+		</field>
+		<field name="items" type="com.orient.jpdl.model.HqlItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.ParameterIn">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.ParameterIn</description>
+		<map-to xml="parameter-in" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="subvar" type="java.lang.String">
+			<bind-xml name="subvar" node="attribute"/>
+		</field>
+		<field name="expr" type="java.lang.String">
+			<bind-xml name="expr" node="attribute"/>
+		</field>
+		<field name="lang" type="java.lang.String">
+			<bind-xml name="lang" node="attribute"/>
+		</field>
+		<field name="var" type="java.lang.String">
+			<bind-xml name="var" node="attribute"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Daq">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Daq</description>
+		<map-to xml="daq"/>
+		<field name="clazz" type="java.lang.String">
+			<bind-xml name="class" node="attribute"/>
+		</field>
+		<field name="expr" type="java.lang.String">
+			<bind-xml name="expr" node="attribute"/>
+		</field>
+		<field name="lang" type="java.lang.String">
+			<bind-xml name="lang" node="attribute"/>
+		</field>
+		<field name="factory" type="java.lang.String">
+			<bind-xml name="factory" node="attribute"/>
+		</field>
+		<field name="method" type="java.lang.String">
+			<bind-xml name="method" node="attribute"/>
+		</field>
+		<field name="autoWire" type="java.lang.String">
+			<bind-xml name="auto-wire" node="attribute"/>
+		</field>
+		<field name="cache" type="com.orient.jpdl.model.types.BooleanValueType">
+			<bind-xml name="cache" node="attribute"/>
+		</field>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="g" type="java.lang.String">
+			<bind-xml name="g" node="attribute"/>
+		</field>
+		<field name="continue" type="com.orient.jpdl.model.types.ContinueType">
+			<bind-xml name="continue" node="attribute"/>
+		</field>
+		<field name="items" type="com.orient.jpdl.model.WireObjectTypeItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+		<field name="items" type="com.orient.jpdl.model.DaqItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Process">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Process</description>
+		<map-to xml="process" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="name" type="java.lang.String" required="true">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="category" type="java.lang.String" required="true">
+			<bind-xml name="category" node="attribute"/>
+		</field>
+		<field name="key" type="java.lang.String">
+			<bind-xml name="key" node="attribute"/>
+		</field>
+		<field name="version" type="int">
+			<bind-xml name="version" node="attribute"/>
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="description" node="element"/>
+		</field>
+		<field name="processChoice" type="com.orient.jpdl.model.ProcessChoice">
+			<bind-xml name="-error-if-this-is-used-" node="element"/>
+		</field>
+		<field name="migrateInstances" type="com.orient.jpdl.model.MigrateInstances">
+			<bind-xml name="migrate-instances" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.State">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.State</description>
+		<map-to xml="state" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="g" type="java.lang.String">
+			<bind-xml name="g" node="attribute"/>
+		</field>
+		<field name="continue" type="com.orient.jpdl.model.types.ContinueType">
+			<bind-xml name="continue" node="attribute"/>
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="description" node="element"/>
+		</field>
+		<field name="stateChoice" type="com.orient.jpdl.model.StateChoice">
+			<bind-xml name="-error-if-this-is-used-" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Handler">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Handler</description>
+		<map-to xml="handler" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="clazz" type="java.lang.String">
+			<bind-xml name="class" node="attribute"/>
+		</field>
+		<field name="expr" type="java.lang.String">
+			<bind-xml name="expr" node="attribute"/>
+		</field>
+		<field name="lang" type="java.lang.String">
+			<bind-xml name="lang" node="attribute"/>
+		</field>
+		<field name="factory" type="java.lang.String">
+			<bind-xml name="factory" node="attribute"/>
+		</field>
+		<field name="method" type="java.lang.String">
+			<bind-xml name="method" node="attribute"/>
+		</field>
+		<field name="autoWire" type="java.lang.String">
+			<bind-xml name="auto-wire" node="attribute"/>
+		</field>
+		<field name="cache" type="com.orient.jpdl.model.types.BooleanValueType">
+			<bind-xml name="cache" node="attribute"/>
+		</field>
+		<field name="items" type="com.orient.jpdl.model.WireObjectTypeItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Invoke">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Invoke</description>
+		<map-to xml="invoke"/>
+		<field name="method" type="java.lang.String" required="true">
+			<bind-xml name="method" node="attribute"/>
+		</field>
+		<field name="items" type="com.orient.jpdl.model.InvokeItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.DaqItem">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.DaqItem</description>
+		<map-to xml="daq" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="on" type="com.orient.jpdl.model.On">
+			<bind-xml name="on" node="element"/>
+		</field>
+		<field name="transition" type="com.orient.jpdl.model.Transition">
+			<bind-xml name="transition" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.RulesDecisionChoiceItem">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.RulesDecisionChoiceItem</description>
+		<map-to ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="transition" type="com.orient.jpdl.model.Transition">
+			<bind-xml name="transition" node="element"/>
+		</field>
+		<field name="on" type="com.orient.jpdl.model.On">
+			<bind-xml name="on" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.types.EndEndsType">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.types.EndEndsType</description>
+		<map-to xml="EndEndsType" ns-uri="http://jbpm.org/4.4/jpdl"/>
+	</class>
+	<class name="com.orient.jpdl.model.List">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.List</description>
+		<map-to xml="list"/>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="clazz" type="java.lang.String">
+			<bind-xml name="class" node="attribute"/>
+		</field>
+		<field name="synchronized" type="com.orient.jpdl.model.types.BooleanValueType">
+			<bind-xml name="synchronized" node="attribute"/>
+		</field>
+		<field name="items" type="com.orient.jpdl.model.ListItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Attachments">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Attachments</description>
+		<map-to xml="attachments" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="attachment" type="com.orient.jpdl.model.Attachment" required="true" collection="array">
+			<bind-xml name="attachment" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Parameters">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Parameters</description>
+		<map-to xml="parameters" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="wireObjectGroup" type="com.orient.jpdl.model.WireObjectGroup" required="true" collection="array">
+			<bind-xml name="-error-if-this-is-used-" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Jms">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Jms</description>
+		<map-to xml="jms"/>
+		<field name="connectionFactory" type="java.lang.String">
+			<bind-xml name="connection-factory" node="attribute"/>
+		</field>
+		<field name="destination" type="java.lang.String">
+			<bind-xml name="destination" node="attribute"/>
+		</field>
+		<field name="transacted" type="com.orient.jpdl.model.types.BooleanValueType">
+			<bind-xml name="transacted" node="attribute"/>
+		</field>
+		<field name="acknowledge" type="com.orient.jpdl.model.types.AcknowledgeType">
+			<bind-xml name="acknowledge" node="attribute"/>
+		</field>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="g" type="java.lang.String">
+			<bind-xml name="g" node="attribute"/>
+		</field>
+		<field name="continue" type="com.orient.jpdl.model.types.ContinueType">
+			<bind-xml name="continue" node="attribute"/>
+		</field>
+		<field name="object" type="com.orient.jpdl.model.Object" required="true">
+			<bind-xml name="object" node="element"/>
+		</field>
+		<field name="text" type="java.lang.String" required="true">
+			<bind-xml name="text" node="element"/>
+		</field>
+		<field name="map" type="com.orient.jpdl.model.Map" required="true">
+			<bind-xml name="map" node="element"/>
+		</field>
+		<field name="items" type="com.orient.jpdl.model.JmsItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.ConstructorItem">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.ConstructorItem</description>
+		<map-to xml="constructor" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="arg" type="com.orient.jpdl.model.Arg" required="true">
+			<bind-xml name="arg" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Value">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Value</description>
+		<map-to xml="value" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="wireObjectGroup" type="com.orient.jpdl.model.WireObjectGroup" required="true">
+			<bind-xml name="-error-if-this-is-used-" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.MigrationHandler">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.MigrationHandler</description>
+		<map-to xml="migration-handler" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="clazz" type="java.lang.Object">
+			<bind-xml name="class" node="attribute"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.types.TaskOnTransitionType">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.types.TaskOnTransitionType</description>
+		<map-to xml="TaskOnTransitionType" ns-uri="http://jbpm.org/4.4/jpdl"/>
+	</class>
+	<class name="com.orient.jpdl.model.ActivityMapping">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.ActivityMapping</description>
+		<map-to xml="activity-mapping" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="oldName" type="java.lang.String" required="true">
+			<bind-xml name="old-name" node="attribute"/>
+		</field>
+		<field name="newName" type="java.lang.String" required="true">
+			<bind-xml name="new-name" node="attribute"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Condition">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Condition</description>
+		<map-to xml="condition" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="expr" type="java.lang.String">
+			<bind-xml name="expr" node="attribute"/>
+		</field>
+		<field name="lang" type="java.lang.String">
+			<bind-xml name="lang" node="attribute"/>
+		</field>
+		<field name="handler" type="com.orient.jpdl.model.Handler">
+			<bind-xml name="handler" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Factory">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Factory</description>
+		<map-to xml="factory" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="wireObjectGroup" type="com.orient.jpdl.model.WireObjectGroup" required="true">
+			<bind-xml name="-error-if-this-is-used-" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.types.EndCancelEndsType">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.types.EndCancelEndsType</description>
+		<map-to xml="EndCancelEndsType" ns-uri="http://jbpm.org/4.4/jpdl"/>
+	</class>
+	<class name="com.orient.jpdl.model.ForeachChoice">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.ForeachChoice</description>
+		<map-to/>
+		<field name="items" type="com.orient.jpdl.model.ForeachChoiceItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Field">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Field</description>
+		<map-to xml="field" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="name" type="java.lang.Object">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="wireObjectGroup" type="com.orient.jpdl.model.WireObjectGroup" required="true">
+			<bind-xml name="-error-if-this-is-used-" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.JoinChoice">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.JoinChoice</description>
+		<map-to/>
+		<field name="items" type="com.orient.jpdl.model.JoinChoiceItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.ParameterOut">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.ParameterOut</description>
+		<map-to xml="parameter-out" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="subvar" type="java.lang.String">
+			<bind-xml name="subvar" node="attribute"/>
+		</field>
+		<field name="expr" type="java.lang.String">
+			<bind-xml name="expr" node="attribute"/>
+		</field>
+		<field name="lang" type="java.lang.String">
+			<bind-xml name="lang" node="attribute"/>
+		</field>
+		<field name="var" type="java.lang.String">
+			<bind-xml name="var" node="attribute"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Properties">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Properties</description>
+		<map-to xml="properties"/>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="file" type="java.lang.String">
+			<bind-xml name="file" node="attribute"/>
+		</field>
+		<field name="resource" type="java.lang.String">
+			<bind-xml name="resource" node="attribute"/>
+		</field>
+		<field name="url" type="java.lang.String">
+			<bind-xml name="url" node="attribute"/>
+		</field>
+		<field name="isXml" type="com.orient.jpdl.model.types.BooleanValueType">
+			<bind-xml name="is-xml" node="attribute"/>
+		</field>
+		<field name="items" type="com.orient.jpdl.model.PropertiesItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.ProcessChoice">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.ProcessChoice</description>
+		<map-to/>
+		<field name="items" type="com.orient.jpdl.model.ProcessChoiceItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.End">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.End</description>
+		<map-to xml="end" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="ends" type="com.orient.jpdl.model.types.EndEndsType">
+			<bind-xml name="ends" node="attribute"/>
+		</field>
+		<field name="state" type="java.lang.String">
+			<bind-xml name="state" node="attribute"/>
+		</field>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="g" type="java.lang.String">
+			<bind-xml name="g" node="attribute"/>
+		</field>
+		<field name="continue" type="com.orient.jpdl.model.types.ContinueType">
+			<bind-xml name="continue" node="attribute"/>
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="description" node="element"/>
+		</field>
+		<field name="on" type="com.orient.jpdl.model.On" collection="array">
+			<bind-xml name="on" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.DecisionChoice">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.DecisionChoice</description>
+		<map-to/>
+		<field name="items" type="com.orient.jpdl.model.DecisionChoiceItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Decision">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Decision</description>
+		<map-to xml="decision" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="expr" type="java.lang.String">
+			<bind-xml name="expr" node="attribute"/>
+		</field>
+		<field name="lang" type="java.lang.String">
+			<bind-xml name="lang" node="attribute"/>
+		</field>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="g" type="java.lang.String">
+			<bind-xml name="g" node="attribute"/>
+		</field>
+		<field name="continue" type="com.orient.jpdl.model.types.ContinueType">
+			<bind-xml name="continue" node="attribute"/>
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="description" node="element"/>
+		</field>
+		<field name="handler" type="com.orient.jpdl.model.Handler">
+			<bind-xml name="handler" node="element"/>
+		</field>
+		<field name="decisionChoice" type="com.orient.jpdl.model.DecisionChoice">
+			<bind-xml name="-error-if-this-is-used-" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Short">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Short</description>
+		<map-to xml="short" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="value" type="short" required="true">
+			<bind-xml name="value" node="attribute"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.JavaItem">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.JavaItem</description>
+		<map-to xml="java" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="on" type="com.orient.jpdl.model.On">
+			<bind-xml name="on" node="element"/>
+		</field>
+		<field name="transition" type="com.orient.jpdl.model.Transition">
+			<bind-xml name="transition" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.Fork">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.Fork</description>
+		<map-to xml="fork" ns-uri="http://jbpm.org/4.4/jpdl"/>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="g" type="java.lang.String">
+			<bind-xml name="g" node="attribute"/>
+		</field>
+		<field name="continue" type="com.orient.jpdl.model.types.ContinueType">
+			<bind-xml name="continue" node="attribute"/>
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="description" node="element"/>
+		</field>
+		<field name="forkChoice" type="com.orient.jpdl.model.ForkChoice">
+			<bind-xml name="-error-if-this-is-used-" node="element"/>
+		</field>
+	</class>
+	<class name="com.orient.jpdl.model.StateChoice">
+		<description xmlns="">Default mapping for class com.orient.jpdl.model.StateChoice</description>
+		<map-to/>
+		<field name="items" type="com.orient.jpdl.model.StateChoiceItem" collection="enumerate">
+			<bind-xml node="element"/>
+		</field>
+	</class>
+</mapping>

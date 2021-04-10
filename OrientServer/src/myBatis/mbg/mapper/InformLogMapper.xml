@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.orient.weibao.mbg.mapper.InformLogMapper">
+  <resultMap id="BaseResultMap" type="com.orient.weibao.mbg.model.InformLog">
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="SYS_DATE_TIME" jdbcType="TIMESTAMP" property="sysDateTime" />
+    <result column="SYS_USERNAME" jdbcType="VARCHAR" property="sysUsername" />
+    <result column="SYS_IS_DELETE" jdbcType="DECIMAL" property="sysIsDelete" />
+    <result column="SYS_SECRECY" jdbcType="VARCHAR" property="sysSecrecy" />
+    <result column="SYS_SCHEMA" jdbcType="VARCHAR" property="sysSchema" />
+    <result column="SYS_OPERATE" jdbcType="VARCHAR" property="sysOperate" />
+    <result column="SYS_FLOW" jdbcType="VARCHAR" property="sysFlow" />
+    <result column="C_TABLE_ID_3566" jdbcType="VARCHAR" property="cTableId3566" />
+    <result column="C_STATE_3566" jdbcType="VARCHAR" property="cState3566" />
+    <result column="C_UPLOAD_TIME_3566" jdbcType="VARCHAR" property="cUploadTime3566" />
+    <result column="C_TASK_ID_3566" jdbcType="VARCHAR" property="cTaskId3566" />
+    <result column="C_UPLOAD_PERSON_3566" jdbcType="VARCHAR" property="cUploadPerson3566" />
+    <result column="C_TYPE_3566" jdbcType="VARCHAR" property="cType3566" />
+    <result column="C_TASK_NAME_3566" jdbcType="VARCHAR" property="cTaskName3566" />
+    <result column="C_TABLE_NAME_3566" jdbcType="VARCHAR" property="cTableName3566" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    ID, SYS_DATE_TIME, SYS_USERNAME, SYS_IS_DELETE, SYS_SECRECY, SYS_SCHEMA, SYS_OPERATE, 
+    SYS_FLOW, C_TABLE_ID_3566, C_STATE_3566, C_UPLOAD_TIME_3566, C_TASK_ID_3566, C_UPLOAD_PERSON_3566, 
+    C_TYPE_3566, C_TASK_NAME_3566, C_TABLE_NAME_3566
+  </sql>
+  <select id="selectByExample" parameterType="com.orient.weibao.mbg.model.InformLogExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from T_INFORM_LOG_480
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from T_INFORM_LOG_480
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from T_INFORM_LOG_480
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.orient.weibao.mbg.model.InformLogExample">
+    delete from T_INFORM_LOG_480
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.orient.weibao.mbg.model.InformLog">
+    insert into T_INFORM_LOG_480 (ID, SYS_DATE_TIME, SYS_USERNAME, 
+      SYS_IS_DELETE, SYS_SECRECY, SYS_SCHEMA, 
+      SYS_OPERATE, SYS_FLOW, C_TABLE_ID_3566, 
+      C_STATE_3566, C_UPLOAD_TIME_3566, C_TASK_ID_3566, 
+      C_UPLOAD_PERSON_3566, C_TYPE_3566, C_TASK_NAME_3566, 
+      C_TABLE_NAME_3566)
+    values (#{id,jdbcType=VARCHAR}, #{sysDateTime,jdbcType=TIMESTAMP}, #{sysUsername,jdbcType=VARCHAR}, 
+      #{sysIsDelete,jdbcType=DECIMAL}, #{sysSecrecy,jdbcType=VARCHAR}, #{sysSchema,jdbcType=VARCHAR}, 
+      #{sysOperate,jdbcType=VARCHAR}, #{sysFlow,jdbcType=VARCHAR}, #{cTableId3566,jdbcType=VARCHAR}, 
+      #{cState3566,jdbcType=VARCHAR}, #{cUploadTime3566,jdbcType=VARCHAR}, #{cTaskId3566,jdbcType=VARCHAR}, 
+      #{cUploadPerson3566,jdbcType=VARCHAR}, #{cType3566,jdbcType=VARCHAR}, #{cTaskName3566,jdbcType=VARCHAR}, 
+      #{cTableName3566,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.orient.weibao.mbg.model.InformLog">
+    insert into T_INFORM_LOG_480
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        ID,
+      </if>
+      <if test="sysDateTime != null">
+        SYS_DATE_TIME,
+      </if>
+      <if test="sysUsername != null">
+        SYS_USERNAME,
+      </if>
+      <if test="sysIsDelete != null">
+        SYS_IS_DELETE,
+      </if>
+      <if test="sysSecrecy != null">
+        SYS_SECRECY,
+      </if>
+      <if test="sysSchema != null">
+        SYS_SCHEMA,
+      </if>
+      <if test="sysOperate != null">
+        SYS_OPERATE,
+      </if>
+      <if test="sysFlow != null">
+        SYS_FLOW,
+      </if>
+      <if test="cTableId3566 != null">
+        C_TABLE_ID_3566,
+      </if>
+      <if test="cState3566 != null">
+        C_STATE_3566,
+      </if>
+      <if test="cUploadTime3566 != null">
+        C_UPLOAD_TIME_3566,
+      </if>
+      <if test="cTaskId3566 != null">
+        C_TASK_ID_3566,
+      </if>
+      <if test="cUploadPerson3566 != null">
+        C_UPLOAD_PERSON_3566,
+      </if>
+      <if test="cType3566 != null">
+        C_TYPE_3566,
+      </if>
+      <if test="cTaskName3566 != null">
+        C_TASK_NAME_3566,
+      </if>
+      <if test="cTableName3566 != null">
+        C_TABLE_NAME_3566,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="sysDateTime != null">
+        #{sysDateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sysUsername != null">
+        #{sysUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="sysIsDelete != null">
+        #{sysIsDelete,jdbcType=DECIMAL},
+      </if>
+      <if test="sysSecrecy != null">
+        #{sysSecrecy,jdbcType=VARCHAR},
+      </if>
+      <if test="sysSchema != null">
+        #{sysSchema,jdbcType=VARCHAR},
+      </if>
+      <if test="sysOperate != null">
+        #{sysOperate,jdbcType=VARCHAR},
+      </if>
+      <if test="sysFlow != null">
+        #{sysFlow,jdbcType=VARCHAR},
+      </if>
+      <if test="cTableId3566 != null">
+        #{cTableId3566,jdbcType=VARCHAR},
+      </if>
+      <if test="cState3566 != null">
+        #{cState3566,jdbcType=VARCHAR},
+      </if>
+      <if test="cUploadTime3566 != null">
+        #{cUploadTime3566,jdbcType=VARCHAR},
+      </if>
+      <if test="cTaskId3566 != null">
+        #{cTaskId3566,jdbcType=VARCHAR},
+      </if>
+      <if test="cUploadPerson3566 != null">
+        #{cUploadPerson3566,jdbcType=VARCHAR},
+      </if>
+      <if test="cType3566 != null">
+        #{cType3566,jdbcType=VARCHAR},
+      </if>
+      <if test="cTaskName3566 != null">
+        #{cTaskName3566,jdbcType=VARCHAR},
+      </if>
+      <if test="cTableName3566 != null">
+        #{cTableName3566,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.orient.weibao.mbg.model.InformLogExample" resultType="java.lang.Long">
+    select count(*) from T_INFORM_LOG_480
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update T_INFORM_LOG_480
+    <set>
+      <if test="record.id != null">
+        ID = #{record.id,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sysDateTime != null">
+        SYS_DATE_TIME = #{record.sysDateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.sysUsername != null">
+        SYS_USERNAME = #{record.sysUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sysIsDelete != null">
+        SYS_IS_DELETE = #{record.sysIsDelete,jdbcType=DECIMAL},
+      </if>
+      <if test="record.sysSecrecy != null">
+        SYS_SECRECY = #{record.sysSecrecy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sysSchema != null">
+        SYS_SCHEMA = #{record.sysSchema,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sysOperate != null">
+        SYS_OPERATE = #{record.sysOperate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sysFlow != null">
+        SYS_FLOW = #{record.sysFlow,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cTableId3566 != null">
+        C_TABLE_ID_3566 = #{record.cTableId3566,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cState3566 != null">
+        C_STATE_3566 = #{record.cState3566,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cUploadTime3566 != null">
+        C_UPLOAD_TIME_3566 = #{record.cUploadTime3566,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cTaskId3566 != null">
+        C_TASK_ID_3566 = #{record.cTaskId3566,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cUploadPerson3566 != null">
+        C_UPLOAD_PERSON_3566 = #{record.cUploadPerson3566,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cType3566 != null">
+        C_TYPE_3566 = #{record.cType3566,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cTaskName3566 != null">
+        C_TASK_NAME_3566 = #{record.cTaskName3566,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cTableName3566 != null">
+        C_TABLE_NAME_3566 = #{record.cTableName3566,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update T_INFORM_LOG_480
+    set ID = #{record.id,jdbcType=VARCHAR},
+      SYS_DATE_TIME = #{record.sysDateTime,jdbcType=TIMESTAMP},
+      SYS_USERNAME = #{record.sysUsername,jdbcType=VARCHAR},
+      SYS_IS_DELETE = #{record.sysIsDelete,jdbcType=DECIMAL},
+      SYS_SECRECY = #{record.sysSecrecy,jdbcType=VARCHAR},
+      SYS_SCHEMA = #{record.sysSchema,jdbcType=VARCHAR},
+      SYS_OPERATE = #{record.sysOperate,jdbcType=VARCHAR},
+      SYS_FLOW = #{record.sysFlow,jdbcType=VARCHAR},
+      C_TABLE_ID_3566 = #{record.cTableId3566,jdbcType=VARCHAR},
+      C_STATE_3566 = #{record.cState3566,jdbcType=VARCHAR},
+      C_UPLOAD_TIME_3566 = #{record.cUploadTime3566,jdbcType=VARCHAR},
+      C_TASK_ID_3566 = #{record.cTaskId3566,jdbcType=VARCHAR},
+      C_UPLOAD_PERSON_3566 = #{record.cUploadPerson3566,jdbcType=VARCHAR},
+      C_TYPE_3566 = #{record.cType3566,jdbcType=VARCHAR},
+      C_TASK_NAME_3566 = #{record.cTaskName3566,jdbcType=VARCHAR},
+      C_TABLE_NAME_3566 = #{record.cTableName3566,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.orient.weibao.mbg.model.InformLog">
+    update T_INFORM_LOG_480
+    <set>
+      <if test="sysDateTime != null">
+        SYS_DATE_TIME = #{sysDateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sysUsername != null">
+        SYS_USERNAME = #{sysUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="sysIsDelete != null">
+        SYS_IS_DELETE = #{sysIsDelete,jdbcType=DECIMAL},
+      </if>
+      <if test="sysSecrecy != null">
+        SYS_SECRECY = #{sysSecrecy,jdbcType=VARCHAR},
+      </if>
+      <if test="sysSchema != null">
+        SYS_SCHEMA = #{sysSchema,jdbcType=VARCHAR},
+      </if>
+      <if test="sysOperate != null">
+        SYS_OPERATE = #{sysOperate,jdbcType=VARCHAR},
+      </if>
+      <if test="sysFlow != null">
+        SYS_FLOW = #{sysFlow,jdbcType=VARCHAR},
+      </if>
+      <if test="cTableId3566 != null">
+        C_TABLE_ID_3566 = #{cTableId3566,jdbcType=VARCHAR},
+      </if>
+      <if test="cState3566 != null">
+        C_STATE_3566 = #{cState3566,jdbcType=VARCHAR},
+      </if>
+      <if test="cUploadTime3566 != null">
+        C_UPLOAD_TIME_3566 = #{cUploadTime3566,jdbcType=VARCHAR},
+      </if>
+      <if test="cTaskId3566 != null">
+        C_TASK_ID_3566 = #{cTaskId3566,jdbcType=VARCHAR},
+      </if>
+      <if test="cUploadPerson3566 != null">
+        C_UPLOAD_PERSON_3566 = #{cUploadPerson3566,jdbcType=VARCHAR},
+      </if>
+      <if test="cType3566 != null">
+        C_TYPE_3566 = #{cType3566,jdbcType=VARCHAR},
+      </if>
+      <if test="cTaskName3566 != null">
+        C_TASK_NAME_3566 = #{cTaskName3566,jdbcType=VARCHAR},
+      </if>
+      <if test="cTableName3566 != null">
+        C_TABLE_NAME_3566 = #{cTableName3566,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.orient.weibao.mbg.model.InformLog">
+    update T_INFORM_LOG_480
+    set SYS_DATE_TIME = #{sysDateTime,jdbcType=TIMESTAMP},
+      SYS_USERNAME = #{sysUsername,jdbcType=VARCHAR},
+      SYS_IS_DELETE = #{sysIsDelete,jdbcType=DECIMAL},
+      SYS_SECRECY = #{sysSecrecy,jdbcType=VARCHAR},
+      SYS_SCHEMA = #{sysSchema,jdbcType=VARCHAR},
+      SYS_OPERATE = #{sysOperate,jdbcType=VARCHAR},
+      SYS_FLOW = #{sysFlow,jdbcType=VARCHAR},
+      C_TABLE_ID_3566 = #{cTableId3566,jdbcType=VARCHAR},
+      C_STATE_3566 = #{cState3566,jdbcType=VARCHAR},
+      C_UPLOAD_TIME_3566 = #{cUploadTime3566,jdbcType=VARCHAR},
+      C_TASK_ID_3566 = #{cTaskId3566,jdbcType=VARCHAR},
+      C_UPLOAD_PERSON_3566 = #{cUploadPerson3566,jdbcType=VARCHAR},
+      C_TYPE_3566 = #{cType3566,jdbcType=VARCHAR},
+      C_TASK_NAME_3566 = #{cTaskName3566,jdbcType=VARCHAR},
+      C_TABLE_NAME_3566 = #{cTableName3566,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

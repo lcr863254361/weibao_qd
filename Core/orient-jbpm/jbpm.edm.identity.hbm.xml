@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.orient.workflow.ext.identity" default-access="field">
+
+  <!-- ### USER ########################################################### -->
+    <class name="UserImpl" table="CWM_SYS_USER"  >
+        <id name="db_id" type="java.lang.String">
+            <column name="ID" length="20" />
+            <generator class="assigned"></generator>
+        </id>
+        <property name="userName" type="java.lang.String">
+            <column name="USER_NAME" length="50" not-null="true" />
+        </property>
+        <property name="allName" type="java.lang.String">
+            <column name="ALL_NAME" length="100" not-null="true" />
+        </property>
+        <property name="password" type="java.lang.String">
+            <column name="PASSWORD" length="100" not-null="true" />
+        </property>
+        <property name="sex" type="java.lang.String">
+            <column name="SEX" length="5" />
+        </property>
+        <property name="phone" type="java.lang.String">
+            <column name="PHONE" length="15" />
+        </property>
+        <property name="post" type="java.lang.String">
+            <column name="POST" length="50" />
+        </property>
+        <property name="specialty" type="java.lang.String">
+            <column name="SPECIALTY" length="50" />
+        </property>
+        <property name="grade" type="java.lang.String">
+            <column name="GRADE" length="5" />
+        </property>
+        <property name="createTime" type="java.util.Date">
+            <column name="CREATE_TIME" length="7" not-null="true" />
+        </property>
+        <property name="createUser" type="java.lang.String">
+            <column name="CREATE_USER" length="50" not-null="true" />
+        </property>
+        <property name="updateTime" type="java.util.Date">
+            <column name="UPDATE_TIME" length="7" />
+        </property>
+        <property name="updateUser" type="java.lang.String">
+            <column name="UPDATE_USER" length="50" />
+        </property>
+        <property name="notes" type="java.lang.String">
+            <column name="NOTES" length="1000" />
+        </property>
+        <property name="state" type="java.lang.String">
+            <column name="STATE" length="1" not-null="true" />
+        </property>
+        <property name="birthday" type="java.util.Date">
+            <column name="BIRTHDAY" length="7" />
+        </property>
+        <property name="mobile" type="java.lang.String">
+            <column name="MOBILE" length="15" />
+        </property>
+        <property name="flg" type="java.lang.String">
+            <column name="FLG" length="1" />
+        </property>
+        <property name="depId" type="java.lang.String">
+            <column name="DEP_ID" length="100" />
+        </property>
+        <property name="isDel" type="java.lang.String">
+            <column name="IS_DEL" length="1" />
+        </property>
+        <property name="EMail" type="java.lang.String">
+            <column name="E_MAIL" length="50" />
+        </property>
+    </class>
+  
+  <!-- ### MEMBERSHIP ##################################################### -->
+    <class name="GroupMemberImpl" table="CWM_SYS_ROLE_USER" >
+        <composite-id name="id" class="GroupMemberImplId">
+            <key-property name="roleId" type="java.lang.String">
+                <column name="ROLE_ID" length="100" />
+            </key-property>
+            <key-property name="userId" type="java.lang.String">
+                <column name="USER_ID" length="100" />
+            </key-property>
+        </composite-id>
+    </class>
+  
+  <!-- ### GROUP ########################################################### -->
+	<class name="GroupImpl" table="CWM_SYS_ROLE" >
+        <id name="db_id" type="java.math.BigDecimal">
+            <column name="ID" precision="22" scale="0" />
+            <generator class="assigned"></generator>
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="NAME" length="100" not-null="true" />
+        </property>
+        <property name="memo" type="java.lang.String">
+            <column name="MEMO" length="4000" />
+        </property>
+        <property name="type" type="java.lang.String">
+            <column name="TYPE" length="1" />
+        </property>
+        <property name="status" type="java.lang.String">
+            <column name="STATUS" length="1" />
+        </property>
+    </class>
+  
+</hibernate-mapping>

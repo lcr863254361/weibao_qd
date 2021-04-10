@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+
+
+    <bean id="UserDAO" class="com.orient.sysmodel.domain.user.UserDAO">
+    </bean>
+
+    <bean id="UserService" class="com.orient.sysmodel.service.user.UserServiceImpl">
+        <property name="dao" ref="UserDAO"></property>
+        <property name="functionDao" ref="FunctionDAO"></property>
+        <property name="userDeptDAO" ref="UserDeptDAO"></property>
+        <property name="roleEngine" ref="RoleEngine"></property>
+    </bean>
+
+    <bean id="PasswordHistoryDAO" class="com.orient.sysmodel.domain.user.PasswordHistoryDAO">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+
+    <bean id="UserColumnDAO" class="com.orient.sysmodel.domain.user.UserColumnDAO">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+    <bean id="UserColumnService" class="com.orient.sysmodel.service.user.UserColumnServiceImpl">
+        <property name="dao" ref="UserColumnDAO"></property>
+    </bean>
+
+    <bean id="UserEnumDAO" class="com.orient.sysmodel.domain.user.UserEnumDAO">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+
+    <bean id="DepartmentDAO" class="com.orient.sysmodel.domain.user.DepartmentDAO">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+
+    <bean id="DepartmentService" class="com.orient.sysmodel.service.user.DepartmentServiceImpl">
+        <property name="dao" ref="DepartmentDAO"></property>
+        <property name="userDao" ref="UserDAO"></property>
+        <property name="userLoginHistoryDao" ref="UserLoginHistoryDAO"></property>
+        <property name="roleEngine" ref="RoleEngine"></property>
+    </bean>
+
+    <bean id="UserDeptDAO" class="com.orient.sysmodel.domain.user.UserDeptDAO">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+
+    <!-- 部门维护 -->
+    <!--
+    <bean id="DepartmentJdbcDAO" class="com.orient.sysmodel.domain.user.DepartmentJdbcDAO">
+        <property name="jdbcTemplate" ref="jdbcTemplate" />
+        <property name="departmentDAO" ref="departmentDAO" />
+    </bean>
+     -->
+
+    <!--
+    <bean id="UserLoginHistory" class="com.orient.sysmodel.domain.user.UserLoginHistory">
+    </bean> -->
+
+    <bean id="UserLoginHistoryDAO" class="com.orient.sysmodel.domain.user.UserLoginHistoryDAO">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+
+    <bean id="UserLoginHistoryService" class="com.orient.sysmodel.service.user.UserLoginHistoryServiceImpl">
+        <property name="dao" ref="UserLoginHistoryDAO"></property>
+    </bean>
+
+    <bean id="RcpLoginDAO" class="com.orient.sysmodel.domain.user.RcpLoginDAO">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+
+    <bean id="RcpLoginService" class="com.orient.sysmodel.service.user.RcpLoginServiceImpl">
+        <property name="dao" ref="RcpLoginDAO"></property>
+        <property name="tableDao" ref="TableDAO"></property>
+    </bean>
+
+    <!-- DAO的工厂类 -->
+    <bean id="userdaofactory" class="com.orient.sysmodel.domain.UserDAOFactory"
+          lazy-init="true">
+        <property name="userDAO" ref="UserDAO"/>
+        <property name="userColumnDAO" ref="UserColumnDAO"/>
+        <property name="enumDAO" ref="EnumDAO"/>
+        <property name="departDAO" ref="DepartmentDAO"/>
+    </bean>
+</beans>

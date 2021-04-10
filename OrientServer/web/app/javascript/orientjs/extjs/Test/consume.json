@@ -1,0 +1,50 @@
+{
+  "result": "success",
+  "msg": "",
+  "data": {
+    "rowBeanArrayList": [
+      {
+        "indexName": null,
+        "order": "0",
+        "dbId": "50244",
+        "cells": [
+          {
+            "content": "",
+            "colIndex": "0",
+            "id": "87816",
+            "type": "2"
+          },
+          {
+            "colIndex": "1",
+            "id": "87817",
+            "type": "1",
+            "content": ""
+          }
+        ]
+      }
+    ],
+    "name": "lcr",
+    "headBeanArrayList": [
+      {
+        "name": "#检查内容",
+        "check": true,
+        "colIndex": "0",
+        "dbId": "4966"
+      },
+      {
+        "check": true,
+        "dbId": "4967",
+        "name": "#检查结果",
+        "colIndex": "1"
+      },
+      {
+        "colIndex": "2",
+        "check": true,
+        "dbId": "4968",
+        "name": "#备注"
+      }
+    ],
+    "state": "未完成",
+    "id": "1582"
+  }
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+    <bean id="orientSqlEngine" class="com.orient.sqlengine.internal.SqlEngineImpl" scope="singleton">
+        <property name="bmService">
+            <ref bean="businessModelJdbcService"/>
+        </property>
+        <property name="sysModelService">
+            <ref bean="sysModelJdbcService"/>
+        </property>
+        <property name="typeMappingBmService">
+            <ref bean="typeMappingBmService"/>
+        </property>
+    </bean>
+    <bean id="sysModelJdbcService" class="com.orient.sqlengine.internal.svc.SysModelJdbcServiceImpl">
+        <property name="commandService">
+            <ref bean="edmCommandService"/>
+        </property>
+    </bean>
+    <bean id="businessModelJdbcService" class="com.orient.sqlengine.internal.svc.ModelJdbcServiceImpl">
+        <property name="commandService">
+            <ref bean="edmCommandService"/>
+        </property>
+    </bean>
+    <bean id="typeMappingBmService" class="com.orient.sqlengine.internal.svc.TypeMappingBmServiceImpl">
+        <property name="modelJdbcService">
+            <ref bean="businessModelJdbcService"/>
+        </property>
+        <property name="businessModelService">
+            <ref bean="BusinessModelService"/>
+        </property>
+        <property name="metaEngine" ref="MetaEngine"/>
+        <property name="commandService">
+            <ref bean="edmCommandService"/>
+        </property>
+    </bean>
+
+    <bean id="edmCommandService" class="com.orient.sqlengine.internal.svc.EDMCommandServiceImpl">
+        <property name="jdbcTemplate">
+            <ref bean="jdbcTemplate"/>
+        </property>
+    </bean>
+
+
+</beans>

@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
+
+    <!-- 数据源配置 -->
+    <bean id="dataSource"
+          class="com.alibaba.druid.pool.DruidDataSource"
+          destroy-method="close">
+        <property name="driverClassName"
+                  value="${jdbc.driverClassName}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <property name="maxActive" value="100"/>
+        <property name="maxWait" value="30000"/>
+        <property name="timeBetweenEvictionRunsMillis" value="60000" />
+        <property name="minEvictableIdleTimeMillis" value="300000" />
+        <property name="testWhileIdle" value="true" />
+        <property name="testOnBorrow" value="true" />
+        <property name="testOnReturn" value="false" />
+        <property name="poolPreparedStatements" value="true" />
+        <property name="maxPoolPreparedStatementPerConnectionSize" value="20" />
+		<property name="validationQuery" value="select 1 from dual"/>
+    </bean>
+    <bean id="hibernateProperties" class="com.orient.utils.HibernateProperties">
+        <property name="map">
+            <map>
+                <entry key="hibernate.connection.driver_class" value="${jdbc.driverClassName}"/>
+                <entry key="hibernate.connection.password" value="${jdbc.password}"/>
+                <entry key="hibernate.connection.url" value="${jdbc.url}"/>
+                <entry key="hibernate.connection.username" value="${jdbc.username}"/>
+                <entry key="hibernate.dialect" value="${hibernate.dialect}"/>
+                <entry key="hibernate.hbm2ddl.auto" value="${hibernate.hbm2ddl.auto}"/>
+            </map>
+        </property>
+    </bean>
+    <!-- Hibernate SessionFactory-->
+    <bean id="sessionFactory"
+          class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+        <!-- 指定数据源 -->
+        <property name="dataSource">
+            <ref bean="dataSource"/>
+        </property>
+
+        <!-- Hibernate的配置 -->
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">
+                    org.hibernate.dialect.Oracle10gDialect
+                </prop>
+                <prop key="hibernate.show_sql">false</prop>
+                <prop key="hibernate.cache.provider_class">
+                    org.hibernate.cache.EhCacheProvider
+                </prop>
+                <!-- 二级缓存 -->
+                <prop key="hibernate.cache.use_second_level_cache">true</prop>
+                <!-- 查询缓存 -->
+                <prop key="hibernate.cache.use_query_cache">true</prop>
+                <prop key="hibernate.connection.url">${jdbc.url}</prop>
+                <prop key="hibernate.connection.driver_class">${jdbc.driverClassName}</prop>
+            </props>
+        </property>
+        <property name="mappingLocations">
+            <list>
+            </list>
+        </property>
+        <property name="packagesToScan">
+            <list>
+                <value>com.orient.**</value>
+            </list>
+        </property>
+        <property name="mappingResources">
+            <list>
+                <value>com/orient/metamodel/metadomain/ViewRefColumn.hbm.xml</value>
+                <value>com/orient/metamodel/metadomain/RelationColumns.hbm.xml</value>
+                <value>com/orient/metamodel/metadomain/ViewResultColumn.hbm.xml</value>
+                <value>com/orient/metamodel/metadomain/TableEnum.hbm.xml</value>
+                <value>com/orient/metamodel/metadomain/Restriction.hbm.xml</value>
+                <value>com/orient/metamodel/metadomain/Table.hbm.xml</value>
+                <value>com/orient/metamodel/metadomain/Enum.hbm.xml</value>
+                <value>com/orient/metamodel/metadomain/ViewSortColumn.hbm.xml</value>
+                <value>com/orient/metamodel/metadomain/ConsExpression.hbm.xml</value>
+                <value>com/orient/metamodel/metadomain/RelationTableEnum.hbm.xml</value>
+                <value>com/orient/metamodel/metadomain/Column.hbm.xml</value>
+                <value>com/orient/metamodel/metadomain/Schema.hbm.xml</value>
+                <value>com/orient/metamodel/metadomain/View.hbm.xml</value>
+                <value>com/orient/metamodel/metadomain/TableColumn.hbm.xml</value>
+                <value>com/orient/metamodel/metadomain/ArithViewAttribute.hbm.xml</value>
+                <value>com/orient/metamodel/metadomain/ArithAttribute.hbm.xml</value>
+                <!-- sysmodel -->
+                <value>com/orient/sysmodel/domain/arith/Arith.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/etl/EtlJob.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/etl/EtlLog.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/etl/EtlScript.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/etl/EtlTranslator.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/file/CwmFile.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/file/CwmFileGroup.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/file/CwmFolder.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/file/Mathcad.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/role/Function.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/role/Operation.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/role/OverAllOperations.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/role/PartOperations.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/role/Role.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/role/RoleArith.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/role/RoleFunctionTbom.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/role/RoleSchema.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/role/RoleUser.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/sys/CwmCss.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/sys/Message.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/sys/PartitionRemark.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/sys/SeqGenerator.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/syslog/CodeToName.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/tbom/Tbom.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/tbom/RelationTbom.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/tbom/RelationFile.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/tbom/TbomDir.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/tbom/DynamicTbom.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/user/Department.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/user/PasswordHistory.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/user/RcpLogin.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/user/User.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/user/LightWeightDepartment.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/user/LightweightUser.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/user/UserColumn.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/user/UserDept.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/user/UserEnum.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/user/UserLoginHistory.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/workflow/DataRight.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/workflow/JbpmTaskAssign.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/workflow/JbpmTaskAssignHistory.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/workflow/JbpmConfigUser.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/workflow/JbpmCounterSignInfo.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/workflow/JbpmVariable.hbm.xml</value>
+
+                <!-- toolmanager
+                <value>com/orient/edm/application/server/selfmanage/dao/UserTool.hbm.xml</value>
+                -->
+                <!-- jbpm config-->
+                <value>jbpm.repository.hbm.xml</value>
+                <value>jbpm.execution.hbm.xml</value>
+                <value>jbpm.history.hbm.xml</value>
+                <value>jbpm.task.hbm.xml</value>
+                <value>jbpm.edm.identity.hbm.xml</value>
+
+                <!--预警
+                <value>com/orient/alarm/model/AlarmContent.hbm.xml</value>
+                <value>com/orient/alarm/model/AlarmInfo.hbm.xml</value>
+                <value>com/orient/alarm/model/AlarmInfoHist.hbm.xml</value>
+                <value>com/orient/alarm/model/AlarmNotice.hbm.xml</value>
+                <value>com/orient/alarm/model/AlarmUser.hbm.xml</value>
+                -->
+                <!-- 大数据
+                <value>com/orient/sysmodel/domain/file/CwmFileColumn.hbm.xml</value>
+                -->
+                <!--TBOM分配-->
+                <value>com/orient/sysmodel/domain/tbom/TbomRole.hbm.xml</value>
+                <value>com/orient/sysmodel/domain/tbom/DynamicTbomRole.hbm.xml</value>
+
+            </list>
+        </property>
+
+    </bean>
+
+    <bean id="transactionManager"
+          class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <bean id="hibernateTemplate"
+          class="org.springframework.orm.hibernate3.HibernateTemplate" lazy-init="false">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+
+    </bean>
+
+
+    <!-- <bean id="jdbcTransactionManager"
+        class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource" />
+    </bean> -->
+    <bean id="nativeJdbcExtractor"
+          class="org.springframework.jdbc.support.nativejdbc.CommonsDbcpNativeJdbcExtractor"
+          lazy-init="true"/>
+
+    <bean id="oracleLobHandler"
+          class="org.springframework.jdbc.support.lob.OracleLobHandler"
+          lazy-init="true">
+        <property name="nativeJdbcExtractor" ref="nativeJdbcExtractor"/>
+    </bean>
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+    <!-- Spring JDBC Template-->
+    <bean id="jdbcTemplate"
+          class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="nativeJdbcExtractor" ref="nativeJdbcExtractor"/>
+    </bean>
+
+
+    <!-- 配置事务的传播特性 -->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="execute*" propagation="REQUIRED" rollback-for="java.lang.Throwable"/>
+            <tx:method name="add*" propagation="REQUIRED" rollback-for="java.lang.Throwable"/>
+            <tx:method name="init*" propagation="REQUIRED" rollback-for="java.lang.Throwable"/>
+            <tx:method name="test*" propagation="REQUIRED" rollback-for="java.lang.Throwable"/>
+            <tx:method name="roll*" propagation="REQUIRED" rollback-for="java.lang.Throwable"/>
+            <tx:method name="set*" propagation="REQUIRED" rollback-for="java.lang.Throwable"/>
+            <tx:method name="save*" propagation="REQUIRED" rollback-for="java.lang.Throwable"/>
+            <tx:method name="de*" propagation="REQUIRED" rollback-for="java.lang.Throwable"/>
+            <tx:method name="re*" propagation="REQUIRED" rollback-for="java.lang.Throwable"/>
+            <tx:method name="modify*" propagation="REQUIRED" rollback-for="java.lang.Throwable"/>
+            <tx:method name="update*" propagation="REQUIRED" rollback-for="java.lang.Throwable"/>
+            <tx:method name="create*" propagation="REQUIRED" rollback-for="java.lang.Throwable"/>
+            <tx:method name="check*" propagation="REQUIRED" rollback-for="java.lang.Throwable"/>
+            <tx:method name="copy*" propagation="REQUIRED" rollback-for="java.lang.Throwable"/>
+            <tx:method name="init*" propagation="REQUIRED" rollback-for="java.lang.Throwable"/>
+            <tx:method name="handle*" propagation="REQUIRED" rollback-for="java.lang.Throwable"/>
+            <tx:method name="fill*" propagation="REQUIRED" rollback-for="java.lang.Throwable"/>
+            <tx:method name="gen*" propagation="REQUIRED" rollback-for="java.lang.Throwable"/>
+            <tx:method name="upload*" propagation="REQUIRED" rollback-for="java.lang.Throwable"/>
+            <tx:method name="import*" propagation="REQUIRED" rollback-for="java.lang.Throwable"/>
+            <tx:method name="assign*" propagation="REQUIRED" rollback-for="java.lang.Throwable"/>
+            <tx:method name="remove*" propagation="REQUIRED" rollback-for="java.lang.Throwable"/>
+            <tx:method name="convert*" propagation="REQUIRED" rollback-for="java.lang.Throwable"/>
+            <tx:method name="swap*" propagation="REQUIRED" rollback-for="java.lang.Throwable"/>
+            <tx:method name="submit*" propagation="REQUIRED" rollback-for="java.lang.Throwable"/>
+            <tx:method name="do*" propagation="REQUIRED" rollback-for="java.lang.Throwable"/>
+            <tx:method name="take*" propagation="REQUIRED" rollback-for="java.lang.Throwable"/>
+            <tx:method name="start*" propagation="REQUIRED" rollback-for="java.lang.Throwable"/>
+            <tx:method name="validate*" propagation="REQUIRED" rollback-for="java.lang.Throwable"/>
+            <tx:method name="preview*" read-only="true"/>
+            <tx:method name="list*" read-only="true"/>
+            <tx:method name="can*" read-only="true"/>
+            <tx:method name="get*" read-only="true"/>
+            <!--<tx:method name="*" read-only="true"/>-->
+        </tx:attributes>
+    </tx:advice>
+
+    <bean id="eventTypeCheck" class="com.orient.web.base.OrientEventBus.OrientEventTypeCheckListener">
+    </bean>
+
+
+    <aop:config proxy-target-class="true">
+        <aop:pointcut expression="execution(* com.orient..*.controller.*.*(..))" id="controlPointcut"/>
+        <aop:pointcut expression="execution(* com.orient.pvm.business.PVMSyncBusiness.*(..))" id="syncPointcut"/>
+        <aop:pointcut expression="execution(* com.orient.collab.business.TeamBusiness.get*Functions*(..))" id="collabModelFunctionPointcut"/>
+        <aop:pointcut expression="execution(* com.orient.collab.business.TeamBusiness.getRoleFunctionTreeNodes(..))" id="collabRoleFunctionPointcut"/>
+        <aop:pointcut expression="execution(* com.orient.flow.business.ProcessDefinitionBusiness.*(..))" id="pdPointcut"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="controlPointcut"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="syncPointcut"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="pdPointcut"/>
+        <aop:aspect ref="tdmLogAspect">
+            <aop:pointcut id="logaspect"
+                          expression="@annotation(com.orient.log.annotion.Action)"/>
+            <aop:around pointcut-ref="logaspect" method="execute"/>
+        </aop:aspect>
+
+        <aop:aspect ref="eventTypeCheck">
+            <aop:pointcut id="eventtypecheckaspect"
+                          expression="@annotation(com.orient.web.base.OrientEventBus.OrientEventCheck)"/>
+            <aop:around pointcut-ref="eventtypecheckaspect" method="execute"/>
+        </aop:aspect>
+
+        <aop:aspect ref="counterSignTaskSubmitAspect">
+            <aop:pointcut id="saveCSTInfo"
+                          expression="execution(* com.orient.flow.business.FlowTaskBusiness.completeTaskWithAssign(..))"/>
+            <aop:around pointcut-ref="saveCSTInfo" method="submitCounterSign"/>
+        </aop:aspect>
+
+        <aop:aspect ref="controlFunction">
+            <aop:after-returning pointcut-ref="collabModelFunctionPointcut" method="controlModelFunctions" returning="functions"/>
+            <aop:after-returning pointcut-ref="collabRoleFunctionPointcut" method="controlRoleFunctions" returning="functions"/>
+        </aop:aspect>
+
+
+    </aop:config>
+
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="configLocation" value="classpath:myBatis/mybatis-spring-config.xml"/>
+        <property name="mapperLocations">
+            <list>
+<!--                <value>classpath*:com/orient/**/dao/mapper/*.xml</value>-->
+                <value>classpath:myBatis/mapper/*.xml</value>
+                <value>classpath:myBatis/mbg/mapper/*.xml</value>
+<!--                <value>classpath*:com/orient/**/dao/mapper/*.xml</value-->
+            </list>
+        </property>
+    </bean>
+
+    <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg ref="sqlSessionFactory"/>
+    </bean>
+
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.orient.weibao.dao;com.orient.weibao.mbg.mapper"/>
+<!--        <property name="markerInterface" value="org.springframework.stereotype.Repository"/>-->
+        <!-- <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>   -->
+    </bean>
+
+    <bean id="springCacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">
+        <property name="cacheManager" ref="ehcacheManager"/>
+    </bean>
+
+    <bean id="ehcacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+        <property name="configLocation" value="classpath:appEhcache.xml"/>
+    </bean>
+
+    <bean id="businessModelCache" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+        <property name="cacheManager" ref="ehcacheManager"/>
+        <!-- 使用缓存 关联ehcache.xml中的缓存配置 -->
+        <property name="cacheName" value="businessModelCache"/>
+    </bean>
+
+    <!--&lt;!&ndash; 异步事件支持&ndash;&gt;-->
+    <!--&lt;!&ndash; 开启@Aspectj AOP代理&ndash;&gt;-->
+    <!--<aop:aspectj-autoproxy proxy-target-class="true"/>-->
+    <!--&lt;!&ndash; 任务调度器&ndash;&gt;-->
+    <!--<task:scheduler id="scheduler" pool-size="10"/>-->
+    <!--&lt;!&ndash; 任务执行器&ndash;&gt;-->
+    <!--<task:executor id="executor" pool-size="10"/>-->
+    <!--&lt;!&ndash; 开启注解调度支持 @Async @Scheduled&ndash;&gt;-->
+    <!--<task:annotation-driven executor="executor" scheduler="scheduler" proxy-target-class="true"/>-->
+
+</beans>

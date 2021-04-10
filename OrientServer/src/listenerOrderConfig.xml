@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ListenerOrder>
+    <EventSource name = "LoginControl">
+        <BaseOrderList>
+            <OrderValue name="TestListener"/>
+            <OrderValue name="loginListener"/>
+            <OrderValue></OrderValue>
+        </BaseOrderList>
+        <ExtenderOderList>
+            <Listener name = "TestListener" order = "1"/>
+            <Listener name = "loginListener" order = "2"/>
+            <Listener name = "ooo" order = "3"/>
+        </ExtenderOderList>
+    </EventSource>
+
+</ListenerOrder>

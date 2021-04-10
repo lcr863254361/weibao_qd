@@ -1,0 +1,79 @@
+package com.orient.collabdev.business.structure.extensions.interceptor;
+
+import com.alibaba.fastjson.JSON;
+import com.orient.businessmodel.bean.IBusinessModel;
+import com.orient.collabdev.business.structure.constant.StructOperateType;
+import com.orient.collabdev.business.structure.extensions.mng.CollabDevStructInterceptor;
+import com.orient.collabdev.business.structure.extensions.mng.CollabDevStructMarker;
+import com.orient.collabdev.business.structure.model.HisStructure;
+import com.orient.collabdev.constant.ManagerStatusEnum;
+import com.orient.sysmodel.domain.collabdev.CollabHistoryStruct;
+import com.orient.sysmodel.domain.collabdev.CollabNode;
+import com.orient.sysmodel.service.collabdev.ICollabHistoryStructService;
+import com.orient.sysmodel.service.collabdev.ICollabNodeService;
+import com.orient.sysmodel.service.collabdev.ICollabNodeWithRelationService;
+import com.orient.utils.CommonTools;
+import org.hibernate.criterion.Restrictions;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.List;
+import java.util.Map;
+
+/**
+ * 保存历史结构
+ *
+ * @author panduanduan
+ * @create 2018-08-13 5:24 PM
+ */
+@CollabDevStructMarker(projectStatus = {ManagerStatusEnum.PROCESSING, ManagerStatusEnum.DONE}, order = -10)
+public class SaveHistoryStructInterceptor implements CollabDevStructInterceptor {
+
+    @Override
+    public boolean preHandle(IBusinessModel bm, List<Map<String, String>> sourceMap, List<Map<String, String>> targetMap, CollabNode rootNode
+            , StructOperateType structOperateType) throws Exception {
+        if (null != rootNode) {
+            HisStructure hisStructure = converToHisStructure(rootNode);
+            CollabHistoryStruct collabHistoryStruct = new CollabHistoryStruct();
+            collabHistoryStruct.setRootId(rootNode.getId());
+            collabHistoryStruct.setRootVersion(rootNode.getVersion());
+            collabHistoryStruct.setStructor(JSON.toJSONString(hisStructure));
+            collabHistoryStructService.save(collabHistoryStruct);
+        }
+        return true;
+    }
+
+    private HisStructure converToHisStructure(CollabNode rootNode) {
+        HisStructure hisStructure = new HisStructure();
+        hisStructure.setId(rootNode.getId());
+        hisStructure.setVersion(rootNode.getVersion());
+        appendChildren(hisStructure, rootNode);
+        return hisStructure;
+    }
+
+    private void appendChildren(HisStructure hisStructure, CollabNode fatherNode) {
+        if (null != fatherNode && null != hisStructure) {
+            List<CollabNode> childrenNode = collabNodeService.list(Restrictions.eq("pid", fatherNode.getId()));
+            if (!CommonTools.isEmptyList(childrenNode)) {
+                childrenNode.forEach(sonNode -> {
+                    HisStructure sonHisNode = new HisStructure();
+                    sonHisNode.setId(sonNode.getId());
+                    sonHisNode.setVersion(sonNode.getVersion());
+                    hisStructure.getChildren().add(sonHisNode);
+                    appendChildren(sonHisNode, sonNode);
+                });
+            }
+        }
+    }
+
+    @Override
+    public void afterCompletion(IBusinessModel bm, List<Map<String, String>> sourceMap, List<Map<String, String>> targetMap, CollabNode rootNode
+            , StructOperateType structOperateType, Object processResult) throws Exception {
+    }
+
+    @Autowired
+    ICollabHistoryStructService collabHistoryStructService;
+
+    @Autowired
+    ICollabNodeService collabNodeService;
+
+}

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="orient-metamodel" default="obfuscate" basedir=".">
+	
+	<property environment="env"/>	
+	<property name="src" value="."/>
+	<property name="server" value="../../Server"/>
+	<property name="bin" value="${server}/WebRoot/orient-metamodel"/>
+	<property name="lib" value="${server}/WebRoot/WEB-INF/lib"/>
+	<property name="jar" value="${lib}/orient-metamodel.jar"/>
+	<property name="class" value="${server}/WebRoot/WEB-INF/classes"/>
+	<property name="obfuscate" value="${server}/WebRoot/WEB-INF/obfuscate/orient-metamodel-obfuscate.jar"/>
+	
+	<target name="init" description="初始化">
+		<mkdir dir="${bin}"/>
+	</target>
+	
+	<target name="clean" description="清理">
+		<delete dir="${bin}"/>
+	</target>
+	
+	<target name="complie" depends="clean, init" description="编译">
+		<javac srcdir="${src}" destdir="${bin}" includeantruntime="false" encoding="utf-8">
+			
+			<classpath>
+			
+				<fileset dir="${lib}">
+					<include name="**/*.jar"/>
+				</fileset>
+				
+				<pathelement path="${class}"/>
+				
+			</classpath>
+			
+		</javac>
+	</target>
+	
+	<target name="jar" description="打包" depends="complie">
+		<jar destfile="${jar}">
+			<fileset dir="${bin}">
+				<include name="**/*.class"/>
+			</fileset>
+			<fileset dir="${src}">
+				<include name="**/*.xml"/>
+				<include name="**/*.properties"/>
+				<exclude name="build.xml"/>
+			</fileset>
+		</jar>
+		
+		<delete dir="${bin}"/>
+	</target>
+	
+	<target name="obfuscate" description="混淆" depends="jar">
+	   <taskdef resource="proguard/ant/task.properties" classpath="${server}/WebRoot/WEB-INF/lib/proguard.jar"/>
+	   <proguard>
+	   		-injars ${obfuscate}
+			-outjars ${jar}
+			
+			-libraryjars '${env.JAVA_HOME}/jre/lib/rt.jar'
+			-libraryjars ${lib}
+			-libraryjars ${class}
+			
+			-dontshrink
+			-dontoptimize
+			-keeppackagenames
+			-keepattributes Exceptions,InnerClasses,Signature,Deprecated,*Annotation*,Synthetic,EnclosingMethod
+			-keepdirectories
+			-ignorewarnings
+			
+			
+			-keep,allowshrinking public class * {
+			    public protected &lt;fields&gt;;
+			    public protected &lt;methods&gt;;
+			}
+	   		
+	   </proguard>
+	   
+	   <delete dir="${obfuscate}"/>
+	</target>
+	
+</project>

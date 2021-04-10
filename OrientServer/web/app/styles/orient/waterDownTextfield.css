@@ -1,0 +1,11 @@
+/*.x-form-textfield-noborder .xform-trigger-wrap-default{*/
+    /*border-width: 0px;*/
+    /*border-style:solid;*/
+    /*border-color: #d0d0d0;*/
+/*}*/
+
+.x-form-textfield-noborder{
+    border-width: 0px;
+    border-style:solid;
+    border-color: #d0d0d0;
+}

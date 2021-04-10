@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+
+
+    <bean id="TbomDAO" class="com.orient.sysmodel.domain.tbom.TbomDAO" lazy-init="true">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+    <bean id="TbomService" class="com.orient.sysmodel.service.tbom.TbomServiceImpl">
+        <property name="dao" ref="TbomDAO"></property>
+        <property name="tbomDirDAO" ref="TbomDirDAO"></property>
+        <property name="relationTbomDAO" ref="RelationTbomDAO"></property>
+        <property name="dynamicTbomDAO" ref="DynamicTbomDAO"></property>
+        <property name="tbomRoleDAO" ref="TbomRoleDAO"></property>
+        <property name="dynamicTbomRoleDAO" ref="DynamicTbomRoleDAO"></property>
+        <property name="roleFunctionTbomDAO" ref="RoleFunctionTbomDAO"/>
+    </bean>
+
+    <bean id="TbomDirDAO" class="com.orient.sysmodel.domain.tbom.TbomDirDAO" lazy-init="true">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+
+    <bean id="RelationTbomDAO" class="com.orient.sysmodel.domain.tbom.RelationTbomDAO" lazy-init="true">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+    <bean id="DynamicTbomDAO" class="com.orient.sysmodel.domain.tbom.DynamicTbomDAO" lazy-init="true">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+    <bean id="RelationFileDAO" class="com.orient.sysmodel.domain.tbom.RelationFileDAO" lazy-init="true">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+    <!-- TBOM权限分配 -->
+    <bean id="TbomRoleDAO" class="com.orient.sysmodel.domain.tbom.TbomRoleDAO" lazy-init="true">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+    <bean id="DynamicTbomRoleDAO" class="com.orient.sysmodel.domain.tbom.DynamicTbomRoleDAO" lazy-init="true">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+
+
+    <!-- DAO的工厂类 -->
+    <bean id="tbomdaofactory" class="com.orient.sysmodel.domain.TbomDAOFactory"
+          lazy-init="true">
+        <property name="tbomDAO" ref="TbomDAO"/>
+        <property name="tbomDirDAO" ref="TbomDirDAO"></property>
+    </bean>
+
+</beans>
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Copyright (c) 2016. Orient Company
+  ~
+  -->
+
+<ListenerOrder>
+    <EventSource name = "com.orient.login.controller" eventType = "com.orient.web.base.OrientEventBus.Listener">
+        <BaseOrderList>
+            <OrderValue name="TestListener"/>
+            <OrderValue name="loginListener"/>
+        </BaseOrderList>
+        <ExtenderOderList>
+            <Listener name = "TestListener" order = "2"/>
+            <Listener name = "loginListener" order = "3"/>
+        </ExtenderOderList>
+    </EventSource>
+</ListenerOrder>

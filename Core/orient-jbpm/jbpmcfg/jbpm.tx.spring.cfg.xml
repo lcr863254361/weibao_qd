@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <!-- Spring事务委托管理-->
+<jbpm-configuration spring="enabled">
+
+  <process-engine-context>
+  
+    <command-service name="newTxRequiredCommandService">
+      <retry-interceptor />
+      <environment-interceptor policy="requiresNew" />
+      <spring-transaction-interceptor policy="requiresNew" />
+    </command-service>
+    
+
+    <command-service name="txRequiredCommandService">
+      <retry-interceptor />
+      <environment-interceptor />
+      <spring-transaction-interceptor current="true"/>
+    </command-service>
+    
+  </process-engine-context>
+
+  <transaction-context>
+    <transaction type="spring" />
+    <hibernate-session factory="sessionFactory" current="true" close="false" tx="true" />
+  </transaction-context>
+
+</jbpm-configuration>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Copyright (c) 2016. Orient Company
+  ~
+  -->
+
+<ListenerOrder>
+    <EventSource eventType="com.orient.sysman.event.BackUpEvent"
+                 name="com.orient.sysman.controller.DataBackController">
+        <BaseOrderList>
+            <OrderValue name="com.orient.sysman.eventListener.PrepareTruncateSqlListeners"/>
+            <OrderValue name="com.orient.sysman.eventListener.PrepareDmpListeners"/>
+            <OrderValue name="com.orient.sysman.eventListener.PrepareRestoreBatListeners"/>
+        </BaseOrderList>
+        <ExtenderOderList>
+            <Listener name="com.orient.sysman.eventListener.PrepareTruncateSqlListeners" order="10"/>
+            <Listener name="com.orient.sysman.eventListener.PrepareDmpListeners" order="20"/>
+            <Listener name="com.orient.sysman.eventListener.PrepareRestoreBatListeners" order="30"/>
+        </ExtenderOderList>
+    </EventSource>
+
+    <EventSource eventType="com.orient.sysman.event.BackUpEvent"
+                 name="com.orient.sysman.scheduler.BackUpJob">
+        <BaseOrderList>
+            <OrderValue name="com.orient.sysman.eventListener.PrepareTruncateSqlListeners"/>
+            <OrderValue name="com.orient.sysman.eventListener.PrepareDmpListeners"/>
+            <OrderValue name="com.orient.sysman.eventListener.PrepareRestoreBatListeners"/>
+        </BaseOrderList>
+        <ExtenderOderList>
+            <Listener name="com.orient.sysman.eventListener.PrepareTruncateSqlListeners" order="10"/>
+            <Listener name="com.orient.sysman.eventListener.PrepareDmpListeners" order="20"/>
+            <Listener name="com.orient.sysman.eventListener.PrepareRestoreBatListeners" order="30"/>
+        </ExtenderOderList>
+    </EventSource>
+</ListenerOrder>

@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.orient.weibao.mbg.mapper.TotalCarryToolMapper">
+  <resultMap id="BaseResultMap" type="com.orient.weibao.mbg.model.TotalCarryTool">
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="SYS_DATE_TIME" jdbcType="TIMESTAMP" property="sysDateTime" />
+    <result column="SYS_USERNAME" jdbcType="VARCHAR" property="sysUsername" />
+    <result column="SYS_IS_DELETE" jdbcType="DECIMAL" property="sysIsDelete" />
+    <result column="SYS_SECRECY" jdbcType="VARCHAR" property="sysSecrecy" />
+    <result column="SYS_SCHEMA" jdbcType="VARCHAR" property="sysSchema" />
+    <result column="SYS_OPERATE" jdbcType="VARCHAR" property="sysOperate" />
+    <result column="SYS_FLOW" jdbcType="VARCHAR" property="sysFlow" />
+    <result column="C_AIR_WEIGHT_3607" jdbcType="FLOAT" property="cAirWeight3607" />
+    <result column="C_DEWATER_VOLUME_3607" jdbcType="FLOAT" property="cDewaterVolume3607" />
+    <result column="C_STOCK_NUMBER_3607" jdbcType="DECIMAL" property="cStockNumber3607" />
+    <result column="C_FRESH_WATER_WEIGHT_3607" jdbcType="FLOAT" property="cFreshWaterWeight3607" />
+    <result column="C_CABIN_INOROUT_3607" jdbcType="VARCHAR" property="cCabinInorout3607" />
+    <result column="C_SERIAL_NUMBER_3607" jdbcType="DECIMAL" property="cSerialNumber3607" />
+    <result column="C_CONNECT_WAY_3607" jdbcType="VARCHAR" property="cConnectWay3607" />
+    <result column="C_MANAGER_3607" jdbcType="VARCHAR" property="cManager3607" />
+    <result column="C_STORE_POSITION_3607" jdbcType="VARCHAR" property="cStorePosition3607" />
+    <result column="C_NAME_3607" jdbcType="VARCHAR" property="cName3607" />
+    <result column="C_HEIGHT_3607" jdbcType="FLOAT" property="cHeight3607" />
+    <result column="C_FILE_3607" jdbcType="VARCHAR" property="cFile3607" />
+    <result column="C_WIDTH_3607" jdbcType="FLOAT" property="cWidth3607" />
+    <result column="C_LENGTH_3607" jdbcType="FLOAT" property="cLength3607" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    ID, SYS_DATE_TIME, SYS_USERNAME, SYS_IS_DELETE, SYS_SECRECY, SYS_SCHEMA, SYS_OPERATE, 
+    SYS_FLOW, C_AIR_WEIGHT_3607, C_DEWATER_VOLUME_3607, C_STOCK_NUMBER_3607, C_FRESH_WATER_WEIGHT_3607, 
+    C_CABIN_INOROUT_3607, C_SERIAL_NUMBER_3607, C_CONNECT_WAY_3607, C_MANAGER_3607, C_STORE_POSITION_3607, 
+    C_NAME_3607, C_HEIGHT_3607, C_FILE_3607, C_WIDTH_3607, C_LENGTH_3607
+  </sql>
+  <select id="selectByExample" parameterType="com.orient.weibao.mbg.model.TotalCarryToolExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from T_CABIN_CARRY_TOOL_480
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from T_CABIN_CARRY_TOOL_480
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from T_CABIN_CARRY_TOOL_480
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.orient.weibao.mbg.model.TotalCarryToolExample">
+    delete from T_CABIN_CARRY_TOOL_480
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.orient.weibao.mbg.model.TotalCarryTool">
+    insert into T_CABIN_CARRY_TOOL_480 (ID, SYS_DATE_TIME, SYS_USERNAME, 
+      SYS_IS_DELETE, SYS_SECRECY, SYS_SCHEMA, 
+      SYS_OPERATE, SYS_FLOW, C_AIR_WEIGHT_3607, 
+      C_DEWATER_VOLUME_3607, C_STOCK_NUMBER_3607, C_FRESH_WATER_WEIGHT_3607, 
+      C_CABIN_INOROUT_3607, C_SERIAL_NUMBER_3607, C_CONNECT_WAY_3607, 
+      C_MANAGER_3607, C_STORE_POSITION_3607, C_NAME_3607, 
+      C_HEIGHT_3607, C_FILE_3607, C_WIDTH_3607, 
+      C_LENGTH_3607)
+    values (#{id,jdbcType=VARCHAR}, #{sysDateTime,jdbcType=TIMESTAMP}, #{sysUsername,jdbcType=VARCHAR}, 
+      #{sysIsDelete,jdbcType=DECIMAL}, #{sysSecrecy,jdbcType=VARCHAR}, #{sysSchema,jdbcType=VARCHAR}, 
+      #{sysOperate,jdbcType=VARCHAR}, #{sysFlow,jdbcType=VARCHAR}, #{cAirWeight3607,jdbcType=FLOAT}, 
+      #{cDewaterVolume3607,jdbcType=FLOAT}, #{cStockNumber3607,jdbcType=DECIMAL}, #{cFreshWaterWeight3607,jdbcType=FLOAT}, 
+      #{cCabinInorout3607,jdbcType=VARCHAR}, #{cSerialNumber3607,jdbcType=DECIMAL}, #{cConnectWay3607,jdbcType=VARCHAR}, 
+      #{cManager3607,jdbcType=VARCHAR}, #{cStorePosition3607,jdbcType=VARCHAR}, #{cName3607,jdbcType=VARCHAR}, 
+      #{cHeight3607,jdbcType=FLOAT}, #{cFile3607,jdbcType=VARCHAR}, #{cWidth3607,jdbcType=FLOAT}, 
+      #{cLength3607,jdbcType=FLOAT})
+  </insert>
+  <insert id="insertSelective" useGeneratedKeys="false" keyProperty="id" keyColumn="id" parameterType="com.orient.weibao.mbg.model.TotalCarryTool">
+    insert into T_CABIN_CARRY_TOOL_480
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+        ID,
+      <if test="sysDateTime != null">
+        SYS_DATE_TIME,
+      </if>
+      <if test="sysUsername != null">
+        SYS_USERNAME,
+      </if>
+      <if test="sysIsDelete != null">
+        SYS_IS_DELETE,
+      </if>
+      <if test="sysSecrecy != null">
+        SYS_SECRECY,
+      </if>
+      <if test="sysSchema != null">
+        SYS_SCHEMA,
+      </if>
+      <if test="sysOperate != null">
+        SYS_OPERATE,
+      </if>
+      <if test="sysFlow != null">
+        SYS_FLOW,
+      </if>
+      <if test="cAirWeight3607 != null">
+        C_AIR_WEIGHT_3607,
+      </if>
+      <if test="cDewaterVolume3607 != null">
+        C_DEWATER_VOLUME_3607,
+      </if>
+      <if test="cStockNumber3607 != null">
+        C_STOCK_NUMBER_3607,
+      </if>
+      <if test="cFreshWaterWeight3607 != null">
+        C_FRESH_WATER_WEIGHT_3607,
+      </if>
+      <if test="cCabinInorout3607 != null">
+        C_CABIN_INOROUT_3607,
+      </if>
+      <if test="cSerialNumber3607 != null">
+        C_SERIAL_NUMBER_3607,
+      </if>
+      <if test="cConnectWay3607 != null">
+        C_CONNECT_WAY_3607,
+      </if>
+      <if test="cManager3607 != null">
+        C_MANAGER_3607,
+      </if>
+      <if test="cStorePosition3607 != null">
+        C_STORE_POSITION_3607,
+      </if>
+      <if test="cName3607 != null">
+        C_NAME_3607,
+      </if>
+      <if test="cHeight3607 != null">
+        C_HEIGHT_3607,
+      </if>
+      <if test="cFile3607 != null">
+        C_FILE_3607,
+      </if>
+      <if test="cWidth3607 != null">
+        C_WIDTH_3607,
+      </if>
+      <if test="cLength3607 != null">
+        C_LENGTH_3607,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      SEQ_T_CABIN_CARRY_TOOL_480.nextval,
+      <if test="sysDateTime != null">
+        #{sysDateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sysUsername != null">
+        #{sysUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="sysIsDelete != null">
+        #{sysIsDelete,jdbcType=DECIMAL},
+      </if>
+      <if test="sysSecrecy != null">
+        #{sysSecrecy,jdbcType=VARCHAR},
+      </if>
+      <if test="sysSchema != null">
+        #{sysSchema,jdbcType=VARCHAR},
+      </if>
+      <if test="sysOperate != null">
+        #{sysOperate,jdbcType=VARCHAR},
+      </if>
+      <if test="sysFlow != null">
+        #{sysFlow,jdbcType=VARCHAR},
+      </if>
+      <if test="cAirWeight3607 != null">
+        #{cAirWeight3607,jdbcType=FLOAT},
+      </if>
+      <if test="cDewaterVolume3607 != null">
+        #{cDewaterVolume3607,jdbcType=FLOAT},
+      </if>
+      <if test="cStockNumber3607 != null">
+        #{cStockNumber3607,jdbcType=DECIMAL},
+      </if>
+      <if test="cFreshWaterWeight3607 != null">
+        #{cFreshWaterWeight3607,jdbcType=FLOAT},
+      </if>
+      <if test="cCabinInorout3607 != null">
+        #{cCabinInorout3607,jdbcType=VARCHAR},
+      </if>
+      <if test="cSerialNumber3607 != null">
+        #{cSerialNumber3607,jdbcType=DECIMAL},
+      </if>
+      <if test="cConnectWay3607 != null">
+        #{cConnectWay3607,jdbcType=VARCHAR},
+      </if>
+      <if test="cManager3607 != null">
+        #{cManager3607,jdbcType=VARCHAR},
+      </if>
+      <if test="cStorePosition3607 != null">
+        #{cStorePosition3607,jdbcType=VARCHAR},
+      </if>
+      <if test="cName3607 != null">
+        #{cName3607,jdbcType=VARCHAR},
+      </if>
+      <if test="cHeight3607 != null">
+        #{cHeight3607,jdbcType=FLOAT},
+      </if>
+      <if test="cFile3607 != null">
+        #{cFile3607,jdbcType=VARCHAR},
+      </if>
+      <if test="cWidth3607 != null">
+        #{cWidth3607,jdbcType=FLOAT},
+      </if>
+      <if test="cLength3607 != null">
+        #{cLength3607,jdbcType=FLOAT},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.orient.weibao.mbg.model.TotalCarryToolExample" resultType="java.lang.Long">
+    select count(*) from T_CABIN_CARRY_TOOL_480
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update T_CABIN_CARRY_TOOL_480
+    <set>
+      <if test="record.id != null">
+        ID = #{record.id,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sysDateTime != null">
+        SYS_DATE_TIME = #{record.sysDateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.sysUsername != null">
+        SYS_USERNAME = #{record.sysUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sysIsDelete != null">
+        SYS_IS_DELETE = #{record.sysIsDelete,jdbcType=DECIMAL},
+      </if>
+      <if test="record.sysSecrecy != null">
+        SYS_SECRECY = #{record.sysSecrecy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sysSchema != null">
+        SYS_SCHEMA = #{record.sysSchema,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sysOperate != null">
+        SYS_OPERATE = #{record.sysOperate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sysFlow != null">
+        SYS_FLOW = #{record.sysFlow,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cAirWeight3607 != null">
+        C_AIR_WEIGHT_3607 = #{record.cAirWeight3607,jdbcType=FLOAT},
+      </if>
+      <if test="record.cDewaterVolume3607 != null">
+        C_DEWATER_VOLUME_3607 = #{record.cDewaterVolume3607,jdbcType=FLOAT},
+      </if>
+      <if test="record.cStockNumber3607 != null">
+        C_STOCK_NUMBER_3607 = #{record.cStockNumber3607,jdbcType=DECIMAL},
+      </if>
+      <if test="record.cFreshWaterWeight3607 != null">
+        C_FRESH_WATER_WEIGHT_3607 = #{record.cFreshWaterWeight3607,jdbcType=FLOAT},
+      </if>
+      <if test="record.cCabinInorout3607 != null">
+        C_CABIN_INOROUT_3607 = #{record.cCabinInorout3607,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cSerialNumber3607 != null">
+        C_SERIAL_NUMBER_3607 = #{record.cSerialNumber3607,jdbcType=DECIMAL},
+      </if>
+      <if test="record.cConnectWay3607 != null">
+        C_CONNECT_WAY_3607 = #{record.cConnectWay3607,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cManager3607 != null">
+        C_MANAGER_3607 = #{record.cManager3607,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cStorePosition3607 != null">
+        C_STORE_POSITION_3607 = #{record.cStorePosition3607,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cName3607 != null">
+        C_NAME_3607 = #{record.cName3607,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cHeight3607 != null">
+        C_HEIGHT_3607 = #{record.cHeight3607,jdbcType=FLOAT},
+      </if>
+      <if test="record.cFile3607 != null">
+        C_FILE_3607 = #{record.cFile3607,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cWidth3607 != null">
+        C_WIDTH_3607 = #{record.cWidth3607,jdbcType=FLOAT},
+      </if>
+      <if test="record.cLength3607 != null">
+        C_LENGTH_3607 = #{record.cLength3607,jdbcType=FLOAT},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update T_CABIN_CARRY_TOOL_480
+    set ID = #{record.id,jdbcType=VARCHAR},
+      SYS_DATE_TIME = #{record.sysDateTime,jdbcType=TIMESTAMP},
+      SYS_USERNAME = #{record.sysUsername,jdbcType=VARCHAR},
+      SYS_IS_DELETE = #{record.sysIsDelete,jdbcType=DECIMAL},
+      SYS_SECRECY = #{record.sysSecrecy,jdbcType=VARCHAR},
+      SYS_SCHEMA = #{record.sysSchema,jdbcType=VARCHAR},
+      SYS_OPERATE = #{record.sysOperate,jdbcType=VARCHAR},
+      SYS_FLOW = #{record.sysFlow,jdbcType=VARCHAR},
+      C_AIR_WEIGHT_3607 = #{record.cAirWeight3607,jdbcType=FLOAT},
+      C_DEWATER_VOLUME_3607 = #{record.cDewaterVolume3607,jdbcType=FLOAT},
+      C_STOCK_NUMBER_3607 = #{record.cStockNumber3607,jdbcType=DECIMAL},
+      C_FRESH_WATER_WEIGHT_3607 = #{record.cFreshWaterWeight3607,jdbcType=FLOAT},
+      C_CABIN_INOROUT_3607 = #{record.cCabinInorout3607,jdbcType=VARCHAR},
+      C_SERIAL_NUMBER_3607 = #{record.cSerialNumber3607,jdbcType=DECIMAL},
+      C_CONNECT_WAY_3607 = #{record.cConnectWay3607,jdbcType=VARCHAR},
+      C_MANAGER_3607 = #{record.cManager3607,jdbcType=VARCHAR},
+      C_STORE_POSITION_3607 = #{record.cStorePosition3607,jdbcType=VARCHAR},
+      C_NAME_3607 = #{record.cName3607,jdbcType=VARCHAR},
+      C_HEIGHT_3607 = #{record.cHeight3607,jdbcType=FLOAT},
+      C_FILE_3607 = #{record.cFile3607,jdbcType=VARCHAR},
+      C_WIDTH_3607 = #{record.cWidth3607,jdbcType=FLOAT},
+      C_LENGTH_3607 = #{record.cLength3607,jdbcType=FLOAT}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.orient.weibao.mbg.model.TotalCarryTool">
+    update T_CABIN_CARRY_TOOL_480
+    <set>
+      <if test="sysDateTime != null">
+        SYS_DATE_TIME = #{sysDateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sysUsername != null">
+        SYS_USERNAME = #{sysUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="sysIsDelete != null">
+        SYS_IS_DELETE = #{sysIsDelete,jdbcType=DECIMAL},
+      </if>
+      <if test="sysSecrecy != null">
+        SYS_SECRECY = #{sysSecrecy,jdbcType=VARCHAR},
+      </if>
+      <if test="sysSchema != null">
+        SYS_SCHEMA = #{sysSchema,jdbcType=VARCHAR},
+      </if>
+      <if test="sysOperate != null">
+        SYS_OPERATE = #{sysOperate,jdbcType=VARCHAR},
+      </if>
+      <if test="sysFlow != null">
+        SYS_FLOW = #{sysFlow,jdbcType=VARCHAR},
+      </if>
+      <if test="cAirWeight3607 != null">
+        C_AIR_WEIGHT_3607 = #{cAirWeight3607,jdbcType=FLOAT},
+      </if>
+      <if test="cDewaterVolume3607 != null">
+        C_DEWATER_VOLUME_3607 = #{cDewaterVolume3607,jdbcType=FLOAT},
+      </if>
+      <if test="cStockNumber3607 != null">
+        C_STOCK_NUMBER_3607 = #{cStockNumber3607,jdbcType=DECIMAL},
+      </if>
+      <if test="cFreshWaterWeight3607 != null">
+        C_FRESH_WATER_WEIGHT_3607 = #{cFreshWaterWeight3607,jdbcType=FLOAT},
+      </if>
+      <if test="cCabinInorout3607 != null">
+        C_CABIN_INOROUT_3607 = #{cCabinInorout3607,jdbcType=VARCHAR},
+      </if>
+      <if test="cSerialNumber3607 != null">
+        C_SERIAL_NUMBER_3607 = #{cSerialNumber3607,jdbcType=DECIMAL},
+      </if>
+      <if test="cConnectWay3607 != null">
+        C_CONNECT_WAY_3607 = #{cConnectWay3607,jdbcType=VARCHAR},
+      </if>
+      <if test="cManager3607 != null">
+        C_MANAGER_3607 = #{cManager3607,jdbcType=VARCHAR},
+      </if>
+      <if test="cStorePosition3607 != null">
+        C_STORE_POSITION_3607 = #{cStorePosition3607,jdbcType=VARCHAR},
+      </if>
+      <if test="cName3607 != null">
+        C_NAME_3607 = #{cName3607,jdbcType=VARCHAR},
+      </if>
+      <if test="cHeight3607 != null">
+        C_HEIGHT_3607 = #{cHeight3607,jdbcType=FLOAT},
+      </if>
+      <if test="cFile3607 != null">
+        C_FILE_3607 = #{cFile3607,jdbcType=VARCHAR},
+      </if>
+      <if test="cWidth3607 != null">
+        C_WIDTH_3607 = #{cWidth3607,jdbcType=FLOAT},
+      </if>
+      <if test="cLength3607 != null">
+        C_LENGTH_3607 = #{cLength3607,jdbcType=FLOAT},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.orient.weibao.mbg.model.TotalCarryTool">
+    update T_CABIN_CARRY_TOOL_480
+    set SYS_DATE_TIME = #{sysDateTime,jdbcType=TIMESTAMP},
+      SYS_USERNAME = #{sysUsername,jdbcType=VARCHAR},
+      SYS_IS_DELETE = #{sysIsDelete,jdbcType=DECIMAL},
+      SYS_SECRECY = #{sysSecrecy,jdbcType=VARCHAR},
+      SYS_SCHEMA = #{sysSchema,jdbcType=VARCHAR},
+      SYS_OPERATE = #{sysOperate,jdbcType=VARCHAR},
+      SYS_FLOW = #{sysFlow,jdbcType=VARCHAR},
+      C_AIR_WEIGHT_3607 = #{cAirWeight3607,jdbcType=FLOAT},
+      C_DEWATER_VOLUME_3607 = #{cDewaterVolume3607,jdbcType=FLOAT},
+      C_STOCK_NUMBER_3607 = #{cStockNumber3607,jdbcType=DECIMAL},
+      C_FRESH_WATER_WEIGHT_3607 = #{cFreshWaterWeight3607,jdbcType=FLOAT},
+      C_CABIN_INOROUT_3607 = #{cCabinInorout3607,jdbcType=VARCHAR},
+      C_SERIAL_NUMBER_3607 = #{cSerialNumber3607,jdbcType=DECIMAL},
+      C_CONNECT_WAY_3607 = #{cConnectWay3607,jdbcType=VARCHAR},
+      C_MANAGER_3607 = #{cManager3607,jdbcType=VARCHAR},
+      C_STORE_POSITION_3607 = #{cStorePosition3607,jdbcType=VARCHAR},
+      C_NAME_3607 = #{cName3607,jdbcType=VARCHAR},
+      C_HEIGHT_3607 = #{cHeight3607,jdbcType=FLOAT},
+      C_FILE_3607 = #{cFile3607,jdbcType=VARCHAR},
+      C_WIDTH_3607 = #{cWidth3607,jdbcType=FLOAT},
+      C_LENGTH_3607 = #{cLength3607,jdbcType=FLOAT}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

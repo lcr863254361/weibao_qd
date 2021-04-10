@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping>
+	<description xmlns="">jpdlform的描述文件</description>
+	<class name="com.orient.jpdl.data.model.Forms" auto-complete="true">
+		<description xmlns="">Default mapping for class com.orient.jpdl.data.model.Forms</description>
+		<map-to xml="forms"/>
+		<field name="formSet" type="com.orient.workflow.form.model.XmlForm" collection="set">
+			<bind-xml name="form"/>
+		</field>
+		<field name="subFormSet" type="com.orient.workflow.form.model.SubXmlForm" collection="set">
+			<bind-xml name="subForm"/>
+		</field>
+		<field name="datatableid" type="java.lang.String">
+			<bind-xml name="datatableid" node="attribute"/>
+		</field>
+		<field name="schemaId" type="java.lang.String">
+			<bind-xml name="schemaId" node="attribute"/>
+		</field>
+		<field name="projectId" type="java.lang.String">
+			<bind-xml name="projectId" node="attribute"/>
+		</field>
+		<field name="dataId" type="java.lang.String">
+			<bind-xml name="dataId" node="attribute"/>
+		</field>
+		<field name="rootType" type="java.lang.String">
+			<bind-xml name="rootType" node="attribute"/>
+		</field>
+		<field name="rootName" type="java.lang.String">
+			<bind-xml name="rootName" node="attribute"/>
+		</field>
+	</class>
+	
+	<class name="com.orient.workflow.form.model.XmlForm" auto-complete="true">
+		<description xmlns="">Default mapping for class com.orient.workflow.form.model.XmlForm</description>
+		<map-to xml="form"/>
+		<field name="id" type="java.lang.String">
+			<bind-xml name="id" node="attribute"/>
+		</field>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="xmlAttrs" type="com.orient.workflow.form.model.XmlAttrs">
+			<bind-xml name="normalAttr"/>
+		</field>
+		<field name="start" type="java.lang.String">
+			<bind-xml name="start" node="attribute"/>
+		</field>
+		<field name="operationtip" type="java.lang.String">
+			<bind-xml name="operationtip" node="attribute"/>
+		</field>
+		<field name="filetype" type="java.lang.String">
+			<bind-xml name="filetype" node="attribute"/>
+		</field>
+		<field name="mailType" type="java.lang.String">
+			<bind-xml name="mailtype" node="attribute"/>
+		</field>
+		<field name="paramIn" type="com.orient.workflow.form.model.XmlIN">
+			<bind-xml name="in"/>
+		</field>
+		<field name="paramOut" type="com.orient.workflow.form.model.XmlOut">
+			<bind-xml name="out"/>
+		</field>
+		<field name="paramInOrOut" type="com.orient.workflow.form.model.XmlInOrOut">
+			<bind-xml name="inOrOut"/>
+		</field>
+		<field name="buttons" type="com.orient.workflow.form.model.XmlButton" collection="arraylist">
+			<bind-xml name="button"/>
+		</field>
+		<field name="infos" type="com.orient.workflow.form.model.XmlInfo" collection="arraylist">
+			<bind-xml name="info"/>
+		</field>
+		<field name="courses" type="com.orient.workflow.form.model.XmlCourse" collection="arraylist">
+			<bind-xml name="course"/>
+		</field>
+	</class>
+	
+	<class name="com.orient.workflow.form.model.SubXmlForm" auto-complete="true">
+		<description xmlns="">Default mapping for class com.orient.workflow.form.model.SubXmlForm</description>
+		<map-to xml="subForm"/>
+		<field name="id" type="java.lang.String">
+			<bind-xml name="id" node="attribute"/>
+		</field>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="xmlAttrs" type="com.orient.workflow.form.model.XmlAttrs">
+			<bind-xml name="normalAttr"/>
+		</field>
+	</class>
+	
+	<class name="com.orient.workflow.form.model.XmlAttrs" auto-complete="true">
+		<map-to xml="normalAttr"/>
+		<field name="xmlAttrs" type="com.orient.workflow.form.model.XmlAttr" collection="arraylist">
+			<bind-xml name="taskAttr"/>
+		</field>
+	</class>
+	
+	<class name="com.orient.workflow.form.model.XmlAttr" auto-complete="true">
+		<map-to xml="taskAttr"/>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="value" type="java.lang.String">
+			<bind-xml name="value" node="attribute"/>
+		</field>
+	</class>
+	
+	<class name="com.orient.workflow.form.model.XmlInfo" auto-complete="true">
+		<map-to xml="info"/>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="required" type="java.lang.String">
+			<bind-xml name="required" node="attribute"/>
+		</field>
+		<field name="value" type="java.lang.String">
+			<bind-xml name="value" node="attribute"/>
+		</field>
+		<field name="isopen" type="java.lang.String">
+			<bind-xml name="isopen" node="attribute"/>
+		</field>
+	</class>
+	
+	<class name="com.orient.workflow.form.model.XmlCourse" auto-complete="true">
+		<map-to xml="course"/>
+		<field name="processName" type="java.lang.String">
+			<bind-xml name="processName" node="attribute"/>
+		</field>
+		<field name="taskName" type="java.lang.String">
+			<bind-xml name="taskName" node="attribute"/>
+		</field>
+	</class>
+	
+	<class name="com.orient.workflow.form.model.XmlButton" auto-complete="true">
+		<map-to xml="button"/>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="type" type="java.lang.String">
+			<bind-xml name="type" node="attribute"/>
+		</field>
+		<field name="isopen" type="java.lang.String">
+			<bind-xml name="isopen" node="attribute"/>
+		</field>
+		<field name="connection" type="java.lang.String">
+			<bind-xml name="connection" node="attribute"/>
+		</field>
+		<field name="buttonColumns" type="com.orient.workflow.form.model.XmlButtonColumn" collection="arraylist">
+			<bind-xml name="button_column"/>
+		</field>
+		<field name="buttonRights" type="com.orient.workflow.form.model.XmlButtonRight" collection="arraylist">
+			<bind-xml name="button_right"/>
+		</field>
+	</class>
+	
+	<class name="com.orient.workflow.form.model.XmlButtonColumn" auto-complete="true">
+		<map-to xml="button_column"/>
+		<field name="column_id" type="java.lang.String">
+			<bind-xml name="column_id" node="attribute"/>
+		</field>
+		<field name="column_name" type="java.lang.String">
+			<bind-xml name="column_name" node="attribute"/>
+		</field>
+		<field name="table_id" type="java.lang.String">
+			<bind-xml name="table_id" node="attribute"/>
+		</field>
+		<field name="type" type="java.lang.String">
+			<bind-xml name="type" node="attribute"/>
+		</field>
+		<field name="value" type="java.lang.String">
+			<bind-xml name="value" node="attribute"/>
+		</field>
+	</class>
+	
+	<class name="com.orient.workflow.form.model.XmlButtonRight" auto-complete="true">
+		<map-to xml="button_right"/>
+		<field name="table_id" type="java.lang.String">
+			<bind-xml name="table_id" node="attribute"/>
+		</field>
+		<field name="table_name" type="java.lang.String">
+			<bind-xml name="table_name" node="attribute"/>
+		</field>
+		<field name="value" type="java.lang.String">
+			<bind-xml name="value" node="attribute"/>
+		</field>
+	</class>
+	
+	<class name="com.orient.workflow.form.model.XmlIN" auto-complete="true">
+		<map-to xml="in"/>
+		<field name="xmlTables" type="com.orient.workflow.form.model.XmlTable" collection="arraylist">
+			<bind-xml name="table"/>
+		</field>
+	</class>
+	
+	<class name="com.orient.workflow.form.model.XmlOut" auto-complete="true">
+		<map-to xml="out"/>
+		<field name="xmlTables" type="com.orient.workflow.form.model.XmlTable" collection="arraylist">
+			<bind-xml name="table"/>
+		</field>
+	</class>
+	
+	<class name="com.orient.workflow.form.model.XmlInOrOut" auto-complete="true">
+		<map-to xml="inOrOut"/>
+		<field name="xmlTables" type="com.orient.workflow.form.model.XmlTable" collection="arraylist">
+			<bind-xml name="table"/>
+		</field>
+	</class>
+	
+	<class name="com.orient.workflow.form.model.XmlTable" auto-complete="true">
+		<map-to xml="table"/>
+		<field name="id" type="java.lang.String">
+			<bind-xml name="id" node="attribute"/>
+		</field>
+		<field name="displayName" type="java.lang.String">
+			<bind-xml name="displayName" node="attribute"/>
+		</field>
+		<field name="is_insert" type="java.lang.String">
+			<bind-xml name="is_insert" node="attribute"/>
+		</field>
+		<field name="is_update" type="java.lang.String">
+			<bind-xml name="is_update" node="attribute"/>
+		</field>
+		<field name="is_ref" type="java.lang.String">
+			<bind-xml name="is_ref" node="attribute"/>
+		</field>
+		<field name="ref_task" type="java.lang.String">
+			<bind-xml name="ref_task" node="attribute"/>
+		</field>
+		<field name="type" type="java.lang.String">
+			<bind-xml name="type" node="attribute"/>
+		</field>
+		<field name="columns" type="com.orient.workflow.form.model.XmlColumn" collection="arraylist">
+			<bind-xml name="column"/>
+		</field>
+	</class>
+	
+	<class name="com.orient.workflow.form.model.XmlColumn" auto-complete="true">
+		<map-to xml="column"/>
+		<field name="id" type="java.lang.String">
+			<bind-xml name="id" node="attribute"/>
+		</field>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute"/>
+		</field>
+		<field name="required" type="java.lang.String">
+			<bind-xml name="required" node="attribute"/>
+		</field>
+		<field name="readonly" type="java.lang.String">
+			<bind-xml name="readonly" node="attribute"/>
+		</field>
+		<field name="tableid" type="java.lang.String">
+			<bind-xml name="tableid" node="attribute"/>
+		</field>
+	</class>
+</mapping>

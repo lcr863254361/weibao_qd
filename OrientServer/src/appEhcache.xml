@@ -1,0 +1,25 @@
+<ehcache updateCheck="false" name="app-ehcache">
+    <diskStore path="java.io.tmpdir"/>
+    <defaultCache
+            maxElementsInMemory="1"
+            eternal="false"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120"
+            overflowToDisk="true"/>
+
+    <cache name="appCache"
+           maxElementsInMemory="2000"
+           eternal="false"
+           timeToIdleSeconds="300"
+           timeToLiveSeconds="600"
+           overflowToDisk="true"/>
+
+    <cache name="businessModelCache"
+           maxElementsInMemory="2000"
+           eternal="false"
+           timeToIdleSeconds="900"
+           timeToLiveSeconds="3600"
+           memoryStoreEvictionPolicy="LFU"
+           overflowToDisk="true"/>
+
+</ehcache>

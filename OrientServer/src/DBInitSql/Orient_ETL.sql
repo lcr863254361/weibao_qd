@@ -1,0 +1,148 @@
+--------------------ETL相关表格----------------
+CREATE TABLE CWM_ETL_JOB
+(
+    ID                             VARCHAR2(38) NOT NULL,
+    USER_NAME                      VARCHAR2(50),
+    JOB_TIME                       DATE,
+    STATUS                         VARCHAR2(50),
+    DDL                            CLOB,
+    DML                            CLOB,
+    LOADSQL                        CLOB,
+    CONSTRAINT PK_CWM_ETL_JOB PRIMARY KEY (ID) USING INDEX
+        PCTFREE 10
+        INITRANS 2
+        MAXTRANS 255
+);
+COMMENT ON COLUMN CWM_ETL_JOB.ID IS '数据导入JOB ID';
+COMMENT ON COLUMN CWM_ETL_JOB.USER_NAME IS '导入用户名';
+COMMENT ON COLUMN CWM_ETL_JOB.JOB_TIME IS '数据导入时间';
+COMMENT ON COLUMN CWM_ETL_JOB.STATUS IS '数据导入状态(1:成功)';
+COMMENT ON COLUMN CWM_ETL_JOB.DDL IS '创建外部表SQL脚本';
+COMMENT ON COLUMN CWM_ETL_JOB.DML IS '查询外部表SQL脚本';
+COMMENT ON COLUMN CWM_ETL_JOB.LOADSQL IS 'loadsql';
+
+CREATE TABLE CWM_ETL_LOG
+(
+    ID                             VARCHAR2(38),
+    LOG_INFO                       VARCHAR2(600),
+    USER_ID                        VARCHAR2(38),
+    START_TIME                     DATE,
+    TABLE_ID                       VARCHAR2(38),
+    STATUS                         VARCHAR2(50),
+    DATA_AMOUNT                    VARCHAR2(50),
+    FILE_NAME                      VARCHAR2(200 BYTE),
+    TABLE_DISNAME                  VARCHAR2(100),
+    END_TIME                       DATE,
+    RIGHT_DATA                     VARCHAR2(30),
+    WRONG_DATA                     VARCHAR2(30),
+    TIME1                          DATE,
+    TIME2                          DATE,
+    IS_DELETE                      NUMBER(1,0) DEFAULT 1,
+    JOB_ID                         VARCHAR2(38),
+    JOB_RESULT                     VARCHAR2(1) DEFAULT 1,
+    TABLE_NAME                     VARCHAR2(100),
+    FILE_SIZE                      VARCHAR2(50),
+    LOGDDL                         CLOB
+);
+
+CREATE TABLE CWM_ETL_SCRIPT
+(
+    ID                             VARCHAR2(20) NOT NULL,
+    SCRIPTNAME                     VARCHAR2(100),
+    FILENAME                       VARCHAR2(100),
+    FILETYPE                       VARCHAR2(10),
+    DATAINDEX                      VARCHAR2(10),
+    LINESPLIT                      VARCHAR2(60),
+    USERNAME                       VARCHAR2(50),
+    ERRORSOLVE                     VARCHAR2(10),
+    JOBTYPE                        VARCHAR2(20),
+    FILEPATH                       VARCHAR2(200),
+    FILELENGTH                     VARCHAR2(1000),
+    FILELASTMOD                    VARCHAR2(1000),
+    JOBTIME                        VARCHAR2(40),
+    SRCCOLUMN                      VARCHAR2(1500),
+    IMPORT_TYPE                    VARCHAR2(20),
+    CONSTRAINT PK_CWM_ETL_SCRIPT PRIMARY KEY (ID) USING INDEX
+        PCTFREE 10
+        INITRANS 2
+        MAXTRANS 255
+);
+COMMENT ON COLUMN CWM_ETL_SCRIPT.ID IS '主键ID';
+COMMENT ON COLUMN CWM_ETL_SCRIPT.SCRIPTNAME IS '脚本名称';
+COMMENT ON COLUMN CWM_ETL_SCRIPT.FILENAME IS '导入文件名称';
+COMMENT ON COLUMN CWM_ETL_SCRIPT.FILETYPE IS '导入文件类型';
+COMMENT ON COLUMN CWM_ETL_SCRIPT.DATAINDEX IS '数据起始行   -1 代表使用外部转换器';
+COMMENT ON COLUMN CWM_ETL_SCRIPT.LINESPLIT IS '行分隔符   或外部转换器名称';
+COMMENT ON COLUMN CWM_ETL_SCRIPT.USERNAME IS '用户ID';
+COMMENT ON COLUMN CWM_ETL_SCRIPT.ERRORSOLVE IS '错误处理方式';
+COMMENT ON COLUMN CWM_ETL_SCRIPT.JOBTYPE IS 'ETL处理方式：立即导入或延时导入';
+COMMENT ON COLUMN CWM_ETL_SCRIPT.FILEPATH IS '导入文件路径';
+COMMENT ON COLUMN CWM_ETL_SCRIPT.FILELENGTH IS '导入文件大小';
+COMMENT ON COLUMN CWM_ETL_SCRIPT.FILELASTMOD IS '导入文件最后修改时间';
+COMMENT ON COLUMN CWM_ETL_SCRIPT.JOBTIME IS '导入时间';
+COMMENT ON COLUMN CWM_ETL_SCRIPT.SRCCOLUMN IS '数据源列名';
+COMMENT ON COLUMN CWM_ETL_SCRIPT.IMPORT_TYPE IS '导入类型';
+
+CREATE TABLE CWM_ETL_TRANSLATOR
+(
+    ID                             VARCHAR2(20) NOT NULL,
+    TABLENAME                      VARCHAR2(50),
+    TABLEID                        VARCHAR2(20),
+    SCRIPTID                       VARCHAR2(20),
+    TABLECOLUMN                    VARCHAR2(4000),
+    TABLESYSNAME                   VARCHAR2(50),
+    TRANSLATOR                     CLOB,
+    CONSTRAINT PK_CWM_ETL_TRANSLATOR PRIMARY KEY (ID) USING INDEX
+        PCTFREE 10
+        INITRANS 2
+        MAXTRANS 255
+);
+COMMENT ON COLUMN CWM_ETL_TRANSLATOR.ID IS '表主键ID';
+COMMENT ON COLUMN CWM_ETL_TRANSLATOR.TABLENAME IS '导入表ID+显示名称';
+COMMENT ON COLUMN CWM_ETL_TRANSLATOR.TABLEID IS '导入表真实名称';
+COMMENT ON COLUMN CWM_ETL_TRANSLATOR.SCRIPTID IS '数据导入脚本ID';
+COMMENT ON COLUMN CWM_ETL_TRANSLATOR.TABLECOLUMN IS '导入表字段名称';
+
+
+--*******************************************--
+--             SEQUENCE 相关                 --
+--*******************************************--
+CREATE SEQUENCE SEQ_CWM_ETL_JOB
+INCREMENT BY 1
+START WITH 1
+NOMAXVALUE
+MINVALUE 0
+NOCYCLE 
+CACHE 100
+NOORDER ;
+
+CREATE SEQUENCE SEQ_CWM_ETL_LOG
+INCREMENT BY 1
+START WITH 1
+NOMAXVALUE
+MINVALUE 0
+NOCYCLE 
+CACHE 20
+NOORDER ;
+
+CREATE SEQUENCE SEQ_CWM_ETL_SCRIPT
+INCREMENT BY 1
+START WITH 1
+MAXVALUE 999999999999999999999999
+MINVALUE 0
+CYCLE 
+CACHE 100
+NOORDER ;
+
+
+CREATE SEQUENCE SEQ_CWM_ETL_TRANSLATOR
+INCREMENT BY 1
+START WITH 1
+NOMAXVALUE
+MINVALUE 0
+NOCYCLE 
+CACHE 20
+NOORDER ;
+
+
+

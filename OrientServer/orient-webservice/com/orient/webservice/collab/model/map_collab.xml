@@ -1,0 +1,45 @@
+<!DOCTYPE databases PUBLIC
+"-//EXOLAB/Castor Mapping DTD Version 1.0//EN"
+"http://castor.exolab.org/mapping.dtd">
+<mapping>
+	<description>ICollab interface result</description>
+
+	<class name="com.orient.webservice.collab.model.TaskInfo" auto-complete="true">
+		<map-to xml="TASKINFO"/>
+		<field name="tasks" collection="arraylist"
+			type="com.orient.webservice.collab.model.CollabTask">
+			<bind-xml name="TASK" />
+		</field>
+	</class>
+
+    <class name="com.orient.webservice.collab.model.CollabTask" auto-complete="true">
+        <map-to xml="TASK"/>
+        <field name="taskId">
+            <bind-xml name="TASKID" node="attribute" />
+        </field>
+        <field name="taskName">
+            <bind-xml name="TASKNAME" node="attribute" />
+        </field>
+        <field name="status">
+            <bind-xml name="STATUS" node="attribute" />
+        </field>
+        <field name="createTime">
+            <bind-xml name="CREATE_TIME" node="attribute" />
+        </field>
+        <field name="projectId">
+            <bind-xml name="PROJECT_ID" node="attribute" />
+        </field>
+        <field name="projectName">
+            <bind-xml name="PROJECT_NAME" node="attribute" />
+        </field>
+        <field name="projectCreator">
+            <bind-xml name="PROJECT_CREATOR" node="attribute" />
+        </field>
+        <field name="projectDesigner">
+            <bind-xml name="PROJECT_DESIGNER" node="attribute" />
+        </field>
+        <field name="note">
+            <bind-xml name="NOTE" node="attribute" />
+        </field>
+    </class>
+</mapping>

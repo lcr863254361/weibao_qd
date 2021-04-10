@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.2.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+        http://www.springframework.org/schema/task
+        http://www.springframework.org/schema/task/spring-task-3.2.xsd">
+
+    <context:component-scan base-package="com.orient">
+        <context:exclude-filter type="annotation"
+                                expression="org.springframework.stereotype.Controller"/>
+        <context:exclude-filter type="annotation"
+                                expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
+    </context:component-scan>
+
+    <task:annotation-driven/>
+
+    <aop:aspectj-autoproxy>
+
+    </aop:aspectj-autoproxy>
+
+    <bean id="fileServerConfig" class="com.orient.edm.init.FileServerConfig" scope="singleton">
+
+        <property name="ftpHome" value="${ftpServer.ftpHome}"/>
+
+        <property name="temp" value="${ftpServer.ftpHome.temp}"/>
+
+        <property name="logStatus" value="${ftpServer.logStatus}"/>
+
+        <property name="logDir" value="${ftpServer.logDir}"/>
+
+        <property name="port" value="${ftpServer.port}"/>
+
+        <property name="maxSessions" value="${ftpServer.maxSessions}"/>
+
+        <property name="soTimeout" value="${ftpServer.soTimeout}"/>
+
+        <property name="overTimeIntervalCheckTime" value="${ftpServer.overTimeIntervalCheckTime}"/>
+
+        <property name="backPath" value="${ftpServer.backPath}"/>
+
+        <property name="enableVideoPreview" value="${ftpServer.enableVideoPreview}"/>
+
+        <property name="hlsHome" value="${ftpServer.hlsHome}"/>
+
+        <property name="mp4Home" value="${ftpServer.mp4Home}"/>
+
+        <property name="nginxPort" value="${ftpServer.nginxPort}"/>
+
+        <property name="pvmTemplateHome" value="${ftpServer.ftpHome.pvm}"/>
+
+        <property name="encrypt" value="${ftpServer.encrypt}"/>
+
+        <property name="decrypt" value="${ftpServer.decrypt}"/>
+    </bean>
+
+    <bean id="castorMarshaller" class="org.springframework.oxm.castor.CastorMarshaller"/>
+    <bean id="applicationContext" class="org.apache.axis2.extensions.spring.receivers.ApplicationContextHolder"/>
+
+    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="host" value="${orient.mail.smtp.host}"/>
+        <property name="port" value="${orient.mail.smtp.port}"/>
+        <property name="username" value="${orient.mail.sender.user}"/>
+        <property name="password" value="${orient.mail.sender.password}"/>
+    </bean>
+</beans>

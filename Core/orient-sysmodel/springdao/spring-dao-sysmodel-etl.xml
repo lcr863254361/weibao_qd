@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+	
+
+	<bean id="EtlJobDAO" class="com.orient.sysmodel.domain.etl.EtlJobDAO" lazy-init="true">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="EtlLogDAO" class="com.orient.sysmodel.domain.etl.EtlLogDAO" lazy-init="true">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="EtlScriptDAO" class="com.orient.sysmodel.domain.etl.EtlScriptDAO" lazy-init="true">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="EtlTranslatorDAO" class="com.orient.sysmodel.domain.etl.EtlTranslatorDAO" lazy-init="true">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="EtlService" class="com.orient.sysmodel.service.etl.EtlServiceImpl">
+		<property name="etlJobDao" ref="EtlJobDAO"></property>
+		<property name="etlLogDao" ref="EtlLogDAO"></property>
+		<property name="etlScriptDao" ref="EtlScriptDAO"></property>
+		<property name="etlTranslatorDao" ref="EtlTranslatorDAO"></property>
+	</bean>
+</beans>

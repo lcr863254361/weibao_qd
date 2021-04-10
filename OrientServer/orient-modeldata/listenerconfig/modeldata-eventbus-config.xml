@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Copyright (c) 2016. Orient Company
+  ~
+  -->
+
+<ListenerOrder>
+    <!-- 新增数据-->
+    <EventSource eventType="com.orient.modeldata.event.SaveModelDataEvent"
+                 name="com.orient.modeldata.controller.ModelDataController">
+        <BaseOrderList>
+            <OrderValue name="com.orient.modeldata.eventListener.DefaultBeforeSaveModelDataListener"/>
+            <OrderValue name="com.orient.modeldata.eventListener.SaveModelDataListener"/>
+            <OrderValue name="com.orient.modeldata.eventListener.DefaultAfterSaveModelDataListener"/>
+        </BaseOrderList>
+        <ExtenderOderList>
+            <!-- 0 ~ 9 可定制区间-->
+            <Listener name="com.orient.modeldata.eventListener.DefaultBeforeSaveModelDataListener" order="10"/>
+            <!-- 11 ~ 19 可定制区间-->
+            <Listener name="com.orient.modeldata.eventListener.SaveModelDataListener" order="20"/>
+            <!-- 21 ~ 29 可定制区间-->
+            <Listener name="com.orient.modeldata.eventListener.DefaultAfterSaveModelDataListener" order="30"/>
+            <!-- 31 ~ infinite 可定制区间-->
+
+        </ExtenderOderList>
+    </EventSource>
+
+    <!-- 修改数据-->
+    <EventSource eventType="com.orient.modeldata.event.UpdateModelDataEvent"
+                 name="com.orient.modeldata.controller.ModelDataController">
+        <BaseOrderList>
+            <OrderValue name="com.orient.modeldata.eventListener.DefaultBeforeSaveModelDataListener"/>
+            <OrderValue name="com.orient.modeldata.eventListener.UpdateModelDataListener"/>
+            <OrderValue name="com.orient.modeldata.eventListener.DefaultAfterSaveModelDataListener"/>
+        </BaseOrderList>
+        <ExtenderOderList>
+            <Listener name="com.orient.modeldata.eventListener.DefaultBeforeSaveModelDataListener" order="10"/>
+            <Listener name="com.orient.modeldata.eventListener.UpdateModelDataListener" order="20"/>
+            <Listener name="com.orient.modeldata.eventListener.DefaultAfterSaveModelDataListener" order="30"/>
+        </ExtenderOderList>
+    </EventSource>
+
+    <!-- 删除数据-->
+    <EventSource eventType="com.orient.modeldata.event.DeleteModelDataEvent"
+                 name="com.orient.modeldata.controller.ModelDataController">
+        <BaseOrderList>
+            <OrderValue name="com.orient.modeldata.eventListener.DeleteModelDataListener"/>
+        </BaseOrderList>
+        <ExtenderOderList>
+            <Listener name="com.orient.modeldata.eventListener.DeleteModelDataListener" order="10"/>
+        </ExtenderOderList>
+    </EventSource>
+
+    <!-- 获取模型描述-->
+    <EventSource eventType="com.orient.modeldata.event.GetGridModelDescEvent"
+                 name="com.orient.modeldata.controller.ModelDataController">
+        <BaseOrderList>
+            <OrderValue name="com.orient.modeldata.eventListener.GetCompleteModelDescListener"/>
+            <OrderValue name="com.orient.modeldata.eventListener.GetGridModelRightsListener"/>
+            <OrderValue name="com.orient.modeldata.eventListener.GetDSModelColumnDescListener"/>
+            <OrderValue name="com.orient.modeldata.eventListener.GetCustomModelColumnDescListener"/>
+            <OrderValue name="com.orient.modeldata.eventListener.GetDSButtonDescListener"/>
+            <OrderValue name="com.orient.modeldata.eventListener.GetCustomModelButtonDescListener"/>
+        </BaseOrderList>
+        <ExtenderOderList>
+            <Listener name="com.orient.modeldata.eventListener.GetCompleteModelDescListener" order="10"/>
+            <Listener name="com.orient.modeldata.eventListener.GetGridModelRightsListener" order="20"/>
+            <Listener name="com.orient.modeldata.eventListener.GetDSModelColumnDescListener" order="30"/>
+            <Listener name="com.orient.modeldata.eventListener.GetCustomModelColumnDescListener" order="40"/>
+            <Listener name="com.orient.modeldata.eventListener.GetDSButtonDescListener" order="50"/>
+            <Listener name="com.orient.modeldata.eventListener.GetCustomModelButtonDescListener" order="60"/>
+        </ExtenderOderList>
+    </EventSource>
+</ListenerOrder>

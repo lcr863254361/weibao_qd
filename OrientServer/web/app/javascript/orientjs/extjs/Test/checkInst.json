@@ -1,0 +1,3854 @@
+{
+  "result": "success",
+  "msg": "",
+  "data": {
+    "state": "未完成",
+    "name": "舱外通电检查记录表",
+    "id": "1618",
+    "rowBeanArrayList": [
+      {
+        "dbId": "50550",
+        "cells": [
+          {
+            "id": "88943",
+            "content": "系统启动",
+            "type": "0",
+            "colIndex": "0"
+          },
+          {
+            "type": "0",
+            "colIndex": "1",
+            "id": "88944",
+            "content": "两组副电池箱上电"
+          },
+          {
+            "content": "正常启动无故障",
+            "type": "0",
+            "colIndex": "2",
+            "id": "88945"
+          },
+          {
+            "colIndex": "3",
+            "content": "",
+            "id": "88946",
+            "type": "1"
+          },
+          {
+            "content": "",
+            "colIndex": "4",
+            "type": "2",
+            "id": "88947"
+          }
+        ],
+        "indexName": "系统启动",
+        "order": "1"
+      },
+      {
+        "dbId": "50551",
+        "indexName": "系统启动",
+        "order": "2",
+        "cells": [
+          {
+            "id": "88948",
+            "type": "0",
+            "colIndex": "0",
+            "content": "系统启动"
+          },
+          {
+            "colIndex": "1",
+            "id": "88949",
+            "type": "0",
+            "content": "照明灯开启"
+          },
+          {
+            "colIndex": "2",
+            "type": "0",
+            "id": "88950",
+            "content": "正常启动无故障"
+          },
+          {
+            "colIndex": "3",
+            "content": "",
+            "type": "1",
+            "id": "88951"
+          },
+          {
+            "content": "",
+            "id": "88952",
+            "colIndex": "4",
+            "type": "2"
+          }
+        ]
+      },
+      {
+        "indexName": "系统启动",
+        "cells": [
+          {
+            "id": "88953",
+            "colIndex": "0",
+            "content": "系统启动",
+            "type": "0"
+          },
+          {
+            "id": "88954",
+            "colIndex": "1",
+            "type": "0",
+            "content": "开关处于初始位置"
+          },
+          {
+            "colIndex": "2",
+            "content": "正常启动无故障",
+            "id": "88955",
+            "type": "0"
+          },
+          {
+            "content": "",
+            "id": "88956",
+            "colIndex": "3",
+            "type": "1"
+          },
+          {
+            "colIndex": "4",
+            "content": "",
+            "id": "88957",
+            "type": "2"
+          }
+        ],
+        "dbId": "50552",
+        "order": "3"
+      },
+      {
+        "dbId": "50553",
+        "order": "4",
+        "indexName": "系统启动",
+        "cells": [
+          {
+            "content": "系统启动",
+            "type": "0",
+            "id": "88958",
+            "colIndex": "0"
+          },
+          {
+            "id": "88959",
+            "colIndex": "1",
+            "type": "0",
+            "content": "航控计算机和软件启动"
+          },
+          {
+            "colIndex": "2",
+            "content": "正常启动无故障",
+            "id": "88960",
+            "type": "0"
+          },
+          {
+            "type": "1",
+            "content": "",
+            "id": "88961",
+            "colIndex": "3"
+          },
+          {
+            "content": "",
+            "id": "88962",
+            "type": "2",
+            "colIndex": "4"
+          }
+        ]
+      },
+      {
+        "order": "5",
+        "cells": [
+          {
+            "content": "系统启动",
+            "type": "0",
+            "colIndex": "0",
+            "id": "88963"
+          },
+          {
+            "colIndex": "1",
+            "content": "显控计算机和软件启动",
+            "id": "88964",
+            "type": "0"
+          },
+          {
+            "id": "88965",
+            "type": "0",
+            "colIndex": "2",
+            "content": "正常启动无故障"
+          },
+          {
+            "colIndex": "3",
+            "content": "",
+            "id": "88966",
+            "type": "1"
+          },
+          {
+            "colIndex": "4",
+            "id": "88967",
+            "content": "",
+            "type": "2"
+          }
+        ],
+        "dbId": "50554",
+        "indexName": "系统启动"
+      },
+      {
+        "dbId": "50555",
+        "indexName": "系统启动",
+        "cells": [
+          {
+            "id": "88968",
+            "content": "系统启动",
+            "colIndex": "0",
+            "type": "0"
+          },
+          {
+            "content": "网络通讯状态",
+            "type": "0",
+            "colIndex": "1",
+            "id": "88969"
+          },
+          {
+            "id": "88970",
+            "content": "正常启动无故障",
+            "colIndex": "2",
+            "type": "0"
+          },
+          {
+            "type": "1",
+            "colIndex": "3",
+            "id": "88971",
+            "content": ""
+          },
+          {
+            "colIndex": "4",
+            "type": "2",
+            "id": "88972",
+            "content": ""
+          }
+        ],
+        "order": "6"
+      },
+      {
+        "dbId": "50556",
+        "cells": [
+          {
+            "type": "0",
+            "colIndex": "0",
+            "id": "88973",
+            "content": "系统启动"
+          },
+          {
+            "content": "视频控制器开启",
+            "type": "0",
+            "colIndex": "1",
+            "id": "88974"
+          },
+          {
+            "colIndex": "2",
+            "id": "88975",
+            "content": "正常启动无故障",
+            "type": "0"
+          },
+          {
+            "colIndex": "3",
+            "type": "1",
+            "content": "",
+            "id": "88976"
+          },
+          {
+            "type": "2",
+            "id": "88977",
+            "colIndex": "4",
+            "content": ""
+          }
+        ],
+        "indexName": "系统启动",
+        "order": "7"
+      },
+      {
+        "dbId": "50557",
+        "indexName": "系统启动",
+        "order": "8",
+        "cells": [
+          {
+            "colIndex": "0",
+            "type": "0",
+            "id": "88978",
+            "content": "系统启动"
+          },
+          {
+            "type": "0",
+            "colIndex": "1",
+            "content": "声学系统开启",
+            "id": "88979"
+          },
+          {
+            "content": "正常启动无故障",
+            "id": "88980",
+            "type": "0",
+            "colIndex": "2"
+          },
+          {
+            "colIndex": "3",
+            "type": "1",
+            "id": "88981",
+            "content": ""
+          },
+          {
+            "colIndex": "4",
+            "type": "2",
+            "content": "",
+            "id": "88982"
+          }
+        ]
+      },
+      {
+        "indexName": "24VDC应急电源检查",
+        "cells": [
+          {
+            "content": "24VDC应急电源检查",
+            "id": "88983",
+            "colIndex": "0",
+            "type": "0"
+          },
+          {
+            "type": "0",
+            "id": "88984",
+            "colIndex": "1",
+            "content": "电压（V）"
+          },
+          {
+            "content": "≥ 25",
+            "type": "0",
+            "id": "88985",
+            "colIndex": "2"
+          },
+          {
+            "colIndex": "3",
+            "content": "",
+            "id": "88986",
+            "type": "1"
+          },
+          {
+            "content": "",
+            "type": "2",
+            "colIndex": "4",
+            "id": "88987"
+          }
+        ],
+        "dbId": "50558",
+        "order": "9"
+      },
+      {
+        "dbId": "50559",
+        "order": "10",
+        "indexName": "左舷副电池组",
+        "cells": [
+          {
+            "type": "0",
+            "colIndex": "0",
+            "content": "左舷副电池组",
+            "id": "88988"
+          },
+          {
+            "content": "电压（V）",
+            "id": "88989",
+            "colIndex": "1",
+            "type": "0"
+          },
+          {
+            "id": "88990",
+            "type": "0",
+            "content": "≥ 25",
+            "colIndex": "2"
+          },
+          {
+            "type": "1",
+            "id": "88991",
+            "colIndex": "3",
+            "content": ""
+          },
+          {
+            "colIndex": "4",
+            "content": "",
+            "id": "88992",
+            "type": "2"
+          }
+        ]
+      },
+      {
+        "indexName": "左舷副电池组",
+        "cells": [
+          {
+            "id": "88993",
+            "colIndex": "0",
+            "content": "左舷副电池组",
+            "type": "0"
+          },
+          {
+            "content": "补偿量",
+            "id": "88994",
+            "type": "0",
+            "colIndex": "1"
+          },
+          {
+            "content": "无报警",
+            "type": "0",
+            "colIndex": "2",
+            "id": "88995"
+          },
+          {
+            "colIndex": "3",
+            "id": "88996",
+            "content": "",
+            "type": "1"
+          },
+          {
+            "content": "",
+            "id": "88997",
+            "colIndex": "4",
+            "type": "2"
+          }
+        ],
+        "dbId": "50560",
+        "order": "11"
+      },
+      {
+        "cells": [
+          {
+            "type": "0",
+            "content": "左舷副电池组",
+            "colIndex": "0",
+            "id": "88998"
+          },
+          {
+            "colIndex": "1",
+            "type": "0",
+            "content": "电量（SOC）",
+            "id": "88999"
+          },
+          {
+            "colIndex": "2",
+            "content": "---",
+            "type": "0",
+            "id": "89000"
+          },
+          {
+            "type": "1",
+            "content": "",
+            "colIndex": "3",
+            "id": "89001"
+          },
+          {
+            "colIndex": "4",
+            "content": "",
+            "id": "89002",
+            "type": "2"
+          }
+        ],
+        "order": "12",
+        "dbId": "50561",
+        "indexName": "左舷副电池组"
+      },
+      {
+        "order": "13",
+        "cells": [
+          {
+            "content": "右舷副电池组",
+            "type": "0",
+            "colIndex": "0",
+            "id": "89003"
+          },
+          {
+            "colIndex": "1",
+            "id": "89004",
+            "content": "电压（V）",
+            "type": "0"
+          },
+          {
+            "content": "≥ 25V",
+            "id": "89005",
+            "type": "0",
+            "colIndex": "2"
+          },
+          {
+            "colIndex": "3",
+            "type": "1",
+            "id": "89006",
+            "content": ""
+          },
+          {
+            "colIndex": "4",
+            "id": "89007",
+            "content": "",
+            "type": "2"
+          }
+        ],
+        "dbId": "50562",
+        "indexName": "右舷副电池组"
+      },
+      {
+        "indexName": "右舷副电池组",
+        "order": "14",
+        "cells": [
+          {
+            "type": "0",
+            "content": "右舷副电池组",
+            "id": "89008",
+            "colIndex": "0"
+          },
+          {
+            "colIndex": "1",
+            "content": "补偿量",
+            "id": "89009",
+            "type": "0"
+          },
+          {
+            "id": "89010",
+            "type": "0",
+            "colIndex": "2",
+            "content": "无报警"
+          },
+          {
+            "content": "",
+            "id": "89011",
+            "type": "1",
+            "colIndex": "3"
+          },
+          {
+            "id": "89012",
+            "content": "",
+            "type": "2",
+            "colIndex": "4"
+          }
+        ],
+        "dbId": "50563"
+      },
+      {
+        "dbId": "50564",
+        "cells": [
+          {
+            "colIndex": "0",
+            "content": "右舷副电池组",
+            "type": "0",
+            "id": "89013"
+          },
+          {
+            "id": "89014",
+            "content": "电量（SOC）",
+            "colIndex": "1",
+            "type": "0"
+          },
+          {
+            "content": "---",
+            "colIndex": "2",
+            "id": "89015",
+            "type": "0"
+          },
+          {
+            "content": "",
+            "id": "89016",
+            "colIndex": "3",
+            "type": "1"
+          },
+          {
+            "colIndex": "4",
+            "type": "2",
+            "content": "",
+            "id": "89017"
+          }
+        ],
+        "order": "15",
+        "indexName": "右舷副电池组"
+      },
+      {
+        "cells": [
+          {
+            "id": "89018",
+            "colIndex": "0",
+            "type": "0",
+            "content": "艏部主电池组"
+          },
+          {
+            "colIndex": "1",
+            "id": "89019",
+            "type": "0",
+            "content": "电压（V）"
+          },
+          {
+            "content": "≥ 110V",
+            "id": "89020",
+            "colIndex": "2",
+            "type": "0"
+          },
+          {
+            "colIndex": "3",
+            "content": "",
+            "id": "89021",
+            "type": "1"
+          },
+          {
+            "content": "",
+            "type": "2",
+            "id": "89022",
+            "colIndex": "4"
+          }
+        ],
+        "order": "16",
+        "indexName": "艏部主电池组",
+        "dbId": "50565"
+      },
+      {
+        "order": "17",
+        "indexName": "艏部主电池组",
+        "dbId": "50566",
+        "cells": [
+          {
+            "type": "0",
+            "content": "艏部主电池组",
+            "colIndex": "0",
+            "id": "89023"
+          },
+          {
+            "content": "补偿量",
+            "id": "89024",
+            "type": "0",
+            "colIndex": "1"
+          },
+          {
+            "content": "无报警",
+            "type": "0",
+            "id": "89025",
+            "colIndex": "2"
+          },
+          {
+            "type": "1",
+            "content": "",
+            "colIndex": "3",
+            "id": "89026"
+          },
+          {
+            "type": "2",
+            "colIndex": "4",
+            "content": "",
+            "id": "89027"
+          }
+        ]
+      },
+      {
+        "indexName": "艏部主电池组",
+        "order": "18",
+        "dbId": "50567",
+        "cells": [
+          {
+            "type": "0",
+            "colIndex": "0",
+            "id": "89028",
+            "content": "艏部主电池组"
+          },
+          {
+            "content": "电量（SOC）",
+            "id": "89029",
+            "colIndex": "1",
+            "type": "0"
+          },
+          {
+            "content": "---",
+            "colIndex": "2",
+            "id": "89030",
+            "type": "0"
+          },
+          {
+            "type": "1",
+            "id": "89031",
+            "colIndex": "3",
+            "content": ""
+          },
+          {
+            "colIndex": "4",
+            "id": "89032",
+            "content": "",
+            "type": "2"
+          }
+        ]
+      },
+      {
+        "indexName": "艉部主电池组",
+        "cells": [
+          {
+            "content": "艉部主电池组",
+            "type": "0",
+            "colIndex": "0",
+            "id": "89033"
+          },
+          {
+            "content": "电压（V）",
+            "type": "0",
+            "id": "89034",
+            "colIndex": "1"
+          },
+          {
+            "type": "0",
+            "content": "≥ 110V",
+            "colIndex": "2",
+            "id": "89035"
+          },
+          {
+            "colIndex": "3",
+            "content": "",
+            "type": "1",
+            "id": "89036"
+          },
+          {
+            "colIndex": "4",
+            "content": "",
+            "id": "89037",
+            "type": "2"
+          }
+        ],
+        "dbId": "50568",
+        "order": "19"
+      },
+      {
+        "cells": [
+          {
+            "content": "艉部主电池组",
+            "id": "89038",
+            "type": "0",
+            "colIndex": "0"
+          },
+          {
+            "colIndex": "1",
+            "id": "89039",
+            "content": "补偿量",
+            "type": "0"
+          },
+          {
+            "id": "89040",
+            "colIndex": "2",
+            "content": "无报警",
+            "type": "0"
+          },
+          {
+            "colIndex": "3",
+            "content": "",
+            "id": "89041",
+            "type": "1"
+          },
+          {
+            "type": "2",
+            "id": "89042",
+            "colIndex": "4",
+            "content": ""
+          }
+        ],
+        "indexName": "艉部主电池组",
+        "dbId": "50569",
+        "order": "20"
+      },
+      {
+        "indexName": "艉部主电池组",
+        "dbId": "50570",
+        "cells": [
+          {
+            "id": "89043",
+            "type": "0",
+            "colIndex": "0",
+            "content": "艉部主电池组"
+          },
+          {
+            "id": "89044",
+            "content": "电量（SOC）",
+            "colIndex": "1",
+            "type": "0"
+          },
+          {
+            "id": "89045",
+            "content": "---",
+            "colIndex": "2",
+            "type": "0"
+          },
+          {
+            "type": "1",
+            "id": "89046",
+            "content": "",
+            "colIndex": "3"
+          },
+          {
+            "content": "",
+            "type": "2",
+            "colIndex": "4",
+            "id": "89047"
+          }
+        ],
+        "order": "21"
+      },
+      {
+        "dbId": "50571",
+        "order": "22",
+        "indexName": "生命支持",
+        "cells": [
+          {
+            "content": "生命支持",
+            "id": "89048",
+            "type": "0",
+            "colIndex": "0"
+          },
+          {
+            "colIndex": "1",
+            "id": "89049",
+            "type": "0",
+            "content": "正常氧源压力"
+          },
+          {
+            "colIndex": "2",
+            "type": "0",
+            "id": "89050",
+            "content": "≥ 10"
+          },
+          {
+            "type": "1",
+            "id": "89051",
+            "colIndex": "3",
+            "content": ""
+          },
+          {
+            "type": "2",
+            "colIndex": "4",
+            "id": "89052",
+            "content": ""
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "id": "89053",
+            "type": "0",
+            "colIndex": "0",
+            "content": "生命支持"
+          },
+          {
+            "id": "89054",
+            "colIndex": "1",
+            "type": "0",
+            "content": "应急氧源压力"
+          },
+          {
+            "content": "≥ 10",
+            "type": "0",
+            "colIndex": "2",
+            "id": "89055"
+          },
+          {
+            "type": "1",
+            "colIndex": "3",
+            "content": "",
+            "id": "89056"
+          },
+          {
+            "type": "2",
+            "colIndex": "4",
+            "content": "",
+            "id": "89057"
+          }
+        ],
+        "dbId": "50572",
+        "order": "23",
+        "indexName": "生命支持"
+      },
+      {
+        "indexName": "生命支持",
+        "order": "24",
+        "cells": [
+          {
+            "content": "生命支持",
+            "type": "0",
+            "id": "89058",
+            "colIndex": "0"
+          },
+          {
+            "id": "89059",
+            "content": "空气瓶压力",
+            "type": "0",
+            "colIndex": "1"
+          },
+          {
+            "content": "≥ 10",
+            "colIndex": "2",
+            "id": "89060",
+            "type": "0"
+          },
+          {
+            "colIndex": "3",
+            "id": "89061",
+            "content": "",
+            "type": "1"
+          },
+          {
+            "content": "",
+            "colIndex": "4",
+            "type": "2",
+            "id": "89062"
+          }
+        ],
+        "dbId": "50573"
+      },
+      {
+        "cells": [
+          {
+            "type": "0",
+            "id": "89063",
+            "colIndex": "0",
+            "content": "生命支持"
+          },
+          {
+            "colIndex": "1",
+            "type": "0",
+            "id": "89064",
+            "content": "闭式呼吸氧源压力"
+          },
+          {
+            "content": "≥ 10",
+            "colIndex": "2",
+            "id": "89065",
+            "type": "0"
+          },
+          {
+            "colIndex": "3",
+            "type": "1",
+            "id": "89066",
+            "content": ""
+          },
+          {
+            "content": "",
+            "colIndex": "4",
+            "id": "89067",
+            "type": "2"
+          }
+        ],
+        "indexName": "生命支持",
+        "order": "25",
+        "dbId": "50574"
+      },
+      {
+        "indexName": "生命支持",
+        "cells": [
+          {
+            "id": "89068",
+            "type": "0",
+            "colIndex": "0",
+            "content": "生命支持"
+          },
+          {
+            "type": "0",
+            "id": "89069",
+            "colIndex": "1",
+            "content": "闭式呼吸空气瓶压力"
+          },
+          {
+            "content": "≥ 10",
+            "id": "89070",
+            "colIndex": "2",
+            "type": "0"
+          },
+          {
+            "colIndex": "3",
+            "id": "89071",
+            "content": "",
+            "type": "1"
+          },
+          {
+            "id": "89072",
+            "type": "2",
+            "content": "",
+            "colIndex": "4"
+          }
+        ],
+        "dbId": "50575",
+        "order": "26"
+      },
+      {
+        "dbId": "50576",
+        "cells": [
+          {
+            "type": "0",
+            "colIndex": "0",
+            "id": "89073",
+            "content": "生命支持"
+          },
+          {
+            "type": "0",
+            "colIndex": "1",
+            "content": "氧浓度1",
+            "id": "89074"
+          },
+          {
+            "colIndex": "2",
+            "type": "0",
+            "content": "≥ 10",
+            "id": "89075"
+          },
+          {
+            "colIndex": "3",
+            "id": "89076",
+            "content": "",
+            "type": "1"
+          },
+          {
+            "colIndex": "4",
+            "content": "",
+            "type": "2",
+            "id": "89077"
+          }
+        ],
+        "order": "27",
+        "indexName": "生命支持"
+      },
+      {
+        "order": "28",
+        "cells": [
+          {
+            "type": "0",
+            "content": "生命支持",
+            "id": "89078",
+            "colIndex": "0"
+          },
+          {
+            "colIndex": "1",
+            "type": "0",
+            "content": "氧浓度2",
+            "id": "89079"
+          },
+          {
+            "id": "89080",
+            "colIndex": "2",
+            "content": "≥ 10",
+            "type": "0"
+          },
+          {
+            "content": "",
+            "colIndex": "3",
+            "id": "89081",
+            "type": "1"
+          },
+          {
+            "content": "",
+            "colIndex": "4",
+            "id": "89082",
+            "type": "2"
+          }
+        ],
+        "indexName": "生命支持",
+        "dbId": "50577"
+      },
+      {
+        "dbId": "50578",
+        "order": "29",
+        "indexName": "生命支持",
+        "cells": [
+          {
+            "colIndex": "0",
+            "id": "89083",
+            "type": "0",
+            "content": "生命支持"
+          },
+          {
+            "type": "0",
+            "colIndex": "1",
+            "id": "89084",
+            "content": "二氧化碳1浓度"
+          },
+          {
+            "colIndex": "2",
+            "content": "≥ 10",
+            "id": "89085",
+            "type": "0"
+          },
+          {
+            "colIndex": "3",
+            "content": "",
+            "id": "89086",
+            "type": "1"
+          },
+          {
+            "colIndex": "4",
+            "type": "2",
+            "id": "89087",
+            "content": ""
+          }
+        ]
+      },
+      {
+        "indexName": "生命支持",
+        "order": "30",
+        "cells": [
+          {
+            "colIndex": "0",
+            "type": "0",
+            "content": "生命支持",
+            "id": "89088"
+          },
+          {
+            "content": "二氧化碳2浓度",
+            "colIndex": "1",
+            "id": "89089",
+            "type": "0"
+          },
+          {
+            "content": "≥ 10",
+            "colIndex": "2",
+            "type": "0",
+            "id": "89090"
+          },
+          {
+            "colIndex": "3",
+            "id": "89091",
+            "content": "",
+            "type": "1"
+          },
+          {
+            "id": "89092",
+            "content": "",
+            "colIndex": "4",
+            "type": "2"
+          }
+        ],
+        "dbId": "50579"
+      },
+      {
+        "dbId": "50580",
+        "cells": [
+          {
+            "colIndex": "0",
+            "type": "0",
+            "content": "生命支持",
+            "id": "89093"
+          },
+          {
+            "type": "0",
+            "colIndex": "1",
+            "content": "湿度",
+            "id": "89094"
+          },
+          {
+            "colIndex": "2",
+            "type": "0",
+            "content": "---",
+            "id": "89095"
+          },
+          {
+            "type": "1",
+            "content": "",
+            "colIndex": "3",
+            "id": "89096"
+          },
+          {
+            "colIndex": "4",
+            "content": "",
+            "id": "89097",
+            "type": "2"
+          }
+        ],
+        "order": "31",
+        "indexName": "生命支持"
+      },
+      {
+        "cells": [
+          {
+            "type": "0",
+            "content": "生命支持",
+            "id": "89098",
+            "colIndex": "0"
+          },
+          {
+            "colIndex": "1",
+            "content": "舱内压力",
+            "type": "0",
+            "id": "89099"
+          },
+          {
+            "id": "89100",
+            "type": "0",
+            "colIndex": "2",
+            "content": "---"
+          },
+          {
+            "content": "",
+            "id": "89101",
+            "colIndex": "3",
+            "type": "1"
+          },
+          {
+            "type": "2",
+            "content": "",
+            "id": "89102",
+            "colIndex": "4"
+          }
+        ],
+        "order": "32",
+        "indexName": "生命支持",
+        "dbId": "50581"
+      },
+      {
+        "cells": [
+          {
+            "id": "89103",
+            "colIndex": "0",
+            "content": "生命支持",
+            "type": "0"
+          },
+          {
+            "content": "温度",
+            "type": "0",
+            "colIndex": "1",
+            "id": "89104"
+          },
+          {
+            "colIndex": "2",
+            "content": "---",
+            "type": "0",
+            "id": "89105"
+          },
+          {
+            "colIndex": "3",
+            "id": "89106",
+            "type": "1",
+            "content": ""
+          },
+          {
+            "type": "2",
+            "content": "",
+            "id": "89107",
+            "colIndex": "4"
+          }
+        ],
+        "indexName": "生命支持",
+        "order": "33",
+        "dbId": "50582"
+      },
+      {
+        "order": "34",
+        "cells": [
+          {
+            "content": "生命支持",
+            "type": "0",
+            "colIndex": "0",
+            "id": "89108"
+          },
+          {
+            "content": "与控制系统通讯",
+            "type": "0",
+            "id": "89109",
+            "colIndex": "1"
+          },
+          {
+            "colIndex": "2",
+            "type": "0",
+            "id": "89110",
+            "content": "通讯正常"
+          },
+          {
+            "type": "1",
+            "colIndex": "3",
+            "content": "",
+            "id": "89111"
+          },
+          {
+            "content": "",
+            "id": "89112",
+            "colIndex": "4",
+            "type": "2"
+          }
+        ],
+        "dbId": "50583",
+        "indexName": "生命支持"
+      },
+      {
+        "cells": [
+          {
+            "type": "0",
+            "colIndex": "0",
+            "content": "可调压载水仓",
+            "id": "89113"
+          },
+          {
+            "colIndex": "1",
+            "id": "89114",
+            "content": "水位体积（L）",
+            "type": "0"
+          },
+          {
+            "type": "0",
+            "content": "---",
+            "id": "89115",
+            "colIndex": "2"
+          },
+          {
+            "content": "",
+            "type": "1",
+            "id": "89116",
+            "colIndex": "3"
+          },
+          {
+            "content": "",
+            "colIndex": "4",
+            "id": "89117",
+            "type": "2"
+          }
+        ],
+        "dbId": "50584",
+        "order": "35",
+        "indexName": "可调压载水仓"
+      },
+      {
+        "cells": [
+          {
+            "colIndex": "0",
+            "id": "89118",
+            "content": "纵倾液位",
+            "type": "0"
+          },
+          {
+            "type": "0",
+            "colIndex": "1",
+            "content": "艏部水银体积（L）",
+            "id": "89119"
+          },
+          {
+            "id": "89120",
+            "colIndex": "2",
+            "content": "---",
+            "type": "0"
+          },
+          {
+            "content": "",
+            "id": "89121",
+            "colIndex": "3",
+            "type": "1"
+          },
+          {
+            "content": "",
+            "type": "2",
+            "colIndex": "4",
+            "id": "89122"
+          }
+        ],
+        "dbId": "50585",
+        "order": "36",
+        "indexName": "纵倾液位"
+      },
+      {
+        "cells": [
+          {
+            "content": "纵倾液位",
+            "colIndex": "0",
+            "id": "89123",
+            "type": "0"
+          },
+          {
+            "content": "艉部水银体积（L）",
+            "id": "89124",
+            "type": "0",
+            "colIndex": "1"
+          },
+          {
+            "content": "---",
+            "colIndex": "2",
+            "id": "89125",
+            "type": "0"
+          },
+          {
+            "colIndex": "3",
+            "id": "89126",
+            "content": "",
+            "type": "1"
+          },
+          {
+            "content": "",
+            "colIndex": "4",
+            "id": "89127",
+            "type": "2"
+          }
+        ],
+        "dbId": "50586",
+        "order": "37",
+        "indexName": "纵倾液位"
+      },
+      {
+        "dbId": "50587",
+        "order": "38",
+        "cells": [
+          {
+            "colIndex": "0",
+            "content": "补偿器",
+            "id": "89128",
+            "type": "0"
+          },
+          {
+            "type": "0",
+            "content": "动力接线箱补偿量",
+            "colIndex": "1",
+            "id": "89129"
+          },
+          {
+            "content": "---",
+            "id": "89130",
+            "colIndex": "2",
+            "type": "0"
+          },
+          {
+            "type": "1",
+            "id": "89131",
+            "content": "",
+            "colIndex": "3"
+          },
+          {
+            "id": "89132",
+            "colIndex": "4",
+            "type": "2",
+            "content": ""
+          }
+        ],
+        "indexName": "补偿器"
+      },
+      {
+        "dbId": "50588",
+        "indexName": "补偿器",
+        "order": "39",
+        "cells": [
+          {
+            "colIndex": "0",
+            "content": "补偿器",
+            "id": "89133",
+            "type": "0"
+          },
+          {
+            "id": "89134",
+            "type": "0",
+            "colIndex": "1",
+            "content": "观通接线箱补偿量"
+          },
+          {
+            "content": "---",
+            "type": "0",
+            "colIndex": "2",
+            "id": "89135"
+          },
+          {
+            "colIndex": "3",
+            "type": "1",
+            "id": "89136",
+            "content": ""
+          },
+          {
+            "colIndex": "4",
+            "content": "",
+            "id": "89137",
+            "type": "2"
+          }
+        ]
+      },
+      {
+        "indexName": "补偿器",
+        "order": "40",
+        "cells": [
+          {
+            "id": "89138",
+            "content": "补偿器",
+            "colIndex": "0",
+            "type": "0"
+          },
+          {
+            "id": "89139",
+            "colIndex": "1",
+            "content": "传感器+声学副接线箱补偿量",
+            "type": "0"
+          },
+          {
+            "colIndex": "2",
+            "id": "89140",
+            "content": "---",
+            "type": "0"
+          },
+          {
+            "type": "1",
+            "colIndex": "3",
+            "id": "89141",
+            "content": ""
+          },
+          {
+            "colIndex": "4",
+            "content": "",
+            "id": "89142",
+            "type": "2"
+          }
+        ],
+        "dbId": "50589"
+      },
+      {
+        "indexName": "补偿器",
+        "cells": [
+          {
+            "colIndex": "0",
+            "content": "补偿器",
+            "type": "0",
+            "id": "89143"
+          },
+          {
+            "type": "0",
+            "colIndex": "1",
+            "id": "89144",
+            "content": "声学主接线箱补偿量"
+          },
+          {
+            "id": "89145",
+            "type": "0",
+            "colIndex": "2",
+            "content": "---"
+          },
+          {
+            "id": "89146",
+            "colIndex": "3",
+            "content": "",
+            "type": "1"
+          },
+          {
+            "colIndex": "4",
+            "content": "",
+            "type": "2",
+            "id": "89147"
+          }
+        ],
+        "order": "41",
+        "dbId": "50590"
+      },
+      {
+        "cells": [
+          {
+            "content": "补偿器",
+            "id": "89148",
+            "type": "0",
+            "colIndex": "0"
+          },
+          {
+            "content": "主液压阀箱补偿量",
+            "id": "89149",
+            "colIndex": "1",
+            "type": "0"
+          },
+          {
+            "id": "89150",
+            "type": "0",
+            "colIndex": "2",
+            "content": "---"
+          },
+          {
+            "content": "",
+            "type": "1",
+            "colIndex": "3",
+            "id": "89151"
+          },
+          {
+            "content": "",
+            "type": "2",
+            "id": "89152",
+            "colIndex": "4"
+          }
+        ],
+        "dbId": "50591",
+        "indexName": "补偿器",
+        "order": "42"
+      },
+      {
+        "cells": [
+          {
+            "type": "0",
+            "colIndex": "0",
+            "id": "89153",
+            "content": "补偿器"
+          },
+          {
+            "type": "0",
+            "colIndex": "1",
+            "id": "89154",
+            "content": "副液压阀箱补偿量"
+          },
+          {
+            "colIndex": "2",
+            "content": "---",
+            "id": "89155",
+            "type": "0"
+          },
+          {
+            "type": "1",
+            "content": "",
+            "colIndex": "3",
+            "id": "89156"
+          },
+          {
+            "colIndex": "4",
+            "content": "",
+            "type": "2",
+            "id": "89157"
+          }
+        ],
+        "dbId": "50592",
+        "indexName": "补偿器",
+        "order": "43"
+      },
+      {
+        "order": "44",
+        "cells": [
+          {
+            "content": "补偿器",
+            "id": "89158",
+            "colIndex": "0",
+            "type": "0"
+          },
+          {
+            "type": "0",
+            "colIndex": "1",
+            "content": "应急液压阀箱补偿量",
+            "id": "89159"
+          },
+          {
+            "type": "0",
+            "id": "89160",
+            "colIndex": "2",
+            "content": "---"
+          },
+          {
+            "content": "",
+            "id": "89161",
+            "type": "1",
+            "colIndex": "3"
+          },
+          {
+            "type": "2",
+            "content": "",
+            "id": "89162",
+            "colIndex": "4"
+          }
+        ],
+        "dbId": "50593",
+        "indexName": "补偿器"
+      },
+      {
+        "indexName": "补偿器",
+        "order": "45",
+        "cells": [
+          {
+            "content": "补偿器",
+            "colIndex": "0",
+            "type": "0",
+            "id": "89163"
+          },
+          {
+            "colIndex": "1",
+            "content": "纵倾阀箱补偿量",
+            "type": "0",
+            "id": "89164"
+          },
+          {
+            "colIndex": "2",
+            "content": "---",
+            "id": "89165",
+            "type": "0"
+          },
+          {
+            "colIndex": "3",
+            "type": "1",
+            "content": "",
+            "id": "89166"
+          },
+          {
+            "type": "2",
+            "content": "",
+            "id": "89167",
+            "colIndex": "4"
+          }
+        ],
+        "dbId": "50594"
+      },
+      {
+        "cells": [
+          {
+            "content": "同步时钟",
+            "type": "0",
+            "colIndex": "0",
+            "id": "89168"
+          },
+          {
+            "colIndex": "1",
+            "id": "89169",
+            "type": "0",
+            "content": "启动"
+          },
+          {
+            "type": "0",
+            "colIndex": "2",
+            "content": "正常间歇响声",
+            "id": "89170"
+          },
+          {
+            "colIndex": "3",
+            "type": "1",
+            "content": "",
+            "id": "89171"
+          },
+          {
+            "content": "",
+            "colIndex": "4",
+            "type": "2",
+            "id": "89172"
+          }
+        ],
+        "order": "46",
+        "indexName": "同步时钟",
+        "dbId": "50595"
+      },
+      {
+        "indexName": "左云台",
+        "dbId": "50596",
+        "cells": [
+          {
+            "id": "89173",
+            "colIndex": "0",
+            "type": "0",
+            "content": "左云台"
+          },
+          {
+            "content": "转动",
+            "colIndex": "1",
+            "type": "0",
+            "id": "89174"
+          },
+          {
+            "colIndex": "2",
+            "content": "正常",
+            "id": "89175",
+            "type": "0"
+          },
+          {
+            "id": "89176",
+            "content": "",
+            "colIndex": "3",
+            "type": "1"
+          },
+          {
+            "colIndex": "4",
+            "id": "89177",
+            "type": "2",
+            "content": ""
+          }
+        ],
+        "order": "47"
+      },
+      {
+        "cells": [
+          {
+            "id": "89178",
+            "content": "右云台",
+            "type": "0",
+            "colIndex": "0"
+          },
+          {
+            "colIndex": "1",
+            "id": "89179",
+            "content": "转动",
+            "type": "0"
+          },
+          {
+            "type": "0",
+            "colIndex": "2",
+            "id": "89180",
+            "content": "正常"
+          },
+          {
+            "id": "89181",
+            "colIndex": "3",
+            "type": "1",
+            "content": ""
+          },
+          {
+            "colIndex": "4",
+            "id": "89182",
+            "content": "",
+            "type": "2"
+          }
+        ],
+        "order": "48",
+        "dbId": "50597",
+        "indexName": "右云台"
+      },
+      {
+        "dbId": "50598",
+        "order": "49",
+        "cells": [
+          {
+            "id": "89183",
+            "content": "云台照相机+闪光灯",
+            "colIndex": "0",
+            "type": "0"
+          },
+          {
+            "id": "89184",
+            "content": "拍摄一张照片",
+            "colIndex": "1",
+            "type": "0"
+          },
+          {
+            "content": "---",
+            "type": "0",
+            "id": "89185",
+            "colIndex": "2"
+          },
+          {
+            "content": "",
+            "type": "1",
+            "colIndex": "3",
+            "id": "89186"
+          },
+          {
+            "content": "",
+            "colIndex": "4",
+            "type": "2",
+            "id": "89187"
+          }
+        ],
+        "indexName": "云台照相机+闪光灯"
+      },
+      {
+        "order": "50",
+        "cells": [
+          {
+            "type": "0",
+            "id": "89188",
+            "colIndex": "0",
+            "content": "底部照相机+闪光灯"
+          },
+          {
+            "content": "拍摄一张照片",
+            "colIndex": "1",
+            "id": "89189",
+            "type": "0"
+          },
+          {
+            "colIndex": "2",
+            "id": "89190",
+            "type": "0",
+            "content": "---"
+          },
+          {
+            "id": "89191",
+            "content": "",
+            "type": "1",
+            "colIndex": "3"
+          },
+          {
+            "colIndex": "4",
+            "id": "89192",
+            "content": "",
+            "type": "2"
+          }
+        ],
+        "indexName": "底部照相机+闪光灯",
+        "dbId": "50599"
+      },
+      {
+        "dbId": "50600",
+        "indexName": "云台高清",
+        "cells": [
+          {
+            "content": "云台高清",
+            "type": "0",
+            "id": "89193",
+            "colIndex": "0"
+          },
+          {
+            "colIndex": "1",
+            "id": "89194",
+            "content": "开启查看视频",
+            "type": "0"
+          },
+          {
+            "id": "89195",
+            "colIndex": "2",
+            "type": "0",
+            "content": "---"
+          },
+          {
+            "id": "89196",
+            "colIndex": "3",
+            "type": "1",
+            "content": ""
+          },
+          {
+            "colIndex": "4",
+            "content": "",
+            "type": "2",
+            "id": "89197"
+          }
+        ],
+        "order": "51"
+      },
+      {
+        "order": "52",
+        "cells": [
+          {
+            "content": "左右舷高清",
+            "type": "0",
+            "colIndex": "0",
+            "id": "89198"
+          },
+          {
+            "colIndex": "1",
+            "id": "89199",
+            "type": "0",
+            "content": "开启查看视频"
+          },
+          {
+            "type": "0",
+            "content": "---",
+            "id": "89200",
+            "colIndex": "2"
+          },
+          {
+            "colIndex": "3",
+            "id": "89201",
+            "content": "",
+            "type": "1"
+          },
+          {
+            "type": "2",
+            "content": "",
+            "colIndex": "4",
+            "id": "89202"
+          }
+        ],
+        "indexName": "左右舷高清",
+        "dbId": "50601"
+      },
+      {
+        "indexName": "微光",
+        "cells": [
+          {
+            "colIndex": "0",
+            "content": "微光",
+            "type": "0",
+            "id": "89203"
+          },
+          {
+            "type": "0",
+            "content": "开启查看视频",
+            "colIndex": "1",
+            "id": "89204"
+          },
+          {
+            "content": "---",
+            "colIndex": "2",
+            "id": "89205",
+            "type": "0"
+          },
+          {
+            "content": "",
+            "id": "89206",
+            "type": "1",
+            "colIndex": "3"
+          },
+          {
+            "id": "89207",
+            "content": "",
+            "type": "2",
+            "colIndex": "4"
+          }
+        ],
+        "dbId": "50602",
+        "order": "53"
+      },
+      {
+        "cells": [
+          {
+            "colIndex": "0",
+            "id": "89208",
+            "content": "尾部摄像机",
+            "type": "0"
+          },
+          {
+            "id": "89209",
+            "type": "0",
+            "colIndex": "1",
+            "content": "开启查看视频"
+          },
+          {
+            "content": "---",
+            "id": "89210",
+            "colIndex": "2",
+            "type": "0"
+          },
+          {
+            "colIndex": "3",
+            "content": "",
+            "type": "1",
+            "id": "89211"
+          },
+          {
+            "id": "89212",
+            "content": "",
+            "type": "2",
+            "colIndex": "4"
+          }
+        ],
+        "order": "54",
+        "indexName": "尾部摄像机",
+        "dbId": "50603"
+      },
+      {
+        "order": "55",
+        "cells": [
+          {
+            "type": "0",
+            "colIndex": "0",
+            "content": "视频录像",
+            "id": "89213"
+          },
+          {
+            "colIndex": "1",
+            "content": "录像",
+            "id": "89214",
+            "type": "0"
+          },
+          {
+            "colIndex": "2",
+            "type": "0",
+            "content": "正常",
+            "id": "89215"
+          },
+          {
+            "type": "1",
+            "content": "",
+            "id": "89216",
+            "colIndex": "3"
+          },
+          {
+            "id": "89217",
+            "content": "",
+            "type": "2",
+            "colIndex": "4"
+          }
+        ],
+        "dbId": "50604",
+        "indexName": "视频录像"
+      },
+      {
+        "indexName": "激光笔",
+        "order": "56",
+        "dbId": "50605",
+        "cells": [
+          {
+            "id": "89218",
+            "type": "0",
+            "colIndex": "0",
+            "content": "激光笔"
+          },
+          {
+            "id": "89219",
+            "type": "0",
+            "colIndex": "1",
+            "content": "开启"
+          },
+          {
+            "colIndex": "2",
+            "id": "89220",
+            "type": "0",
+            "content": "正常"
+          },
+          {
+            "colIndex": "3",
+            "type": "1",
+            "id": "89221",
+            "content": ""
+          },
+          {
+            "id": "89222",
+            "colIndex": "4",
+            "type": "2",
+            "content": ""
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "id": "89223",
+            "type": "0",
+            "colIndex": "0",
+            "content": "终止下潜抛弃电磁铁"
+          },
+          {
+            "content": "吸合",
+            "id": "89224",
+            "colIndex": "1",
+            "type": "0"
+          },
+          {
+            "id": "89225",
+            "type": "0",
+            "colIndex": "2",
+            "content": "---"
+          },
+          {
+            "content": "",
+            "id": "89226",
+            "colIndex": "3",
+            "type": "1"
+          },
+          {
+            "colIndex": "4",
+            "content": "",
+            "id": "89227",
+            "type": "2"
+          }
+        ],
+        "dbId": "50606",
+        "indexName": "终止下潜抛弃电磁铁",
+        "order": "57"
+      },
+      {
+        "cells": [
+          {
+            "type": "0",
+            "content": "上浮抛弃电磁铁",
+            "colIndex": "0",
+            "id": "89228"
+          },
+          {
+            "colIndex": "1",
+            "type": "0",
+            "id": "89229",
+            "content": "吸合"
+          },
+          {
+            "id": "89230",
+            "type": "0",
+            "content": "---",
+            "colIndex": "2"
+          },
+          {
+            "content": "",
+            "id": "89231",
+            "colIndex": "3",
+            "type": "1"
+          },
+          {
+            "colIndex": "4",
+            "id": "89232",
+            "content": "",
+            "type": "2"
+          }
+        ],
+        "dbId": "50607",
+        "indexName": "上浮抛弃电磁铁",
+        "order": "58"
+      },
+      {
+        "cells": [
+          {
+            "colIndex": "0",
+            "id": "89233",
+            "content": "LED组1，2，3，4",
+            "type": "0"
+          },
+          {
+            "id": "89234",
+            "type": "0",
+            "colIndex": "1",
+            "content": "短暂启动并关闭"
+          },
+          {
+            "type": "0",
+            "id": "89235",
+            "colIndex": "2",
+            "content": "点亮"
+          },
+          {
+            "colIndex": "3",
+            "content": "",
+            "type": "1",
+            "id": "89236"
+          },
+          {
+            "colIndex": "4",
+            "type": "2",
+            "id": "89237",
+            "content": ""
+          }
+        ],
+        "order": "59",
+        "indexName": "LED组1，2，3，4",
+        "dbId": "50608"
+      },
+      {
+        "dbId": "50609",
+        "order": "60",
+        "indexName": "6只HMI灯",
+        "cells": [
+          {
+            "colIndex": "0",
+            "type": "0",
+            "content": "6只HMI灯",
+            "id": "89238"
+          },
+          {
+            "content": "短暂启动并关闭",
+            "colIndex": "1",
+            "id": "89239",
+            "type": "0"
+          },
+          {
+            "type": "0",
+            "id": "89240",
+            "colIndex": "2",
+            "content": "点亮"
+          },
+          {
+            "colIndex": "3",
+            "content": "",
+            "type": "1",
+            "id": "89241"
+          },
+          {
+            "id": "89242",
+            "type": "2",
+            "colIndex": "4",
+            "content": ""
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "id": "89243",
+            "type": "0",
+            "colIndex": "0",
+            "content": "底部灯阵"
+          },
+          {
+            "id": "89244",
+            "content": "短暂启动并关闭",
+            "type": "0",
+            "colIndex": "1"
+          },
+          {
+            "content": "点亮",
+            "id": "89245",
+            "type": "0",
+            "colIndex": "2"
+          },
+          {
+            "colIndex": "3",
+            "type": "1",
+            "content": "",
+            "id": "89246"
+          },
+          {
+            "id": "89247",
+            "colIndex": "4",
+            "content": "",
+            "type": "2"
+          }
+        ],
+        "indexName": "底部灯阵",
+        "order": "61",
+        "dbId": "50610"
+      },
+      {
+        "indexName": "尾部灯",
+        "cells": [
+          {
+            "id": "89248",
+            "type": "0",
+            "content": "尾部灯",
+            "colIndex": "0"
+          },
+          {
+            "type": "0",
+            "id": "89249",
+            "content": "短暂启动并关闭",
+            "colIndex": "1"
+          },
+          {
+            "type": "0",
+            "content": "点亮",
+            "id": "89250",
+            "colIndex": "2"
+          },
+          {
+            "id": "89251",
+            "type": "1",
+            "colIndex": "3",
+            "content": ""
+          },
+          {
+            "colIndex": "4",
+            "content": "",
+            "id": "89252",
+            "type": "2"
+          }
+        ],
+        "dbId": "50611",
+        "order": "62"
+      },
+      {
+        "indexName": "推进器检查",
+        "cells": [
+          {
+            "content": "推进器检查",
+            "id": "89253",
+            "type": "0",
+            "colIndex": "0"
+          },
+          {
+            "colIndex": "1",
+            "type": "0",
+            "content": "前进",
+            "id": "89254"
+          },
+          {
+            "colIndex": "2",
+            "content": "左右艉主推同时正转，转速和电流反馈正确",
+            "type": "0",
+            "id": "89255"
+          },
+          {
+            "id": "89256",
+            "colIndex": "3",
+            "content": "",
+            "type": "1"
+          },
+          {
+            "colIndex": "4",
+            "content": "",
+            "id": "89257",
+            "type": "2"
+          }
+        ],
+        "dbId": "50612",
+        "order": "63"
+      },
+      {
+        "dbId": "50613",
+        "order": "64",
+        "indexName": "推进器检查",
+        "cells": [
+          {
+            "colIndex": "0",
+            "content": "推进器检查",
+            "id": "89258",
+            "type": "0"
+          },
+          {
+            "colIndex": "1",
+            "content": "后退",
+            "id": "89259",
+            "type": "0"
+          },
+          {
+            "id": "89260",
+            "type": "0",
+            "content": "左右艉主推同时反转，转速和电流反馈正确",
+            "colIndex": "2"
+          },
+          {
+            "id": "89261",
+            "content": "",
+            "colIndex": "3",
+            "type": "1"
+          },
+          {
+            "type": "2",
+            "colIndex": "4",
+            "id": "89262",
+            "content": ""
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "content": "推进器检查",
+            "colIndex": "0",
+            "id": "89263",
+            "type": "0"
+          },
+          {
+            "colIndex": "1",
+            "content": "左移",
+            "id": "89264",
+            "type": "0"
+          },
+          {
+            "id": "89265",
+            "colIndex": "2",
+            "type": "0",
+            "content": "左艉主推正转，右艉主推反转，艏侧推反转，转速和电流反馈正确"
+          },
+          {
+            "content": "",
+            "type": "1",
+            "colIndex": "3",
+            "id": "89266"
+          },
+          {
+            "content": "",
+            "id": "89267",
+            "colIndex": "4",
+            "type": "2"
+          }
+        ],
+        "dbId": "50614",
+        "order": "65",
+        "indexName": "推进器检查"
+      },
+      {
+        "indexName": "推进器检查",
+        "order": "66",
+        "dbId": "50615",
+        "cells": [
+          {
+            "colIndex": "0",
+            "id": "89268",
+            "content": "推进器检查",
+            "type": "0"
+          },
+          {
+            "colIndex": "1",
+            "id": "89269",
+            "content": "右移",
+            "type": "0"
+          },
+          {
+            "type": "0",
+            "id": "89270",
+            "colIndex": "2",
+            "content": "左艉主推反转，右艉主推正转，艏侧推正转，转速和电流反馈正确"
+          },
+          {
+            "id": "89271",
+            "type": "1",
+            "colIndex": "3",
+            "content": ""
+          },
+          {
+            "type": "2",
+            "content": "",
+            "colIndex": "4",
+            "id": "89272"
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "colIndex": "0",
+            "id": "89273",
+            "type": "0",
+            "content": "推进器检查"
+          },
+          {
+            "id": "89274",
+            "colIndex": "1",
+            "content": "左转",
+            "type": "0"
+          },
+          {
+            "id": "89275",
+            "type": "0",
+            "colIndex": "2",
+            "content": "左右艉主推错车运转，转速和电流反馈正确"
+          },
+          {
+            "content": "",
+            "type": "1",
+            "colIndex": "3",
+            "id": "89276"
+          },
+          {
+            "type": "2",
+            "content": "",
+            "colIndex": "4",
+            "id": "89277"
+          }
+        ],
+        "dbId": "50616",
+        "indexName": "推进器检查",
+        "order": "67"
+      },
+      {
+        "dbId": "50617",
+        "indexName": "推进器检查",
+        "order": "68",
+        "cells": [
+          {
+            "colIndex": "0",
+            "type": "0",
+            "content": "推进器检查",
+            "id": "89278"
+          },
+          {
+            "colIndex": "1",
+            "content": "右转",
+            "id": "89279",
+            "type": "0"
+          },
+          {
+            "content": "左右艉主推错车运转，转速和电流反馈正确",
+            "colIndex": "2",
+            "id": "89280",
+            "type": "0"
+          },
+          {
+            "colIndex": "3",
+            "content": "",
+            "type": "1",
+            "id": "89281"
+          },
+          {
+            "content": "",
+            "id": "89282",
+            "type": "2",
+            "colIndex": "4"
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "colIndex": "0",
+            "id": "89283",
+            "content": "推进器检查",
+            "type": "0"
+          },
+          {
+            "type": "0",
+            "colIndex": "1",
+            "content": "上浮",
+            "id": "89284"
+          },
+          {
+            "type": "0",
+            "id": "89285",
+            "content": "左右垂推正转，艉垂推正转，转速和电流反馈正确",
+            "colIndex": "2"
+          },
+          {
+            "id": "89286",
+            "type": "1",
+            "content": "",
+            "colIndex": "3"
+          },
+          {
+            "colIndex": "4",
+            "type": "2",
+            "content": "",
+            "id": "89287"
+          }
+        ],
+        "order": "69",
+        "dbId": "50618",
+        "indexName": "推进器检查"
+      },
+      {
+        "dbId": "50619",
+        "order": "70",
+        "indexName": "推进器检查",
+        "cells": [
+          {
+            "colIndex": "0",
+            "id": "89288",
+            "type": "0",
+            "content": "推进器检查"
+          },
+          {
+            "type": "0",
+            "content": "下潜",
+            "colIndex": "1",
+            "id": "89289"
+          },
+          {
+            "colIndex": "2",
+            "id": "89290",
+            "content": "左右垂推反转，艉垂推反转，转速和电流反馈正确",
+            "type": "0"
+          },
+          {
+            "id": "89291",
+            "colIndex": "3",
+            "content": "",
+            "type": "1"
+          },
+          {
+            "type": "2",
+            "colIndex": "4",
+            "content": "",
+            "id": "89292"
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "content": "推进器检查",
+            "id": "89293",
+            "colIndex": "0",
+            "type": "0"
+          },
+          {
+            "type": "0",
+            "colIndex": "1",
+            "content": "前倾",
+            "id": "89294"
+          },
+          {
+            "content": "左右垂推正转，艉垂推反转，转速和电流反馈正确",
+            "type": "0",
+            "id": "89295",
+            "colIndex": "2"
+          },
+          {
+            "colIndex": "3",
+            "content": "",
+            "type": "1",
+            "id": "89296"
+          },
+          {
+            "colIndex": "4",
+            "type": "2",
+            "content": "",
+            "id": "89297"
+          }
+        ],
+        "indexName": "推进器检查",
+        "dbId": "50620",
+        "order": "71"
+      },
+      {
+        "order": "72",
+        "dbId": "50621",
+        "indexName": "推进器检查",
+        "cells": [
+          {
+            "type": "0",
+            "content": "推进器检查",
+            "id": "89298",
+            "colIndex": "0"
+          },
+          {
+            "colIndex": "1",
+            "content": "后倾",
+            "type": "0",
+            "id": "89299"
+          },
+          {
+            "id": "89300",
+            "content": "左右垂推反转，艉垂推正转，转速和电流反馈正确",
+            "colIndex": "2",
+            "type": "0"
+          },
+          {
+            "colIndex": "3",
+            "id": "89301",
+            "type": "1",
+            "content": ""
+          },
+          {
+            "id": "89302",
+            "content": "",
+            "type": "2",
+            "colIndex": "4"
+          }
+        ]
+      },
+      {
+        "order": "73",
+        "indexName": "主液压源启动",
+        "cells": [
+          {
+            "colIndex": "0",
+            "content": "主液压源启动",
+            "id": "89303",
+            "type": "0"
+          },
+          {
+            "colIndex": "1",
+            "type": "0",
+            "content": "压力",
+            "id": "89304"
+          },
+          {
+            "type": "0",
+            "colIndex": "2",
+            "content": "---",
+            "id": "89305"
+          },
+          {
+            "colIndex": "3",
+            "content": "",
+            "type": "1",
+            "id": "89306"
+          },
+          {
+            "content": "",
+            "type": "2",
+            "id": "89307",
+            "colIndex": "4"
+          }
+        ],
+        "dbId": "50622"
+      },
+      {
+        "order": "74",
+        "indexName": "主液压源启动",
+        "dbId": "50623",
+        "cells": [
+          {
+            "content": "主液压源启动",
+            "type": "0",
+            "colIndex": "0",
+            "id": "89308"
+          },
+          {
+            "type": "0",
+            "colIndex": "1",
+            "id": "89309",
+            "content": "补偿量"
+          },
+          {
+            "content": "---",
+            "type": "0",
+            "id": "89310",
+            "colIndex": "2"
+          },
+          {
+            "id": "89311",
+            "colIndex": "3",
+            "content": "",
+            "type": "1"
+          },
+          {
+            "id": "89312",
+            "colIndex": "4",
+            "type": "2",
+            "content": ""
+          }
+        ]
+      },
+      {
+        "dbId": "50624",
+        "indexName": "主液压源启动",
+        "cells": [
+          {
+            "type": "0",
+            "colIndex": "0",
+            "id": "89313",
+            "content": "主液压源启动"
+          },
+          {
+            "content": "纵倾由前向后调水银",
+            "type": "0",
+            "colIndex": "1",
+            "id": "89314"
+          },
+          {
+            "id": "89315",
+            "type": "0",
+            "content": "---",
+            "colIndex": "2"
+          },
+          {
+            "type": "1",
+            "colIndex": "3",
+            "content": "",
+            "id": "89316"
+          },
+          {
+            "content": "",
+            "type": "2",
+            "colIndex": "4",
+            "id": "89317"
+          }
+        ],
+        "order": "75"
+      },
+      {
+        "order": "76",
+        "cells": [
+          {
+            "type": "0",
+            "id": "89318",
+            "content": "主液压源启动",
+            "colIndex": "0"
+          },
+          {
+            "colIndex": "1",
+            "id": "89319",
+            "content": "纵倾由后向前调水银",
+            "type": "0"
+          },
+          {
+            "colIndex": "2",
+            "id": "89320",
+            "type": "0",
+            "content": "---"
+          },
+          {
+            "colIndex": "3",
+            "id": "89321",
+            "content": "",
+            "type": "1"
+          },
+          {
+            "colIndex": "4",
+            "id": "89322",
+            "type": "2",
+            "content": ""
+          }
+        ],
+        "dbId": "50625",
+        "indexName": "主液压源启动"
+      },
+      {
+        "indexName": "主液压源启动",
+        "order": "77",
+        "dbId": "50626",
+        "cells": [
+          {
+            "colIndex": "0",
+            "content": "主液压源启动",
+            "type": "0",
+            "id": "89323"
+          },
+          {
+            "content": "左舷机械手",
+            "colIndex": "1",
+            "type": "0",
+            "id": "89324"
+          },
+          {
+            "type": "0",
+            "id": "89325",
+            "content": "---",
+            "colIndex": "2"
+          },
+          {
+            "colIndex": "3",
+            "type": "1",
+            "content": "",
+            "id": "89326"
+          },
+          {
+            "colIndex": "4",
+            "content": "",
+            "id": "89327",
+            "type": "2"
+          }
+        ]
+      },
+      {
+        "order": "78",
+        "cells": [
+          {
+            "type": "0",
+            "colIndex": "0",
+            "content": "主液压源启动",
+            "id": "89328"
+          },
+          {
+            "id": "89329",
+            "colIndex": "1",
+            "content": "右舷机械手",
+            "type": "0"
+          },
+          {
+            "colIndex": "2",
+            "id": "89330",
+            "type": "0",
+            "content": "---"
+          },
+          {
+            "id": "89331",
+            "type": "1",
+            "colIndex": "3",
+            "content": ""
+          },
+          {
+            "id": "89332",
+            "content": "",
+            "colIndex": "4",
+            "type": "2"
+          }
+        ],
+        "dbId": "50627",
+        "indexName": "主液压源启动"
+      },
+      {
+        "dbId": "50628",
+        "order": "79",
+        "cells": [
+          {
+            "colIndex": "0",
+            "type": "0",
+            "id": "89333",
+            "content": "副液压源启动"
+          },
+          {
+            "id": "89334",
+            "content": "压力",
+            "colIndex": "1",
+            "type": "0"
+          },
+          {
+            "id": "89335",
+            "type": "0",
+            "colIndex": "2",
+            "content": "---"
+          },
+          {
+            "id": "89336",
+            "colIndex": "3",
+            "type": "1",
+            "content": ""
+          },
+          {
+            "id": "89337",
+            "colIndex": "4",
+            "type": "2",
+            "content": ""
+          }
+        ],
+        "indexName": "副液压源启动"
+      },
+      {
+        "cells": [
+          {
+            "id": "89338",
+            "content": "副液压源启动",
+            "type": "0",
+            "colIndex": "0"
+          },
+          {
+            "colIndex": "1",
+            "content": "补偿量",
+            "id": "89339",
+            "type": "0"
+          },
+          {
+            "id": "89340",
+            "colIndex": "2",
+            "content": "---",
+            "type": "0"
+          },
+          {
+            "id": "89341",
+            "type": "1",
+            "colIndex": "3",
+            "content": ""
+          },
+          {
+            "content": "",
+            "colIndex": "4",
+            "type": "2",
+            "id": "89342"
+          }
+        ],
+        "indexName": "副液压源启动",
+        "order": "80",
+        "dbId": "50629"
+      },
+      {
+        "indexName": "副液压源启动",
+        "cells": [
+          {
+            "content": "副液压源启动",
+            "colIndex": "0",
+            "type": "0",
+            "id": "89343"
+          },
+          {
+            "type": "0",
+            "id": "89344",
+            "colIndex": "1",
+            "content": "注排水排水动作"
+          },
+          {
+            "colIndex": "2",
+            "content": "---",
+            "id": "89345",
+            "type": "0"
+          },
+          {
+            "content": "",
+            "type": "1",
+            "colIndex": "3",
+            "id": "89346"
+          },
+          {
+            "id": "89347",
+            "type": "2",
+            "colIndex": "4",
+            "content": ""
+          }
+        ],
+        "dbId": "50630",
+        "order": "81"
+      },
+      {
+        "cells": [
+          {
+            "content": "副液压源启动",
+            "type": "0",
+            "colIndex": "0",
+            "id": "89348"
+          },
+          {
+            "content": "水平稳定翼转动",
+            "colIndex": "1",
+            "type": "0",
+            "id": "89349"
+          },
+          {
+            "id": "89350",
+            "colIndex": "2",
+            "content": "---",
+            "type": "0"
+          },
+          {
+            "colIndex": "3",
+            "id": "89351",
+            "type": "1",
+            "content": ""
+          },
+          {
+            "type": "2",
+            "content": "",
+            "colIndex": "4",
+            "id": "89352"
+          }
+        ],
+        "dbId": "50631",
+        "indexName": "副液压源启动",
+        "order": "82"
+      },
+      {
+        "dbId": "50632",
+        "cells": [
+          {
+            "content": "海水泵",
+            "colIndex": "0",
+            "id": "89353",
+            "type": "0"
+          },
+          {
+            "type": "0",
+            "id": "89354",
+            "colIndex": "1",
+            "content": "向外泵水"
+          },
+          {
+            "colIndex": "2",
+            "content": "---",
+            "id": "89355",
+            "type": "0"
+          },
+          {
+            "content": "",
+            "type": "1",
+            "colIndex": "3",
+            "id": "89356"
+          },
+          {
+            "content": "",
+            "type": "2",
+            "colIndex": "4",
+            "id": "89357"
+          }
+        ],
+        "order": "83",
+        "indexName": "海水泵"
+      },
+      {
+        "dbId": "50633",
+        "indexName": "应急液压源",
+        "cells": [
+          {
+            "type": "0",
+            "content": "应急液压源",
+            "colIndex": "0",
+            "id": "89358"
+          },
+          {
+            "colIndex": "1",
+            "content": "压力",
+            "id": "89359",
+            "type": "0"
+          },
+          {
+            "colIndex": "2",
+            "content": "---",
+            "id": "89360",
+            "type": "0"
+          },
+          {
+            "colIndex": "3",
+            "id": "89361",
+            "type": "1",
+            "content": ""
+          },
+          {
+            "colIndex": "4",
+            "type": "2",
+            "content": "",
+            "id": "89362"
+          }
+        ],
+        "order": "84"
+      },
+      {
+        "dbId": "50634",
+        "indexName": "应急液压源",
+        "order": "85",
+        "cells": [
+          {
+            "content": "应急液压源",
+            "colIndex": "0",
+            "type": "0",
+            "id": "89363"
+          },
+          {
+            "colIndex": "1",
+            "content": "补偿量",
+            "type": "0",
+            "id": "89364"
+          },
+          {
+            "content": "---",
+            "colIndex": "2",
+            "id": "89365",
+            "type": "0"
+          },
+          {
+            "type": "1",
+            "content": "",
+            "colIndex": "3",
+            "id": "89366"
+          },
+          {
+            "content": "",
+            "id": "89367",
+            "type": "2",
+            "colIndex": "4"
+          }
+        ]
+      },
+      {
+        "order": "86",
+        "cells": [
+          {
+            "content": "接地绝缘检测",
+            "colIndex": "0",
+            "id": "89368",
+            "type": "0"
+          },
+          {
+            "type": "0",
+            "content": "24V接地值",
+            "colIndex": "1",
+            "id": "89369"
+          },
+          {
+            "colIndex": "2",
+            "id": "89370",
+            "content": "---",
+            "type": "0"
+          },
+          {
+            "id": "89371",
+            "content": "",
+            "type": "1",
+            "colIndex": "3"
+          },
+          {
+            "id": "89372",
+            "type": "2",
+            "colIndex": "4",
+            "content": ""
+          }
+        ],
+        "indexName": "接地绝缘检测",
+        "dbId": "50635"
+      },
+      {
+        "dbId": "50636",
+        "cells": [
+          {
+            "content": "接地绝缘检测",
+            "type": "0",
+            "id": "89373",
+            "colIndex": "0"
+          },
+          {
+            "colIndex": "1",
+            "content": "110V接地值",
+            "id": "89374",
+            "type": "0"
+          },
+          {
+            "content": "---",
+            "type": "0",
+            "id": "89375",
+            "colIndex": "2"
+          },
+          {
+            "id": "89376",
+            "type": "1",
+            "colIndex": "3",
+            "content": ""
+          },
+          {
+            "type": "2",
+            "colIndex": "4",
+            "content": "",
+            "id": "89377"
+          }
+        ],
+        "indexName": "接地绝缘检测",
+        "order": "87"
+      },
+      {
+        "cells": [
+          {
+            "colIndex": "0",
+            "type": "0",
+            "content": "VHF通讯",
+            "id": "89378"
+          },
+          {
+            "id": "89379",
+            "type": "0",
+            "colIndex": "1",
+            "content": "通话效果"
+          },
+          {
+            "id": "89380",
+            "colIndex": "2",
+            "type": "0",
+            "content": "---"
+          },
+          {
+            "type": "1",
+            "content": "",
+            "colIndex": "3",
+            "id": "89381"
+          },
+          {
+            "content": "",
+            "id": "89382",
+            "type": "2",
+            "colIndex": "4"
+          }
+        ],
+        "dbId": "50637",
+        "indexName": "VHF通讯",
+        "order": "88"
+      },
+      {
+        "cells": [
+          {
+            "colIndex": "0",
+            "content": "GPS",
+            "id": "89383",
+            "type": "0"
+          },
+          {
+            "colIndex": "1",
+            "content": "定位信息",
+            "id": "89384",
+            "type": "0"
+          },
+          {
+            "type": "0",
+            "colIndex": "2",
+            "content": "有效稳定",
+            "id": "89385"
+          },
+          {
+            "content": "",
+            "id": "89386",
+            "colIndex": "3",
+            "type": "1"
+          },
+          {
+            "colIndex": "4",
+            "content": "",
+            "type": "2",
+            "id": "89387"
+          }
+        ],
+        "order": "89",
+        "indexName": "GPS",
+        "dbId": "50638"
+      },
+      {
+        "indexName": "惯导",
+        "order": "90",
+        "cells": [
+          {
+            "content": "惯导",
+            "type": "0",
+            "colIndex": "0",
+            "id": "89388"
+          },
+          {
+            "type": "0",
+            "colIndex": "1",
+            "content": "定位信息",
+            "id": "89389"
+          },
+          {
+            "type": "0",
+            "colIndex": "2",
+            "id": "89390",
+            "content": "有效稳定"
+          },
+          {
+            "id": "89391",
+            "content": "",
+            "type": "1",
+            "colIndex": "3"
+          },
+          {
+            "content": "",
+            "id": "89392",
+            "colIndex": "4",
+            "type": "2"
+          }
+        ],
+        "dbId": "50639"
+      },
+      {
+        "cells": [
+          {
+            "type": "0",
+            "colIndex": "0",
+            "id": "89393",
+            "content": "深度计"
+          },
+          {
+            "colIndex": "1",
+            "id": "89394",
+            "content": "数据有效",
+            "type": "0"
+          },
+          {
+            "colIndex": "2",
+            "content": "---",
+            "id": "89395",
+            "type": "0"
+          },
+          {
+            "content": "",
+            "id": "89396",
+            "colIndex": "3",
+            "type": "1"
+          },
+          {
+            "id": "89397",
+            "type": "2",
+            "content": "",
+            "colIndex": "4"
+          }
+        ],
+        "order": "91",
+        "indexName": "深度计",
+        "dbId": "50640"
+      },
+      {
+        "order": "92",
+        "dbId": "50641",
+        "cells": [
+          {
+            "type": "0",
+            "content": "CTD",
+            "colIndex": "0",
+            "id": "89398"
+          },
+          {
+            "id": "89399",
+            "colIndex": "1",
+            "type": "0",
+            "content": "数据有效"
+          },
+          {
+            "id": "89400",
+            "colIndex": "2",
+            "type": "0",
+            "content": "---"
+          },
+          {
+            "id": "89401",
+            "type": "1",
+            "colIndex": "3",
+            "content": ""
+          },
+          {
+            "content": "",
+            "id": "89402",
+            "colIndex": "4",
+            "type": "2"
+          }
+        ],
+        "indexName": "CTD"
+      },
+      {
+        "dbId": "50642",
+        "cells": [
+          {
+            "type": "0",
+            "content": "高度计",
+            "colIndex": "0",
+            "id": "89403"
+          },
+          {
+            "colIndex": "1",
+            "type": "0",
+            "content": "数据有效",
+            "id": "89404"
+          },
+          {
+            "type": "0",
+            "colIndex": "2",
+            "content": "---",
+            "id": "89405"
+          },
+          {
+            "content": "",
+            "id": "89406",
+            "type": "1",
+            "colIndex": "3"
+          },
+          {
+            "content": "",
+            "colIndex": "4",
+            "type": "2",
+            "id": "89407"
+          }
+        ],
+        "indexName": "高度计",
+        "order": "93"
+      },
+      {
+        "order": "94",
+        "dbId": "50643",
+        "cells": [
+          {
+            "content": "2台频闪灯",
+            "type": "0",
+            "id": "89408",
+            "colIndex": "0"
+          },
+          {
+            "id": "89409",
+            "type": "0",
+            "colIndex": "1",
+            "content": "是否开启"
+          },
+          {
+            "id": "89410",
+            "content": "开启",
+            "type": "0",
+            "colIndex": "2"
+          },
+          {
+            "colIndex": "3",
+            "id": "89411",
+            "type": "1",
+            "content": ""
+          },
+          {
+            "colIndex": "4",
+            "type": "2",
+            "content": "",
+            "id": "89412"
+          }
+        ],
+        "indexName": "2台频闪灯"
+      },
+      {
+        "order": "95",
+        "cells": [
+          {
+            "type": "0",
+            "id": "89413",
+            "colIndex": "0",
+            "content": "两台通讯机"
+          },
+          {
+            "colIndex": "1",
+            "content": "工作情况",
+            "id": "89414",
+            "type": "0"
+          },
+          {
+            "colIndex": "2",
+            "type": "0",
+            "id": "89415",
+            "content": "工作正常"
+          },
+          {
+            "colIndex": "3",
+            "content": "",
+            "type": "1",
+            "id": "89416"
+          },
+          {
+            "type": "2",
+            "content": "",
+            "id": "89417",
+            "colIndex": "4"
+          }
+        ],
+        "dbId": "50644",
+        "indexName": "两台通讯机"
+      },
+      {
+        "cells": [
+          {
+            "type": "0",
+            "content": "7台避碰声纳",
+            "id": "89418",
+            "colIndex": "0"
+          },
+          {
+            "content": "通讯情况",
+            "type": "0",
+            "colIndex": "1",
+            "id": "89419"
+          },
+          {
+            "content": "通讯正常",
+            "id": "89420",
+            "type": "0",
+            "colIndex": "2"
+          },
+          {
+            "type": "1",
+            "id": "89421",
+            "content": "",
+            "colIndex": "3"
+          },
+          {
+            "colIndex": "4",
+            "id": "89422",
+            "type": "2",
+            "content": ""
+          }
+        ],
+        "indexName": "7台避碰声纳",
+        "dbId": "50645",
+        "order": "96"
+      },
+      {
+        "cells": [
+          {
+            "content": "多普勒",
+            "id": "89423",
+            "type": "0",
+            "colIndex": "0"
+          },
+          {
+            "colIndex": "1",
+            "id": "89424",
+            "content": "通讯情况",
+            "type": "0"
+          },
+          {
+            "id": "89425",
+            "type": "0",
+            "colIndex": "2",
+            "content": "通讯正常"
+          },
+          {
+            "type": "1",
+            "id": "89426",
+            "colIndex": "3",
+            "content": ""
+          },
+          {
+            "colIndex": "4",
+            "content": "",
+            "id": "89427",
+            "type": "2"
+          }
+        ],
+        "dbId": "50646",
+        "indexName": "多普勒",
+        "order": "97"
+      },
+      {
+        "order": "98",
+        "dbId": "50647",
+        "cells": [
+          {
+            "content": "定位声纳",
+            "colIndex": "0",
+            "id": "89428",
+            "type": "0"
+          },
+          {
+            "type": "0",
+            "content": "脉冲发射情况",
+            "colIndex": "1",
+            "id": "89429"
+          },
+          {
+            "id": "89430",
+            "content": "每6秒发射一次",
+            "type": "0",
+            "colIndex": "2"
+          },
+          {
+            "colIndex": "3",
+            "content": "",
+            "id": "89431",
+            "type": "1"
+          },
+          {
+            "id": "89432",
+            "colIndex": "4",
+            "content": "",
+            "type": "2"
+          }
+        ],
+        "indexName": "定位声纳"
+      },
+      {
+        "order": "99",
+        "cells": [
+          {
+            "type": "0",
+            "colIndex": "0",
+            "content": "声学对钟",
+            "id": "89433"
+          },
+          {
+            "content": "对钟",
+            "colIndex": "1",
+            "id": "89434",
+            "type": "0"
+          },
+          {
+            "content": "完成对钟",
+            "id": "89435",
+            "colIndex": "2",
+            "type": "0"
+          },
+          {
+            "content": "",
+            "type": "1",
+            "id": "89436",
+            "colIndex": "3"
+          },
+          {
+            "colIndex": "4",
+            "type": "2",
+            "content": "",
+            "id": "89437"
+          }
+        ],
+        "indexName": "声学对钟",
+        "dbId": "50648"
+      },
+      {
+        "dbId": "50649",
+        "indexName": "成像声纳",
+        "cells": [
+          {
+            "content": "成像声纳",
+            "type": "0",
+            "colIndex": "0",
+            "id": "89438"
+          },
+          {
+            "type": "0",
+            "colIndex": "1",
+            "content": "启动设备旋转",
+            "id": "89439"
+          },
+          {
+            "content": "有扫描图",
+            "colIndex": "2",
+            "id": "89440",
+            "type": "0"
+          },
+          {
+            "id": "89441",
+            "colIndex": "3",
+            "content": "",
+            "type": "1"
+          },
+          {
+            "content": "",
+            "type": "2",
+            "colIndex": "4",
+            "id": "89442"
+          }
+        ],
+        "order": "100"
+      },
+      {
+        "dbId": "50650",
+        "cells": [
+          {
+            "id": "89443",
+            "content": "水声电话",
+            "colIndex": "0",
+            "type": "0"
+          },
+          {
+            "id": "89444",
+            "type": "0",
+            "colIndex": "1",
+            "content": "发射是否正常"
+          },
+          {
+            "colIndex": "2",
+            "content": "能够发射",
+            "id": "89445",
+            "type": "0"
+          },
+          {
+            "colIndex": "3",
+            "type": "1",
+            "id": "89446",
+            "content": ""
+          },
+          {
+            "id": "89447",
+            "content": "",
+            "colIndex": "4",
+            "type": "2"
+          }
+        ],
+        "indexName": "水声电话",
+        "order": "101"
+      },
+      {
+        "order": "102",
+        "cells": [
+          {
+            "content": "授时同步",
+            "colIndex": "0",
+            "type": "0",
+            "id": "89448"
+          },
+          {
+            "id": "89449",
+            "type": "0",
+            "colIndex": "1",
+            "content": "各计算机时间是否同步"
+          },
+          {
+            "id": "89450",
+            "colIndex": "2",
+            "content": "在同一分钟内",
+            "type": "0"
+          },
+          {
+            "colIndex": "3",
+            "content": "",
+            "type": "1",
+            "id": "89451"
+          },
+          {
+            "colIndex": "4",
+            "id": "89452",
+            "type": "2",
+            "content": ""
+          }
+        ],
+        "dbId": "50651",
+        "indexName": "授时同步"
+      },
+      {
+        "cells": [
+          {
+            "content": "安全销",
+            "type": "0",
+            "id": "89453",
+            "colIndex": "0"
+          },
+          {
+            "colIndex": "1",
+            "content": "拆除",
+            "type": "0",
+            "id": "89454"
+          },
+          {
+            "type": "0",
+            "colIndex": "2",
+            "id": "89455",
+            "content": "拆除"
+          },
+          {
+            "colIndex": "3",
+            "id": "89456",
+            "content": "",
+            "type": "1"
+          },
+          {
+            "colIndex": "4",
+            "id": "89457",
+            "content": "",
+            "type": "2"
+          }
+        ],
+        "order": "103",
+        "dbId": "50652",
+        "indexName": "安全销"
+      }
+    ],
+    "headBeanArrayList": [
+      {
+        "colIndex": "0",
+        "check": false,
+        "dbId": "5046",
+        "name": "检查项目"
+      },
+      {
+        "dbId": "5047",
+        "check": false,
+        "name": "检查操作",
+        "colIndex": "1"
+      },
+      {
+        "colIndex": "2",
+        "check": false,
+        "dbId": "5048",
+        "name": "检查要求"
+      },
+      {
+        "check": true,
+        "dbId": "5049",
+        "name": "#状态",
+        "colIndex": "3"
+      },
+      {
+        "colIndex": "4",
+        "check": true,
+        "dbId": "5050",
+        "name": "#备注"
+      }
+    ]
+  }
+}

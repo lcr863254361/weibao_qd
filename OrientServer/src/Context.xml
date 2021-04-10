@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+        "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <bean id="dynamicLoadBean" class="com.orient.edm.util.DynamicLoadBean"/>
+
+    <bean id="propertyConfigurer"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:jdbc.properties</value>
+                <value>classpath:ftpServer.properties</value>
+                <value>classpath:config.properties</value>
+                <value>classpath:mq.properties</value>
+                <value>classpath:mail.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="DBInitBusiness" class="com.orient.edm.init.DBInitBusiness">
+        <property name="dynamicLoadBean" ref="dynamicLoadBean"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="syspassword" value="${jdbc.syspassword}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <property name="tablespaceName" value="${jdbc.tablespaceName}"/>
+        <property name="tablespaceDataFile" value="${jdbc.tablespaceDatafile}"/>
+        <property name="tablespaceSize" value="${jdbc.tablespaceSize}"/>
+        <property name="backPath" value="${ftpServer.backPath}"/>
+    </bean>
+
+
+    <bean id="initContextLoad" class="com.orient.edm.init.InitLoadStart">
+        <property name="startLoadBeans">
+            <list>
+                <value>MetaEngine</value>
+                <value>RoleEngine</value>
+                <value>SessionPoolCheckScheduler</value>
+                <value>listenerOrderService</value>
+                <value>TDMParamter</value>
+                <value>backUpScheduler</value>
+                <value>AsposeRegisiter</value>
+                <!--<value>initFileDesc</value>-->
+            </list>
+        </property>
+    </bean>
+
+    <bean id="flowExtensionManager" class="com.orient.flow.extend.mng.ExtensionManagerImpl">
+        <property name="basePackage" value="com.orient.flow;com.orient.collab;com.orient.example"/>
+        <property name="extensionToExtractorClsNameMap">
+            <map>
+                <entry key="com.orient.flow.extend.extensions.FlowTaskExecutionEventListener"
+                       value="com.orient.flow.extend.extensions.FlowTaskExecutionEventListenerInfoExtractor">
+                </entry>
+                <entry key="com.orient.collab.business.projectCore.extensions.mng.CollabProcessInterceptor"
+                       value="com.orient.collab.business.projectCore.extensions.mng.CollabProcessInterceptorInfoExtractor">
+                </entry>
+                <entry key="com.orient.flow.extend.extensions.FlowDecisionEventListener"
+                       value="com.orient.flow.extend.extensions.FlowDecisionEventListenerInfoExtractor">
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="templateSupportRegistry" class="com.orient.template.business.core.support.DefaultTemplateSupportRegistry">
+        <property name="templateSupportMap">
+            <map>
+                <entry key="com.orient.collab.model.Project" value-ref="projectTemplateSupport">
+                </entry>
+                <entry key="com.orient.collab.model.Plan" value-ref="planTemplateSupport">
+                </entry>
+                <entry key="com.orient.collab.model.Task" value-ref="taskTemplateSupport">
+                </entry>
+                <entry key="com.orient.collab.model.GanttPlanDependency" value-ref="ganttPlanDependencyTemplateSupport">
+                </entry>
+                <entry key="com.orient.template.model.GanttGraph" value-ref="ganttGraphTemplateSupport">
+                </entry>
+                <entry key="com.orient.template.model.CollabTeam" value-ref="collabTeamTemplateSupport">
+                </entry>
+                <entry key="com.orient.template.model.CollabFlow" value-ref="collabFlowTemplateSupport">
+                </entry>
+                <entry key="com.orient.template.model.CollabDataFlowDefinition"
+                       value-ref="collabDataFlowDefinitionTemplateSupport">
+                </entry>
+                <entry key="com.orient.template.model.CollabDevData" value-ref="collabDevDataTemplateSupport">
+                </entry>
+                <entry key="com.orient.template.model.CollabCheckData" value-ref="collabCheckDataTemplateSupport">
+                </entry>
+                <entry key="com.orient.template.model.CollabComp" value-ref="collabCompTemplateSupport">
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+
+    <bean id="hisTaskSupport" class="com.orient.history.core.support.HisTaskSupport">
+        <property name="hisTaskEngineFactoryMap">
+            <map>
+                <entry key="${TASKTYPE.AUDIT_TASK}" value-ref="hisAuditTaskEngineFactory"/>
+                <entry key="${TASKTYPE.COLLAB_TASK}" value-ref="hisCollabTaskEngineFactory"/>
+                <entry key="${TASKTYPE.DATA_TASK}" value-ref="hisDataTaskEngineFactory"/>
+                <entry key="${TASKTYPE.PLAN_TASK}" value-ref="hisPlanTaskEngineFactory"/>
+            </map>
+        </property>
+    </bean>
+
+
+    <bean id="TDMParamter" class="com.orient.web.util.TDMParamter" singleton="true">
+        <property name="paramterService" ref="paramterService"/>
+        <property name="configClasses">
+            <list>
+                <value>com.orient.workflow.WorkFlowConstants</value>
+                <value>com.orient.collab.config.CollabConstants</value>
+                <value>com.orient.history.core.util.HisTaskTypeConstants</value>
+                <value>com.orient.config.SystemMngConfig</value>
+                <value>com.orient.testresource.util.TestResourceMgrConstants</value>
+                <value>com.orient.mongorequest.config.MongoConfig</value>
+                <value>com.orient.weibao.constants.PropertyConstant</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="docTransformRegister" class="com.orient.background.doctemplate.transform.DocTransformRegister">
+        <property name="transformMap">
+            <map>
+                <entry key="businessModel" value-ref="BMGridTransform"/>
+                <entry key="C_Date" value-ref="commonTransform"/>
+                <entry key="C_DateTime" value-ref="commonTransform"/>
+                <entry key="C_Integer" value-ref="commonTransform"/>
+                <entry key="C_BigInteger" value-ref="commonTransform"/>
+                <entry key="C_Decimal" value-ref="commonTransform"/>
+                <entry key="C_Float" value-ref="commonTransform"/>
+                <entry key="C_Double" value-ref="commonTransform"/>
+                <entry key="C_Text" value-ref="commonTransform"/>
+                <entry key="C_SingleEnum" value-ref="enumTransform"/>
+                <entry key="C_MultiEnum" value-ref="enumTransform"/>
+                <entry key="C_SingleTableEnum" value-ref="enumTransform"/>
+                <entry key="C_MultiTableEnum" value-ref="enumTransform"/>
+                <entry key="C_Relation" value-ref="relationTransform"/>
+                <entry key="C_Boolean" value-ref="booleanTransform"/>
+                <entry key="C_Simple" value-ref="simpleTransform"/>
+                <entry key="C_Dynamic" value-ref="tableColumnTransform"/>
+                <entry key="C_NameValue" value-ref="tableColumnTransform"/>
+                <entry key="C_SubTable" value-ref="tableColumnTransform"/>
+                <entry key="C_File" value-ref="fileTransform"/>
+                <entry key="C_Ods" value-ref="fileTransform"/>
+                <entry key="C_Hadoop" value-ref="fileTransform"/>
+                <entry key="C_Check" value-ref="checkColumnTransform"/>
+            </map>
+        </property>
+    </bean>
+</beans>

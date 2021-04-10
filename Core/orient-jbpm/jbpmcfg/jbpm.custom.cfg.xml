@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jbpm-configuration>
+
+  <import resource="jbpm.default.scriptmanager.xml" />
+
+  <process-engine-context>
+  
+    <repository-service />
+    <repository-cache />
+    <execution-service />
+    <history-service />
+    <management-service />
+    <identity-service />
+    <task-service />
+    <edmform-cache />
+
+    <object class="org.jbpm.pvm.internal.id.DatabaseDbidGenerator">
+      <field name="commandService"><ref object="newTxRequiredCommandService" /></field>
+    </object>
+
+    <object class="org.jbpm.pvm.internal.id.DatabaseIdComposer" init="eager" />
+
+    <types resource="jbpm.variable.types.xml" />
+
+    <address-resolver />
+
+    <mail-template name='task-notification'>
+      <to users="${task.assignee}"/>
+      <subject>${task.name}任务</subject>
+      <text><![CDATA[${task.assignee}，您好！
+您有一个 "${task.name}"任务需要办理， 请您及时进行处理，谢谢！ 
+${task.description}
+这是系统自动发出的E-Mail，请不要直接回复；如有问题，请直接与管理员联系。
+]]></text>
+    </mail-template>
+  
+    <mail-template name='task-reminder'>
+      <to users="${task.assignee}"/>
+      <subject>${task.name}任务超时限通知</subject>
+      <text><![CDATA[${task.assignee}，您好！
+您的任务"${task.name}"已经超过处理时限，请您及时进行处理，谢谢！
+${task.description}
+这是系统自动发出的E-Mail，请不要直接回复；如有问题，请直接与管理员联系。
+]]></text>
+    </mail-template>
+  
+  </process-engine-context>
+
+  <transaction-context>
+    <repository-session />
+    <db-session />
+    
+    <message-session />
+    <timer-session />
+    
+    <history-sessions>
+      <object class="org.jbpm.pvm.internal.history.HistorySessionImpl" />
+    </history-sessions>
+    
+    <mail-session>
+      <mail-server>
+        <session-properties resource="jbpm.mail.properties" />
+        <authenticator class="com.orient.workflow.ext.mail.EdmMailAuthenticator" />
+      </mail-server>
+    </mail-session>
+
+  </transaction-context>
+
+</jbpm-configuration>

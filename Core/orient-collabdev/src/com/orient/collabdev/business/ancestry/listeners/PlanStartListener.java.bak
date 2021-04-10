@@ -1,0 +1,59 @@
+package com.orient.collabdev.business.ancestry.listeners;
+
+import com.orient.businessmodel.bean.IBusinessModel;
+import com.orient.collabdev.business.ancestry.taskanalyze.context.InitNodeAnalyzeContext;
+import com.orient.sqlengine.extend.ModelDataOperate;
+import com.orient.sqlengine.extend.annotation.ModelOperateExtend;
+
+import java.util.Map;
+
+/**
+ * Created by karry on 18-9-5.
+ */
+//@ModelOperateExtend(modelNames = "CB_PLAN", schemaName = "协同模型")
+public class PlanStartListener implements ModelDataOperate {
+    @Override
+    public void beforeAdd(IBusinessModel bm, Map<String, String> dataMap) {
+
+    }
+
+    @Override
+    public void afterAdd(IBusinessModel bm, Map<String, String> dataMap, String id) {
+
+    }
+
+    @Override
+    public void beforeUpdate(IBusinessModel bm, Map<String, String> dataMap, String dataId) {
+        String modelId = bm.getId();
+        String state = dataMap.get("STATUS_"+modelId);
+        if("1".equals(state)) {
+            InitNodeAnalyzeContext context = new InitNodeAnalyzeContext();
+            context.initTasksInPlan(dataMap.get("ID"));
+        }
+    }
+
+    @Override
+    public void afterUpdate(IBusinessModel bm, Map<String, String> dataMap, String dataId, Boolean result) {
+
+    }
+
+    @Override
+    public void beforeDelete(IBusinessModel bm, String dataIds) {
+
+    }
+
+    @Override
+    public void afterDelete(IBusinessModel bm, String dataIds) {
+
+    }
+
+    @Override
+    public void beforeDeleteCascade(IBusinessModel bm, String dataIds) {
+
+    }
+
+    @Override
+    public void afterDeleteCascade(IBusinessModel bm, String dataIds) {
+
+    }
+}

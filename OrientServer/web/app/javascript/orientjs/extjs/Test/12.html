@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+'<tpl for=".">',
+    '<div style="width: 15%; height: 180px; float: left; text-align:center; margin: 5px; border-radius: 10px;">',
+        '<div style="height: 144px; background-color:#F0F0F0; color:#01AAED; font-size: 20px; ">',
+            '<div style="height: 50%; text-align: center; display: flex; align-items: center;">',
+                '<span style="width: 100%">{' +
+                me.mainKey +
+                '}</span>',
+                '</div>',
+            '<div style="height: 50%; font-size: 12px; text-align: center; display: flex; align-items: center;">',
+                '<div style="width: 49%; float:left;">',
+                    '<span>{' +
+                me.leftKey +
+                '}</span>',
+                    '</div>',
+                '<div style="background-color:#01AAED; width: 2px; height: 50%; float:left;"></div>',
+                '<div style="width: 49%; float:right;">',
+                    '<span>{' +
+                me.rightKey +
+                '}</span>',
+                    '</div>',
+                '</div>',
+            '</div>',
+        '<div class="showmore" style="padding: 10px; height: 36px; background-color:#01AAED; color: #F0F0F0">',
+            '<span>显示详情</span>',
+            '</div>',
+        '</div>​',
+    '</tpl>'
+</body>
+</html>

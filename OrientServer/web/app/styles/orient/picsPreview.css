@@ -1,0 +1,66 @@
+.image_stack img { /* css style for photo stack */
+    border: none;
+    text-decoration: none;
+    position: absolute;
+    margin-left:0px;
+    /*width: 158px;*/
+    /*height: 158px;*/
+    width: 16px;
+    height: 16px;
+}
+.image_stack { /* css style for photo stack */
+    /*width: 400px;*/
+    position: absolute;
+    /*margin:60px 10px 10px;*/
+}
+.image_stack img { /* css style for photo stack */
+    position: absolute;
+    border: 1px solid #FFF;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    /* Firefox */
+    -moz-transition: all 0.2s ease;
+    /* WebKit */
+    -webkit-transition: all 0.2s ease;
+    /* Opera */
+    -o-transition: all 0.2s ease;
+    /* Standard */
+    transition: all 0.2s ease;
+}
+.image_stack #bottomPhoto {  /* position of last photo in the stack */
+    top: 1px;
+    left: 12px;
+}
+.image_stack #midPhoto {/* position of middle photo in the stack */
+    top: 1px;
+    left: 6px;
+}
+.image_stack #topPhoto {/* position of first photo at the top in the stack */
+    top: 1px;
+    left: 0px;
+    right: 100px;
+}
+.image_stack .rotateRight {/* rotate last image 15 degrees to the right */
+    -webkit-transform: rotate(15deg); /* safari and chrome */
+    -moz-transform: rotate(15deg);/*firefox browsers */
+    transform: rotate(15deg);/*other */
+    -ms-transform:rotate(15deg); /* Internet Explorer 9 */
+    -o-transform:rotate(15deg); /* Opera */
+}
+.image_stack .rotateMid {/* css not used*/
+    -webkit-transform: rotate(0deg); /* safari and chrome */
+    -moz-transform: rotate(0deg);/*firefox browsers */
+    transform: rotate(0deg);/*other */
+    -ms-transform:rotate(0deg); /* Internet Explorer 9 */
+    -o-transform:rotate(0deg); /* Opera */
+    cursor: pointer;
+}
+.image_stack .rotateLeft {/*rotate first image 15 degrees to the left*/
+    -webkit-transform: rotate(-15deg); /* safari and chrome */
+    -moz-transform: rotate(-15deg); /*firefox browsers */
+    transform: rotate(-15deg);/*other */
+    -ms-transform:rotate(-15deg); /* Internet Explorer 9 */
+    -o-transform:rotate(-15deg); /* Opera */
+}

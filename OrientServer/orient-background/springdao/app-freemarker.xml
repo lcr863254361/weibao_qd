@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+       <!-- 文件模版引擎配置 -->
+       <bean id="freemarkerConfiguration" class="org.springframework.ui.freemarker.FreeMarkerConfigurationFactoryBean">
+              <property name="templateLoaderPath" value="classpath:template/" />
+              <property name="defaultEncoding" value="UTF-8"/>
+       </bean>
+
+       <bean id="templateLoader" class="freemarker.cache.StringTemplateLoader"></bean>
+
+       <!-- freemaker引擎 -->
+       <bean id="freemarkEngine" class="com.orient.web.form.engine.FreemarkEngine">
+              <property name="configuration" ref="freemarkerConfiguration"/>
+       </bean>
+</beans>

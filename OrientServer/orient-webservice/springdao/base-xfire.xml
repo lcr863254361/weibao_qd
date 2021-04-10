@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+	
+	<!-- base webservice的spring bean容器-->	
+	<bean id="baseBean" class="com.orient.webservice.base.Impl.BaseBean" >
+    	<property name="metaEngine" ref="MetaEngine"/>
+		<property name="metadaofactory" ref="metadaofactory" />
+		<property name="businessModelService" ref="BusinessModelService"/>
+		<property name="userService" ref="UserService"/>
+		<property name="sqlEngine" ref="orientSqlEngine"/>
+		<property name="userLoginHistoryService" ref="UserLoginHistoryService"/>
+		<property name="roleEngine" ref="RoleEngine"/>
+    </bean>
+	
+	<!--数据库连接的webservice -->		
+	<bean id="HelloWorldBean" class="com.orient.webservice.base.Impl.HelloWorldImpl" parent="baseBean">		 
+	</bean>
+	
+	<!--数据操作的webservice -->		
+	<bean id="DbopBean" class="com.orient.webservice.base.Impl.IDBOPImpl" parent="baseBean">		 
+	</bean>
+	
+	<!--用户登录的webservice -->		
+	<bean id="LoginBean" class="com.orient.webservice.base.Impl.LoginCheckingImpl" parent="baseBean">		 
+	</bean>
+	
+	<!--base webservice全接口实现 -->
+	<bean id="baseImpl" class="com.orient.webservice.base.Impl.BaseImpl">		
+	    <property name="helloWorldBean" ref="HelloWorldBean"/>
+	    <property name="dbopBean" ref="DbopBean"/>
+	    <property name="loginBean" ref="LoginBean"/>
+	</bean>
+	
+</beans>

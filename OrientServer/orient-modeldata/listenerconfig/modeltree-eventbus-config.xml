@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Copyright (c) 2016. Orient Company
+  ~
+  -->
+
+<ListenerOrder>
+    <EventSource eventType="com.orient.modeldata.event.GetTbomNodesEvent"
+                 name="com.orient.modeldata.controller.ModelTreeController">
+        <BaseOrderList>
+            <OrderValue name="com.orient.modeldata.eventListener.GetStaticTbomNodesListener"/>
+            <OrderValue name="com.orient.modeldata.eventListener.GetDynamicTbomNodesListener"/>
+            <OrderValue name="com.orient.modeldata.eventListener.AddStaticNodeModelListener"/>
+            <OrderValue name="com.orient.modeldata.eventListener.BuildRecurrentlyDynamicNodeListener"/>
+            <OrderValue name="com.orient.modeldata.eventListener.PermissionFilterListener"/>
+            <OrderValue name="com.orient.modeldata.eventListener.ChangeTBomNodeIconListener"/>
+            <OrderValue name="com.orient.modeldata.eventListener.TBomNodeHandleListener"/>
+        </BaseOrderList>
+        <ExtenderOderList>
+            <Listener name="com.orient.modeldata.eventListener.GetStaticTbomNodesListener" order="10"/>
+            <Listener name="com.orient.modeldata.eventListener.GetDynamicTbomNodesListener" order="20"/>
+            <Listener name="com.orient.modeldata.eventListener.AddStaticNodeModelListener" order="30"/>
+            <Listener name="com.orient.modeldata.eventListener.BuildRecurrentlyDynamicNodeListener" order="35"/>
+            <Listener name="com.orient.modeldata.eventListener.PermissionFilterListener" order="40"/>
+            <Listener name="com.orient.modeldata.eventListener.ChangeTBomNodeIconListener" order="50"/>
+            <Listener name="com.orient.modeldata.eventListener.TBomNodeHandleListener" order="60"/>
+        </ExtenderOderList>
+    </EventSource>
+
+</ListenerOrder>

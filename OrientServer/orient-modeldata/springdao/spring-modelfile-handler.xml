@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="fileHandleContainer" class="com.orient.modeldata.fileHandle.bean.FileDecoratorContainer">
+        <property name="decoratorNames">
+            <list>
+                <value>imageModelFileDecorator</value>
+                <value>videoModelFileDecorator</value>
+                <value>odsModelFileDecorator</value>
+                <value>hadoopModelFileDecorator</value>
+                <!--<value>luceneFileDecorator</value>-->
+                <value>fileDecryptDecorator</value>
+                <value>office2PDFDecorator</value>
+            </list>
+        </property>
+    </bean>
+</beans>

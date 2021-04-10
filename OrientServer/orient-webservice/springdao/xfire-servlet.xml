@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+	
+	<!-- 引入XFire预配置信息 -->
+	<import resource="classpath:org/codehaus/xfire/spring/xfire.xml" />
+
+	<bean id="baseWebService"
+		class="org.codehaus.xfire.spring.remoting.XFireExporter"
+		lazy-init="false" abstract="true">
+		<property name="serviceFactory" ref="xfire.serviceFactory" />
+		<property name="xfire" ref="xfire" />
+	</bean>
+
+	<!-- base webservice -->
+    <!-- 与应用服务器连接接口 -->
+	<bean id="HelloWorldService" parent="baseWebService">
+		<property name="serviceBean" ref="baseImpl" />
+		<property name="serviceClass"
+			value="com.orient.webservice.base.HelloWorld" />
+	</bean>	
+	
+	<!-- 用户登录接口  -->
+	<bean id="LoginService" parent="baseWebService">
+		<property name="serviceBean" ref="baseImpl" />
+		<property name="serviceClass"
+			value="com.orient.webservice.base.LoginChecking" />
+	</bean>	
+	
+	<!-- 数据访问接口 -->
+	<bean id="DBOpService" parent="baseWebService">
+		<property name="serviceBean" ref="baseImpl" />
+		<property name="serviceClass"
+			value="com.orient.webservice.base.IDBOP" />
+	</bean>
+	
+	<!-- 用于base单元测试
+	<bean id="testBaseService" class="com.orient.webservice.base.Impl.BaseImpl">
+		<property name="helloWorldBean" ref="HelloWorldBean"/>
+	    <property name="dbopBean" ref="DbopBean"/>
+	    <property name="loginBean" ref="LoginBean"/>
+	</bean>-->
+	
+	<!-- schema模型接口 -->
+	<bean id="ISchemaService" parent="baseWebService">
+		<property name="serviceBean" ref="schemaImpl" />
+		<property name="serviceClass"
+			value="com.orient.webservice.schema.ISchema" />
+	</bean>
+	
+	<!-- 用于schema单元测试
+	<bean id="testSchemaService" class="com.orient.webservice.schema.Impl.ISchemaImpl">
+		 <property name="lockBean" ref="LockBean"/>
+	    <property name="genSeqScriptBean" ref="GenSeqScriptBean"/>
+	    <property name="schemaBean" ref="SchemaBean"/>
+	    <property name="schemaInfoBean" ref="SchemaInfoBean"/>
+	    <property name="shareSchemaBean" ref="ShareSchemaBean"/>
+	</bean>-->
+	
+	<!-- tbom模型接口-->
+	<bean id="ITbomService" parent="baseWebService">
+		<property name="serviceBean" ref="tbomImpl" />
+		<property name="serviceClass"
+			value="com.orient.webservice.tbom.ITbom" />
+	</bean>
+	
+	<!-- p2m接口-->
+	<!--<bean id="IP2MService" parent="baseWebService">-->
+		<!--<property name="serviceBean" ref="p2mImpl" />-->
+		<!--<property name="serviceClass"-->
+			<!--value="com.orient.webservice.p2m.IP2M" />-->
+	<!--</bean>-->
+	
+	<!-- workFlow接口-->
+	<bean id="IWorkFlowService" parent="baseWebService">
+		<property name="serviceBean" ref="jpdlImpl" />
+		<property name="serviceClass"
+			value="com.orient.webservice.workflow.IJpdl" />
+	</bean>
+	
+	<!-- 用于tbom单元测试
+	<bean id="testTbomService" class="com.orient.webservice.tbom.Impl.TbomImpl" parent="basicTbom">
+		<property name="setTbom" ref="setTbom"/>
+	    <property name="getTbom" ref="getTbom"/>
+	    <property name="importTbom" ref="importTbom"/>
+	    <property name="getSource" ref="getSource"/>
+	</bean>-->
+	
+
+	
+	<!-- 数据导入 -->
+	<bean id="dataImportManagerService" parent="baseWebService">
+		<property name="serviceBean" ref="dataImportBean"/>
+		<property name="serviceClass" value="com.orient.webservice.dataImportManager.IDataImportManager"/>
+	</bean>
+	
+	<!-- 获取所有部门 -->
+	<bean id="IDepartmentService" parent="baseWebService">
+		<property name="serviceBean" ref="departmentImpl"/>
+		<property name="serviceClass" value="com.orient.webservice.system.IDepartment"/>
+	</bean>
+	
+	<!-- 获取所有角色 -->
+	<bean id="IRoleService" parent="baseWebService">
+		<property name="serviceBean" ref="roleImpl"/>
+		<property name="serviceClass" value="com.orient.webservice.system.IRole"/>
+	</bean>
+	
+	<!-- 获取所有单位信息 -->
+	<bean id="IUnitService" parent="baseWebService">
+		<property name="serviceBean" ref="unitImpl"/>
+		<property name="serviceClass" value="com.orient.webservice.system.IUnit"/>
+	</bean>
+
+	<!-- pad同步 -->
+	<bean id="PVMSyncServiceImpl" class="com.orient.pvm.sync.PVMSyncService">
+	</bean>
+	<bean id="PVMSyncService" parent="baseWebService">
+		<property name="serviceBean" ref="PVMSyncServiceImpl"/>
+		<property name="serviceClass" value="com.orient.pvm.sync.IPVMSyncService" />
+	</bean>
+
+	<!-- 获取协同项目任务 -->
+	<bean id="ICollabService" parent="baseWebService">
+		<property name="serviceBean" ref="collabImpl"/>
+		<property name="serviceClass" value="com.orient.webservice.collab.ICollab"/>
+	</bean>
+</beans>

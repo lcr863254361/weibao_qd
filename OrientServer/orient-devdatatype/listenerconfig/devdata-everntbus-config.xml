@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Copyright (c) 2016. Orient Company
+  ~
+  -->
+
+<ListenerOrder>
+    <EventSource eventType="com.orient.devdataobj.event.DataObjModifiedEvent"
+                 name="com.orient.collab.controller.PlanTaskProcessController">
+        <BaseOrderList>
+            <OrderValue name="com.orient.devdataobj.event.listener.GroupModifiedDataObjListener"/>
+            <OrderValue name="com.orient.collab.event.listener.DataTaskCreate"/>
+        </BaseOrderList>
+        <ExtenderOderList>
+            <Listener name="com.orient.devdataobj.event.listener.GroupModifiedDataObjListener" order="1"/>
+            <Listener name="com.orient.collab.event.listener.DataTaskCreate" order="5"/>
+        </ExtenderOderList>
+    </EventSource>
+
+
+    <EventSource eventType="com.orient.devdataobj.event.GetDataObjEvent"
+                 name="com.orient.devdataobj.controller.DataObjController">
+        <BaseOrderList>
+            <OrderValue name="com.orient.devdataobj.event.listener.GetBindDataObjListener"/>
+            <OrderValue name="com.orient.devdataobj.event.listener.ConvertDataObjBeanListener"/>
+        </BaseOrderList>
+        <ExtenderOderList>
+            <Listener name="com.orient.devdataobj.event.listener.GetBindDataObjListener" order="1"/>
+            <!-- <Listener name="com.orient.devdataobj.event.listener.GetParentBindDataObjListener" order="2"/> 只需要当前节点的数据-->
+            <Listener name="com.orient.devdataobj.event.listener.ConvertDataObjBeanListener" order="5"/>
+        </ExtenderOderList>
+    </EventSource>
+
+    <EventSource eventType="com.orient.devdataobj.event.GetDataObjEvent"
+                 name="com.orient.collab.controller.MyTaskController">
+        <BaseOrderList>
+            <OrderValue name="com.orient.devdataobj.event.listener.GetBindDataObjListener"/>
+            <OrderValue name="com.orient.devdataobj.event.listener.ConvertDataObjBeanListener"/>
+        </BaseOrderList>
+        <ExtenderOderList>
+            <Listener name="com.orient.devdataobj.event.listener.GetBindDataObjListener" order="1"/>
+            <!--<Listener name="com.orient.devdataobj.event.listener.GetParentBindDataObj" order="2"/>  只需要当前节点的数据-->
+            <Listener name="com.orient.devdataobj.event.listener.ConvertDataObjBeanListener" order="5"/>
+        </ExtenderOderList>
+    </EventSource>
+</ListenerOrder>

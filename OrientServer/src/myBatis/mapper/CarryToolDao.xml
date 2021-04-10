@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.orient.weibao.dao.CarryToolDao">
+    <resultMap id="CarryToolWithName" type="com.orient.weibao.dto.CarryToolWithParams"
+    extends="com.orient.weibao.mbg.mapper.CarryToolMapper.BaseResultMap">
+        <result property="deviceName" column="C_NAME_3607"/>
+        <result property="cWidth3209" column="C_WIDTH_3607"/>
+        <result property="cLength3209" column="C_LENGTH_3607"/>
+    </resultMap>
+    <select id="selectByDivingTaskId" resultMap="CarryToolWithName">
+        SELECT T_CARRY_TOOL_480.*,C_NAME_3607,C_WIDTH_3607,C_LENGTH_3607 from T_CARRY_TOOL_480 inner JOIN T_CABIN_CARRY_TOOL_480 on C_DEVICE_ID_3486=T_CABIN_CARRY_TOOL_480.ID
+        where T_DIVING_TASK_480_ID=#{taskId} and C_DIVING_PLAN_ID_3486=#{divingPlanId}
+
+    </select>
+</mapper>

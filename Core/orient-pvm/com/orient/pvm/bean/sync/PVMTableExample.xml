@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PVMTables version="1.0">
+    <CheckModel modelType = "MODEL"  modelId = "1" modelName = "2" taskId="3" taskModelName="4" taskPath="5" plan_Start="6" plan_End="7" modelStatus="7" projectName="22">
+        <Team uploadUserId = "180">
+            <UserId id = "1"></UserId>
+            <UserId id = "180"></UserId>
+        </Team>
+        <Signers>
+            <Signer roleName = "测试岗" userId="" userName=""/>
+            <Signer roleName = "指挥" userId="" userName=""/>
+        </Signers>
+        <Columns>
+            <Column headName = "序号" headCode = "LINENUM" type = "STRING"></Column>
+            <Column headName = "检查内容" headCode = "CHECKCONTENT" type = "STRING"></Column>
+            <Column headName = "检查结果" headCode = "RESLUT" type = "CHECK"></Column>
+        </Columns>
+        <Row dataId = "1">
+            <!--check 表示一个字段 其中TYPE是字段的类型,例如 String,Interger,Check,File-->
+            <Check headName = "序号" headCode="LINENUM" dispalyValue="1" type="STRING">
+            </Check>
+            <Check  headName = "检查内容" headCode="CHECKCONTENT" dispalyValue="检查电缆" type="STRING">
+            </Check>
+            <Check  headName = "检查结果" headCode="RESLUT" dispalyValue="" type="CHECK">
+                <CheckOP label= "B21" OPTYPE= "BOOLEAN" value = "" OPTIME ="" OPUSERID="" >
+                </CheckOP>
+                <CheckOP label= "B22" OPTYPE = "INPUT" value = "" OPTIME ="" OPUSERID="" >
+                </CheckOP>
+            </Check>
+        </Row>
+        <Row dataId = "2">
+            <!--check 表示一个字段 其中TYPE是字段的类型,例如 String,Interger,Check,File-->
+            <Check headName = "序号" headCode="LINENUM" dispalyValue="1" type="STRING">
+            </Check>
+            <Check  headName = "检查内容" headCode="CHECKCONTENT" dispalyValue="检查插头" type="STRING">
+            </Check>
+            <Check  headName = "检查结果" headCode="RESLUT" dispalyValue="" type="CHECK">
+                <CheckOP label= "B21" OPTYPE= "BOOLEAN" value = "" OPTIME ="" OPUSERID="" >
+                </CheckOP>
+            </Check>
+        </Row>
+    </CheckModel>
+</PVMTables>

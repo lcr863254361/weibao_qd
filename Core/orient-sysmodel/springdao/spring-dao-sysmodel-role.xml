@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+	
+    <bean id="RoleDAO" class="com.orient.sysmodel.domain.role.RoleDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="RoleService" class="com.orient.sysmodel.service.role.RoleServiceImpl">
+		<property name="dao" ref="RoleDAO"></property>
+		<property name="roleArithDao" ref="RoleArithDAO"></property>
+		<property name="roleSchemaDao" ref="RoleSchemaDAO"></property>
+		<property name="roleFunctionTbomDao" ref="RoleFunctionTbomDAO"></property>
+		<property name="roleUserDao" ref="RoleUserDAO"></property>
+		<property name="overAllOperationsDao" ref="OverAllOperationsDAO"></property>
+		<property name="partOperationsDao" ref="PartOperationsDAO"></property>
+		<property name="operationDao" ref="OperationDAO"></property>
+		<property name="metaEngine" ref="MetaEngine"/>
+		<property name="roleEngine" ref="RoleEngine"/>
+		<property name="modelBtnTypeDao" ref="modelBtnTypeDao"/>
+	</bean>
+    
+    <bean id="RoleSchemaDAO" class="com.orient.sysmodel.domain.role.RoleSchemaDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="RoleUserDAO" class="com.orient.sysmodel.domain.role.RoleUserDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="RoleArithDAO" class="com.orient.sysmodel.domain.role.RoleArithDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="FunctionDAO" class="com.orient.sysmodel.domain.role.FunctionDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="FunctionService" class="com.orient.sysmodel.service.role.FunctionServiceImpl">
+		<property name="dao" ref="FunctionDAO"></property>
+		<property name="roleFunctionTbomDao" ref="RoleFunctionTbomDAO"></property>
+		<property name="roleEngine" ref="RoleEngine"></property>
+	</bean>
+
+	
+	<bean id="RoleFunctionTbomDAO" class="com.orient.sysmodel.domain.role.RoleFunctionTbomDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	
+	<bean id="OverAllOperationsDAO" class="com.orient.sysmodel.domain.role.OverAllOperationsDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="PartOperationsDAO" class="com.orient.sysmodel.domain.role.PartOperationsDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="OperationDAO" class="com.orient.sysmodel.domain.role.OperationDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<!-- 角色数据数据引擎，必须是单例 -->
+	<bean id="RoleEngine" class="com.orient.sysmodel.roleengine.impl.RoleUtilImpl" scope="singleton">
+
+	</bean>
+	
+	<!-- DAO的工厂类 -->
+	<bean id="roledaofactory" class="com.orient.sysmodel.domain.RoleDAOFactory"
+		lazy-init="true">
+		<property name="roleDAO" ref="RoleDAO" />
+		<property name="roleSchemaDAO" ref="RoleSchemaDAO" />
+		<property name="roleUserDAO" ref="RoleUserDAO" />
+		<property name="roleArithDAO" ref="RoleArithDAO" />
+
+		<property name="functionDAO" ref="FunctionDAO" />
+		<property name="roleFunctionTbomDAO" ref="RoleFunctionTbomDAO" />
+
+		<property name="overAllOperationsDAO" ref="OverAllOperationsDAO" />
+		<property name="partOperationsDAO" ref="PartOperationsDAO" />
+		<property name="operationDAO" ref="OperationDAO" />				
+	</bean>
+</beans>

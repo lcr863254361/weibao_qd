@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <description>apache shiro配置</description>
+
+    <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+        <property name="securityManager" ref="securityManager"/>
+        <property name="loginUrl" value="/index.jsp"/>
+        <property name="successUrl" value="/ExtModel.jsp"/>
+        <property name="unauthorizedUrl" value="/index.jsp"/>
+        <property name="filterChainDefinitions">
+            <value>
+                <!-- 静态资源允许访问 -->
+                /app/** = anon
+                <!-- 登录页允许访问 -->
+                /doLogin.rdm = anon
+                /loginError.rdm = anon
+                /service/** = anon
+                /services/** = anon
+                /OutService/** = anon
+                /axis2-web/** = anon
+                <!-- 附件相关 firefox swfupload 上传session丢失的问题-->
+                /modelFile/create.rdm = anon
+                /app/views/file/*.jsp = anon
+                /flow/deploy.rdm = anon
+                <!--视频预览-->
+                /orientForm/videoDownload.rdm = anon
+                /orientForm/pngDownload.rdm = anon
+                /orientForm/upload.rdm = anon
+                /collabFlow/jpdl/*.rdm = anon
+                <!--C#上传文件-->
+                /orientForm/upload.rdm = anon
+                <!--C#客户端-->
+                /uploadClient/*.rdm = anon
+                <!--DS请求需要放行-->
+                /loginCheck/** = anon
+                /sequence/** = anon
+                /schema/** = anon
+                /schemaLock/** = anon
+                /share/** = anon
+                /script/** = anon
+                /api/** = anon
+                /preview/**=anon
+                /news.jsp = anon
+                /CurrentTaskMgr/getCheckTableCaseHtml.rdm = anon
+                /accountingForm/getDivingPlanTableData.rdm = anon
+                /accountingForm/getOutTemplateTable.rdm = anon
+                /accountingForm/getScientistPicturePreviewFile.rdm = anon
+                /accountingForm/getDepthDesitySelectData.rdm = anon
+                /accountingForm/getPersons.rdm=anon
+                /accountingForm/getCarryToolList.rdm=anon
+                /accountingForm/getPersonWeight.rdm=anon
+                /informMgr/notice.rdm = anon
+                /informMgr/currentHangduanNotice.rdm = anon
+                /informMgr/getCurrentHangduanFlowPost.rdm=anon
+                /orientForm/download.rdm=anon
+                /modelFile/list.rdm=anon
+                /accountingForm/getDepthDesityTypeData.rdm=anon
+                /informMgr/informGetTroubleCellDetail.rdm=anon
+                /informMgr/informGetTroubleCellDetail.rdm=anon
+                /CurrentTaskMgr/getTroubleIdByCellId.rdm=anon
+                /news2.jsp = anon
+                /news3.jsp = anon
+                /news4.jsp = anon
+                <!-- 其他资源需要认证 -->
+                /** = authc
+            </value>
+        </property>
+    </bean>
+
+    <!-- 缓存管理器 使用Ehcache实现 -->
+    <!--<bean id="shiroEhcacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">-->
+        <!--<property name="cacheManagerConfigFile" value="classpath:ehcache-shiro.xml"/>-->
+    <!--</bean>-->
+
+    <!-- 会话DAO -->
+    <bean id="sessionDAO" class="org.apache.shiro.session.mgt.eis.MemorySessionDAO"/>
+
+    <bean id="shiroSessionListener" class="com.orient.login.shiro.ShiroSessionListener"/>
+
+    <!-- 会话管理器 -->
+    <bean id="sessionManager" class="org.apache.shiro.web.session.mgt.DefaultWebSessionManager">
+        <property name="sessionDAO" ref="sessionDAO"/>
+        <property name="globalSessionTimeout" value="-1000"/>
+        <property name="sessionListeners" ref="shiroSessionListener"/>
+        <property name="sessionValidationInterval" value="10000"/>
+        <property name="sessionValidationSchedulerEnabled" value="true"/>
+
+    </bean>
+
+    <!-- 安全管理器 -->
+    <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+        <property name="realms">
+            <list>
+                <ref bean="securityRealm"/>
+            </list>
+        </property>
+        <!--&lt;!&ndash; cacheManager,集合spring缓存工厂 &ndash;&gt;-->
+        <!--<property name="cacheManager" ref="shiroEhcacheManager"/>-->
+        <property name="sessionManager" ref="sessionManager" />
+    </bean>
+
+    <!-- Shiro生命周期处理器 -->
+    <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
+
+</beans>

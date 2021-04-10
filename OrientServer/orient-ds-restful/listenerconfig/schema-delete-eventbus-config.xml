@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ListenerOrder>
+
+    <EventSource eventType="com.orient.dsrestful.event.DeleteSchemaEvent"
+                 name="com.orient.dsrestful.business.SchemaOperationBusiness">
+
+        <BaseOrderList>
+            <OrderValue name="com.orient.dsrestful.listener.deleteSchema.DeleteFileListener"/>
+            <OrderValue name="com.orient.dsrestful.listener.deleteSchema.DeleteTableListener"/>
+            <OrderValue name="com.orient.dsrestful.listener.deleteSchema.DeleteRestrictionListener"/>
+            <OrderValue name="com.orient.dsrestful.listener.deleteSchema.DeleteViewListener"/>
+            <OrderValue name="com.orient.dsrestful.listener.deleteSchema.DeleteTbomListener"/>
+            <OrderValue name="com.orient.dsrestful.listener.deleteSchema.DeleteFinalHandlerListener"/>
+        </BaseOrderList>
+
+        <ExtenderOderList>
+            <Listener name="com.orient.dsrestful.listener.deleteSchema.DeleteFileListener" order="10"/>
+            <Listener name="com.orient.dsrestful.listener.deleteSchema.DeleteViewListener" order="11"/>
+            <Listener name="com.orient.dsrestful.listener.deleteSchema.DeleteTableListener" order="20"/>
+            <Listener name="com.orient.dsrestful.listener.deleteSchema.DeleteRestrictionListener" order="30"/>
+            <Listener name="com.orient.dsrestful.listener.deleteSchema.DeleteTbomListener" order="50"/>
+            <Listener name="com.orient.dsrestful.listener.deleteSchema.DeleteFinalHandlerListener" order="60"/>
+        </ExtenderOderList>
+
+    </EventSource>
+
+
+    <EventSource eventType="com.orient.dsrestful.event.SaveSchemaEvent"
+                 name="com.orient.dsrestful.business.SchemaOperationBusiness">
+
+        <BaseOrderList>
+            <OrderValue name="com.orient.dsrestful.listener.saveSchema.SaveSchemaRecordListener"/>
+            <OrderValue name="com.orient.dsrestful.listener.saveSchema.SaveTableListener"/>
+            <OrderValue name="com.orient.dsrestful.listener.saveSchema.SaveTableColumnListener"/>
+            <OrderValue name="com.orient.dsrestful.listener.saveSchema.SaveRestrictionListener"/>
+            <OrderValue name="com.orient.dsrestful.listener.saveSchema.SaveViewListener"/>
+            <OrderValue name="com.orient.dsrestful.listener.saveSchema.CreatePhysicalListener"/>
+            <OrderValue name="com.orient.dsrestful.listener.saveSchema.SaveFinalHandlerListener"/>
+        </BaseOrderList>
+
+        <ExtenderOderList>
+            <Listener name="com.orient.dsrestful.listener.saveSchema.SaveSchemaRecordListener" order="10"/>
+            <Listener name="com.orient.dsrestful.listener.saveSchema.SaveTableListener" order="20"/>
+            <Listener name="com.orient.dsrestful.listener.saveSchema.SaveTableColumnListener" order="30"/>
+            <Listener name="com.orient.dsrestful.listener.saveSchema.SaveRestrictionListener" order="40"/>
+            <Listener name="com.orient.dsrestful.listener.saveSchema.SaveViewListener" order="50"/>
+            <Listener name="com.orient.dsrestful.listener.saveSchema.CreatePhysicalListener" order="60"/>
+            <Listener name="com.orient.dsrestful.listener.saveSchema.SaveFinalHandlerListener" order="70"/>
+        </ExtenderOderList>
+
+    </EventSource>
+
+    <EventSource eventType="com.orient.dsrestful.event.UpdateSchemaEvent"
+                 name="com.orient.dsrestful.business.SchemaOperationBusiness">
+
+        <BaseOrderList>
+            <OrderValue name="com.orient.dsrestful.listener.updateSchema.VerifyTableColumnListener"/>
+            <OrderValue name="com.orient.dsrestful.listener.updateSchema.SetOldSchemaInvalidListener"/>
+            <OrderValue name="com.orient.dsrestful.listener.updateSchema.UpdateTableListener"/>
+            <OrderValue name="com.orient.dsrestful.listener.updateSchema.FlashbackPrepareListener"/>
+            <OrderValue name="com.orient.dsrestful.listener.updateSchema.UpdateColumnListener"/>
+            <OrderValue name="com.orient.dsrestful.listener.updateSchema.ExportUpdateTableDmpListener"/>
+            <OrderValue name="com.orient.dsrestful.listener.updateSchema.UpdateRestrictionListener"/>
+            <OrderValue name="com.orient.dsrestful.listener.updateSchema.UpdateViewListener"/>
+            <OrderValue name="com.orient.dsrestful.listener.updateSchema.UpdatePhysicalFieldListener"/>
+            <OrderValue name="com.orient.dsrestful.listener.updateSchema.UpdateFinalHandlerListener"/>
+        </BaseOrderList>
+
+        <ExtenderOderList>
+            <Listener name="com.orient.dsrestful.listener.updateSchema.VerifyTableColumnListener" order="10"/>
+            <Listener name="com.orient.dsrestful.listener.updateSchema.FlashbackPrepareListener" order="11"/>
+            <Listener name="com.orient.dsrestful.listener.updateSchema.SetOldSchemaInvalidListener" order="20"/>
+            <Listener name="com.orient.dsrestful.listener.updateSchema.UpdateTableListener" order="30"/>
+            <Listener name="com.orient.dsrestful.listener.updateSchema.UpdateColumnListener" order="40"/>
+            <Listener name="com.orient.dsrestful.listener.updateSchema.ExportUpdateTableDmpListener" order="41"/>
+            <Listener name="com.orient.dsrestful.listener.updateSchema.UpdateRestrictionListener" order="50"/>
+            <Listener name="com.orient.dsrestful.listener.updateSchema.UpdateViewListener" order="60"/>
+            <Listener name="com.orient.dsrestful.listener.updateSchema.UpdatePhysicalFieldListener" order="70"/>
+            <Listener name="com.orient.dsrestful.listener.updateSchema.UpdateFinalHandlerListener" order="80"/>
+        </ExtenderOderList>
+
+    </EventSource>
+
+</ListenerOrder>

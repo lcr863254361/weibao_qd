@@ -1,0 +1,13 @@
+@include extjs-tab-panel-ui(
+	$ui: 'orientTab',
+	$ui-tab-background-color: #CC3333,
+	$ui-tab-background-color-over: adjust-color(#CC3333, $hue: 0deg, $saturation: 11.429%, $lightness: 2.353%),
+	$ui-tab-background-color-active: adjust-color(#CC3333, $hue: 0deg, $saturation: 30.768%, $lightness: -13.333%)
+);
+
+@include extjs-tab-panel-ui(
+	$ui: 'orientTab2',
+	$ui-tab-background-color: #FFCC33,
+	$ui-tab-background-color-over: adjust-color(#FFCC33, $hue: 0deg, $saturation: 11.429%, $lightness: 2.353%),
+	$ui-tab-background-color-active: adjust-color(#FFCC33, $hue: 0deg, $saturation: 30.768%, $lightness: -13.333%)
+);

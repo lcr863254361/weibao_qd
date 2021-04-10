@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.orient.component.runenv.data.mapper.ComponentFlowDataMapper">
+	<insert id="saveData" parameterType="com.orient.component.runenv.model.ComponentFlowData">
+	   INSERT INTO CWM_COMPONENT_RELATIONDATA VALUES(SEQ_CWM_COMPONENT_RELATIONDATA.NEXTVAL,#{projectCode},#{key},#{value})
+	</insert>
+		
+	<update id="update" parameterType="com.orient.component.runenv.model.ComponentFlowData">
+		UPDATE CWM_COMPONENT_RELATIONDATA SET PARAMVALUE=#{value} WHERE PRJCODE=#{projectCode} AND PARAMKEY=#{key}
+	</update>
+
+	<delete id="deleteAll">
+		DELETE FROM CWM_COMPONENT_RELATIONDATA
+	</delete>
+	
+	<delete id="deleteProjData">
+		DELETE FROM CWM_COMPONENT_RELATIONDATA WHERE PRJCODE=#{projCode} 
+	</delete>
+	
+	<delete id="deleteKeyData">
+		DELETE FROM CWM_COMPONENT_RELATIONDATA WHERE PRJCODE=#{projCode} AND PARAMKEY=#{key} 
+	</delete>
+	
+	<select id="findAll" resultType="com.orient.component.runenv.model.ComponentFlowData">
+		SELECT * FROM CWM_COMPONENT_RELATIONDATA
+	</select>
+	
+	<select id="getComponentFlowDataByKey" resultType="com.orient.component.runenv.model.ComponentFlowData">
+		SELECT ID,PRJCODE PROJECTCODE,PARAMKEY KEY,PARAMVALUE VALUE FROM CWM_COMPONENT_RELATIONDATA WHERE PARAMKEY=#{key} AND PRJCODE=#{projCode}
+	</select>
+	
+	<select id="findByProjCode" resultType="com.orient.component.runenv.model.ComponentFlowData">
+		SELECT ID,PRJCODE PROJECTCODE,PARAMKEY KEY,PARAMVALUE VALUE FROM CWM_COMPONENT_RELATIONDATA WHERE PRJCODE=#{projCode}
+	</select>	
+</mapper>

@@ -1,0 +1,35 @@
+/*计划版本迭代轮的dataView的样式*/
+#plan-version-view {
+    background: #404040;
+    font-size: 14px;
+    color: #fff;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+#plan-version-view .thumb-wrap {
+    padding: 5px;
+    margin: 4px 10px 4px 10px;
+}
+
+#plan-version-view .thumb-wrap span {
+    display: block;
+    overflow: hidden;
+    text-align: left;
+}
+
+#plan-version-view .x-view-over {
+    border: 1px solid #dddddd;
+}
+
+#plan-version-view .x-item-selected {
+    background: #404040;
+    padding: 5px;
+    margin: 4px 10px 4px 10px;
+    font-size: 14px;
+    color: #0fdf3c;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+#plan-version-view .x-item-selected span {
+    color: #0fdf3c;
+}

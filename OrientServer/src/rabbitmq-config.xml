@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:rabbit="http://www.springframework.org/schema/rabbit"
+	   xsi:schemaLocation="http://www.springframework.org/schema/rabbit
+           http://www.springframework.org/schema/rabbit/spring-rabbit.xsd
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<!--*********************************************-->
+	<!--               producer配置                   -->
+	<!--*********************************************-->
+
+	<rabbit:topic-exchange name="myExchange" durable="true" auto-declare="true" declared-by="containerAdmin">
+	</rabbit:topic-exchange>
+
+	<!--*********************************************-->
+	<!--               consumer配置                  -->
+	<!--*********************************************-->
+
+	<!-- queue 队列声明-->
+	<rabbit:queue name="myQueue" durable="true" auto-delete="false" exclusive="false" declared-by="containerAdmin"/>
+
+	<!-- exchange queue binging key 绑定 -->
+	<rabbit:topic-exchange name="myExchange" declared-by="containerAdmin">
+		<rabbit:bindings>
+			<rabbit:binding queue="myQueue" pattern="hello" />
+		</rabbit:bindings>
+	</rabbit:topic-exchange>
+
+
+</beans>

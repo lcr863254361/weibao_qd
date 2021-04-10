@@ -1,0 +1,51 @@
+<!DOCTYPE databases PUBLIC
+        "-//EXOLAB/Castor Mapping DTD Version 1.0//EN"
+        "http://castor.exolab.org/mapping.dtd">
+<mapping>
+    <description>HikeyTDM RCP Mapping</description>
+
+    <!--  下表是业务库SCHEMA表，有name,version,description,modifiedTime,isLock,useid,lockModifiedTime属性
+
+
+
+        以及tables,views,restrictions三个一对多映射  -->
+
+    <class name="com.rcp.design.domain.Schema" identity="name">
+        <map-to xml="schema"/>
+        <field name="name">
+            <bind-xml name="name" node="attribute"/>
+        </field>
+        <field name="version">
+            <bind-xml name="version" node="attribute"/>
+        </field>
+        <field name="description">
+            <bind-xml name="description" node="attribute"/>
+        </field>
+        <field name="modifiedTime">
+            <bind-xml name="modifiedTime" node="attribute"/>
+        </field>
+        <field name="isLock">
+            <bind-xml name="isLock" node="attribute"/>
+        </field>
+        <field name="ip">
+            <bind-xml name="ip" node="attribute"/>
+        </field>
+        <field name="username">
+            <bind-xml name="username" node="attribute"/>
+        </field>
+        <field name="lockModifiedTime">
+            <bind-xml name="lockModifiedTime" node="attribute"/>
+        </field>
+        <field name="secrecySet">
+            <bind-xml name="secrecySet" node="attribute"/>
+        </field>
+        <field name="type">
+            <bind-xml name="type" node="attribute"/>
+        </field>
+        <field name="isdelete">
+            <bind-xml name="isdelete" node="attribute"/>
+        </field>
+    </class>
+
+
+</mapping>

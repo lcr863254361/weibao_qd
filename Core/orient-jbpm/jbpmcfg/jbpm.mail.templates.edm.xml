@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jbpm-configuration>
+
+  <process-engine-context>
+
+    <mail-template name="text-template">
+      <to addresses="${addresses}" />
+      <cc users="${username}" groups="${role}" />
+      <bcc groups="${role}" />
+      <subject>${subject}</subject>
+      <text>${subject} ${date} ${email_content}</text>
+    </mail-template>
+    
+    <mail-template name="html-template_user">
+      <to users="${username}" groups="${role}" />
+      <subject>${subject}</subject>
+      <html>
+          <table>
+               <tr>
+                   <td>
+                       ${subject}
+                   </td>
+                    <td>
+                       ${date}
+                   </td>
+               </tr>
+               <tr>
+                  <td colspan="2">
+                                      你有以下任务需要处理
+                  </td>
+               </tr>
+               <tr>
+                  <td colspan="2">
+                          ${task_url}
+                  </td>
+               </tr>
+          </table>
+      </html>
+    </mail-template>
+    <mail-template name="html-template_role">
+      <to groups="${role}" />
+      <subject>${subject}</subject>
+      <html>
+          <table>
+               <tr>
+                   <td>
+                       ${subject}
+                   </td>
+                    <td>
+                       ${date}
+                   </td>
+               </tr>
+               <tr>
+                  <td colspan="2">
+                                      你有以下任务需要处理
+                  </td>
+               </tr>
+               <tr>
+                  <td colspan="2">
+                          ${task_url}
+                  </td>
+               </tr>
+          </table>
+      </html>
+    </mail-template>
+    
+
+  </process-engine-context>
+
+</jbpm-configuration>

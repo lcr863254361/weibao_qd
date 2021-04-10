@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.orient.weibao.dao.DivingPlanTableDao">
+    <resultMap id="DivingPlanTableDaoWithToolsAndDeepth" type="com.orient.weibao.dto.DivingPlanTableDaoWithToolsAndDeepth"
+    extends="com.orient.weibao.mbg.mapper.DivingPlanTableMapper.BaseResultMap">
+        <association property="depthDesity"
+        select="com.orient.weibao.mbg.mapper.DepthDesityMapper.selectByPrimaryKey"
+        column="C_PLAN_DIVING_DEPTH_3487"/>
+        <collection property="carryTools" select="com.orient.weibao.dao.CarryToolDao.selectByDivingTaskId"
+        column="T_DIVING_TASK_480_ID"/>
+    </resultMap>
+    <select id="selectListWithToolsAndDeepth" resultMap="DivingPlanTableDaoWithToolsAndDeepth">
+        select *from T_DIVING__PLAN_TABLE_480 where T_DIVING_TASK_480_ID=#{taskId}
+    </select>
+    <select id="getHangDuanIdByDivingTaskId" resultType="java.lang.String">
+        select distinct T.T_HANGDUAN_480_ID from T_DIVING__PLAN_TABLE_480 inner join T_DIVING_TASK_480 T on T_DIVING__PLAN_TABLE_480.T_DIVING_TASK_480_ID = T.ID
+WHERE T.ID=#{taskId}
+    </select>
+</mapper>

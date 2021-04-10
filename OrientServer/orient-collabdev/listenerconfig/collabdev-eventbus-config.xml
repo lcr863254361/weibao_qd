@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListenerOrder>
+
+    <EventSource eventType="com.orient.collab.event.ProjectTreeNodeCreatedEvent"
+                 name="com.orient.collabdev.business.designing.DesignPlanGanttBusiness">
+        <BaseOrderList>
+            <OrderValue name="com.orient.modeldata.eventListener.DefaultBeforeSaveModelDataListener"/>
+            <OrderValue name="com.orient.modeldata.eventListener.SaveModelDataListener"/>
+            <OrderValue name="com.orient.modeldata.eventListener.DefaultAfterSaveModelDataListener"/>
+        </BaseOrderList>
+        <ExtenderOderList>
+            <Listener name="com.orient.modeldata.eventListener.DefaultBeforeSaveModelDataListener" order="10"/>
+            <Listener name="com.orient.modeldata.eventListener.SaveModelDataListener" order="20"/>
+            <Listener name="com.orient.modeldata.eventListener.DefaultAfterSaveModelDataListener" order="30"/>
+        </ExtenderOderList>
+    </EventSource>
+    <EventSource eventType="com.orient.collab.event.ProjectTreeNodeEditEvent"
+                 name="com.orient.collabdev.business.designing.DesignPlanGanttBusiness">
+        <BaseOrderList>
+            <OrderValue name="com.orient.modeldata.eventListener.DefaultBeforeSaveModelDataListener"/>
+            <OrderValue name="com.orient.modeldata.eventListener.UpdateModelDataListener"/>
+            <OrderValue name="com.orient.collab.event.listener.UpdatePlanInfoListener"/>
+            <OrderValue name="com.orient.modeldata.eventListener.DefaultAfterSaveModelDataListener"/>
+        </BaseOrderList>
+        <ExtenderOderList>
+            <Listener name="com.orient.modeldata.eventListener.DefaultBeforeSaveModelDataListener" order="10"/>
+            <Listener name="com.orient.modeldata.eventListener.UpdateModelDataListener" order="20"/>
+            <Listener name="com.orient.collab.event.listener.UpdatePlanInfoListener" order="30"/>
+            <Listener name="com.orient.modeldata.eventListener.DefaultAfterSaveModelDataListener" order="40"/>
+        </ExtenderOderList>
+    </EventSource>
+
+    <EventSource eventType="com.orient.collabdev.business.common.pedigree.event.GetPedigreeEvent"
+                 name="com.orient.collabdev.business.common.pedigree.PedigreeBusiness">
+        <BaseOrderList>
+            <OrderValue name="com.orient.collabdev.business.common.pedigree.event.listener.GetPedigreeNodes"/>
+            <OrderValue name="com.orient.collabdev.business.common.pedigree.event.listener.GetPedigreeRelations"/>
+            <OrderValue name="com.orient.collabdev.business.common.pedigree.event.listener.GetPedigreeStatus"/>
+        </BaseOrderList>
+        <ExtenderOderList>
+            <Listener name="com.orient.collabdev.business.common.pedigree.event.listener.GetPedigreeNodes"
+                      order="10"/>
+            <Listener name="com.orient.collabdev.business.common.pedigree.event.listener.GetPedigreeRelations"
+                      order="20"/>
+            <Listener name="com.orient.collabdev.business.common.pedigree.event.listener.GetPedigreeStatus"
+                      order="30"/>
+        </ExtenderOderList>
+    </EventSource>
+
+    <!--项目启动-->
+    <EventSource eventType="com.orient.collabdev.controller.startup.event.StartUpProjectEvent"
+                 name="com.orient.collabdev.controller.ProjectDriveController">
+
+        <BaseOrderList>
+            <OrderValue name="com.orient.collabdev.controller.startup.listener.ModifyProjectStatusListener"/>
+            <OrderValue name="com.orient.collabdev.controller.startup.listener.StartUpPlansByGanttListener"/>
+        </BaseOrderList>
+
+        <ExtenderOderList>
+            <Listener name="com.orient.collabdev.controller.startup.listener.ModifyProjectStatusListener" order="10"/>
+            <Listener name="com.orient.collabdev.controller.startup.listener.StartUpPlansByGanttListener" order="20"/>
+        </ExtenderOderList>
+
+    </EventSource>
+
+    <!--提交项目-->
+    <EventSource eventType="com.orient.collabdev.controller.commit.event.CommitProjectEvent"
+                 name="com.orient.collabdev.controller.ProjectDriveController">
+
+        <BaseOrderList>
+            <OrderValue name="com.orient.collabdev.controller.commit.listener.CommitProjectListener"/>
+        </BaseOrderList>
+
+        <ExtenderOderList>
+            <Listener name="com.orient.collabdev.controller.commit.listener.CommitProjectListener" order="10"/>
+        </ExtenderOderList>
+
+    </EventSource>
+
+    <!--提交计划-->
+    <EventSource eventType="com.orient.collabdev.controller.commit.event.CommitPlanEvent"
+                 name="com.orient.collabdev.controller.PlanDriveController">
+
+        <BaseOrderList>
+            <OrderValue name="com.orient.collabdev.controller.commit.listener.CommitPlanListener"/>
+        </BaseOrderList>
+
+        <ExtenderOderList>
+            <Listener name="com.orient.collabdev.controller.commit.listener.CommitPlanListener" order="10"/>
+        </ExtenderOderList>
+
+    </EventSource>
+
+    <!--手动启动计划-->
+    <EventSource eventType="com.orient.collabdev.controller.startup.event.ManualStartUpPlanEvent"
+                 name="com.orient.collabdev.controller.PlanDriveController">
+
+        <BaseOrderList>
+            <OrderValue name="com.orient.collabdev.controller.startup.listener.ManualStartUpPlanListener"/>
+        </BaseOrderList>
+
+        <ExtenderOderList>
+            <Listener name="com.orient.collabdev.controller.startup.listener.ManualStartUpPlanListener" order="10"/>
+        </ExtenderOderList>
+
+    </EventSource>
+
+</ListenerOrder>

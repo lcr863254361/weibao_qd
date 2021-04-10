@@ -1,0 +1,88 @@
+.dataview-block {
+    padding: 10px 0px 10px 40px;
+    border-bottom: 1px solid #DADADA;
+    display: block;
+}
+.dataview-front-label {
+    width: 30%;
+    font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #888;
+}
+.dataview-front-end {
+    width: 70%;
+    font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #01AAED;
+}
+.dataview-normal {
+    width: 22%;
+    height: 200px;
+    float: left;
+    text-align:center;
+    margin: 5px;
+    border-radius: 4px;
+    font-size: 20px;
+    font-family:"Microsoft Yahei";
+    cursor: pointer;
+}
+.dataview-error {
+    width: 22%;
+    height: 200px;
+    float: left;
+    text-align:center;
+    margin: 5px;
+    border-radius: 4px;
+    color: #C64A52;
+    font-size: 20px;
+    font-family:"Microsoft Yahei";
+}
+.dataview-content {
+    height: 160px;
+    background-image:url('../../images/cards/card-normal.jpg');
+}
+.dataview-content-error {
+    height: 160px;
+    background-image:url('../../images/cards/card-error.jpg');
+}
+.dataview-detail {
+    width: 20px;
+    height: 20px;
+    float: right;
+    cursor: pointer;
+    background-image:url('../../images/cards/card-detail.png');
+    background-size:100% 100%;
+}
+.dataview-header {
+    height: 40px;
+    background-color:#159EEF;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+.dataview-header-error {
+    height: 40px;
+    background-color:#C64A52;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+/*.dataview-normal {*/
+    /*width: 15%;*/
+    /*height: 180px;*/
+    /*float: left;*/
+    /*text-align:center;*/
+    /*margin: 5px;*/
+    /*border-radius: 10px;*/
+    /*color:#01AAED;*/
+    /*background-image:url('../../images/cards/card-normal.jpg');*/
+    /*font-size: 20px;*/
+/*}*/
+/*.dataview-error {*/
+    /*width: 15%;*/
+    /*height: 180px;*/
+    /*float: left;*/
+    /*text-align:center;*/
+    /*margin: 5px;*/
+    /*border-radius: 10px;*/
+    /*color: red;*/
+    /*font-size: 20px;*/
+/*}*/
