@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="Oracle - orcl@192.168.8.180" uuid="51c4ea85-d8b6-4eb2-9a63-c150043a0178">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="180-MONGO" uuid="d686cea1-8581-4bba-b26d-448ed05f3fc6">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="180-newcollab" uuid="3127d07d-fcab-48d9-8740-01ca5e40ef65">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

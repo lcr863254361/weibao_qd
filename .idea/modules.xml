@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/OrientServer/OrientServer.iml" filepath="$PROJECT_DIR$/OrientServer/OrientServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Core/orient-alarm/orient-alarm.iml" filepath="$PROJECT_DIR$/Core/orient-alarm/orient-alarm.iml" group="common" />
+      <module fileurl="file://$PROJECT_DIR$/Core/orient-auditflow/orient-auditflow.iml" filepath="$PROJECT_DIR$/Core/orient-auditflow/orient-auditflow.iml" group="flow" />
+      <module fileurl="file://$PROJECT_DIR$/Core/orient-background/orient-background.iml" filepath="$PROJECT_DIR$/Core/orient-background/orient-background.iml" group="system" />
+      <module fileurl="file://$PROJECT_DIR$/Core/orient-businesscore/orient-businesscore.iml" filepath="$PROJECT_DIR$/Core/orient-businesscore/orient-businesscore.iml" group="core" />
+      <module fileurl="file://$PROJECT_DIR$/Core/orient-collab/orient-collab.iml" filepath="$PROJECT_DIR$/Core/orient-collab/orient-collab.iml" group="flow" />
+      <module fileurl="file://$PROJECT_DIR$/Core/orient-collabdev/orient-collabdev.iml" filepath="$PROJECT_DIR$/Core/orient-collabdev/orient-collabdev.iml" group="flow" />
+      <module fileurl="file://$PROJECT_DIR$/Core/orient-componentrule/orient-componentrule.iml" filepath="$PROJECT_DIR$/Core/orient-componentrule/orient-componentrule.iml" group="flow" />
+      <module fileurl="file://$PROJECT_DIR$/Core/orient-componentrunenv/orient-componentrunenv.iml" filepath="$PROJECT_DIR$/Core/orient-componentrunenv/orient-componentrunenv.iml" group="flow" />
+      <module fileurl="file://$PROJECT_DIR$/Core/orient-devdatatype/orient-devdatatype.iml" filepath="$PROJECT_DIR$/Core/orient-devdatatype/orient-devdatatype.iml" group="data" />
+      <module fileurl="file://$PROJECT_DIR$/Core/orient-flow/orient-flow.iml" filepath="$PROJECT_DIR$/Core/orient-flow/orient-flow.iml" group="flow" />
+      <module fileurl="file://$PROJECT_DIR$/Core/orient-init/orient-init.iml" filepath="$PROJECT_DIR$/Core/orient-init/orient-init.iml" group="core" />
+      <module fileurl="file://$PROJECT_DIR$/Core/orient-jbpm/orient-jbpm.iml" filepath="$PROJECT_DIR$/Core/orient-jbpm/orient-jbpm.iml" group="flow" />
+      <module fileurl="file://$PROJECT_DIR$/Core/orient-jpdl/orient-jpdl.iml" filepath="$PROJECT_DIR$/Core/orient-jpdl/orient-jpdl.iml" group="flow" />
+      <module fileurl="file://$PROJECT_DIR$/Core/orient-log/orient-log.iml" filepath="$PROJECT_DIR$/Core/orient-log/orient-log.iml" group="common" />
+      <module fileurl="file://$PROJECT_DIR$/Core/orient-login/orient-login.iml" filepath="$PROJECT_DIR$/Core/orient-login/orient-login.iml" group="system" />
+      <module fileurl="file://$PROJECT_DIR$/Core/orient-metamodel/orient-metamodel.iml" filepath="$PROJECT_DIR$/Core/orient-metamodel/orient-metamodel.iml" group="core" />
+      <module fileurl="file://$PROJECT_DIR$/Core/orient-modeldata/orient-modeldata.iml" filepath="$PROJECT_DIR$/Core/orient-modeldata/orient-modeldata.iml" group="data" />
+      <module fileurl="file://$PROJECT_DIR$/Core/orient-ods/orient-ods.iml" filepath="$PROJECT_DIR$/Core/orient-ods/orient-ods.iml" group="data" />
+      <module fileurl="file://$PROJECT_DIR$/Core/orient-pvm/orient-pvm.iml" filepath="$PROJECT_DIR$/Core/orient-pvm/orient-pvm.iml" group="data" />
+      <module fileurl="file://$PROJECT_DIR$/Core/orient-sysman/orient-sysman.iml" filepath="$PROJECT_DIR$/Core/orient-sysman/orient-sysman.iml" group="system" />
+      <module fileurl="file://$PROJECT_DIR$/Core/orient-sysmodel/orient-sysmodel.iml" filepath="$PROJECT_DIR$/Core/orient-sysmodel/orient-sysmodel.iml" group="core" />
+      <module fileurl="file://$PROJECT_DIR$/Core/orient-template/orient-template.iml" filepath="$PROJECT_DIR$/Core/orient-template/orient-template.iml" group="flow" />
+      <module fileurl="file://$PROJECT_DIR$/Core/orient-utils/orient-utils.iml" filepath="$PROJECT_DIR$/Core/orient-utils/orient-utils.iml" group="common" />
+      <module fileurl="file://$PROJECT_DIR$/Core/orient-webbase/orient-webbase.iml" filepath="$PROJECT_DIR$/Core/orient-webbase/orient-webbase.iml" group="common" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,39 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="OrientServer:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/OrientServer_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="OrientServer" />
+          <element id="module-output" name="orient-login" />
+          <element id="module-output" name="orient-log" />
+          <element id="module-output" name="orient-webbase" />
+          <element id="module-output" name="orient-sysmodel" />
+          <element id="module-output" name="orient-metamodel" />
+          <element id="module-output" name="orient-init" />
+          <element id="module-output" name="orient-utils" />
+          <element id="module-output" name="orient-businesscore" />
+          <element id="module-output" name="orient-jbpm" />
+          <element id="module-output" name="orient-jpdl" />
+          <element id="module-output" name="orient-alarm" />
+          <element id="module-output" name="orient-componentrunenv" />
+          <element id="module-output" name="orient-componentrule" />
+          <element id="module-output" name="orient-ods" />
+          <element id="module-output" name="orient-modeldata" />
+          <element id="module-output" name="orient-background" />
+          <element id="module-output" name="orient-sysman" />
+          <element id="module-output" name="orient-devdatatype" />
+          <element id="module-output" name="orient-flow" />
+          <element id="module-output" name="orient-collab" />
+          <element id="module-output" name="orient-auditflow" />
+          <element id="module-output" name="orient-pvm" />
+          <element id="module-output" name="orient-template" />
+          <element id="module-output" name="orient-mq" />
+          <element id="module-output" name="orient-collabdev" />
+        </element>
+        <element id="directory" name="lib" />
+      </element>
+      <element id="javaee-facet-resources" facet="OrientServer/web/Web" />
+    </root>
+  </artifact>
+</component>
