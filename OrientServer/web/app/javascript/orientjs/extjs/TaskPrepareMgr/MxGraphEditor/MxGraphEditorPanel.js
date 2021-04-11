@@ -230,6 +230,72 @@ Ext.define('OrientTdm.TaskPrepareMgr.MxGraphEditor.MxGraphEditorPanel', {
                             },500)
                         });
                     }
+                },{
+                    xtype: 'button',
+                    iconCls: 'icon-import',
+                    text: '检查表绑定流程',
+                    scope: me,
+                    handler:function () {
+                        var win = Ext.create('Ext.Window', {
+                            title: '检查表绑定流程',
+                            plain: true,
+                            height: 110,
+                            width: '40%',
+                            layout: 'fit',
+                            maximizable: true,
+                            modal: true,
+                            items: [{
+                                xtype: 'form',
+                                bodyPadding: 10,
+                                layout: 'anchor',
+                                defaults: {
+                                    anchor: '100%',
+                                    labelAlign: 'left',
+                                    msgTarget: 'side',
+                                    labelWidth: 90
+                                },
+                                items: [{
+                                    xtype: 'filefield',
+                                    buttonText: '',
+                                    fieldLabel: '检查表绑定流程(.xlsx)',
+                                    buttonConfig: {
+                                        iconCls: 'icon-upload'
+                                    },
+                                    listeners: {
+                                        'change': function (fb, v) {
+                                            if (v.substr(v.length - 3) != "xls" && v.substr(v.length - 4) != "xlsx") {
+                                                OrientExtUtil.Common.info('提示', '请选择Excel文件');
+                                                return;
+                                            }
+                                        }
+                                    }
+                                }]
+                            }],
+                            buttons: [{
+                                text: '关联',
+                                handler: function () {
+                                    var form = win.down("form").getForm();
+                                    if (form.isValid()) {
+                                        form.submit({
+                                            url: serviceName + '/taskPrepareController/easybindFlowData.rdm?taskId=' + me.taskId,
+                                            waitMsg: '绑定中...',
+                                            success: function (form, action) {
+                                                OrientExtUtil.Common.info('成功', action.result.msg, function () {
+                                                    win.close();
+                                                });
+                                            },
+                                            failure: function (form, action) {
+                                                OrientExtUtil.Common.info('失败', action.result.msg, function () {
+                                                    win.close();
+                                                });
+                                            }
+                                        });
+                                    }
+                                }
+                            }]
+                        });
+                        win.show();
+                    }
                 }],
             items: [
                    {

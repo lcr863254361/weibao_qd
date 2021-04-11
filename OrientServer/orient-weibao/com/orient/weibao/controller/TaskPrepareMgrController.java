@@ -1058,6 +1058,7 @@ public class TaskPrepareMgrController extends BaseController {
 
     /**
      * 检查表关联流程
+     *
      * @param flowId
      * @param flowName
      * @param checkTableInstIds
@@ -1070,6 +1071,53 @@ public class TaskPrepareMgrController extends BaseController {
         AjaxResponseData retVal = new AjaxResponseData();
         taskPrepareMgrBusiness.checkTablebindFlowData(flowId, flowName, checkTableInstIds, taskId);
         retVal.setSuccess(true);
+        return retVal;
+    }
+
+    /**
+     * 检查表快速绑定流程
+     * @param request
+     * @param taskId
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping("easybindFlowData")
+    @ResponseBody
+    public Map<String, Object> easybindFlowData(HttpServletRequest request, String taskId) throws Exception {
+        Map<String, Object> retVal = null;
+        String fileName = "";
+        String filePath = fileServerConfig.getFtpHome() + File.separator + FtpFileUtil.IMPORT_ROOT + "/流程关联检查表/";
+        CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver(request.getSession().getServletContext());
+        if (multipartResolver.isMultipart(request)) {
+            MultipartHttpServletRequest multiRequest = (MultipartHttpServletRequest) request;
+            Iterator iter = multiRequest.getFileNames();
+            if (iter.hasNext()) {
+                MultipartFile file = multiRequest.getFile((String) iter.next());
+                fileName = file.getOriginalFilename();
+                String fileSufix = fileName.substring(fileName.lastIndexOf(".") + 1);
+                File dst = new File(fileName);
+                if ("xls".equals(fileSufix) || "xlsx".equals(fileSufix)) {
+                    file.transferTo(dst);
+                    retVal = bindHandleExcel(request, fileName);
+                } else {
+                    retVal = new HashMap<>();
+                    retVal.put("msg", "目前仅支持.xls,.xlsx文件格式");
+                }
+            }
+        }
+        DeCompress.deleteDirectory(filePath);
+        return retVal;
+    }
+
+    public Map<String, Object> bindHandleExcel(HttpServletRequest request, String fileName) throws Exception {
+        ExcelReader excelReader = new ExcelReader();
+        File excelFile = new File(fileName);
+        InputStream input = new FileInputStream(excelFile);
+        boolean after2007 = fileName.substring(fileName.length() - 4).equals("xlsx");
+        TableEntity excelEntity = excelReader.readFile(input, after2007);
+        String taskId = request.getParameter("taskId");
+        excelFile.delete();
+        Map<String, Object> retVal = taskPrepareMgrBusiness.checkTableEasyBindFlow(excelEntity, taskId);
         return retVal;
     }
 }

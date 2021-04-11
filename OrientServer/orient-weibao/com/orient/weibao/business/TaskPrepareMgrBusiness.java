@@ -44,6 +44,9 @@ import net.sf.json.JSONArray;
 import org.apache.commons.lang.StringUtils;
 import org.apache.http.entity.ContentType;
 import org.apache.jasper.tagplugins.jstl.core.If;
+import org.dom4j.Document;
+import org.dom4j.Element;
+import org.dom4j.io.SAXReader;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,13 +55,11 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
+import org.xml.sax.InputSource;
 
 import javax.annotation.Resource;
 import javax.swing.*;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.Serializable;
+import java.io.*;
 import java.net.URLDecoder;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -3145,7 +3146,7 @@ public class TaskPrepareMgrBusiness extends BaseBusiness {
                                     }
                                 }
                             }
-                        }else{
+                        } else {
                             //填写
                             cellType = "#2";
                             cellMap.put("C_CONTENT_" + cellBM.getId(), "填写");
@@ -3205,5 +3206,99 @@ public class TaskPrepareMgrBusiness extends BaseBusiness {
                 orientSqlEngine.getBmService().updateModelData(checkTableInstBM, checkInstMap, checkTableInstId);
             }
         }
+    }
+
+    public Map<String, Object> checkTableEasyBindFlow(TableEntity entity, String taskId) {
+        IBusinessModel checkTableInstBM=businessModelService.getBusinessModelBySName(PropertyConstant.CHECK_TEMP_INST,schemaId, EnumInter.BusinessModelEnum.Table);
+        Map retVal=UtilFactory.newHashMap();
+        List<DataEntity> dataEntities = entity.getDataEntityList();
+        if (dataEntities != null&&dataEntities.size()>0) {
+            checkTableInstBM.setReserve_filter("AND T_DIVING_TASK_"+schemaId+"_ID='"+taskId+"'");
+            List<Map> checkTableInstList=orientSqlEngine.getBmService().createModelQuery(checkTableInstBM).list();
+            String xmlStr = getXmlStr(taskId, null);
+            //利用dom4j解析xml
+            InputSource inputSource = new InputSource(new StringReader(xmlStr));
+            inputSource.setEncoding("UTF-8");
+            SAXReader reader = new SAXReader();
+            Document document;
+            try {
+                document = reader.read(inputSource);
+                //获取根节点
+                String xpath = "//Roundrect[@id]";
+                List<Element> elementList = document.selectNodes(xpath);
+                        for (int j = 0; j < dataEntities.size(); j++) {
+                            //取出每一行的单元格数据遍历，插入到数据库
+                            List<FieldEntity> fieldEntities = dataEntities.get(j).getFieldEntityList();
+                            if (fieldEntities != null&&fieldEntities.size()>0) {
+                                Map<String, String> dataMap = new HashMap();
+                                dataMap.put("nodeId","");
+                                dataMap.put("tableName","");
+                                Map checkTableMap=UtilFactory.newHashMap();
+                                for (int i = 0; i < fieldEntities.size(); i++) {
+                                    FieldEntity fieldEntity = fieldEntities.get(i);
+                                    if (fieldEntity.getIsKey() == 1) {
+                                        continue;
+                                    }
+                                    String name = fieldEntities.get(i).getName();
+                                    String value = fieldEntities.get(i).getValue();
+                                    if ("流程名称".equals(name)) {
+                                        if (value == null || "".equals(value)) {
+                                            break;
+                                        }
+                                        for (Iterator iterator = elementList.iterator(); iterator.hasNext(); ) {
+                                            Element element = (Element) iterator.next();
+                                            String nodeId = element.attributeValue("id");
+                                            String nodeContent = element.attributeValue("label");
+                                            value=value.trim();
+                                            value=value.replaceAll(" ","");
+                                            value = value.replaceAll("\n", "");
+                                            nodeContent=nodeContent.replaceAll(" ","");
+                                            nodeContent = nodeContent.replaceAll("\n", "");
+                                            if (value.equals(nodeContent)){
+                                                dataMap.put("nodeId",nodeId);
+                                                dataMap.put("nodeContent",nodeContent);
+                                                break;
+                                            }
+                                        }
+                                    } else if ("检查表名称".equals(name)) {
+                                        if (value == null || "".equals(value)) {
+                                            break;
+                                        }
+                                        if (checkTableInstList!=null&&checkTableInstList.size()>0) {
+                                            for (Map checkMap:checkTableInstList){
+                                                String checkTableName=CommonTools.Obj2String(checkMap.get("C_NAME_"+checkTableInstBM.getId()));
+                                                value=value.trim();
+                                                value=value.replaceAll(" ","");
+                                                value = value.replaceAll("\n", "");
+                                                checkTableName=checkTableName.replaceAll(" ","");
+                                                checkTableName = checkTableName.replaceAll("\n", "");
+                                                if (value.equals(checkTableName)){
+                                                    dataMap.put("tableName",checkTableName);
+                                                    checkTableMap=checkMap;
+                                                    break;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                if (!"".equals(dataMap.get("nodeId"))&&!"".equals(dataMap.get("tableName"))){
+                                    String nodeId=dataMap.get("nodeId");
+                                    String nodeContent=dataMap.get("nodeContent");
+                                    if (checkTableMap!=null){
+                                        String checkTableInstId=checkTableMap.get("ID").toString();
+                                        checkTableMap.put("C_NODE_ID_"+checkTableInstBM.getId(),nodeId);
+                                        checkTableMap.put("C_NODE_TEXT_"+checkTableInstBM.getId(),nodeContent);
+                                        orientSqlEngine.getBmService().updateModelData(checkTableInstBM,checkTableMap,checkTableInstId);
+                                    }
+                                }
+                            }
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        retVal.put("success", true);
+        retVal.put("msg", "关联成功！");
+        return retVal;
     }
 }
